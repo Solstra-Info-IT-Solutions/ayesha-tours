@@ -1,6 +1,7 @@
 "use client";
 
 import { trackLead } from "@/lib/analytics";
+import { emailLead } from "@/lib/lead-client";
 import { useEffect, useMemo, useState } from "react";
 import Navbar from "@/components/Navbarforenquirypage";
 import Footer from "@/components/Footer";
@@ -823,6 +824,7 @@ _New travel enquiry received from the website._
     ===================================================== */
 
     trackLead("enquiry_form");
+    emailLead("enquiry_form", finalPayload);
 
     window.open(
       whatsappURL,

@@ -40,16 +40,27 @@ export default function Analytics() {
     return () => window.removeEventListener("gh-consent-change", sync);
   }, []);
 
+  useEffect(() => {
+    window.gtag?.("consent", "update", {
+      analytics_storage: consent.analytics ? "granted" : "denied",
+      ad_storage: consent.marketing ? "granted" : "denied",
+      ad_user_data: consent.marketing ? "granted" : "denied",
+      ad_personalization: consent.marketing ? "granted" : "denied",
+    });
+  }, [consent]);
+
   return (
     <>
-      {ANALYTICS.gaId && consent.analytics && (
+      {ANALYTICS.gaId && (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS.gaId}`}
             strategy="afterInteractive"
           />
+          {/* Consent Mode v2: GA loads for everyone but stores no cookies until
+              the visitor accepts; denied visits send anonymous pings only. */}
           <Script id="ga4-init" strategy="afterInteractive">
-            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${ANALYTICS.gaId}');`}
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});gtag('js',new Date());gtag('config','${ANALYTICS.gaId}');`}
           </Script>
         </>
       )}

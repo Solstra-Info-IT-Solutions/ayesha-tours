@@ -38,7 +38,7 @@ Redeploy after saving the variables.
 
 - `generate_lead` (GA4) / `Lead` (Meta) when any of the 4 forms is submitted: Contact, Request Quote, Transport Quote, Enquiry.
 - Clicks on any phone number, email and WhatsApp link site-wide.
-- Analytics only loads after the visitor accepts the cookie banner (analytics → GA4, marketing → Meta Pixel).
+- Analytics uses Google Consent Mode v2: GA4 loads for everyone, stores cookies only after the visitor accepts, and counts anonymous visits otherwise. Meta Pixel loads only after marketing consent.
 
 ## 5. Important notes for the client
 
@@ -55,3 +55,19 @@ Redeploy after saving the variables.
 - Add 1–2 new landing pages/blog posts a month (edit `lib/landing-pages.ts`; pages, sitemap and structured data are generated automatically).
 - Ask every returning customer for a Google review.
 - Check Search Console monthly: which searches bring impressions, which pages need improvement.
+
+## 7. Email fallback for form leads (one-time setup)
+
+Every form submission is now also emailed to the business, so a lead is never lost if the visitor closes WhatsApp.
+
+1. Sign in to the Gmail account that should send the emails (e.g. ghtravelsinfo@gmail.com) and turn on **2-Step Verification** (myaccount.google.com → Security).
+2. Go to myaccount.google.com/apppasswords, create an app password named "Website", and copy the 16-character code.
+3. Add these environment variables on the host and redeploy:
+
+| Variable | Value |
+|---|---|
+| `SMTP_USER` | the Gmail address, e.g. `ghtravelsinfo@gmail.com` |
+| `SMTP_PASS` | the 16-character app password (no spaces) |
+| `LEAD_TO_EMAIL` | optional – where leads are delivered; defaults to `SMTP_USER` |
+
+4. Submit a test enquiry on the live site and confirm the email arrives (check spam once). Replying to the email answers the customer directly.

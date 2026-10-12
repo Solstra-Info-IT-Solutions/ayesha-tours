@@ -1,6 +1,7 @@
 "use client";
 
 import { trackLead } from "@/lib/analytics";
+import { emailLead } from "@/lib/lead-client";
 import { FormEvent, useState } from "react";
 import { Send, ShieldCheck, Loader2 } from "lucide-react";
 
@@ -268,6 +269,7 @@ ${
     ===================================================== */
 
     trackLead("transport_quote");
+    emailLead("transport_quote", formData);
 
     window.open(
       whatsappURL,
