@@ -11,43 +11,43 @@ import {
 
 const vehicles = [
   {
-    image: "/luxury.jpg",
-    title: "Luxury SUV / XUV",
-    capacity: "6–7 Guests",
-    bags: "4 Bags",
-    badge: "Most Popular",
+    image: "/images/demo/vehicle-suv.jpg",
+    title: "Family SUV / GMC",
+    capacity: "6–7 Pilgrims",
+    bags: "4–5 Bags",
+    badge: "Popular With Families",
     description:
-      "A refined and spacious choice for families, executives and premium road journeys.",
+      "A spacious choice for families travelling between the airport, Makkah and Madinah.",
     features: [
-      "Spacious legroom & premium upholstery",
-      "Climate control & ambient comfort",
-      "Ideal for family trips & corporate groups",
+      "Room for elders, children & luggage",
+      "Air-conditioned for the Saudi heat",
+      "Ideal for family Umrah & ziyarat",
     ],
   },
   {
-    image: "/sedan.jpg",
-    title: "Premium Sedan",
-    capacity: "4 Guests",
+    image: "/images/demo/vehicle-sedan.jpg",
+    title: "Private Sedan",
+    capacity: "3–4 Pilgrims",
     bags: "3 Bags",
     description:
-      "Comfortable, elegant and perfectly suited for airport transfers and private journeys.",
+      "A comfortable option for couples and small families on airport and hotel transfers.",
     features: [
-      "Smooth ride for city or highway",
-      "Excellent boot space for luggage",
-      "Perfect for couples or solo travelers",
+      "Private transfer for your party",
+      "Boot space for Umrah luggage",
+      "Suited to couples & solo pilgrims",
     ],
   },
   {
-    image: "/tempo.jpg",
-    title: "Tempo Traveller / Bus",
-    capacity: "12–17 Guests",
+    image: "/images/demo/vehicle-coach.jpg",
+    title: "Group Van / Coach",
+    capacity: "12–45 Pilgrims",
     bags: "Large Capacity",
     description:
-      "Designed for groups seeking comfort, convenience and seamless travel together.",
+      "For community and family groups who want to travel and perform ziyarat together.",
     features: [
-      "Push-back seats & ample headroom",
-      "Quality entertainment system",
-      "Ideal for large groups & extended tours",
+      "Keeps the whole group together",
+      "Space for group luggage",
+      "Ideal for Makkah–Madinah & ziyarat days",
     ],
   },
 ];
@@ -56,12 +56,12 @@ export default function Fleet() {
   return (
     <section
       id="fleet"
-      className="relative overflow-hidden bg-[#faf9f5] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#f9f6f8] py-20 sm:py-24 lg:py-28"
     >
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full border border-[#e5b34d]/15" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full border border-[#fb1895]/15" />
 
-      <div className="pointer-events-none absolute right-[-180px] bottom-10 h-[450px] w-[450px] rounded-full bg-[#14596a]/[0.025] blur-3xl" />
+      <div className="pointer-events-none absolute right-[-180px] bottom-10 h-[450px] w-[450px] rounded-full bg-[#4e1367]/[0.025] blur-3xl" />
 
       <div className="relative mx-auto w-full max-w-[1600px] px-5 sm:px-8 md:px-10 lg:px-14 xl:px-16 2xl:px-20">
 
@@ -72,41 +72,41 @@ export default function Fleet() {
           {/* Eyebrow */}
           <div className="flex items-center justify-center gap-4">
 
-            <span className="h-[2px] w-10 bg-[#d9a737]" />
+            <span className="h-[2px] w-10 bg-[#e40e83]" />
 
             <div className="flex items-center gap-2">
 
               <CarFront
                 size={15}
-                className="text-[#14596a]"
+                className="text-[#4e1367]"
               />
 
-              <span className="text-[10px] font-semibold uppercase tracking-[2px] text-[#14596a] sm:text-[11px] sm:tracking-[2.5px]">
-                Premium Transportation
+              <span className="text-[10px] font-semibold uppercase tracking-[2px] text-[#4e1367] sm:text-[11px] sm:tracking-[2.5px]">
+                Vehicle Options
               </span>
 
             </div>
 
-            <span className="h-[2px] w-10 bg-[#d9a737]" />
+            <span className="h-[2px] w-10 bg-[#e40e83]" />
 
           </div>
 
           {/* Heading */}
 
-          <h2 className="mt-6 font-serif text-[36px] font-bold leading-[1.12] text-[#123f55] sm:text-[46px] lg:text-[52px]">
+          <h2 className="mt-6 font-serif text-[36px] font-bold leading-[1.12] text-[#3f1152] sm:text-[46px] lg:text-[52px]">
 
-            Travel in
+            Travel In
 
-            <span className="italic text-[#d9a737]">
+            <span className="italic text-[#e40e83]">
               {" "}Comfort
             </span>
 
           </h2>
 
-          <p className="mt-5 text-[15px] leading-7 text-[#657176] sm:text-[16px]">
-            Choose the perfect vehicle for your journey. From private luxury
-            transfers to spacious group transportation, every ride is designed
-            around comfort, reliability and convenience.
+          <p className="mt-5 text-[15px] leading-7 text-[#6e6272] sm:text-[16px]">
+            Typical vehicle types for pilgrim transfers in Saudi Arabia. Exact
+            vehicles depend on availability and group size, and are confirmed
+            in your quote (demo images shown).
           </p>
 
         </div>
@@ -119,7 +119,7 @@ export default function Fleet() {
 
             <article
               key={vehicle.title}
-              className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-[#e7e1d7] bg-white shadow-[0_12px_30px_rgba(20,89,106,0.06)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(20,89,106,0.15)]"
+              className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-[#e3dbdf] bg-white shadow-[0_12px_30px_rgba(78,19,103,0.06)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(78,19,103,0.15)]"
             >
 
               {/* ================= IMAGE ================= */}
@@ -134,7 +134,7 @@ export default function Fleet() {
 
                 {/* Cinematic Overlay */}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#082f39]/70 via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#290837]/70 via-transparent to-transparent opacity-80" />
 
                 {/* Number */}
 
@@ -148,7 +148,7 @@ export default function Fleet() {
 
                   <div className="absolute right-5 top-5">
 
-                    <span className="rounded-full border border-white/20 bg-[#14596a]/90 px-4 py-2 text-[10px] font-semibold uppercase tracking-[1.5px] text-white shadow-lg backdrop-blur-md">
+                    <span className="rounded-full border border-white/20 bg-[#4e1367]/90 px-4 py-2 text-[10px] font-semibold uppercase tracking-[1.5px] text-white shadow-lg backdrop-blur-md">
 
                       {vehicle.badge}
 
@@ -166,27 +166,27 @@ export default function Fleet() {
 
                 {/* Title */}
 
-                <h3 className="font-serif text-[26px] font-bold text-[#123f55] transition duration-300 group-hover:text-[#14596a]">
+                <h3 className="font-serif text-[26px] font-bold text-[#3f1152] transition duration-300 group-hover:text-[#4e1367]">
                   {vehicle.title}
                 </h3>
 
                 {/* Gold Divider */}
 
-                <div className="mt-4 h-px w-12 bg-[#e5b34d] transition-all duration-500 group-hover:w-20" />
+                <div className="mt-4 h-px w-12 bg-[#fb1895] transition-all duration-500 group-hover:w-20" />
 
                 {/* Description */}
 
-                <p className="mt-5 text-[14px] leading-6 text-[#687276]">
+                <p className="mt-5 text-[14px] leading-6 text-[#6e6572]">
                   {vehicle.description}
                 </p>
 
                 {/* ================= VEHICLE DETAILS ================= */}
 
-                <div className="mt-6 grid grid-cols-2 gap-3 border-y border-[#e9e4dc] py-5">
+                <div className="mt-6 grid grid-cols-2 gap-3 border-y border-[#e6dfe3] py-5">
 
                   <div className="flex items-center gap-3">
 
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f2f5f5] text-[#14596a]">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f4f2f5] text-[#4e1367]">
 
                       <Users size={17} />
 
@@ -194,11 +194,11 @@ export default function Fleet() {
 
                     <div>
 
-                      <p className="text-[9px] font-semibold uppercase tracking-[1px] text-[#9aa1a3]">
+                      <p className="text-[9px] font-semibold uppercase tracking-[1px] text-[#a09aa3]">
                         Capacity
                       </p>
 
-                      <p className="mt-1 text-[13px] font-medium text-[#123f55]">
+                      <p className="mt-1 text-[13px] font-medium text-[#3f1152]">
                         {vehicle.capacity}
                       </p>
 
@@ -208,7 +208,7 @@ export default function Fleet() {
 
                   <div className="flex items-center gap-3">
 
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f8f2e6] text-[#d9a737]">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f4eaef] text-[#e40e83]">
 
                       <Briefcase size={16} />
 
@@ -216,11 +216,11 @@ export default function Fleet() {
 
                     <div>
 
-                      <p className="text-[9px] font-semibold uppercase tracking-[1px] text-[#9aa1a3]">
+                      <p className="text-[9px] font-semibold uppercase tracking-[1px] text-[#a09aa3]">
                         Luggage
                       </p>
 
-                      <p className="mt-1 text-[13px] font-medium text-[#123f55]">
+                      <p className="mt-1 text-[13px] font-medium text-[#3f1152]">
                         {vehicle.bags}
                       </p>
 
@@ -244,10 +244,10 @@ export default function Fleet() {
                       <CheckCircle2
                         size={18}
                         strokeWidth={1.8}
-                        className="mt-[2px] shrink-0 text-[#d9a737]"
+                        className="mt-[2px] shrink-0 text-[#e40e83]"
                       />
 
-                      <span className="text-[13px] leading-6 text-[#687276]">
+                      <span className="text-[13px] leading-6 text-[#6e6572]">
                         {feature}
                       </span>
 
@@ -261,7 +261,7 @@ export default function Fleet() {
 
                 <Link
                   href="/transport-request-quote"
-                  className="group/button mt-8 flex h-[52px] items-center justify-center gap-3 border border-[#14596a] text-[11px] font-bold uppercase tracking-[1.5px] text-[#14596a] transition duration-300 hover:bg-[#14596a] hover:text-white"
+                  className="group/button mt-8 flex h-[52px] items-center justify-center gap-3 border border-[#4e1367] text-[11px] font-bold uppercase tracking-[1.5px] text-[#4e1367] transition duration-300 hover:bg-[#4e1367] hover:text-white"
                 >
 
                   Request a Quote
@@ -283,13 +283,13 @@ export default function Fleet() {
 
         {/* ================= BOTTOM TEXT ================= */}
 
-        <div className="mt-14 flex items-center justify-center gap-3 text-center text-[10px] uppercase tracking-[2px] text-[#8b9698] sm:text-[11px]">
+        <div className="mt-14 flex items-center justify-center gap-3 text-center text-[10px] uppercase tracking-[2px] text-[#948b98] sm:text-[11px]">
 
-          <span className="h-px w-10 bg-[#d9a737]/60" />
+          <span className="h-px w-10 bg-[#e40e83]/60" />
 
-          Travel Beyond Ordinary
+          Comfort Between The Haramain
 
-          <span className="h-px w-10 bg-[#d9a737]/60" />
+          <span className="h-px w-10 bg-[#e40e83]/60" />
 
         </div>
 

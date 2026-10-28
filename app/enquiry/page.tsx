@@ -1,5 +1,7 @@
 "use client";
 
+
+import { whatsappLink } from "@/lib/site";
 import { trackLead } from "@/lib/analytics";
 import { emailLead } from "@/lib/lead-client";
 import { useEffect, useMemo, useState } from "react";
@@ -34,7 +36,7 @@ import {
   User,
   UserRoundPlus,
   Users,
-  Utensils,
+  FileCheck2,
   X,
 } from "lucide-react";
 
@@ -63,97 +65,97 @@ type ContactData = {
 
 const destinations = [
   {
-  title: "Shambhajirao, Aurangabad",
-  subtitle: "Aurangabad, Ajanta, Ellora...",
-  image: "/11.jpg",
+  title: "Umrah – Makkah & Madinah",
+  subtitle: "Economy, standard or premium Umrah...",
+  image: "/images/demo/kaaba-tawaf.jpg",
 },
 {
-  title: "Grishneshwar, Shani Shingnapur, Shirdi, Trimbakeshwar & Bhimashankar Tour",
-  subtitle: "Temples, Pilgrimage, Spiritual Journeys...",
-  image: "/ghrishneshwar-shani-shingnapur-shirdi-trimbakeshwar-bhimashankar-pune.png",
+  title: "Ramadan Umrah",
+  subtitle: "Part of Ramadan or the last ten nights...",
+  image: "/images/demo/haram-aerial.jpg",
 },
 {
-  title: "Mumbai Tour",
-  subtitle: "Gateway of India, Marine Drive, Bollywood...",
-  image: "/13.jpg",
+  title: "Haj",
+  subtitle: "Guidance for the journey of a lifetime...",
+  image: "/images/demo/arafat.jpg",
 },
 {
-  title: "Hyderabad",
-  subtitle: "Charminar, Golconda, Heritage & Culture...",
-  image: "/14.jpg",
+  title: "Umrah + Extended Ziyarat",
+  subtitle: "More time for Madinah, Taif & historic sites...",
+  image: "/images/demo/quba.jpg",
 },
 ];
 
 const services = [
   {
-    title: "Sightseeing",
+    title: "Ziyarat Tours",
     description:
-      "Curated tours of iconic landmarks and hidden gems with expert local insights.",
+      "Guided visits to the historic sites of Makkah and Madinah.",
     icon: MapPin,
   },
   {
-    title: "Private Transport",
+    title: "Private Transfers",
     description:
-      "Dedicated luxury vehicles for seamless and comfortable travel.",
+      "Private vehicles between the airport, hotels and the two holy cities.",
     icon: Car,
   },
   {
     title: "Airport Transfers",
     description:
-      "Smooth pick-up and drop-off services for a stress-free journey.",
+      "Pickups and drop-offs at Jeddah or Madinah airport.",
     icon: Plane,
   },
   {
-    title: "Accommodation",
+    title: "Hotels Near Haram",
     description:
-      "Carefully selected premium stays throughout your journey.",
+      "Hotel options in Makkah and Madinah by distance and budget.",
     icon: Bed,
   },
   {
-    title: "Dining Experiences",
+    title: "Visa & Flights",
     description:
-      "Exceptional culinary experiences tailored to your preferences.",
-    icon: Utensils,
+      "Help with Umrah visa paperwork and flight options.",
+    icon: FileCheck2,
   },
   {
     title: "Full Package",
     description:
-      "A complete luxury journey with all essential services included.",
+      "Flights, visa, hotels, transfers and ziyarat arranged together.",
     icon: Infinity,
   },
 ];
 
 const vehicles = [
   {
-    title: "Premium Sedan",
-    tag: "COUPLES / SOLOS",
-    passengers: "Up to 3 Passengers",
+    title: "Private Sedan",
+    tag: "COUPLES / SOLO PILGRIMS",
+    passengers: "Up to 3 Pilgrims",
     bags: "2 Large + 2 Small Bags",
     description:
-      "Elegant, comfortable and ideal for couples or intimate journeys.",
+      "Comfortable for couples and small families on airport and hotel transfers.",
     image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85",
+      "/images/demo/vehicle-sedan.jpg",
   },
   {
-    title: "Luxury SUV",
+    title: "Family SUV / GMC",
     tag: "FAMILIES",
-    passengers: "Up to 5 Passengers",
+    passengers: "Up to 6 Pilgrims",
     bags: "4 Large + 3 Small Bags",
     description:
-      "Extra comfort, generous space and an elevated luxury experience.",
+      "Extra space for elders, children and Umrah luggage.",
     popular: true,
     image:
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=85",
+      "/images/demo/vehicle-suv.jpg",
   },
   {
-    title: "Luxury Van",
+    title: "Group Van / Coach",
     tag: "GROUPS",
-    passengers: "9 to 12 Passengers",
+    passengers: "10+ Pilgrims",
     bags: "Ample Storage",
     description:
-      "Spacious premium interiors designed for families and groups.",
+      "Keeps family and community groups together on transfers and ziyarat.",
     image:
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=85",
+      "/images/demo/vehicle-coach.jpg",
   },
 ];
 
@@ -167,7 +169,7 @@ const travelerOptions = [
   {
     id: "couple" as TravelerType,
     title: "Couple",
-    subtitle: "Two travelers",
+    subtitle: "Two pilgrims",
     icon: Heart,
   },
   {
@@ -613,7 +615,7 @@ export default function Home() {
   //       isOpen: true,
   //       type: "error",
   //       title: "Invalid Email Address",
-  //       message: "Please enter a valid email address so our travel experts can contact you.",
+  //       message: "Please enter a valid email address so our team can contact you.",
   //     });
 
   //     return;
@@ -656,7 +658,7 @@ export default function Home() {
   //       type: "success",
   //       title: "Journey Request Received!",
   //       message:
-  //         "Thank you for sharing your travel plans with Global Horizons. Our travel experts will personally review your requirements and get in touch with you shortly.",
+  //         "Thank you for sharing your travel plans with Ayesha Tours. Our travel experts will personally review your requirements and get in touch with you shortly.",
   //     });
   //   } catch (error) {
   //     console.error("Enquiry submission error:", error);
@@ -693,8 +695,8 @@ export default function Home() {
       isOpen: true,
       type: "error",
       title: "Contact Details Required",
-      message:
-        "Please provide your full name, email address and mobile number before submitting your travel enquiry.",
+        message:
+          "Please provide your full name, email address and mobile number before sending your enquiry.",
     });
 
     return;
@@ -712,7 +714,7 @@ export default function Home() {
       type: "error",
       title: "Invalid Email Address",
       message:
-        "Please enter a valid email address so our travel experts can contact you.",
+        "Please enter a valid email address so our team can contact you.",
     });
 
     return;
@@ -739,7 +741,7 @@ export default function Home() {
     ===================================================== */
 
     const whatsappMessage = `
-🌍 *NEW TRAVEL ENQUIRY*
+🕋 *NEW UMRAH / HAJ ENQUIRY*
 
 ━━━━━━━━━━━━━━━━━━
 
@@ -753,7 +755,7 @@ Phone: ${contact.phone.trim()}
 
 ━━━━━━━━━━━━━━━━━━
 
-✈️ *TRAVEL REQUIREMENTS*
+✈️ *PILGRIMAGE REQUIREMENTS*
 
 ${Object.entries(finalPayload)
   .filter(
@@ -802,9 +804,8 @@ ${Object.entries(finalPayload)
 
 ━━━━━━━━━━━━━━━━━━
 
-🌟 *Global Horizons Tours & Travels*
-
-_New travel enquiry received from the website._
+🕋 *Ayesha Tours*
+_New pilgrimage enquiry from the website._
 `.trim();
 
     /* =====================================================
@@ -813,11 +814,7 @@ _New travel enquiry received from the website._
         + SIGN MAT LAGANA
     ===================================================== */
 
-    const whatsappNumber = "917770069004";
-
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+    const whatsappURL = whatsappLink(whatsappMessage);
 
     /* =====================================================
         OPEN WHATSAPP
@@ -839,9 +836,9 @@ _New travel enquiry received from the website._
     setStatusModal({
       isOpen: true,
       type: "success",
-      title: "Journey Request Ready!",
+      title: "Enquiry Ready In WhatsApp",
       message:
-        "Your travel enquiry has been prepared successfully. WhatsApp has been opened with your journey details so you can send your request directly to our travel experts.",
+        "WhatsApp has been opened with your enquiry filled in. Please press send in WhatsApp to deliver it to our team – it has not been sent until you do.",
     });
 
   } catch (error) {
@@ -874,19 +871,19 @@ _New travel enquiry received from the website._
      STEP TITLES
   ========================================================= */
 
-  const steps = ["Destination", "Dates", "Travelers", "Experience", "Transport", "Contact"];
+  const steps = ["Pilgrimage", "Dates", "Pilgrims", "Services", "Transfers", "Contact"];
 
   /* =========================================================
      RENDER
   ========================================================= */
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f7f6f2] text-[#172b32]">
+    <main className="min-h-screen overflow-hidden bg-[#f6f3f5] text-[#291631]">
       <Navbar />
 
       {/* HERO HEADER */}
 
-      <section className="relative overflow-hidden bg-[#003f50] px-4 pb-28 pt-12 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[#36004e] px-4 pb-28 pt-12 sm:px-6 lg:px-8">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full border border-white/30" />
           <div className="absolute -right-40 -top-40 h-[600px] w-[600px] rounded-full border border-white/20" />
@@ -894,20 +891,20 @@ _New travel enquiry received from the website._
 
         <div className="relative mx-auto max-w-7xl">
           <div className="flex items-center justify-center gap-3">
-            <Sparkles className="text-[#df6b45]" size={20} />
-            <span className="text-xs font-semibold tracking-[4px] text-[#d9e6e8]">
-              GLOBAL HORIZONS
+            <Sparkles className="text-[#ea3471]" size={20} />
+            <span className="text-xs font-semibold tracking-[4px] text-[#e3d9e8]">
+              AYESHA TOURS
             </span>
           </div>
 
           <h1 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-            Design Your Perfect
-            <span className="block text-[#df6b45]">Journey</span>
+            Plan Your
+            <span className="block text-[#ea3471]">Pilgrimage</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-7 text-[#c8d9dc] sm:text-lg">
-            Tell us how you want to travel, and our concierge team will craft a completely
-            personalized luxury experience for you.
+          <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-7 text-[#d6c8dc] sm:text-lg">
+            Tell us about your Umrah or Haj plans in six short steps, and our team will
+            reply with suitable options for you and your family.
           </p>
         </div>
       </section>
@@ -915,10 +912,10 @@ _New travel enquiry received from the website._
       {/* MAIN CARD */}
 
       <section className="relative z-10 mx-auto -mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-[32px] border border-white bg-white shadow-[0_30px_100px_rgba(0,63,80,0.15)]">
+        <div className="overflow-hidden rounded-[32px] border border-white bg-white shadow-[0_30px_100px_rgba(54,0,78,0.15)]">
           {/* PROGRESS */}
 
-          <div className="border-b border-gray-100 bg-[#fcfcfa] px-4 py-6 sm:px-8 lg:px-12">
+          <div className="border-b border-gray-100 bg-[#fcfafb] px-4 py-6 sm:px-8 lg:px-12">
             <div className="hidden items-center justify-between md:flex">
               {steps.map((item, index) => {
                 const number = index + 1;
@@ -929,9 +926,9 @@ _New travel enquiry received from the website._
                       <div
                         className={`flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold transition ${
                           step > number
-                            ? "bg-[#df6b45] text-white"
+                            ? "bg-[#ea3471] text-white"
                             : step === number
-                            ? "bg-[#00495a] text-white shadow-lg shadow-[#00495a]/20"
+                            ? "bg-[#3d0057] text-white shadow-lg shadow-[#3d0057]/20"
                             : "bg-[#edf0ef] text-gray-400"
                         }`}
                       >
@@ -941,7 +938,7 @@ _New travel enquiry received from the website._
                       <div>
                         <p
                           className={`text-xs font-bold uppercase tracking-wider ${
-                            step >= number ? "text-[#00495a]" : "text-gray-400"
+                            step >= number ? "text-[#3d0057]" : "text-gray-400"
                           }`}
                         >
                           Step {number}
@@ -954,7 +951,7 @@ _New travel enquiry received from the website._
                     {index !== steps.length - 1 && (
                       <div
                         className={`mx-4 h-[2px] flex-1 ${
-                          step > number ? "bg-[#df6b45]" : "bg-gray-200"
+                          step > number ? "bg-[#ea3471]" : "bg-gray-200"
                         }`}
                       />
                     )}
@@ -968,14 +965,14 @@ _New travel enquiry received from the website._
             <div className="md:hidden">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[2px] text-[#df6b45]">
+                  <p className="text-xs font-bold uppercase tracking-[2px] text-[#ea3471]">
                     Step {step} of 6
                   </p>
 
-                  <h2 className="mt-1 text-lg font-bold text-[#00495a]">{steps[step - 1]}</h2>
+                  <h2 className="mt-1 text-lg font-bold text-[#3d0057]">{steps[step - 1]}</h2>
                 </div>
 
-                <div className="text-3xl font-serif font-bold text-[#00495a]">
+                <div className="text-3xl font-serif font-bold text-[#3d0057]">
                   {step}
                   <span className="text-gray-300">/6</span>
                 </div>
@@ -983,7 +980,7 @@ _New travel enquiry received from the website._
 
               <div className="mt-4 h-2 overflow-hidden rounded-full bg-gray-200">
                 <div
-                  className="h-full rounded-full bg-[#df6b45] transition-all duration-500"
+                  className="h-full rounded-full bg-[#ea3471] transition-all duration-500"
                   style={{ width: `${(step / 6) * 100}%` }}
                 />
               </div>
@@ -998,18 +995,18 @@ _New travel enquiry received from the website._
             {step === 1 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#fff1eb] px-4 py-2 text-xs font-bold tracking-[2px] text-[#b54b25]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#ffebf2] px-4 py-2 text-xs font-bold tracking-[2px] text-[#bc1a50]">
                     <MapPin size={14} />
-                    YOUR JOURNEY
+                    YOUR PILGRIMAGE
                   </span>
 
-                  <h2 className="mt-6 font-serif text-3xl font-bold text-[#172b32] sm:text-4xl">
-                    Where would you like
-                    <span className="text-[#df6b45]"> to explore?</span>
+                  <h2 className="mt-6 font-serif text-3xl font-bold text-[#291631] sm:text-4xl">
+                    What are you
+                    <span className="text-[#ea3471]"> planning?</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
-                    Choose your dream region and let us begin designing an unforgettable journey.
+                    Choose the type of pilgrimage and we will tailor the next steps to it.
                   </p>
                 </div>
 
@@ -1024,7 +1021,7 @@ _New travel enquiry received from the website._
                         onClick={() => setSelectedDestination(destination.title)}
                         className={`group relative h-[260px] overflow-hidden rounded-[24px] text-left transition-all duration-300 ${
                           selected
-                            ? "scale-[1.015] ring-4 ring-[#df6b45]/30"
+                            ? "scale-[1.015] ring-4 ring-[#ea3471]/30"
                             : "hover:-translate-y-1 hover:shadow-2xl"
                         }`}
                       >
@@ -1041,7 +1038,7 @@ _New travel enquiry received from the website._
                         <div
                           className={`absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border-2 transition ${
                             selected
-                              ? "border-[#df6b45] bg-[#df6b45] text-white"
+                              ? "border-[#ea3471] bg-[#ea3471] text-white"
                               : "border-white bg-black/20"
                           }`}
                         >
@@ -1049,8 +1046,8 @@ _New travel enquiry received from the website._
                         </div>
 
                         <div className="absolute bottom-0 left-0 right-0 p-7 text-white">
-                          <p className="text-xs font-bold tracking-[3px] text-[#f5b09a]">
-                            CURATED DESTINATION
+                          <p className="text-xs font-bold tracking-[3px] text-[#fc93b6]">
+                            PILGRIMAGE TYPE
                           </p>
 
                           <h3 className="mt-2 font-serif text-3xl font-bold">
@@ -1064,16 +1061,16 @@ _New travel enquiry received from the website._
                   })}
                 </div>
 
-                <div className="mt-8 rounded-2xl border border-gray-200 bg-[#fafaf8] p-6">
-                  <label className="text-xs font-bold tracking-[2px] text-[#00495a]">
-                    SPECIFIC DESTINATION (OPTIONAL)
+                <div className="mt-8 rounded-2xl border border-gray-200 bg-[#faf8f9] p-6">
+                  <label className="text-xs font-bold tracking-[2px] text-[#3d0057]">
+                    DEPARTURE CITY / NOTES (OPTIONAL)
                   </label>
 
                   <input
                     value={specificLocation}
                     onChange={(event) => setSpecificLocation(event.target.value)}
-                    placeholder="Kyoto, Paris, Santorini, Machu Picchu..."
-                    className="mt-4 w-full rounded-xl border border-gray-200 bg-white px-5 py-4 text-gray-700 outline-none transition placeholder:text-gray-400 focus:border-[#00495a] focus:ring-4 focus:ring-[#00495a]/10"
+                    placeholder="E.g. flying from Mumbai, prefer more nights in Madinah..."
+                    className="mt-4 w-full rounded-xl border border-gray-200 bg-white px-5 py-4 text-gray-700 outline-none transition placeholder:text-gray-400 focus:border-[#3d0057] focus:ring-4 focus:ring-[#3d0057]/10"
                   />
                 </div>
               </div>
@@ -1084,19 +1081,19 @@ _New travel enquiry received from the website._
             {step === 2 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#eaf3f5] px-4 py-2 text-xs font-bold tracking-[2px] text-[#00495a]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f2eaf5] px-4 py-2 text-xs font-bold tracking-[2px] text-[#3d0057]">
                     <CalendarDays size={14} />
                     TRAVEL PERIOD
                   </span>
 
                   <h2 className="mt-6 font-serif text-3xl font-bold sm:text-4xl">
                     Choose your
-                    <span className="text-[#df6b45]"> perfect dates.</span>
+                    <span className="text-[#ea3471]"> travel dates.</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
-                    Select your arrival and departure dates. We&apos;ll curate every detail
-                    around your preferred journey.
+                    Select your approximate departure and return dates. Final dates are
+                    confirmed with flight and hotel availability.
                   </p>
                 </div>
 
@@ -1106,17 +1103,17 @@ _New travel enquiry received from the website._
                       <button
                         type="button"
                         onClick={() => setCalendarMonth(new Date(year, month - 1, 1))}
-                        className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition hover:border-[#00495a] hover:bg-[#00495a] hover:text-white"
+                        className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition hover:border-[#3d0057] hover:bg-[#3d0057] hover:text-white"
                       >
                         <ChevronLeft size={20} />
                       </button>
 
                       <div className="text-center">
-                        <p className="text-xs font-bold tracking-[3px] text-[#df6b45]">
+                        <p className="text-xs font-bold tracking-[3px] text-[#ea3471]">
                           SELECT DATES
                         </p>
 
-                        <h3 className="mt-2 font-serif text-2xl font-bold text-[#00495a]">
+                        <h3 className="mt-2 font-serif text-2xl font-bold text-[#3d0057]">
                           {calendarMonth.toLocaleDateString("en-US", {
                             month: "long",
                             year: "numeric",
@@ -1127,7 +1124,7 @@ _New travel enquiry received from the website._
                       <button
                         type="button"
                         onClick={() => setCalendarMonth(new Date(year, month + 1, 1))}
-                        className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition hover:border-[#00495a] hover:bg-[#00495a] hover:text-white"
+                        className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition hover:border-[#3d0057] hover:bg-[#3d0057] hover:text-white"
                       >
                         <ChevronRight size={20} />
                       </button>
@@ -1152,23 +1149,30 @@ _New travel enquiry received from the website._
                         const selectedEnd = isSameDay(date, checkOut);
                         const between = isBetweenDates(date);
                         const today = isSameDay(date, new Date());
+                        const startOfToday = new Date();
+                        startOfToday.setHours(0, 0, 0, 0);
+                        const past = date < startOfToday;
 
                         return (
                           <div
                             key={date.toISOString()}
                             className={`relative flex aspect-square items-center justify-center ${
-                              between ? "bg-[#e7f0f2]" : ""
+                              between ? "bg-[#efe7f2]" : ""
                             }`}
                           >
                             <button
                               type="button"
                               onClick={() => selectDate(date)}
+                              disabled={past}
+                              aria-label={date.toDateString()}
                               className={`relative z-10 flex h-11 w-11 items-center justify-center rounded-full text-sm font-semibold transition-all sm:h-12 sm:w-12 ${
-                                selectedStart || selectedEnd
-                                  ? "scale-110 bg-[#00495a] text-white shadow-lg shadow-[#00495a]/30"
+                                past
+                                  ? "cursor-not-allowed text-gray-300"
+                                  : selectedStart || selectedEnd
+                                  ? "scale-110 bg-[#3d0057] text-white shadow-lg shadow-[#3d0057]/30"
                                   : today
-                                  ? "border-2 border-[#df6b45] text-[#df6b45]"
-                                  : "text-gray-700 hover:bg-[#f3f1ec]"
+                                  ? "border-2 border-[#ea3471] text-[#ea3471]"
+                                  : "text-gray-700 hover:bg-[#f1eef0]"
                               }`}
                             >
                               {date.getDate()}
@@ -1180,24 +1184,24 @@ _New travel enquiry received from the website._
 
                     <div className="mt-8 flex flex-wrap items-center gap-5 border-t border-gray-100 pt-6 text-sm text-gray-500">
                       <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-full bg-[#00495a]" />
+                        <span className="h-3 w-3 rounded-full bg-[#3d0057]" />
                         Selected date
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-full bg-[#e7f0f2]" />
+                        <span className="h-3 w-3 rounded-full bg-[#efe7f2]" />
                         Your journey
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-full border-2 border-[#df6b45]" />
+                        <span className="h-3 w-3 rounded-full border-2 border-[#ea3471]" />
                         Today
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-[#003f50] p-7 text-white sm:p-10">
-                    <p className="text-xs font-bold tracking-[3px] text-[#df6b45]">
+                  <div className="bg-[#36004e] p-7 text-white sm:p-10">
+                    <p className="text-xs font-bold tracking-[3px] text-[#ea3471]">
                       YOUR TRAVEL PLAN
                     </p>
 
@@ -1225,7 +1229,7 @@ _New travel enquiry received from the website._
                       </div>
                     </div>
 
-                    <div className="mt-10 rounded-2xl bg-[#df6b45] p-6">
+                    <div className="mt-10 rounded-2xl bg-[#ea3471] p-6">
                       <p className="text-xs font-bold tracking-[2px] text-white/70">
                         JOURNEY DURATION
                       </p>
@@ -1249,19 +1253,19 @@ _New travel enquiry received from the website._
             {step === 3 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#fff1eb] px-4 py-2 text-xs font-bold tracking-[2px] text-[#b54b25]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#ffebf2] px-4 py-2 text-xs font-bold tracking-[2px] text-[#bc1a50]">
                     <Users size={14} />
                     TRAVEL PARTY
                   </span>
 
                   <h2 className="mt-6 font-serif text-3xl font-bold sm:text-4xl">
                     Who is joining
-                    <span className="text-[#df6b45]"> the journey?</span>
+                    <span className="text-[#ea3471]"> the pilgrimage?</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
-                    Tell us about every traveler so we can personalize accommodation, transport
-                    and experiences perfectly.
+                    Tell us about each pilgrim so we can plan rooms, transfers and any
+                    special assistance properly.
                   </p>
                 </div>
 
@@ -1277,22 +1281,22 @@ _New travel enquiry received from the website._
                         onClick={() => setTravelerType(option.id)}
                         className={`relative overflow-hidden rounded-2xl border p-6 text-left transition-all duration-300 ${
                           selected
-                            ? "border-[#00495a] bg-[#00495a] text-white shadow-xl shadow-[#00495a]/20"
-                            : "border-gray-200 bg-white hover:-translate-y-1 hover:border-[#df6b45]"
+                            ? "border-[#3d0057] bg-[#3d0057] text-white shadow-xl shadow-[#3d0057]/20"
+                            : "border-gray-200 bg-white hover:-translate-y-1 hover:border-[#ea3471]"
                         }`}
                       >
                         {selected && (
-                          <div className="absolute right-4 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-[#df6b45]">
+                          <div className="absolute right-4 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-[#ea3471]">
                             <Check size={15} />
                           </div>
                         )}
 
                         <div
                           className={`flex h-14 w-14 items-center justify-center rounded-xl ${
-                            selected ? "bg-white/10" : "bg-[#f3f1ec]"
+                            selected ? "bg-white/10" : "bg-[#f1eef0]"
                           }`}
                         >
-                          <Icon size={27} className={selected ? "text-[#df6b45]" : "text-[#00495a]"} />
+                          <Icon size={27} className={selected ? "text-[#ea3471]" : "text-[#3d0057]"} />
                         </div>
 
                         <h3 className="mt-5 text-xl font-bold">{option.title}</h3>
@@ -1306,8 +1310,8 @@ _New travel enquiry received from the website._
                 </div>
 
                 {travelerType === "family" && (
-                  <div className="mt-8 rounded-3xl border border-gray-200 bg-[#fafaf8] p-6 sm:p-8">
-                    <h3 className="font-serif text-2xl font-bold text-[#00495a]">
+                  <div className="mt-8 rounded-3xl border border-gray-200 bg-[#faf8f9] p-6 sm:p-8">
+                    <h3 className="font-serif text-2xl font-bold text-[#3d0057]">
                       Family Composition
                     </h3>
 
@@ -1336,7 +1340,7 @@ _New travel enquiry received from the website._
                         },
                       ].map((item) => (
                         <div key={item.label} className="rounded-2xl bg-white p-5 shadow-sm">
-                          <p className="font-bold text-[#00495a]">{item.label}</p>
+                          <p className="font-bold text-[#3d0057]">{item.label}</p>
 
                           <p className="mt-1 text-xs text-gray-400">{item.subtitle}</p>
 
@@ -1344,19 +1348,19 @@ _New travel enquiry received from the website._
                             <button
                               type="button"
                               onClick={() => item.setValue(Math.max(item.min, item.value - 1))}
-                              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f3f1ec] transition hover:bg-gray-200"
+                              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f1eef0] transition hover:bg-gray-200"
                             >
                               <Minus size={18} />
                             </button>
 
-                            <span className="font-serif text-3xl font-bold text-[#00495a]">
+                            <span className="font-serif text-3xl font-bold text-[#3d0057]">
                               {item.value}
                             </span>
 
                             <button
                               type="button"
                               onClick={() => item.setValue(item.value + 1)}
-                              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#00495a] text-white transition hover:bg-[#003746]"
+                              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3d0057] text-white transition hover:bg-[#300044]"
                             >
                               <Plus size={18} />
                             </button>
@@ -1368,10 +1372,10 @@ _New travel enquiry received from the website._
                 )}
 
                 {travelerType === "group" && (
-                  <div className="mt-8 rounded-3xl border border-gray-200 bg-[#fafaf8] p-6 sm:p-8">
+                  <div className="mt-8 rounded-3xl border border-gray-200 bg-[#faf8f9] p-6 sm:p-8">
                     <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
                       <div>
-                        <h3 className="font-serif text-2xl font-bold text-[#00495a]">
+                        <h3 className="font-serif text-2xl font-bold text-[#3d0057]">
                           Group Size
                         </h3>
 
@@ -1384,19 +1388,19 @@ _New travel enquiry received from the website._
                         <button
                           type="button"
                           onClick={() => setGroupCount((value) => Math.max(2, value - 1))}
-                          className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f3f1ec]"
+                          className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f1eef0]"
                         >
                           <Minus size={18} />
                         </button>
 
-                        <span className="min-w-[50px] text-center font-serif text-3xl font-bold text-[#00495a]">
+                        <span className="min-w-[50px] text-center font-serif text-3xl font-bold text-[#3d0057]">
                           {groupCount}
                         </span>
 
                         <button
                           type="button"
                           onClick={() => setGroupCount((value) => Math.min(20, value + 1))}
-                          className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00495a] text-white"
+                          className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#3d0057] text-white"
                         >
                           <Plus size={18} />
                         </button>
@@ -1408,11 +1412,11 @@ _New travel enquiry received from the website._
                 <div className="mt-8">
                   <div className="flex items-end justify-between gap-5">
                     <div>
-                      <p className="text-xs font-bold tracking-[2px] text-[#df6b45]">
+                      <p className="text-xs font-bold tracking-[2px] text-[#ea3471]">
                         TRAVELER DETAILS
                       </p>
 
-                      <h3 className="mt-2 font-serif text-2xl font-bold text-[#00495a]">
+                      <h3 className="mt-2 font-serif text-2xl font-bold text-[#3d0057]">
                         {travelerType === "solo"
                           ? "Tell us about yourself"
                           : travelerType === "couple"
@@ -1423,7 +1427,7 @@ _New travel enquiry received from the website._
                       </h3>
                     </div>
 
-                    <span className="rounded-full bg-[#eaf3f5] px-4 py-2 text-sm font-bold text-[#00495a]">
+                    <span className="rounded-full bg-[#f2eaf5] px-4 py-2 text-sm font-bold text-[#3d0057]">
                       {activeMembers.length} Traveler{activeMembers.length !== 1 ? "s" : ""}
                     </span>
                   </div>
@@ -1453,15 +1457,15 @@ _New travel enquiry received from the website._
                       return (
                         <div
                           key={member.id}
-                          className="group rounded-2xl border border-gray-200 bg-white p-5 transition hover:border-[#00495a]/40 hover:shadow-lg"
+                          className="group rounded-2xl border border-gray-200 bg-white p-5 transition hover:border-[#3d0057]/40 hover:shadow-lg"
                         >
                           <div className="flex flex-col gap-5 md:flex-row md:items-center">
-                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#eaf3f5] font-serif text-lg font-bold text-[#00495a]">
+                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f2eaf5] font-serif text-lg font-bold text-[#3d0057]">
                               {index + 1}
                             </div>
 
                             <div className="flex-1">
-                              <p className="text-xs font-bold tracking-[2px] text-[#df6b45]">
+                              <p className="text-xs font-bold tracking-[2px] text-[#ea3471]">
                                 {label.toUpperCase()}
                               </p>
 
@@ -1472,7 +1476,7 @@ _New travel enquiry received from the website._
                                     updateMember(travelerType, index, "name", event.target.value)
                                   }
                                   placeholder="Full name"
-                                  className="rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#00495a] focus:ring-4 focus:ring-[#00495a]/10"
+                                  className="rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#3d0057] focus:ring-4 focus:ring-[#3d0057]/10"
                                 />
 
                                 <input
@@ -1483,7 +1487,7 @@ _New travel enquiry received from the website._
                                     updateMember(travelerType, index, "age", event.target.value)
                                   }
                                   placeholder="Age"
-                                  className="rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#00495a] focus:ring-4 focus:ring-[#00495a]/10"
+                                  className="rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#3d0057] focus:ring-4 focus:ring-[#3d0057]/10"
                                 />
                               </div>
                             </div>
@@ -1501,18 +1505,18 @@ _New travel enquiry received from the website._
             {step === 4 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#eaf3f5] px-4 py-2 text-xs font-bold tracking-[2px] text-[#00495a]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f2eaf5] px-4 py-2 text-xs font-bold tracking-[2px] text-[#3d0057]">
                     <Sparkles size={14} />
-                    CURATE YOUR EXPERIENCE
+                    CHOOSE YOUR SERVICES
                   </span>
 
                   <h2 className="mt-6 font-serif text-3xl font-bold sm:text-4xl">
-                    Create an experience
-                    <span className="text-[#df6b45]"> made for you.</span>
+                    What should we
+                    <span className="text-[#ea3471]"> arrange for you?</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
-                    Select individual services or choose our complete Full Package experience.
+                    Select individual services, or choose the Full Package for everything together.
                   </p>
                 </div>
 
@@ -1530,8 +1534,8 @@ _New travel enquiry received from the website._
                         className={`group relative min-h-[280px] overflow-hidden rounded-[24px] border p-7 text-left transition-all duration-300 ${
                           selected
                             ? fullPackage
-                              ? "border-[#df6b45] bg-[#fff7f3] shadow-xl shadow-[#df6b45]/10"
-                              : "border-[#00495a] bg-[#f5fafb] shadow-xl shadow-[#00495a]/10"
+                              ? "border-[#ea3471] bg-[#fff3f7] shadow-xl shadow-[#ea3471]/10"
+                              : "border-[#3d0057] bg-[#f9f5fb] shadow-xl shadow-[#3d0057]/10"
                             : "border-gray-200 bg-white hover:-translate-y-1 hover:shadow-xl"
                         }`}
                       >
@@ -1539,8 +1543,8 @@ _New travel enquiry received from the website._
                           className={`absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full border-2 ${
                             selected
                               ? fullPackage
-                                ? "border-[#df6b45] bg-[#df6b45] text-white"
-                                : "border-[#00495a] bg-[#00495a] text-white"
+                                ? "border-[#ea3471] bg-[#ea3471] text-white"
+                                : "border-[#3d0057] bg-[#3d0057] text-white"
                               : "border-gray-300"
                           }`}
                         >
@@ -1549,10 +1553,10 @@ _New travel enquiry received from the website._
 
                         <div
                           className={`flex h-16 w-16 items-center justify-center rounded-2xl ${
-                            selected && fullPackage ? "bg-[#f9dfd5]" : "bg-[#f3f1ec]"
+                            selected && fullPackage ? "bg-[#fcd2e0]" : "bg-[#f1eef0]"
                           }`}
                         >
-                          <Icon size={30} className={fullPackage ? "text-[#df6b45]" : "text-[#00495a]"} />
+                          <Icon size={30} className={fullPackage ? "text-[#ea3471]" : "text-[#3d0057]"} />
                         </div>
 
                         <h3 className="mt-7 font-serif text-2xl font-bold">{service.title}</h3>
@@ -1574,18 +1578,18 @@ _New travel enquiry received from the website._
             {step === 5 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#fff1eb] px-4 py-2 text-xs font-bold tracking-[2px] text-[#b54b25]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#ffebf2] px-4 py-2 text-xs font-bold tracking-[2px] text-[#bc1a50]">
                     <Car size={14} />
-                    PRIVATE TRANSPORT
+                    TRANSFERS IN SAUDI ARABIA
                   </span>
 
                   <h2 className="mt-6 font-serif text-3xl font-bold sm:text-4xl">
                     Travel in
-                    <span className="text-[#df6b45]"> complete comfort.</span>
+                    <span className="text-[#ea3471]"> comfort.</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
-                    Select the vehicle class that best suits your travel party and style.
+                    Select the vehicle type that suits your group (demo images shown).
                   </p>
                 </div>
 
@@ -1600,7 +1604,7 @@ _New travel enquiry received from the website._
                         onClick={() => setSelectedVehicle(vehicle.title)}
                         className={`group overflow-hidden rounded-[24px] border text-left transition-all duration-300 ${
                           selected
-                            ? "border-[#00495a] shadow-2xl shadow-[#00495a]/15"
+                            ? "border-[#3d0057] shadow-2xl shadow-[#3d0057]/15"
                             : "border-gray-200 hover:-translate-y-2 hover:shadow-xl"
                         }`}
                       >
@@ -1614,7 +1618,7 @@ _New travel enquiry received from the website._
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/10" />
 
                           {vehicle.popular && (
-                            <span className="absolute left-5 top-5 rounded-full bg-[#df6b45] px-4 py-2 text-xs font-bold tracking-wider text-white">
+                            <span className="absolute left-5 top-5 rounded-full bg-[#ea3471] px-4 py-2 text-xs font-bold tracking-wider text-white">
                               MOST POPULAR
                             </span>
                           )}
@@ -1622,7 +1626,7 @@ _New travel enquiry received from the website._
                           <div
                             className={`absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border-2 ${
                               selected
-                                ? "border-[#df6b45] bg-[#df6b45] text-white"
+                                ? "border-[#ea3471] bg-[#ea3471] text-white"
                                 : "border-white bg-black/20 text-white"
                             }`}
                           >
@@ -1636,18 +1640,18 @@ _New travel enquiry received from the website._
                         </div>
 
                         <div className="p-6">
-                          <h3 className="font-serif text-2xl font-bold text-[#172b32]">
+                          <h3 className="font-serif text-2xl font-bold text-[#291631]">
                             {vehicle.title}
                           </h3>
 
                           <div className="mt-5 space-y-3 text-sm text-gray-500">
                             <div className="flex items-center gap-3">
-                              <Users size={17} className="text-[#00495a]" />
+                              <Users size={17} className="text-[#3d0057]" />
                               {vehicle.passengers}
                             </div>
 
                             <div className="flex items-center gap-3">
-                              <Luggage size={17} className="text-[#00495a]" />
+                              <Luggage size={17} className="text-[#3d0057]" />
                               {vehicle.bags}
                             </div>
                           </div>
@@ -1668,19 +1672,19 @@ _New travel enquiry received from the website._
             {step === 6 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#fff1eb] px-4 py-2 text-xs font-bold tracking-[2px] text-[#b54b25]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#ffebf2] px-4 py-2 text-xs font-bold tracking-[2px] text-[#bc1a50]">
                     <Sparkles size={14} />
                     FINAL STEP
                   </span>
 
                   <h2 className="mt-6 font-serif text-4xl font-bold leading-tight sm:text-5xl">
                     Almost there.
-                    <span className="block text-[#df6b45]">How can we reach you?</span>
+                    <span className="block text-[#ea3471]">How can we reach you?</span>
                   </h2>
 
                   <p className="mt-5 text-lg leading-8 text-gray-500">
-                    Our concierge team will personally review your requirements and craft your
-                    personalized itinerary.
+                    Your enquiry will open in WhatsApp so you can send it to our team, who
+                    will reply with suitable options.
                   </p>
                 </div>
 
@@ -1688,7 +1692,7 @@ _New travel enquiry received from the website._
                   <div className="rounded-[28px] border border-gray-200 bg-white p-6 sm:p-9">
                     <div className="space-y-7">
                       <div>
-                        <label className="text-xs font-bold tracking-[2px] text-[#00495a]">
+                        <label className="text-xs font-bold tracking-[2px] text-[#3d0057]">
                           FULL NAME
                         </label>
 
@@ -1698,13 +1702,13 @@ _New travel enquiry received from the website._
                             setContact({ ...contact, name: event.target.value })
                           }
                           placeholder="Your full name"
-                          className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 text-lg outline-none transition placeholder:text-gray-300 focus:border-[#00495a]"
+                          className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 text-lg outline-none transition placeholder:text-gray-300 focus:border-[#3d0057]"
                         />
                       </div>
 
                       <div className="grid gap-7 md:grid-cols-2">
                         <div>
-                          <label className="flex items-center gap-2 text-xs font-bold tracking-[2px] text-[#00495a]">
+                          <label className="flex items-center gap-2 text-xs font-bold tracking-[2px] text-[#3d0057]">
                             <Mail size={14} />
                             EMAIL ADDRESS
                           </label>
@@ -1716,12 +1720,12 @@ _New travel enquiry received from the website._
                               setContact({ ...contact, email: event.target.value })
                             }
                             placeholder="you@example.com"
-                            className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 outline-none transition focus:border-[#00495a]"
+                            className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 outline-none transition focus:border-[#3d0057]"
                           />
                         </div>
 
                         <div>
-                          <label className="flex items-center gap-2 text-xs font-bold tracking-[2px] text-[#00495a]">
+                          <label className="flex items-center gap-2 text-xs font-bold tracking-[2px] text-[#3d0057]">
                             <Phone size={14} />
                             MOBILE / WHATSAPP
                           </label>
@@ -1732,13 +1736,13 @@ _New travel enquiry received from the website._
                               setContact({ ...contact, phone: event.target.value })
                             }
                             placeholder="+91 XXXXX XXXXX"
-                            className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 outline-none transition focus:border-[#00495a]"
+                            className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 outline-none transition focus:border-[#3d0057]"
                           />
                         </div>
                       </div>
 
                       <div>
-                        <label className="text-xs font-bold tracking-[2px] text-[#00495a]">
+                        <label className="text-xs font-bold tracking-[2px] text-[#3d0057]">
                           ANYTHING ELSE WE SHOULD KNOW?
                         </label>
 
@@ -1748,29 +1752,29 @@ _New travel enquiry received from the website._
                           onChange={(event) =>
                             setContact({ ...contact, message: event.target.value })
                           }
-                          placeholder="Special occasions, dietary requirements, preferences..."
-                          className="mt-3 w-full resize-none rounded-xl border border-gray-200 p-4 outline-none transition focus:border-[#00495a] focus:ring-4 focus:ring-[#00495a]/10"
+                          placeholder="Wheelchair needs, room sharing, preferred hotel distance..."
+                          className="mt-3 w-full resize-none rounded-xl border border-gray-200 p-4 outline-none transition focus:border-[#3d0057] focus:ring-4 focus:ring-[#3d0057]/10"
                         />
                       </div>
                     </div>
 
-                    <div className="mt-8 flex gap-4 rounded-2xl bg-[#f3f1ec] p-5">
-                      <ShieldCheck className="mt-1 shrink-0 text-[#00495a]" size={23} />
+                    <div className="mt-8 flex gap-4 rounded-2xl bg-[#f1eef0] p-5">
+                      <ShieldCheck className="mt-1 shrink-0 text-[#3d0057]" size={23} />
 
                       <div>
-                        <h3 className="font-bold text-[#172b32]">Human Touch Guaranteed</h3>
+                        <h3 className="font-bold text-[#291631]">Human Touch Guaranteed</h3>
 
                         <p className="mt-2 text-sm leading-6 text-gray-500">
-                          No automated booking. Our travel specialists personally review every
-                          enquiry and contact you directly.
+                          No automated booking. Our team personally reviews every enquiry and
+                    contacts you directly.
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="rounded-[28px] bg-[#003f50] p-7 text-white sm:p-9">
-                    <p className="text-xs font-bold tracking-[3px] text-[#df6b45]">
-                      YOUR JOURNEY SUMMARY
+                  <div className="rounded-[28px] bg-[#36004e] p-7 text-white sm:p-9">
+                    <p className="text-xs font-bold tracking-[3px] text-[#ea3471]">
+                      YOUR ENQUIRY SUMMARY
                     </p>
 
                     <div className="mt-8 space-y-6">
@@ -1831,13 +1835,13 @@ _New travel enquiry received from the website._
 
           {/* BOTTOM NAVIGATION */}
 
-          <div className="flex flex-col gap-4 border-t border-gray-100 bg-[#fcfcfa] px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16">
+          <div className="flex flex-col gap-4 border-t border-gray-100 bg-[#fcfafb] px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16">
             <div>
               {step > 1 && (
                 <button
                   type="button"
                   onClick={() => setStep((value) => Math.max(1, value - 1))}
-                  className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-gray-500 transition hover:bg-gray-100 hover:text-[#00495a]"
+                  className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-gray-500 transition hover:bg-gray-100 hover:text-[#3d0057]"
                 >
                   <ArrowLeft size={18} />
                   Previous Step
@@ -1850,7 +1854,7 @@ _New travel enquiry received from the website._
                 type="button"
                 disabled={!canContinue()}
                 onClick={() => canContinue() && setStep((value) => Math.min(6, value + 1))}
-                className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#00495a] px-8 py-4 font-bold text-white shadow-lg shadow-[#00495a]/20 transition hover:bg-[#003746] disabled:cursor-not-allowed disabled:opacity-40"
+                className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#3d0057] px-8 py-4 font-bold text-white shadow-lg shadow-[#3d0057]/20 transition hover:bg-[#300044] disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Continue
                 <ArrowRight size={19} />
@@ -1860,14 +1864,14 @@ _New travel enquiry received from the website._
                 type="button"
                 onClick={submitEnquiry}
                 disabled={isSubmitting}
-                className={`group relative inline-flex min-h-[54px] min-w-[220px] items-center justify-center gap-3 overflow-hidden rounded-full px-8 text-[10px] font-bold uppercase tracking-[0.14em] shadow-[0_15px_35px_rgba(18,63,85,0.22)] transition-all duration-300 ${
+                className={`group relative inline-flex min-h-[54px] min-w-[220px] items-center justify-center gap-3 overflow-hidden rounded-full px-8 text-[10px] font-bold uppercase tracking-[0.14em] shadow-[0_15px_35px_rgba(63,17,82,0.22)] transition-all duration-300 ${
                   isSubmitting
-                    ? "cursor-not-allowed bg-[#123f55]/60 text-white/70"
-                    : "bg-[#123f55] text-white hover:-translate-y-1 hover:shadow-[0_22px_45px_rgba(18,63,85,0.32)]"
+                    ? "cursor-not-allowed bg-[#3f1152]/60 text-white/70"
+                    : "bg-[#3f1152] text-white hover:-translate-y-1 hover:shadow-[0_22px_45px_rgba(63,17,82,0.32)]"
                 }`}
               >
                 {!isSubmitting && (
-                  <span className="absolute inset-0 translate-y-full bg-[#d9a737] transition-transform duration-500 group-hover:translate-y-0" />
+                  <span className="absolute inset-0 translate-y-full bg-[#e40e83] transition-transform duration-500 group-hover:translate-y-0" />
                 )}
 
                 <span className="relative z-10 flex items-center gap-3">
@@ -1878,10 +1882,10 @@ _New travel enquiry received from the website._
                     </>
                   ) : (
                     <>
-                      Submit Travel Enquiry
+                      Send Enquiry On WhatsApp
                       <ArrowUpRight
                         size={17}
-                        className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#123f55]"
+                        className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"
                       />
                     </>
                   )}

@@ -1,5 +1,7 @@
 "use client";
 
+
+import { whatsappLink } from "@/lib/site";
 import { trackLead } from "@/lib/analytics";
 import { emailLead } from "@/lib/lead-client";
 import { FormEvent, useState } from "react";
@@ -176,7 +178,7 @@ const handleSubmit = async (
     ===================================================== */
 
     const whatsappMessage = `
-🚌 *NEW TRANSPORT QUOTE REQUEST*
+🚌 *NEW TRANSPORT / ZIYARAT QUOTE REQUEST*
 
 ━━━━━━━━━━━━━━━━━━
 
@@ -247,22 +249,12 @@ ${
 
 ━━━━━━━━━━━━━━━━━━
 
-🌍 *Global Horizons Tours & Travels*
+🕋 *Ayesha Tours*
 
 *New Transport Enquiry*
 `.trim();
 
-    /* =====================================================
-       WHATSAPP NUMBER
-       Country code ke saath number.
-       + sign nahi lagana.
-    ===================================================== */
-
-    const whatsappNumber = "917770069004";
-
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+    const whatsappURL = whatsappLink(whatsappMessage);
 
     /* =====================================================
        OPEN WHATSAPP
@@ -290,9 +282,9 @@ ${
     setModal({
       isOpen: true,
       type: "success",
-      title: "Transport Request Ready!",
-      message:
-        "Your transport request has been prepared successfully. WhatsApp has been opened so you can send your journey details directly to our transport team.",
+      title: "Request Ready In WhatsApp",
+        message:
+          "WhatsApp has been opened with your transport request filled in. Please press send in WhatsApp to deliver it to our team – it has not been sent until you do.",
     });
 
   } catch (error) {
@@ -317,25 +309,26 @@ ${
   return (
     <>
       <form
+        method="post"
         onSubmit={handleSubmit}
-        className="overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_20px_70px_rgba(18,63,85,0.08)]"
+        className="overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_20px_70px_rgba(63,17,82,0.08)]"
       >
         {/* Form Header */}
 
         <div className="border-b border-gray-100 px-6 py-7 sm:px-8">
           <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#e7eef0] text-[#123f55]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#ede7f0] text-[#3f1152]">
               <Send size={20} />
             </div>
 
             <div>
-              <h2 className="font-serif text-2xl font-bold text-[#123f55]">
+              <h2 className="font-serif text-2xl font-bold text-[#3f1152]">
                 Tell Us About Your Journey
               </h2>
 
               <p className="mt-2 text-sm leading-6 text-gray-500">
-                Complete the details below and receive a customized
-                transport quotation from our team.
+                Complete the details below and send them to our team on
+                WhatsApp for a transport quotation.
               </p>
             </div>
           </div>
@@ -365,7 +358,7 @@ ${
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group flex w-full items-center justify-center gap-3 rounded-xl bg-[#123f55] px-6 py-4 text-sm font-semibold text-white shadow-lg shadow-[#123f55]/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0d5069] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
+              className="group flex w-full items-center justify-center gap-3 rounded-xl bg-[#3f1152] px-6 py-4 text-sm font-semibold text-white shadow-lg shadow-[#3f1152]/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#4b0d66] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
             >
               {isSubmitting ? (
                 <>
@@ -391,11 +384,10 @@ ${
             <div className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-gray-400">
               <ShieldCheck
                 size={15}
-                className="text-[#d4a139]"
+                className="text-[#db1481]"
               />
 
-              Your information is securely shared with our travel
-              team.
+              Your details are only used to answer your transport enquiry.
             </div>
           </div>
         </div>

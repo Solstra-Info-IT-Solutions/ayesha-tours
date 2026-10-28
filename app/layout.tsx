@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import FloatingActions from "@/components/FloatingActions";
 import CookieConsent from "@/components/CookieConsent";
@@ -6,27 +7,40 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import Analytics from "@/components/seo/Analytics";
 import ClickTracker from "@/components/seo/ClickTracker";
 import JsonLd from "@/components/seo/JsonLd";
-import { ANALYTICS, SITE, SITE_URL, absoluteUrl } from "@/lib/site";
+import { ANALYTICS, IS_PRODUCTION_SITE, SITE, SITE_URL, absoluteUrl } from "@/lib/site";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE.name} | Tour Packages & Taxi Service in Chhatrapati Sambhajinagar (Aurangabad)`,
+    default: `${SITE.name} | Haj & Umrah Packages`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
   applicationName: SITE.name,
   keywords: [
-    "tour operator in Aurangabad",
-    "travel agency Chhatrapati Sambhajinagar",
-    "Ajanta Ellora tour package",
-    "Aurangabad to Shirdi taxi",
-    "Aurangabad taxi service",
-    "Grishneshwar Jyotirlinga tour",
-    "Maharashtra tour packages",
-    "airport transfer Aurangabad",
-    "private cab Chhatrapati Sambhajinagar",
-    "heritage tours India",
+    "Umrah packages",
+    "Haj packages",
+    "Hajj and Umrah travel agency",
+    "Ramadan Umrah package",
+    "family Umrah package",
+    "economy Umrah package",
+    "premium Umrah package",
+    "Umrah visa assistance",
+    "Makkah Madinah ziyarat",
+    "Ayesha Tours",
   ],
   authors: [{ name: SITE.name }],
   creator: SITE.name,
@@ -37,7 +51,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     locale: "en_IN",
     url: SITE_URL,
-    title: `${SITE.name} | Tour Packages & Taxi Service in Chhatrapati Sambhajinagar`,
+    title: `${SITE.name} | Haj & Umrah Packages`,
     description: SITE.description,
     images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.name }],
   },
@@ -47,12 +61,14 @@ export const metadata: Metadata = {
     description: SITE.description,
     images: [SITE.ogImage],
   },
+  // Search engines are blocked until a production domain is configured,
+  // so the demo (with placeholder contact details) is never indexed.
   robots: {
-    index: true,
-    follow: true,
+    index: IS_PRODUCTION_SITE,
+    follow: IS_PRODUCTION_SITE,
     googleBot: {
-      index: true,
-      follow: true,
+      index: IS_PRODUCTION_SITE,
+      follow: IS_PRODUCTION_SITE,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
@@ -70,7 +86,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0e4655",
+  themeColor: "#3e0e52",
 };
 
 const businessLd = {
@@ -83,51 +99,13 @@ const businessLd = {
   logo: absoluteUrl("/logo.png"),
   image: absoluteUrl(SITE.ogImage),
   description: SITE.description,
-  telephone: SITE.phone,
-  email: SITE.email,
-  priceRange: "₹₹",
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 19.8952399,
-    longitude: 75.3417461,
-  },
+  telephone: SITE.hasRealContact ? SITE.phone : undefined,
+  email: SITE.hasRealContact ? SITE.email : undefined,
+  // Address, geo, hours and ratings are deliberately omitted until the
+  // client confirms them – structured data must only contain verified facts.
   hasMap: SITE.googleBusinessUrl || undefined,
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ],
-    opens: "00:00",
-    closes: "23:59",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: SITE.address.street,
-    addressLocality: "Chhatrapati Sambhajinagar",
-    addressRegion: SITE.address.region,
-    addressCountry: SITE.address.country,
-  },
-  areaServed: [
-    { "@type": "City", name: "Chhatrapati Sambhajinagar" },
-    { "@type": "City", name: "Aurangabad" },
-    { "@type": "State", name: "Maharashtra" },
-    { "@type": "Country", name: "India" },
-  ],
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: SITE.phone,
-      contactType: "customer service",
-      areaServed: "IN",
-      availableLanguage: ["English", "Hindi", "Marathi"],
-    },
-  ],
+  areaServed: { "@type": "Country", name: "India" },
+  knowsAbout: ["Umrah", "Hajj", "Ziyarat", "Pilgrimage travel"],
   sameAs: [...SITE.socials, ...(SITE.googleBusinessUrl ? [SITE.googleBusinessUrl] : [])],
 };
 
@@ -147,7 +125,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" suppressHydrationWarning>
+    <html lang="en-IN" className={`${poppins.variable} ${playfair.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <JsonLd data={businessLd} />
         <JsonLd data={websiteLd} />

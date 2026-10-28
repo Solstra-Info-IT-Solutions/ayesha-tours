@@ -11,36 +11,36 @@ export default function WhyChooseTransport() {
       icon: ShieldCheck,
       title: "Reliable Service",
       description:
-        "Professional transport solutions designed for a comfortable journey.",
+      "Transfers planned around flights, hotel check-in and prayer times.",
     },
     {
       icon: Clock3,
-      title: "24/7 Assistance",
-      description:
-        "Our team is available to assist you whenever you need help.",
+      title: "Family Friendly",
+    description:
+      "Vehicle suggestions that consider elders, children and luggage.",
     },
     {
       icon: Headphones,
       title: "Dedicated Support",
       description:
-        "Personal assistance before and during your journey.",
+      "A contact to reach about your transfers while you travel.",
     },
   ];
 
   return (
-    <div className="overflow-hidden rounded-[28px] bg-[#123f55] p-7 text-white shadow-xl">
+    <div className="overflow-hidden rounded-[28px] bg-[#3f1152] p-7 text-white shadow-xl">
       <div className="flex items-center gap-3">
-        <Sparkles size={17} className="text-[#e7ae3c]" />
+        <Sparkles size={17} className="text-[#ff058f]" />
 
-        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#e7ae3c]">
+        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#ff058f]">
           Travel With Confidence
         </span>
       </div>
 
       <h3 className="mt-5 font-serif text-3xl font-bold leading-tight">
-        Comfortable Travel.
-        <span className="block italic font-medium text-[#e7ae3c]">
-          Every Mile.
+        Calm Transfers.
+        <span className="block italic font-medium text-[#ff058f]">
+          Every Pilgrim.
         </span>
       </h3>
 
@@ -50,7 +50,7 @@ export default function WhyChooseTransport() {
 
           return (
             <div key={feature.title} className="flex gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#e7ae3c]">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#ff058f]">
                 <Icon size={18} />
               </div>
 
@@ -70,8 +70,8 @@ export default function WhyChooseTransport() {
 
       <div className="mt-8 border-t border-white/10 pt-6">
         <p className="text-xs leading-6 text-white/50">
-          Submit your requirements and our team will get back to you with the
-          best available transport option.
+          Send your requirements and our team will reply with suitable
+            vehicle options and a quotation.
         </p>
       </div>
     </div>

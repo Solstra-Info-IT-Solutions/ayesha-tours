@@ -17,14 +17,17 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
+import { SITE, phoneLink, mailLink, whatsappLink } from "@/lib/site";
+
 export default function Footer() {
   const quickLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
+    { label: "Umrah & Haj Packages", href: "/tour-packages" },
     { label: "Services", href: "/services" },
-    { label: "Destinations", href: "/destinations" },
-    { label: "Our Transport", href: "/transport" },
-    { label: "Tours & Experiences", href: "/tours" },
+    { label: "Makkah & Madinah", href: "/destinations" },
+    { label: "Transport & Ziyarat", href: "/transport" },
+    { label: "Pilgrimage Journeys", href: "/tours" },
   ];
 
   const legalLinks = [
@@ -55,20 +58,20 @@ export default function Footer() {
 ];
 
   return (
-    <footer className="relative overflow-hidden bg-[#0e4655] text-white">
+    <footer className="relative overflow-hidden bg-[#3e0e52] text-white">
       {/* =====================================================
           PREMIUM BACKGROUND
       ====================================================== */}
 
       {/* Top Gold Accent */}
-      <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#e7ae3c]/80 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff058f]/80 to-transparent" />
 
       {/* Decorative Background */}
       <div className="pointer-events-none absolute -right-40 -top-40 h-[420px] w-[420px] rounded-full border border-white/[0.04]" />
 
-      <div className="pointer-events-none absolute -bottom-60 -left-40 h-[480px] w-[480px] rounded-full border border-[#e7ae3c]/[0.05]" />
+      <div className="pointer-events-none absolute -bottom-60 -left-40 h-[480px] w-[480px] rounded-full border border-[#ff058f]/[0.05]" />
 
-      <div className="pointer-events-none absolute right-[10%] top-[20%] h-[220px] w-[220px] rounded-full bg-[#e7ae3c]/[0.025] blur-[90px]" />
+      <div className="pointer-events-none absolute right-[10%] top-[20%] h-[220px] w-[220px] rounded-full bg-[#ff058f]/[0.025] blur-[90px]" />
 
       <div className="relative mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-10 xl:px-6">
 
@@ -80,41 +83,41 @@ export default function Footer() {
 
           <div>
             <div className="flex items-center gap-3">
-              <span className="h-px w-8 bg-[#e7ae3c]" />
+              <span className="h-px w-8 bg-[#ff058f]" />
 
               <div className="flex items-center gap-2">
                 <Sparkles
                   size={12}
-                  className="text-[#e7ae3c]"
+                  className="text-[#ff058f]"
                 />
 
-                <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#e7ae3c]">
-                  Global Horizons
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#ff058f]">
+                  Ayesha Tours
                 </span>
               </div>
             </div>
 
             <h2 className="mt-5 max-w-[700px] font-serif text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-white sm:text-[40px] lg:text-[48px]">
-              Your Next Journey Begins
+              Your Journey To The Haramain
 
-              <span className="block italic font-medium text-[#e7ae3c]">
-                Beyond The Horizon.
+              <span className="block italic font-medium text-[#ff058f]">
+                Begins With One Conversation.
               </span>
             </h2>
 
-            <p className="mt-4 max-w-[600px] text-[14px] leading-6 text-[#b8cbd0] sm:text-[15px]">
-              From carefully planned holidays to comfortable transportation,
-              we create travel experiences designed around the moments that
-              matter most.
+            <p className="mt-4 max-w-[600px] text-[14px] leading-6 text-[#c9b8d0] sm:text-[15px]">
+              From choosing the right Umrah or Haj package to flights, hotels
+              and ziyarat, we help you prepare calmly so you can focus on
+              your worship.
             </p>
           </div>
 
           <div className="lg:flex lg:justify-end">
             <Link
               href="/request-quote"
-              className="group relative inline-flex min-h-[52px] items-center justify-center gap-4 overflow-hidden border border-[#e7ae3c]/60 px-6 text-[9px] font-bold uppercase tracking-[0.2em] text-[#e7ae3c] transition-all duration-500 hover:-translate-y-1 hover:border-[#e7ae3c] hover:text-[#0e4655]"
+              className="group relative inline-flex min-h-[52px] items-center justify-center gap-4 overflow-hidden border border-[#ff058f]/60 px-6 text-[9px] font-bold uppercase tracking-[0.2em] text-[#ff058f] transition-all duration-500 hover:-translate-y-1 hover:border-[#ff058f] hover:text-white"
             >
-              <span className="absolute inset-0 translate-y-full bg-[#e7ae3c] transition-transform duration-500 group-hover:translate-y-0" />
+              <span className="absolute inset-0 translate-y-full bg-[#ff058f] transition-transform duration-500 group-hover:translate-y-0" />
 
               <span className="relative z-10">
                 Request A Quote
@@ -145,12 +148,15 @@ export default function Footer() {
             >
               {/* LOGO IMAGE */}
 
-              <div className="relative flex h-[44px] w-[44px] shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#d9a737]/25 bg-white shadow-[0_6px_20px_rgba(18,63,85,0.08)] transition-all duration-300 group-hover:scale-105 group-hover:border-[#d9a737]/60 group-hover:shadow-[0_10px_28px_rgba(18,63,85,0.14)] sm:h-[48px] sm:w-[48px]">
+              <div className="relative flex shrink-0 items-center justify-center rounded-2xl bg-white px-4 py-2.5 shadow-[0_6px_20px_rgba(0,0,0,0.18)] transition-all duration-300 group-hover:scale-[1.03]">
 
                 <img
                   src="/logo.png"
-                  alt="Global Tours & Travels"
-                  className="h-full w-full object-cover"
+                  alt="Ayesha Tours – Haj & Umrah Packages"
+                  width={1099}
+                  height={684}
+                  loading="lazy"
+                  className="h-[64px] w-auto object-contain sm:h-[72px]"
                 />
 
               </div>
@@ -158,50 +164,30 @@ export default function Footer() {
 
               {/* BRAND TEXT */}
 
-              <div className="hidden flex-col min-[480px]:flex">
 
-                <span className="font-serif text-[16px] font-bold leading-tight text-[#ffffff] sm:text-[18px]">
-
-                  Global Horizons Tours & Travels
-
-                </span>
-
-                <div className="mt-1.5 flex items-center gap-2">
-
-                  <span className="h-px w-5 bg-[#d9a737]" />
-
-                  <span className="text-[8px] font-semibold uppercase tracking-[2.3px] text-[#123f55]/55">
-
-                    Explore The World
-
-                  </span>
-
-                </div>
-
-              </div>
 
             </Link>
 
-            <p className="mt-6 max-w-[310px] text-[13px] leading-6 text-[#afc3c8]">
-              Creating meaningful journeys through exceptional destinations,
-              thoughtful planning and travel experiences you will always
-              remember.
+            <p className="mt-6 max-w-[310px] text-[13px] leading-6 text-[#c1afc8]">
+              Umrah and Haj journeys planned with care – clear package
+              details, honest guidance and support from your first enquiry
+              to your safe return home.
             </p>
 
             {/* Trust Badge */}
 
             <div className="mt-6 inline-flex items-center gap-3 border border-white/[0.09] bg-white/[0.035] px-3.5 py-3 backdrop-blur-sm">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#e7ae3c]/10 text-[#e7ae3c]">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ff058f]/10 text-[#ff058f]">
                 <ShieldCheck size={16} />
               </div>
 
               <div>
                 <p className="text-[11px] font-semibold text-white">
-                  Trusted Travel Partner
+                  Pilgrimage Travel Support
                 </p>
 
-                <p className="mt-0.5 text-[9px] uppercase tracking-[0.1em] text-[#8eabb2]">
-                  Comfort • Care • Experience
+                <p className="mt-0.5 text-[9px] uppercase tracking-[0.1em] text-[#a78eb2]">
+                  Guidance • Care • Clarity
                 </p>
               </div>
             </div>
@@ -222,7 +208,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="group flex items-center justify-between border-b border-white/[0.06] py-2.5 text-[13px] text-[#afc3c8] transition-all duration-300 hover:border-[#e7ae3c]/30 hover:text-white"
+                  className="group flex items-center justify-between border-b border-white/[0.06] py-2.5 text-[13px] text-[#c1afc8] transition-all duration-300 hover:border-[#ff058f]/30 hover:text-white"
                 >
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     {link.label}
@@ -230,14 +216,14 @@ export default function Footer() {
 
                   <ChevronRight
                     size={15}
-                    className="text-[#e7ae3c] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+                    className="text-[#ff058f] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
                   />
                 </Link>
               ))}
 
               <Link
                 href="/request-quote"
-                className="group flex items-center justify-between border-b border-white/[0.06] py-2.5 text-[13px] text-[#afc3c8] transition-all duration-300 hover:border-[#e7ae3c]/30 hover:text-white"
+                className="group flex items-center justify-between border-b border-white/[0.06] py-2.5 text-[13px] text-[#c1afc8] transition-all duration-300 hover:border-[#ff058f]/30 hover:text-white"
               >
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   Request A Quote
@@ -245,7 +231,7 @@ export default function Footer() {
 
                 <ArrowUpRight
                   size={15}
-                  className="text-[#e7ae3c] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
+                  className="text-[#ff058f] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
                 />
               </Link>
             </div>
@@ -266,7 +252,7 @@ export default function Footer() {
       <Link
         key={link.label}
         href={link.href}
-        className="group flex items-center justify-between border-b border-white/[0.06] py-2.5 text-[13px] text-[#afc3c8] transition-all duration-300 hover:border-[#e7ae3c]/30 hover:text-white"
+        className="group flex items-center justify-between border-b border-white/[0.06] py-2.5 text-[13px] text-[#c1afc8] transition-all duration-300 hover:border-[#ff058f]/30 hover:text-white"
       >
         <span className="transition-transform duration-300 group-hover:translate-x-1">
           {link.label}
@@ -274,7 +260,7 @@ export default function Footer() {
 
         <ChevronRight
           size={14}
-          className="text-[#e7ae3c] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+          className="text-[#ff058f] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
         />
       </Link>
     ))}
@@ -301,13 +287,13 @@ export default function Footer() {
                 </ContactIcon>
 
                 <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#e7ae3c]">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#ff058f]">
                     Visit Us
                   </p>
 
-                  <p className="mt-1.5 max-w-[270px] text-[13px] leading-5 text-[#afc3c8]">
-                    Collector Office Road, Ganesh Colony,
-                    Chhatrapati Sambhajinagar, Maharashtra
+                  <p className="mt-1.5 max-w-[270px] text-[13px] leading-5 text-[#c1afc8]">
+                    {SITE.address.street}
+                    {SITE.address.region ? `, ${SITE.address.locality}, ${SITE.address.region}` : ""}
                   </p>
                 </div>
               </div>
@@ -315,7 +301,7 @@ export default function Footer() {
               {/* Phone */}
 
               <a
-                href="tel:+917770069004"
+                href={phoneLink()}
                 className="group flex gap-3"
               >
                 <ContactIcon>
@@ -323,12 +309,12 @@ export default function Footer() {
                 </ContactIcon>
 
                 <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#e7ae3c]">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#ff058f]">
                     Call Us
                   </p>
 
-                  <p className="mt-1.5 text-[13px] text-[#afc3c8] transition-colors duration-300 group-hover:text-white">
-                    +91 77700 69004
+                  <p className="mt-1.5 text-[13px] text-[#c1afc8] transition-colors duration-300 group-hover:text-white">
+                    {SITE.phone}
                   </p>
                 </div>
               </a>
@@ -336,7 +322,7 @@ export default function Footer() {
               {/* Email */}
 
               <a
-                href="mailto:ghtravelsinfo@gmail.com"
+                href={mailLink()}
                 className="group flex gap-3"
               >
                 <ContactIcon>
@@ -344,12 +330,12 @@ export default function Footer() {
                 </ContactIcon>
 
                 <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#e7ae3c]">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#ff058f]">
                     Email Us
                   </p>
 
-                  <p className="mt-1.5 break-all text-[13px] text-[#afc3c8] transition-colors duration-300 group-hover:text-white">
-                    ghtravelsinfo@gmail.com
+                  <p className="mt-1.5 break-all text-[13px] text-[#c1afc8] transition-colors duration-300 group-hover:text-white">
+                    {SITE.email}
                   </p>
                 </div>
               </a>
@@ -366,29 +352,31 @@ export default function Footer() {
               title="Stay Connected"
             />
 
-            <p className="mt-6 max-w-[240px] text-[13px] leading-6 text-[#afc3c8]">
-              Follow our latest journeys, destinations and travel experiences.
+            <p className="mt-6 max-w-[240px] text-[13px] leading-6 text-[#c1afc8]">
+              Package updates, departure news and pilgrim guidance – social
+              channels will be linked once confirmed.
             </p>
 
             {/* Social Icons */}
 
             <div className="mt-5 flex gap-2.5">
+              {/* Instagram / Facebook links are added here once the client confirms them */}
               <SocialButton
-                href="https://www.instagram.com/global_horizons_tours?igsi=MWw0bGx4NmhjdHI5ZQ=="
-                label="Instagram"
+                href="/contact"
+                label="Instagram (link coming soon)"
               >
                 <FaInstagram size={17} />
               </SocialButton>
 
               <SocialButton
-                href="https://www.facebook.com/share/19RzbooduD/?mibextid=wwXIfr"
-                label="Facebook"
+                href="/contact"
+                label="Facebook (link coming soon)"
               >
                 <FaFacebookF size={16} />
               </SocialButton>
 
               <SocialButton
-                href="https://wa.me/917770069004"
+                href={whatsappLink("Assalamu alaikum, I would like to know about your Umrah packages.")}
                 label="WhatsApp"
               >
                 <FaWhatsapp size={18} />
@@ -397,8 +385,8 @@ export default function Footer() {
 
             {/* Premium Card */}
 
-            <div className="relative mt-6 overflow-hidden rounded-2xl border border-[#e7ae3c]/20 bg-gradient-to-br from-[#e7ae3c]/10 via-transparent to-transparent p-4">
-              <div className="absolute right-[-15px] top-[-18px] text-[#e7ae3c]/10">
+            <div className="relative mt-6 overflow-hidden rounded-2xl border border-[#ff058f]/20 bg-gradient-to-br from-[#ff058f]/10 via-transparent to-transparent p-4">
+              <div className="absolute right-[-15px] top-[-18px] text-[#ff058f]/10">
                 <Star
                   size={70}
                   fill="currentColor"
@@ -409,19 +397,19 @@ export default function Footer() {
                 <div className="flex items-center gap-2">
                   <Star
                     size={12}
-                    className="fill-[#e7ae3c] text-[#e7ae3c]"
+                    className="fill-[#ff058f] text-[#ff058f]"
                   />
 
-                  <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#e7ae3c]">
-                    Premium Service
+                  <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#ff058f]">
+                    Pilgrim Care
                   </span>
                 </div>
 
                 <p className="mt-3 font-serif text-[16px] font-semibold leading-5 text-white">
-                  Exceptional journeys.
+                  A journey of the heart.
 
-                  <span className="block italic text-[#e7ae3c]">
-                    Beautiful memories.
+                  <span className="block italic text-[#ff058f]">
+                    Planned with care.
                   </span>
                 </p>
               </div>
@@ -439,10 +427,10 @@ export default function Footer() {
             BOTTOM BAR
         ====================================================== */}
 
-        <section className="flex flex-col gap-4 py-5 text-[11px] text-[#8eaab0] md:flex-row md:items-center md:justify-between">
+        <section className="flex flex-col gap-4 py-5 text-[11px] text-[#a68eb0] md:flex-row md:items-center md:justify-between">
 
           <p className="leading-5">
-            © {new Date().getFullYear()} Global Horizon Tours & Travels.
+            © {new Date().getFullYear()} {SITE.name}. Haj & Umrah Packages.
             <span className="hidden sm:inline">
               {" "}All rights reserved.
             </span>
@@ -470,10 +458,17 @@ export default function Footer() {
               Refund Policy
             </Link>
 
-            <span className="hidden h-1 w-1 rounded-full bg-[#e7ae3c] lg:block" />
+            <Link
+              href="/image-credits"
+              className="transition-colors duration-300 hover:text-white"
+            >
+              Image Credits
+            </Link>
 
-            <span className="text-[#d4a139]">
-              Crafted For Exceptional Journeys
+            <span className="hidden h-1 w-1 rounded-full bg-[#ff058f] lg:block" />
+
+            <span className="text-[#db1481]">
+              Labbaik Allahumma Labbaik
             </span>
           </div>
         </section>
@@ -497,9 +492,9 @@ function FooterHeading({
   return (
     <div>
       <div className="flex items-center gap-3">
-        <span className="h-px w-5 bg-[#e7ae3c]" />
+        <span className="h-px w-5 bg-[#ff058f]" />
 
-        <span className="text-[8px] font-bold uppercase tracking-[0.22em] text-[#e7ae3c]">
+        <span className="text-[8px] font-bold uppercase tracking-[0.22em] text-[#ff058f]">
           {eyebrow}
         </span>
       </div>
@@ -522,7 +517,7 @@ function ContactIcon({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.10] bg-white/[0.035] text-[#e7ae3c] transition-all duration-300 group-hover:border-[#e7ae3c]/50 group-hover:bg-[#e7ae3c]/10">
+    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.10] bg-white/[0.035] text-[#ff058f] transition-all duration-300 group-hover:border-[#ff058f]/50 group-hover:bg-[#ff058f]/10">
       {children}
     </div>
   );
@@ -548,9 +543,9 @@ function SocialButton({
       aria-label={label}
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-      className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-white/[0.12] bg-white/[0.035] text-[#b9cbd0] transition-all duration-300 hover:-translate-y-1 hover:border-[#e7ae3c] hover:text-[#0e4655]"
+      className="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-white/[0.12] bg-white/[0.035] text-[#c9b9d0] transition-all duration-300 hover:-translate-y-1 hover:border-[#ff058f] hover:text-white"
     >
-      <span className="absolute inset-0 translate-y-full bg-[#e7ae3c] transition-transform duration-300 group-hover:translate-y-0" />
+      <span className="absolute inset-0 translate-y-full bg-[#ff058f] transition-transform duration-300 group-hover:translate-y-0" />
 
       <span className="relative z-10">
         {children}

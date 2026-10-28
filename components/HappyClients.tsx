@@ -2,36 +2,36 @@
 
 const clients = [
   {
-    image: "/5.png",
-    alt: "Happy travelers enjoying their journey",
+    image: "/images/demo/nabawi-2.jpg",
+    alt: "Courtyard of Masjid an-Nabawi in Madinah",
   },
   {
-    image: "/2.png",
-    alt: "Happy clients travel experience",
+    image: "/images/demo/kaaba-tawaf.jpg",
+    alt: "Pilgrims performing tawaf around the Kaaba",
   },
   {
-    image: "/4.png",
-    alt: "Travel memories with our clients",
+    image: "/images/demo/mina-overview.jpg",
+    alt: "Overview of the tent city at Mina",
   },
   {
-    image: "/1.png",
-    alt: "Satisfied travelers",
+    image: "/images/demo/quba-2.jpg",
+    alt: "Masjid Quba in Madinah",
   },
   {
-    image: "/3.png",
-    alt: "Memorable travel moments",
+    image: "/images/demo/clock-tower.jpg",
+    alt: "Abraj Al Bait clock tower overlooking the Haram",
   },
 ];
 
 export default function HappyClients() {
   return (
-    <section className="relative overflow-hidden bg-[#14596a] px-6 py-20 md:px-10 md:py-24 lg:px-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#4e1367] px-6 py-20 md:px-10 md:py-24 lg:px-20 lg:py-28">
 
       {/* ===================================================== */}
       {/* ================= DECORATIVE BACKGROUND ============= */}
       {/* ===================================================== */}
 
-      <div className="pointer-events-none absolute -left-32 top-[-80px] h-[360px] w-[360px] rounded-full bg-[#efb83f]/[0.045] blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-[-80px] h-[360px] w-[360px] rounded-full bg-[#ff1094]/[0.045] blur-3xl" />
 
       <div className="pointer-events-none absolute -bottom-40 -right-32 h-[440px] w-[440px] rounded-full bg-black/[0.12] blur-3xl" />
 
@@ -53,28 +53,28 @@ export default function HappyClients() {
           {/* Premium Accent */}
           <div className="mb-5 flex items-center justify-center gap-3">
 
-            <span className="h-px w-10 bg-[#efb83f]/70" />
+            <span className="h-px w-10 bg-[#ff1094]/70" />
 
-            <span className="h-2 w-2 rotate-45 border border-[#efb83f] bg-[#efb83f]" />
+            <span className="h-2 w-2 rotate-45 border border-[#ff1094] bg-[#ff1094]" />
 
-            <span className="h-px w-10 bg-[#efb83f]/70" />
+            <span className="h-px w-10 bg-[#ff1094]/70" />
 
           </div>
 
           {/* Eyebrow */}
-          <p className="text-[11px] font-semibold uppercase tracking-[3px] text-[#efb83f] md:text-[12px]">
-            MAKE YOUR TOUR MORE PLEASURE
+          <p className="text-[11px] font-semibold uppercase tracking-[3px] text-[#ff1094] md:text-[12px]">
+            MOMENTS FROM THE JOURNEY
           </p>
 
           {/* Heading */}
           <h2 className="mt-5 font-serif text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-[52px]">
-            Our Happy Clients
+            Pilgrim Memories
           </h2>
 
           {/* Description */}
           <p className="mx-auto mt-5 max-w-[600px] text-sm leading-7 text-white/65 md:text-[15px]">
-            Beautiful journeys, unforgettable experiences and memories shared
-            with travelers who chose to explore with us.
+            Demo photographs of the holy cities. Photos of Ayesha Tours pilgrim
+            groups will be shown here once shared by the client.
           </p>
 
         </div>
@@ -117,7 +117,7 @@ export default function HappyClients() {
             <div className="relative rounded-[24px] border border-white/15 bg-white/[0.045] p-2 shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
 
               {/* Inner Image Container */}
-              <div className="relative h-[500px] overflow-hidden rounded-[17px] bg-[#0f4b5b] md:h-[545px]">
+              <div className="relative h-[500px] overflow-hidden rounded-[17px] bg-[#420f58] md:h-[545px]">
 
                 <img
                   src={clients[1].image}
@@ -134,7 +134,7 @@ export default function HappyClients() {
                   <div className="inline-flex rounded-full border border-white/20 bg-black/20 px-4 py-2 backdrop-blur-md">
 
                     <span className="text-[10px] font-medium uppercase tracking-[1.8px] text-white/90">
-                      Memories That Last Forever
+                      Memories That Stay With You
                     </span>
 
                   </div>
@@ -149,9 +149,9 @@ export default function HappyClients() {
             </div>
 
             {/* Gold Decorative Corner */}
-            <div className="pointer-events-none absolute -right-3 -top-3 h-14 w-14 border-r border-t border-[#efb83f]/70" />
+            <div className="pointer-events-none absolute -right-3 -top-3 h-14 w-14 border-r border-t border-[#ff1094]/70" />
 
-            <div className="pointer-events-none absolute -bottom-3 -left-3 h-14 w-14 border-b border-l border-[#efb83f]/40" />
+            <div className="pointer-events-none absolute -bottom-3 -left-3 h-14 w-14 border-b border-l border-[#ff1094]/40" />
 
           </div>
 
@@ -190,7 +190,7 @@ export default function HappyClients() {
             <span className="h-px w-8 bg-white/20" />
 
             <p className="font-serif text-lg italic text-white/80">
-              Every journey becomes a memory.
+              Every step is a memory of devotion.
             </p>
 
             <span className="h-px w-8 bg-white/20" />
@@ -227,7 +227,7 @@ function GalleryImage({
 
       {/* Image Frame */}
       <div
-        className={`relative ${height} overflow-hidden bg-[#0f4b5b] ${radius}`}
+        className={`relative ${height} overflow-hidden bg-[#420f58] ${radius}`}
       >
 
         <img
@@ -245,7 +245,7 @@ function GalleryImage({
         />
 
         {/* Gold Bottom Accent */}
-        <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#efb83f] transition-all duration-500 group-hover:w-full" />
+        <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#ff1094] transition-all duration-500 group-hover:w-full" />
 
       </div>
 

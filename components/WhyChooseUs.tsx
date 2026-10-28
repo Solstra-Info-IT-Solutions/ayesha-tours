@@ -12,37 +12,37 @@ import {
 
 const features = [
   {
-    title: "Comfortable Vehicles",
+    title: "Clear Package Details",
     description:
-      "Travel in clean, comfortable and well-maintained vehicles designed to make every journey relaxing.",
+      "Every package is explained in writing – hotels, distance to the Haram, flights, transfers and what is not included.",
     icon: Car,
     number: "01",
   },
   {
-    title: "Professional Drivers",
+    title: "Visa & Document Help",
     description:
-      "Our experienced and professional drivers provide safe, reliable and courteous transportation.",
+      "Step-by-step help with Umrah visa paperwork, passport validity and the documents you need before travel.",
     icon: ShieldCheck,
     number: "02",
   },
   {
-    title: "Customised Travel",
+    title: "Family-Friendly Planning",
     description:
-      "We create personalised travel experiences based on your destination, schedule and preferences.",
+      "Plans that consider elderly parents, children and wheelchair needs, from hotel choice to transfer timings.",
     icon: MapPinned,
     number: "03",
   },
   {
-    title: "Transparent Service",
+    title: "Transparent Pricing",
     description:
-      "Clear pricing and honest communication ensure there are no surprises during your journey.",
+      "Quotes are itemised and confirmed in advance, so there are no surprises once you reach Makkah or Madinah.",
     icon: BadgeCheck,
     number: "04",
   },
   {
-    title: "Local Expertise",
+    title: "Guidance Before You Fly",
     description:
-      "Our local knowledge helps you discover authentic places, hidden gems and memorable experiences.",
+      "Pre-departure guidance on ihram, the rites of Umrah, packing and what to expect, especially for first-time pilgrims.",
     icon: Compass,
     number: "05",
   },
@@ -58,12 +58,12 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose-us"
-      className="relative overflow-hidden bg-[#faf9f5] px-6 py-20 md:px-10 lg:px-20 lg:py-28"
+      className="relative overflow-hidden bg-[#f9f6f8] px-6 py-20 md:px-10 lg:px-20 lg:py-28"
     >
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute left-0 top-0 h-[350px] w-[350px] rounded-full bg-[#125467]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-0 h-[350px] w-[350px] rounded-full bg-[#4b1164]/[0.035] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-[#e6b442]/[0.04] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-[#ff0b91]/[0.04] blur-3xl" />
 
       <div className="relative mx-auto max-w-[1200px]">
 
@@ -72,28 +72,28 @@ export default function WhyChooseUs() {
 
           {/* Small Heading */}
           <div className="flex items-center gap-4">
-            <span className="h-[2px] w-10 bg-[#e6b442]" />
+            <span className="h-[2px] w-10 bg-[#ff0b91]" />
 
-            <span className="text-xs font-semibold tracking-[3px] text-[#125467]">
-              WHY TRAVEL WITH US
+            <span className="text-xs font-semibold tracking-[3px] text-[#4b1164]">
+              WHY PILGRIMS CHOOSE US
             </span>
           </div>
 
           {/* Heading */}
-          <h2 className="mt-5 font-serif text-4xl font-bold leading-tight text-[#123f55] md:text-5xl">
-            More Than a Ride.
+          <h2 className="mt-5 font-serif text-4xl font-bold leading-tight text-[#3f1152] md:text-5xl">
+            More Than a Package.
             <br />
 
-            <span className="italic text-[#b9471e]">
-              It&apos;s Your Journey.
+            <span className="italic text-[#c1124c]">
+              It&apos;s Your Ibadah.
             </span>
           </h2>
 
           {/* Description */}
           <p className="mt-6 max-w-2xl text-[16px] leading-7 text-gray-600">
-            Every journey deserves comfort, reliability and thoughtful
-            planning. We combine local expertise with personalised service to
-            create travel experiences you can truly enjoy.
+            A pilgrimage deserves clarity, care and honest advice. We take care
+            of the practical details so you can give your full attention to
+            your prayers and your journey.
           </p>
         </div>
 
@@ -104,35 +104,35 @@ export default function WhyChooseUs() {
           <div className="relative">
 
             {/* Gold Border Decoration */}
-            <div className="absolute -left-4 -top-4 h-28 w-28 border-l-2 border-t-2 border-[#e6b442]" />
+            <div className="absolute -left-4 -top-4 h-28 w-28 border-l-2 border-t-2 border-[#ff0b91]" />
 
-            <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_60px_rgba(18,63,85,0.16)]">
+            <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_60px_rgba(63,17,82,0.16)]">
 
               <img
-                src="/Frame 33.png"
-                alt="Premium travel experience"
+                src="/images/demo/haram-supplication.jpg"
+                alt="A pilgrim in supplication at Masjid al-Haram"
                 className="h-[400px] w-full object-cover transition duration-700 hover:scale-105 lg:h-[570px]"
               />
 
               {/* Image Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#062f3b]/75 via-[#062f3b]/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2a0639]/75 via-[#2a0639]/10 to-transparent" />
 
               {/* Experience Card */}
               <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/20 bg-white/10 p-5 text-white backdrop-blur-md">
 
                 <div className="flex items-center gap-4">
 
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e6b442] text-[#123f55]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#ff0b91] text-[#3f1152]">
                     <Compass size={22} />
                   </div>
 
                   <div>
                     <p className="font-serif text-xl font-bold">
-                      Travel With Confidence
+                      Travel With Peace Of Mind
                     </p>
 
                     <p className="mt-1 text-sm leading-5 text-white/80">
-                      Thoughtfully planned journeys from start to finish.
+                      Organised pilgrimages from your first question to your return.
                     </p>
                   </div>
 
@@ -142,14 +142,14 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Floating Experience Badge */}
-            <div className="absolute -bottom-7 -right-4 hidden rounded-xl border border-[#125467]/10 bg-white px-6 py-5 shadow-xl md:block">
+            <div className="absolute -bottom-7 -right-4 hidden rounded-xl border border-[#4b1164]/10 bg-white px-6 py-5 shadow-xl md:block">
 
-              <p className="font-serif text-3xl font-bold text-[#b9471e]">
-                20+
+              <p className="font-serif text-3xl font-bold text-[#c1124c]">
+                Haj
               </p>
 
-              <p className="mt-1 text-xs font-semibold tracking-[1.5px] text-[#125467]">
-                YEARS EXPERIENCE
+              <p className="mt-1 text-xs font-semibold tracking-[1.5px] text-[#4b1164]">
+                & UMRAH FOCUSED
               </p>
 
             </div>
@@ -168,8 +168,8 @@ export default function WhyChooseUs() {
                   key={feature.title}
                   className={`group overflow-hidden rounded-xl border transition-all duration-300 ${
                     isOpen
-                      ? "border-[#125467]/30 bg-white shadow-[0_15px_35px_rgba(18,63,85,0.08)]"
-                      : "border-[#125467]/10 bg-white/70 hover:border-[#125467]/25"
+                      ? "border-[#4b1164]/30 bg-white shadow-[0_15px_35px_rgba(63,17,82,0.08)]"
+                      : "border-[#4b1164]/10 bg-white/70 hover:border-[#4b1164]/25"
                   }`}
                 >
                   {/* Header */}
@@ -184,8 +184,8 @@ export default function WhyChooseUs() {
                     <span
                       className={`font-serif text-sm font-bold ${
                         isOpen
-                          ? "text-[#b9471e]"
-                          : "text-[#125467]/40"
+                          ? "text-[#c1124c]"
+                          : "text-[#4b1164]/40"
                       }`}
                     >
                       {feature.number}
@@ -195,8 +195,8 @@ export default function WhyChooseUs() {
                     <div
                       className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg transition ${
                         isOpen
-                          ? "bg-[#125467] text-[#e6b442]"
-                          : "bg-[#f2f0ea] text-[#125467]"
+                          ? "bg-[#4b1164] text-[#ff0b91]"
+                          : "bg-[#f0ecee] text-[#4b1164]"
                       }`}
                     >
                       <Icon size={20} strokeWidth={1.8} />
@@ -206,7 +206,7 @@ export default function WhyChooseUs() {
                     <span
                       className={`flex-1 font-serif text-lg font-bold transition ${
                         isOpen
-                          ? "text-[#123f55]"
+                          ? "text-[#3f1152]"
                           : "text-[#202020]"
                       }`}
                     >
@@ -217,8 +217,8 @@ export default function WhyChooseUs() {
                     <span
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition ${
                         isOpen
-                          ? "border-[#b9471e] bg-[#b9471e] text-white"
-                          : "border-[#125467]/15 text-[#125467]"
+                          ? "border-[#c1124c] bg-[#c1124c] text-white"
+                          : "border-[#4b1164]/15 text-[#4b1164]"
                       }`}
                     >
                       <ChevronDown
@@ -242,7 +242,7 @@ export default function WhyChooseUs() {
                   >
                     <div className="overflow-hidden">
 
-                      <div className="mx-7 border-t border-[#125467]/10 pb-6 pt-5 md:ml-[105px]">
+                      <div className="mx-7 border-t border-[#4b1164]/10 pb-6 pt-5 md:ml-[105px]">
 
                         <p className="max-w-xl text-[15px] leading-7 text-gray-600">
                           {feature.description}
@@ -262,25 +262,25 @@ export default function WhyChooseUs() {
         </div>
 
         {/* ================= BOTTOM STATEMENT ================= */}
-        <div className="mt-20 border-t border-[#125467]/10 pt-10">
+        <div className="mt-20 border-t border-[#4b1164]/10 pt-10">
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center">
 
-            <p className="max-w-3xl font-serif text-xl leading-8 text-[#123f55] md:text-2xl">
-              We don&apos;t simply take you from one destination to another.
-              We make sure every mile becomes part of your experience.
+            <p className="max-w-3xl font-serif text-xl leading-8 text-[#3f1152] md:text-2xl">
+              We don&apos;t simply book a trip. We help you prepare for a
+              journey of worship, with care at every step.
             </p>
 
             <div className="flex justify-start md:justify-end">
 
-              <div className="border-l-2 border-[#e6b442] pl-5">
+              <div className="border-l-2 border-[#ff0b91] pl-5">
 
-                <p className="text-2xl font-serif font-bold text-[#b9471e]">
-                  20+ Years
+                <p className="text-2xl font-serif font-bold text-[#c1124c]">
+                  Labbaik
                 </p>
 
-                <p className="mt-1 text-xs font-semibold tracking-[2px] text-[#125467]">
-                  OF TRUSTED TRAVEL
+                <p className="mt-1 text-xs font-semibold tracking-[2px] text-[#4b1164]">
+                  ALLAHUMMA LABBAIK
                 </p>
 
               </div>

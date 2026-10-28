@@ -1,3 +1,4 @@
+import { phoneLink, mailLink, SITE } from "@/lib/site";
 import {
   Clock3,
   ShieldCheck,
@@ -11,19 +12,19 @@ const benefits = [
     icon: Clock3,
     title: "Quick Response",
     description:
-      "Our travel specialists review your request and respond as quickly as possible.",
+      "Our team reviews your request and replies during office hours.",
   },
   {
     icon: ShieldCheck,
     title: "Tailored For You",
     description:
-      "Every itinerary and quotation is prepared around your specific requirements.",
+      "Each quotation is prepared around your dates, group and hotel preferences.",
   },
   {
     icon: Headphones,
     title: "Dedicated Support",
     description:
-      "Receive professional assistance before, during and throughout your journey.",
+      "Guidance before you travel and support while you are in Makkah and Madinah.",
   },
 ];
 
@@ -34,30 +35,29 @@ export default function QuoteContactInfo() {
       {/* Eyebrow */}
       <div className="flex items-center gap-3">
 
-        <span className="h-[2px] w-9 bg-[#d9a737]" />
+        <span className="h-[2px] w-9 bg-[#e40e83]" />
 
-        <span className="text-[10px] font-semibold uppercase tracking-[2.5px] text-[#14596a]">
-          Travel With Confidence
+        <span className="text-[10px] font-semibold uppercase tracking-[2.5px] text-[#4e1367]">
+          Travel With Peace Of Mind
         </span>
 
       </div>
 
       {/* Heading */}
-      <h2 className="mt-6 font-serif text-4xl font-bold leading-[1.15] text-[#123f55]">
+      <h2 className="mt-6 font-serif text-4xl font-bold leading-[1.15] text-[#3f1152]">
 
-        Your Journey
+        Your Pilgrimage
 
-        <span className="block italic text-[#d9a737]">
+        <span className="block italic text-[#e40e83]">
           Starts Here.
         </span>
 
       </h2>
 
-      <p className="mt-6 max-w-md text-[15px] leading-7 text-[#687276]">
+      <p className="mt-6 max-w-md text-[15px] leading-7 text-[#6e6572]">
 
-        Whether you're planning a family holiday, corporate trip, pilgrimage,
-        group journey or completely customised experience, we're here to help
-        you plan every detail.
+        Whether you're planning a family Umrah, a group journey, Ramadan
+          Umrah or Haj, we're here to help you plan every detail.
 
       </p>
 
@@ -73,7 +73,7 @@ export default function QuoteContactInfo() {
               className="flex gap-4"
             >
 
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f5ead0] text-[#14596a]">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#edd8e3] text-[#4e1367]">
 
                 <Icon size={19} />
 
@@ -81,11 +81,11 @@ export default function QuoteContactInfo() {
 
               <div>
 
-                <h3 className="font-serif text-lg font-bold text-[#123f55]">
+                <h3 className="font-serif text-lg font-bold text-[#3f1152]">
                   {benefit.title}
                 </h3>
 
-                <p className="mt-1 text-[13px] leading-6 text-[#7a8588]">
+                <p className="mt-1 text-[13px] leading-6 text-[#847a88]">
                   {benefit.description}
                 </p>
 
@@ -98,38 +98,36 @@ export default function QuoteContactInfo() {
       </div>
 
       {/* Contact Card */}
-      <div className="mt-12 rounded-[20px] bg-[#123f55] p-7 text-white shadow-[0_20px_50px_rgba(18,63,85,0.18)]">
+      <div className="mt-12 rounded-[20px] bg-[#3f1152] p-7 text-white shadow-[0_20px_50px_rgba(63,17,82,0.18)]">
 
-        <p className="text-[10px] font-semibold uppercase tracking-[2px] text-[#e5b34d]">
+        <p className="text-[10px] font-semibold uppercase tracking-[2px] text-[#fb1895]">
           Prefer To Speak Directly?
         </p>
 
         <h3 className="mt-4 font-serif text-2xl font-bold">
-          Our Travel Team Is Here.
+          Our Team Is Here.
         </h3>
 
         <div className="mt-6 space-y-4">
 
           <a
-            href="tel:+917770069004"
+            href={phoneLink()}
             className="flex items-center gap-3 text-sm text-white/75 transition hover:text-white"
           >
 
-            <Phone size={16} className="text-[#e5b34d]" />
+            <Phone size={16} className="text-[#fb1895]" />
 
-            +91 77700 69004
-
+            {SITE.phone}
           </a>
 
           <a
-            href="mailto:ghtravelsinfo@gmail.com"
+            href={mailLink()}
             className="flex items-center gap-3 text-sm text-white/75 transition hover:text-white"
           >
 
-            <Mail size={16} className="text-[#e5b34d]" />
+            <Mail size={16} className="text-[#fb1895]" />
 
-            ghtravelsinfo@gmail.com
-
+            {SITE.email}
           </a>
 
         </div>

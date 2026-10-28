@@ -27,14 +27,14 @@ export default function JourneyDetails({
       <SectionHeading
         number="01"
         title="Journey Details"
-        description="Tell us where and when you would like to travel."
+        description="Tell us your pickup, drop-off and timings in Saudi Arabia."
       />
 
       <div className="mt-7 space-y-6">
         {/* Journey Type */}
 
         <div>
-          <label className="mb-3 block text-sm font-semibold text-[#123f55]">
+          <label className="mb-3 block text-sm font-semibold text-[#3f1152]">
             Journey Type
           </label>
 
@@ -42,7 +42,7 @@ export default function JourneyDetails({
             {[
               { value: "one-way", label: "One Way" },
               { value: "round-trip", label: "Round Trip" },
-              { value: "local-rental", label: "Local Rental" },
+              { value: "ziyarat", label: "Ziyarat Tour" },
             ].map((option) => (
               <button
                 key={option.value}
@@ -52,8 +52,8 @@ export default function JourneyDetails({
                 }
                 className={`rounded-xl border px-4 py-3 text-sm font-medium transition ${
                   formData.journeyType === option.value
-                    ? "border-[#123f55] bg-[#123f55] text-white shadow-md"
-                    : "border-gray-200 bg-white text-gray-600 hover:border-[#123f55]/40"
+                    ? "border-[#3f1152] bg-[#3f1152] text-white shadow-md"
+                    : "border-gray-200 bg-white text-gray-600 hover:border-[#3f1152]/40"
                 }`}
               >
                 {option.label}
@@ -67,7 +67,7 @@ export default function JourneyDetails({
         <div className="grid gap-5 md:grid-cols-2">
           <InputField
             label="Pickup Location"
-            placeholder="Enter pickup location"
+            placeholder="E.g. Jeddah Airport (KAIA)"
             icon={<MapPin size={18} />}
             value={formData.pickupLocation}
             onChange={(value) =>
@@ -78,7 +78,7 @@ export default function JourneyDetails({
 
           <InputField
             label="Drop Location"
-            placeholder="Enter destination"
+            placeholder="E.g. hotel in Makkah"
             icon={<Route size={18} />}
             value={formData.dropLocation}
             onChange={(value) =>
@@ -116,8 +116,8 @@ export default function JourneyDetails({
         {/* Return Details */}
 
         {formData.journeyType === "round-trip" && (
-          <div className="rounded-2xl border border-[#d4a139]/20 bg-[#fffaf0] p-5">
-            <p className="mb-5 text-sm font-semibold text-[#123f55]">
+          <div className="rounded-2xl border border-[#db1481]/20 bg-[#fcf3f8] p-5">
+            <p className="mb-5 text-sm font-semibold text-[#3f1152]">
               Return Journey Details
             </p>
 
@@ -161,12 +161,12 @@ function SectionHeading({
 }) {
   return (
     <div className="flex gap-4">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#123f55] text-xs font-bold text-[#e7ae3c]">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#3f1152] text-xs font-bold text-[#ff058f]">
         {number}
       </span>
 
       <div>
-        <h3 className="font-serif text-xl font-bold text-[#123f55]">
+        <h3 className="font-serif text-xl font-bold text-[#3f1152]">
           {title}
         </h3>
 
@@ -202,7 +202,7 @@ function InputField({
       </label>
 
       <div className="relative">
-        <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#123f55]/50">
+        <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#3f1152]/50">
           {icon}
         </div>
 
@@ -212,7 +212,7 @@ function InputField({
           value={value}
           required={required}
           onChange={(event) => onChange(event.target.value)}
-          className="h-[52px] w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-[#123f55] focus:ring-4 focus:ring-[#123f55]/5"
+          className="h-[52px] w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-[#3f1152] focus:ring-4 focus:ring-[#3f1152]/5"
         />
       </div>
     </div>

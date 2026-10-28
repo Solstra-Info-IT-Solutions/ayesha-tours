@@ -9,10 +9,10 @@ import Footer from "@/components/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Our Services – Tours, Pilgrimages, Taxi & Travel Planning",
-  description: "From curated holidays and pilgrimage tours to airport transfers and group transport, explore the travel services offered by Global Horizons Tours & Travels.",
+  title: "Our Services – Umrah Packages, Haj Guidance, Visa & Transfers",
+  description: "Explore the pilgrimage services offered by Ayesha Tours: Umrah packages, Haj guidance, visa and flight assistance, hotels near the Haramain, transfers and ziyarat.",
   path: "/services",
-  keywords: ["travel services Aurangabad", "tour and taxi services Maharashtra"],
+  keywords: ["Umrah services", "Haj travel services", "Umrah visa assistance", "ziyarat tours Makkah Madinah"],
 });
 
 export default function ServicesPage() {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE, absoluteUrl } from "@/lib/site";
+import { IS_PRODUCTION_SITE, SITE, absoluteUrl } from "@/lib/site";
 
 type PageSeo = {
   title: string;
@@ -39,7 +39,8 @@ export function buildMetadata({
       description,
       images: [image],
     },
-    robots: noindex ? { index: false, follow: false } : undefined,
+    // Demo builds (no production domain configured) are never indexed.
+    robots: noindex || !IS_PRODUCTION_SITE ? { index: false, follow: false } : undefined,
   };
 }
 

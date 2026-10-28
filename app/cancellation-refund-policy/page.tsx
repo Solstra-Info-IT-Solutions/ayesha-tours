@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Cancellation & Refund Policy",
-  description: "Cancellation terms and refund process for tours and transport bookings with Global Horizons Tours & Travels.",
+  description: "Cancellation terms and refund process for tours and transport bookings with Ayesha Tours.",
   path: "/cancellation-refund-policy",
 });
 
@@ -21,7 +21,7 @@ export default function CancellationRefundPolicyPage() {
     {
       title: "How to Request Cancellation",
       content: [
-        "Cancellation requests should be communicated to Global Horizon Tours & Travels through an official communication channel such as email, WhatsApp or telephone.",
+        "Cancellation requests should be communicated to Ayesha Tours through an official communication channel such as email, WhatsApp or telephone.",
         "The effective cancellation time may be considered from the time the request is received and acknowledged by our team.",
       ],
     },
@@ -43,7 +43,7 @@ export default function CancellationRefundPolicyPage() {
     {
       title: "Refund Processing",
       content: [
-        "Where a refund is approved, Global Horizon Tours & Travels will initiate the refund process after necessary verification and calculation of applicable deductions.",
+        "Where a refund is approved, Ayesha Tours will initiate the refund process after necessary verification and calculation of applicable deductions.",
         "Refund processing times may vary depending on the original payment method, banking institutions and payment service providers.",
       ],
     },

@@ -1,4 +1,5 @@
 import { MapPin, Navigation } from "lucide-react";
+import { SITE, mapEmbedUrl } from "@/lib/site";
 
 export default function ContactMap() {
   return (
@@ -17,42 +18,40 @@ export default function ContactMap() {
             <div className="flex items-center gap-3">
               <MapPin
                 size={18}
-                className="text-[#d9a737]"
+                className="text-[#e40e83]"
               />
 
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#14596a]">
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#4e1367]">
                 Find Us
               </span>
             </div>
 
-            <h2 className="mt-6 font-serif text-[36px] font-bold text-[#123f55]">
+            <h2 className="mt-6 font-serif text-[36px] font-bold text-[#3f1152]">
               Visit Our
 
-              <span className="block italic text-[#d9a737]">
-                Travel Office.
+              <span className="block italic text-[#e40e83]">
+                Office.
               </span>
             </h2>
 
-            <p className="mt-5 max-w-[420px] text-[14px] leading-7 text-[#748185]">
-              Visit us and speak with our travel specialists personally. We
-              would be happy to help you plan your next journey.
+            <p className="mt-5 max-w-[420px] text-[14px] leading-7 text-[#7c7181]">
+              Visit us to discuss your Umrah or Haj plans in person. Please call
+            or message ahead so the right person is available.
             </p>
 
 
-            <div className="mt-8 flex items-start gap-4 border-l-2 border-[#d9a737] bg-white p-5 shadow-sm">
+            <div className="mt-8 flex items-start gap-4 border-l-2 border-[#e40e83] bg-white p-5 shadow-sm">
 
               <MapPin
                 size={20}
-                className="mt-1 text-[#14596a]"
+                className="mt-1 text-[#4e1367]"
               />
 
-              <p className="text-[14px] leading-7 text-[#536166]">
-                Collector Office Road,
+              <p className="text-[14px] leading-7 text-[#5d5163]">
+                {SITE.address.street}
                 <br />
-                Ganesh Colony,
-                <br />
-                Chhatrapati Sambhajinagar,
-                Maharashtra
+                {SITE.address.locality}
+                {SITE.address.region ? `, ${SITE.address.region}` : ""}
               </p>
 
             </div>
@@ -62,19 +61,20 @@ export default function ContactMap() {
 
           {/* Map */}
 
-          <div className="overflow-hidden border border-[#ded8ce] bg-white p-2 shadow-[0_20px_60px_rgba(18,63,85,0.10)]">
+          <div className="overflow-hidden border border-[#dad2d6] bg-white p-2 shadow-[0_20px_60px_rgba(63,17,82,0.10)]">
 
             <div className="relative h-[400px] overflow-hidden">
 
               <iframe
-                src="https://www.google.com/maps?q=19.8952399,75.3417461&z=17&output=embed"
+                src={mapEmbedUrl()}
+                title="Ayesha Tours office location"
                 width="100%"
                 height="100%"
                 loading="lazy"
                 className="border-0 grayscale-[15%]"
               />
 
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#123f55] via-[#d9a737] to-[#123f55]" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
 
             </div>
 

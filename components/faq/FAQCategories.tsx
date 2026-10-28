@@ -1,7 +1,7 @@
 import {
   CalendarCheck,
   CreditCard,
-  Car,
+  FileCheck2,
   Plane,
   ShieldCheck,
 } from "lucide-react";
@@ -16,11 +16,11 @@ const categories = [
     icon: CreditCard,
   },
   {
-    title: "Transport",
-    icon: Car,
+    title: "Visas",
+    icon: FileCheck2,
   },
   {
-    title: "Tours",
+    title: "Umrah & Haj",
     icon: Plane,
   },
   {
@@ -31,7 +31,7 @@ const categories = [
 
 export default function FAQCategories() {
   return (
-    <section className="bg-[#f7f5f1] py-14">
+    <section className="bg-[#f6f2f4] py-14">
       <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-10">
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
@@ -41,13 +41,13 @@ export default function FAQCategories() {
             return (
               <div
                 key={category.title}
-                className="group rounded-[22px] border border-[#e2ddd5] bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#e7ae3c]/60 hover:shadow-lg"
+                className="group rounded-[22px] border border-[#dfd8dc] bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#ff058f]/60 hover:shadow-lg"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#edf4f5] text-[#14596a] transition-all duration-300 group-hover:bg-[#e7ae3c] group-hover:text-[#0e4655]">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#f3edf5] text-[#4e1367] transition-all duration-300 group-hover:bg-[#ff058f] group-hover:text-white">
                   <Icon size={21} />
                 </div>
 
-                <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.12em] text-[#123f55]">
+                <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.12em] text-[#3f1152]">
                   {category.title}
                 </p>
               </div>

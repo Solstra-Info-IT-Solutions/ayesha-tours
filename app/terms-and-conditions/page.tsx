@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Terms & Conditions",
-  description: "Terms and conditions for using the Global Horizons Tours & Travels website and services.",
+  description: "Terms and conditions for using the Ayesha Tours website and services.",
   path: "/terms-and-conditions",
 });
 
@@ -13,23 +13,23 @@ export default function TermsAndConditionsPage() {
     {
       title: "Acceptance of Terms",
       content: [
-        "By accessing the Global Horizon Tours & Travels website, submitting an enquiry, requesting a quotation or making a booking, you agree to comply with these Terms and Conditions.",
-        "These terms apply to all travel, transportation and related services provided by Global Horizon Tours & Travels unless otherwise stated in a specific written agreement.",
+        "By accessing the Ayesha Tours website, submitting an enquiry, requesting a quotation or making a booking, you agree to comply with these Terms and Conditions.",
+        "These terms apply to all travel, transportation and related services provided by Ayesha Tours unless otherwise stated in a specific written agreement.",
       ],
     },
 
     {
       title: "Our Services",
       content: [
-        "Global Horizon Tours & Travels provides travel planning, transportation, transfers, tour arrangements and related travel services based on availability and customer requirements.",
+        "Ayesha Tours provides Umrah and Haj travel planning, package arrangements, transfers and related pilgrimage travel services based on availability and customer requirements.",
       ],
       points: [
-        "Private taxi and local transportation services.",
-        "Airport pickup and drop-off services.",
-        "Railway station transfer services.",
-        "Corporate transportation arrangements.",
-        "Tours, holidays and travel experiences.",
-        "Customized travel planning and quotations.",
+        "Umrah packages and customised Umrah planning.",
+        "Haj guidance, subject to official quotas and regulations.",
+        "Visa application assistance (visa decisions rest solely with the issuing authorities).",
+        "Flight and hotel arrangements in Makkah and Madinah.",
+        "Airport, intercity and ziyarat transfers in Saudi Arabia.",
+        "Customised pilgrimage planning and quotations.",
       ],
     },
 
@@ -57,7 +57,7 @@ export default function TermsAndConditionsPage() {
       title: "Service Availability",
       content: [
         "All travel and transportation services are subject to availability at the time of confirmation.",
-        "Global Horizon Tours & Travels may need to modify arrangements due to operational requirements, weather conditions, road conditions, government restrictions or circumstances beyond reasonable control.",
+        "Ayesha Tours may need to modify arrangements due to operational requirements, weather conditions, road conditions, government restrictions or circumstances beyond reasonable control.",
       ],
     },
 
@@ -87,7 +87,7 @@ export default function TermsAndConditionsPage() {
     {
       title: "Limitation of Liability",
       content: [
-        "Global Horizon Tours & Travels will make reasonable efforts to provide services professionally and safely. However, our liability may be limited where losses arise from circumstances outside our reasonable control or from inaccurate information provided by the customer.",
+        "Ayesha Tours will make reasonable efforts to provide services professionally and safely. However, our liability may be limited where losses arise from circumstances outside our reasonable control or from inaccurate information provided by the customer.",
         "We are not responsible for personal belongings left unattended or lost during travel unless liability is established under applicable law.",
       ],
     },
@@ -104,7 +104,7 @@ export default function TermsAndConditionsPage() {
       title: "Governing Jurisdiction",
       content: [
         "These Terms and Conditions shall be interpreted in accordance with applicable laws of India.",
-        "Any disputes arising from services provided by Global Horizon Tours & Travels shall be subject to the appropriate jurisdiction as permitted by applicable law.",
+        "Any disputes arising from services provided by Ayesha Tours shall be subject to the appropriate jurisdiction as permitted by applicable law.",
       ],
     },
   ];

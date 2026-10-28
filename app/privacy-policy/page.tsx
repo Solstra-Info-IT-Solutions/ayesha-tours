@@ -1,10 +1,11 @@
 import LegalPageLayout from "@/components/LegalPageLayout";
 
 import { buildMetadata } from "@/lib/seo";
+import { SITE } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Privacy Policy",
-  description: "How Global Horizons Tours & Travels collects, uses and protects your personal information.",
+  description: "How Ayesha Tours collects, uses and protects your personal information.",
   path: "/privacy-policy",
 });
 
@@ -13,7 +14,7 @@ export default function PrivacyPolicyPage() {
     {
       title: "Introduction",
       content: [
-        "Global Horizon Tours & Travels respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, store and protect information when you visit our website, contact our team or use our travel and transportation services.",
+        "Ayesha Tours respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, store and protect information when you visit our website, contact our team or use our travel and transportation services.",
         "By accessing our website or providing your information to us, you agree to the practices described in this Privacy Policy.",
       ],
     },
@@ -36,7 +37,7 @@ export default function PrivacyPolicyPage() {
     {
       title: "How We Use Your Information",
       content: [
-        "The information collected by Global Horizon Tours & Travels is used primarily to provide requested travel, transportation and customer support services.",
+        "The information collected by Ayesha Tours is used primarily to provide requested travel, transportation and customer support services.",
       ],
       points: [
         "To respond to enquiries and provide quotations.",
@@ -82,7 +83,7 @@ export default function PrivacyPolicyPage() {
     {
       title: "Third-Party Links",
       content: [
-        "Our website may contain links to third-party websites or platforms. Global Horizon Tours & Travels is not responsible for the privacy practices, content or security of external websites.",
+        "Our website may contain links to third-party websites or platforms. Ayesha Tours is not responsible for the privacy practices, content or security of external websites.",
         "We recommend reviewing the privacy policy of any third-party website before providing personal information.",
       ],
     },
@@ -106,8 +107,8 @@ export default function PrivacyPolicyPage() {
     {
       title: "Contact Us",
       content: [
-        "If you have questions or concerns regarding this Privacy Policy or the handling of your personal information, please contact Global Horizon Tours & Travels.",
-        "Email: ghtravelsinfo@gmail.com | Phone: +91 77700 69004",
+        "If you have questions or concerns regarding this Privacy Policy or the handling of your personal information, please contact Ayesha Tours.",
+        `Email: ${SITE.email} | Phone: ${SITE.phone}`,
       ],
     },
   ];
@@ -116,7 +117,7 @@ export default function PrivacyPolicyPage() {
     <LegalPageLayout
       eyebrow="Legal Information"
       title="Privacy Policy"
-      description="Understanding how Global Horizon Tours & Travels collects, uses and protects your personal information."
+      description="Understanding how Ayesha Tours collects, uses and protects your personal information."
       sections={sections}
     />
   );

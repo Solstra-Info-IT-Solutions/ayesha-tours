@@ -1,5 +1,7 @@
 "use client";
 
+
+import { whatsappLink, phoneLink } from "@/lib/site";
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -33,20 +35,20 @@ export default function QuickTravelAssistant() {
   const mainMenu: MenuItem[] = [
     {
       id: "trip",
-      title: "Plan a Trip",
-      subtitle: "Create your perfect journey",
+      title: "Plan My Umrah",
+    subtitle: "Packages, dates & enquiries",
       icon: <Plane size={19} />,
     },
     {
       id: "transport",
-      title: "Transport Booking",
-      subtitle: "Travel comfortably with us",
+      title: "Transport & Ziyarat",
+    subtitle: "Transfers in Makkah & Madinah",
       icon: <Bus size={19} />,
     },
     {
       id: "tours",
-      title: "Tours & Packages",
-      subtitle: "Explore amazing destinations",
+      title: "Umrah & Haj Packages",
+    subtitle: "Explore package options",
       icon: <Map size={19} />,
     },
     {
@@ -62,18 +64,18 @@ export default function QuickTravelAssistant() {
       {
         id: "quote",
         title: "Request a Quote",
-        subtitle: "Get a personalised travel quote",
+        subtitle: "Get a quote for your group",
         icon: <FileText size={18} />,
       },
       {
         id: "custom",
-        title: "Customize My Trip",
-        subtitle: "Tell us your travel requirements",
+        title: "Customise My Package",
+    subtitle: "Hotels, dates & special needs",
         icon: <Route size={18} />,
       },
       {
         id: "expert",
-        title: "Talk to Travel Expert",
+        title: "Talk to Our Team",
         subtitle: "Speak directly with our team",
         icon: <Phone size={18} />,
       },
@@ -82,19 +84,19 @@ export default function QuickTravelAssistant() {
     transport: [
       {
         id: "transport-booking",
-        title: "Book Transport",
-        subtitle: "Choose your preferred travel option",
+        title: "Request Transfers",
+    subtitle: "Airport, intercity & ziyarat",
         icon: <Bus size={18} />,
       },
       {
         id: "transport-enquiry",
         title: "Transport Enquiry",
-        subtitle: "Ask about availability and pricing",
+    subtitle: "Ask about vehicles and pricing",
         icon: <FileText size={18} />,
       },
       {
         id: "call",
-        title: "Call Travel Expert",
+        title: "Call Our Team",
         subtitle: "Get immediate assistance",
         icon: <Phone size={18} />,
       },
@@ -103,20 +105,20 @@ export default function QuickTravelAssistant() {
     tours: [
       {
         id: "destinations",
-        title: "Explore Destinations",
-        subtitle: "Discover beautiful places",
+        title: "Makkah & Madinah",
+    subtitle: "About the holy cities",
         icon: <Map size={18} />,
       },
       {
         id: "packages",
-        title: "View Tour Packages",
-        subtitle: "Find your next perfect holiday",
+        title: "View Umrah Packages",
+    subtitle: "Economy, standard & premium",
         icon: <CalendarDays size={18} />,
       },
       {
         id: "custom-tour",
-        title: "Custom Tour Package",
-        subtitle: "Create a journey made for you",
+        title: "Group & Family Umrah",
+    subtitle: "Plans for your whole family",
         icon: <Sparkles size={18} />,
       },
     ],
@@ -156,7 +158,7 @@ export default function QuickTravelAssistant() {
       case "expert":
       case "call":
       case "call-support":
-        window.location.href = "tel:+917770069004";
+        window.location.href = phoneLink();
         break;
 
       case "transport-booking":
@@ -175,7 +177,7 @@ export default function QuickTravelAssistant() {
 
       case "whatsapp":
         window.open(
-          "https://wa.me/917770069004?text=Hello%20Global%20Horizon%20Tours%20%26%20Travels%2C%20I%20need%20help%20with%20my%20travel%20plans.",
+          whatsappLink("Assalamu alaikum Ayesha Tours, I need help with my Umrah or Haj plans."),
           "_blank"
         );
         break;
@@ -205,7 +207,7 @@ export default function QuickTravelAssistant() {
 
   const getSubtitle = () => {
     if (!activeMenu) {
-      return "Choose an option and let us make your journey easier.";
+      return "Choose an option and we'll help you plan your pilgrimage.";
     }
 
     return "Choose how you would like to continue.";
@@ -222,7 +224,7 @@ export default function QuickTravelAssistant() {
         {/* WHATSAPP */}
 
         <a
-          href="https://wa.me/917770069004?text=Hello%20Global%20Horizon%20Tours%20%26%20Travels%2C%20I%20would%20like%20to%20know%20more%20about%20your%20travel%20services."
+          href={whatsappLink("Assalamu alaikum Ayesha Tours, I would like to know more about your Umrah and Haj packages.")}
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3.5 text-white shadow-[0_15px_40px_rgba(37,211,102,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(37,211,102,0.38)]"
@@ -253,10 +255,10 @@ export default function QuickTravelAssistant() {
               setActiveMenu(null);
             }
           }}
-          className={`group flex items-center gap-3 rounded-full px-5 py-3.5 text-white shadow-[0_15px_40px_rgba(14,70,85,0.3)] transition-all duration-300 hover:-translate-y-1 ${
+          className={`group flex items-center gap-3 rounded-full px-5 py-3.5 text-white shadow-[0_15px_40px_rgba(62,14,82,0.3)] transition-all duration-300 hover:-translate-y-1 ${
             isOpen
-              ? "bg-[#123f55]"
-              : "bg-[#14596a] hover:bg-[#123f55]"
+              ? "bg-[#3f1152]"
+              : "bg-[#4e1367] hover:bg-[#3f1152]"
           }`}
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10">
@@ -269,7 +271,7 @@ export default function QuickTravelAssistant() {
             </p>
 
             <p className="mt-0.5 text-[9px] text-white/65">
-              Travel assistant
+              Pilgrim assistant
             </p>
           </div>
         </button>
@@ -287,19 +289,19 @@ export default function QuickTravelAssistant() {
             : "pointer-events-none translate-y-5 scale-95 opacity-0"
         }`}
       >
-        <div className="overflow-hidden rounded-[26px] border border-white/70 bg-[#faf9f6]/95 shadow-[0_25px_70px_rgba(14,70,85,0.25)] backdrop-blur-xl">
+        <div className="overflow-hidden rounded-[26px] border border-white/70 bg-[#f9f7f8]/95 shadow-[0_25px_70px_rgba(62,14,82,0.25)] backdrop-blur-xl">
 
           {/* =====================================================
               HEADER
           ====================================================== */}
 
-          <div className="relative overflow-hidden border-b border-[#123f55]/10 px-5 pb-5 pt-5 sm:px-6">
+          <div className="relative overflow-hidden border-b border-[#3f1152]/10 px-5 pb-5 pt-5 sm:px-6">
 
             {/* Background Decoration */}
 
-            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-[#e7ae3c]/20" />
+            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-[#ff058f]/20" />
 
-            <div className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full border border-[#e7ae3c]/15" />
+            <div className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full border border-[#ff058f]/15" />
 
             {/* Back Button */}
 
@@ -307,7 +309,7 @@ export default function QuickTravelAssistant() {
               <button
                 type="button"
                 onClick={() => setActiveMenu(null)}
-                className="relative z-10 mb-4 flex items-center gap-1.5 text-[10px] font-bold tracking-[0.12em] text-[#14596a] transition hover:text-[#e7ae3c]"
+                className="relative z-10 mb-4 flex items-center gap-1.5 text-[10px] font-bold tracking-[0.12em] text-[#4e1367] transition hover:text-[#ff058f]"
               >
                 <ChevronLeft size={15} />
                 BACK
@@ -318,14 +320,14 @@ export default function QuickTravelAssistant() {
 
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="h-px w-6 bg-[#e7ae3c]" />
+                  <span className="h-px w-6 bg-[#ff058f]" />
 
-                  <span className="text-[9px] font-bold tracking-[0.2em] text-[#e7ae3c]">
-                    GLOBAL HORIZON
+                  <span className="text-[9px] font-bold tracking-[0.2em] text-[#ff058f]">
+                    AYESHA TOURS
                   </span>
                 </div>
 
-                <h3 className="mt-3 font-serif text-[24px] font-bold leading-tight text-[#123f55]">
+                <h3 className="mt-3 font-serif text-[24px] font-bold leading-tight text-[#3f1152]">
                   {getTitle()}
                 </h3>
 
@@ -340,7 +342,7 @@ export default function QuickTravelAssistant() {
                   setIsOpen(false);
                   setActiveMenu(null);
                 }}
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-400 transition hover:text-[#123f55]"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-400 transition hover:text-[#3f1152]"
                 aria-label="Close assistant"
               >
                 <X size={17} />
@@ -367,18 +369,18 @@ export default function QuickTravelAssistant() {
                       handleAction(item.id);
                     }
                   }}
-                  className="group flex w-full items-center gap-3 rounded-2xl border border-transparent px-3 py-3 text-left transition-all duration-300 hover:border-[#123f55]/10 hover:bg-white hover:shadow-[0_8px_25px_rgba(18,63,85,0.07)]"
+                  className="group flex w-full items-center gap-3 rounded-2xl border border-transparent px-3 py-3 text-left transition-all duration-300 hover:border-[#3f1152]/10 hover:bg-white hover:shadow-[0_8px_25px_rgba(63,17,82,0.07)]"
                 >
                   {/* Icon */}
 
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e7eef0] text-[#14596a] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#14596a] group-hover:text-white">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ede7f0] text-[#4e1367] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#4e1367] group-hover:text-white">
                     {item.icon}
                   </div>
 
                   {/* Text */}
 
                   <div className="min-w-0 flex-1">
-                    <p className="text-[13px] font-semibold text-[#123f55]">
+                    <p className="text-[13px] font-semibold text-[#3f1152]">
                       {item.title}
                     </p>
 
@@ -389,7 +391,7 @@ export default function QuickTravelAssistant() {
 
                   {/* Arrow */}
 
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f0f2f2] text-[#14596a] transition-all duration-300 group-hover:bg-[#e7ae3c] group-hover:text-white">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f1f0f2] text-[#4e1367] transition-all duration-300 group-hover:bg-[#ff058f] group-hover:text-white">
                     <ChevronRight
                       size={16}
                       className="transition-transform duration-300 group-hover:translate-x-0.5"
@@ -405,12 +407,12 @@ export default function QuickTravelAssistant() {
               FOOTER
           ====================================================== */}
 
-          <div className="border-t border-[#123f55]/10 bg-[#f5f4f0] px-5 py-3">
+          <div className="border-t border-[#3f1152]/10 bg-[#f4f1f3] px-5 py-3">
             <div className="flex items-center justify-center gap-2">
-              <Sparkles size={12} className="text-[#e7ae3c]" />
+              <Sparkles size={12} className="text-[#ff058f]" />
 
-              <span className="text-center text-[8px] font-bold tracking-[0.22em] text-[#123f55]/55">
-                YOUR JOURNEY STARTS HERE
+              <span className="text-center text-[8px] font-bold tracking-[0.22em] text-[#3f1152]/55">
+                YOUR PILGRIMAGE STARTS HERE
               </span>
             </div>
           </div>

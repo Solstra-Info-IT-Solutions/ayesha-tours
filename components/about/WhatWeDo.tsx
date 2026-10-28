@@ -8,39 +8,39 @@ import {
 
 const services = [
   {
-    title: "Private Transportation",
-    category: "LOGISTICS",
+    title: "Umrah Packages",
+    category: "ALL YEAR",
     description:
-      "Executive transportation, chauffeur-driven cultural tours, and seamless point-to-point logistics tailored to your schedule.",
-    image: "/whatwedo1.png",
+      "Economy, standard and premium Umrah packages with flights, hotels in Makkah and Madinah, transfers and ziyarat explained clearly.",
+    image: "/images/demo/kaaba-tawaf.jpg",
     icon: Car,
     type: "image",
     className: "md:col-span-2",
   },
   {
-    title: "Business Travel",
-    category: "PREMIUM SERVICE",
+    title: "Haj Guidance",
+    category: "ONCE IN A LIFETIME",
     description:
-      "Professional travel solutions designed for executives who value comfort, reliability, and seamless coordination.",
+      "Guidance on Haj options, documentation and preparation, so you know what to expect in Mina, Arafat and Muzdalifah.",
     icon: BriefcaseBusiness,
     type: "dark",
     className: "",
   },
   {
-    title: "Corporate Travel",
-    category: "BUSINESS SOLUTIONS",
+    title: "Visa & Flights",
+    category: "PAPERWORK",
     description:
-      "Streamlined travel management for executives, incentive trips, and corporate retreats with dedicated support.",
+      "Assistance with Umrah visa applications, flight options and document checklists before you travel.",
     icon: Building2,
     type: "light",
     className: "",
   },
   {
-    title: "Meetings & Events",
-    category: "HOSPITALITY",
+    title: "Hotels & Transfers",
+    category: "ON THE GROUND",
     description:
-      "Thoughtfully coordinated travel and event experiences designed around comfort, convenience, and memorable moments.",
-    image: "/whatwedo.png",
+      "Hotel options near the Haramain plus airport, intercity and ziyarat transfers arranged around your group.",
+    image: "/images/demo/clock-tower.jpg",
     icon: CalendarDays,
     type: "image",
     className: "md:col-span-2",
@@ -49,12 +49,12 @@ const services = [
 
 export default function WhatWeDo() {
   return (
-    <section className="relative overflow-hidden bg-[#faf9f5] px-6 py-20 md:px-10 lg:px-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#f9f6f8] px-6 py-20 md:px-10 lg:px-20 lg:py-28">
 
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute left-[-100px] top-[20%] h-[350px] w-[350px] rounded-full bg-[#14596a]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute left-[-100px] top-[20%] h-[350px] w-[350px] rounded-full bg-[#4e1367]/[0.035] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-[-100px] right-[-100px] h-[400px] w-[400px] rounded-full bg-[#eab943]/[0.06] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-100px] right-[-100px] h-[400px] w-[400px] rounded-full bg-[#ff0f93]/[0.06] blur-3xl" />
 
       <div className="relative mx-auto max-w-[1200px]">
 
@@ -64,24 +64,24 @@ export default function WhatWeDo() {
           {/* Premium Eyebrow */}
           <div className="flex items-center gap-4">
 
-            <span className="h-px w-10 bg-[#e2b33e]" />
+            <span className="h-px w-10 bg-[#fa078d]" />
 
-            <p className="text-[11px] font-semibold uppercase tracking-[3px] text-[#dcae3c]">
+            <p className="text-[11px] font-semibold uppercase tracking-[3px] text-[#ed0c88]">
               Comprehensive Expertise
             </p>
 
           </div>
 
           {/* Heading */}
-          <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-[#14596a] md:text-[44px]">
+          <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-[#4e1367] md:text-[44px]">
             What We Do
           </h2>
 
           {/* Description */}
-          <p className="mt-5 max-w-[600px] text-[15px] leading-7 text-[#687579]">
-            From initial conception to the final return journey, we manage
-            every facet of your travel experience with precision, comfort,
-            and exceptional attention to detail.
+          <p className="mt-5 max-w-[600px] text-[15px] leading-7 text-[#706575]">
+            From your first question to your return flight, we help with the
+            practical parts of Umrah and Haj so nothing important is left to
+            chance.
           </p>
 
         </div>
@@ -97,7 +97,7 @@ export default function WhatWeDo() {
               return (
                 <article
                   key={service.title}
-                  className={`group relative min-h-[330px] overflow-hidden rounded-2xl shadow-[0_15px_40px_rgba(20,89,106,0.12)] ${service.className}`}
+                  className={`group relative min-h-[330px] overflow-hidden rounded-2xl shadow-[0_15px_40px_rgba(78,19,103,0.12)] ${service.className}`}
                 >
                   {/* Background Image */}
                   <img
@@ -107,7 +107,7 @@ export default function WhatWeDo() {
                   />
 
                   {/* Premium Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#063f4d]/95 via-[#064b5b]/45 to-[#064b5b]/15" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#36064b]/95 via-[#400658]/45 to-[#400658]/15" />
 
                   {/* Top Icon */}
                   <div className="absolute left-7 top-7 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md">
@@ -115,7 +115,7 @@ export default function WhatWeDo() {
                     <Icon
                       size={25}
                       strokeWidth={1.7}
-                      className="text-[#f0bd45]"
+                      className="text-[#ff1797]"
                     />
 
                   </div>
@@ -131,9 +131,9 @@ export default function WhatWeDo() {
                     {/* Category */}
                     <div className="mb-4 flex items-center gap-3">
 
-                      <span className="h-[2px] w-8 bg-[#eab943]" />
+                      <span className="h-[2px] w-8 bg-[#ff0f93]" />
 
-                      <span className="text-[10px] font-semibold tracking-[2.5px] text-[#f0bd45]">
+                      <span className="text-[10px] font-semibold tracking-[2.5px] text-[#ff1797]">
                         {service.category}
                       </span>
 
@@ -152,7 +152,7 @@ export default function WhatWeDo() {
                       </div>
 
                       {/* Arrow */}
-                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition-all duration-300 group-hover:bg-[#eab943] group-hover:text-[#14596a] md:flex">
+                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition-all duration-300 group-hover:bg-[#ff0f93] group-hover:text-white md:flex">
 
                         <ArrowUpRight size={19} />
 
@@ -171,7 +171,7 @@ export default function WhatWeDo() {
               return (
                 <article
                   key={service.title}
-                  className="group relative min-h-[330px] overflow-hidden rounded-2xl bg-[#14596a] p-8 text-white shadow-[0_15px_40px_rgba(20,89,106,0.14)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(20,89,106,0.22)]"
+                  className="group relative min-h-[330px] overflow-hidden rounded-2xl bg-[#4e1367] p-8 text-white shadow-[0_15px_40px_rgba(78,19,103,0.14)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(78,19,103,0.22)]"
                 >
 
                   {/* Decorative Number */}
@@ -180,15 +180,15 @@ export default function WhatWeDo() {
                   </span>
 
                   {/* Gold Accent */}
-                  <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#eab943] transition-all duration-500 group-hover:w-full" />
+                  <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#ff0f93] transition-all duration-500 group-hover:w-full" />
 
                   {/* Icon */}
-                  <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eab943] shadow-[0_10px_25px_rgba(0,0,0,0.15)]">
+                  <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ff0f93] shadow-[0_10px_25px_rgba(0,0,0,0.15)]">
 
                     <Icon
                       size={25}
                       strokeWidth={1.8}
-                      className="text-[#14596a]"
+                      className="text-[#4e1367]"
                     />
 
                   </div>
@@ -196,7 +196,7 @@ export default function WhatWeDo() {
                   {/* Content */}
                   <div className="relative mt-12">
 
-                    <p className="text-[10px] font-semibold tracking-[2.5px] text-[#eab943]">
+                    <p className="text-[10px] font-semibold tracking-[2.5px] text-[#ff0f93]">
                       {service.category}
                     </p>
 
@@ -204,7 +204,7 @@ export default function WhatWeDo() {
                       {service.title}
                     </h3>
 
-                    <div className="mt-5 h-px w-12 bg-white/20 transition-all duration-500 group-hover:w-20 group-hover:bg-[#eab943]" />
+                    <div className="mt-5 h-px w-12 bg-white/20 transition-all duration-500 group-hover:w-20 group-hover:bg-[#ff0f93]" />
 
                     <p className="mt-5 text-[14px] leading-7 text-white/70">
                       {service.description}
@@ -213,7 +213,7 @@ export default function WhatWeDo() {
                   </div>
 
                   {/* Bottom Arrow */}
-                  <div className="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 group-hover:border-[#eab943] group-hover:bg-[#eab943] group-hover:text-[#14596a]">
+                  <div className="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 group-hover:border-[#ff0f93] group-hover:bg-[#ff0f93] group-hover:text-white">
 
                     <ArrowUpRight size={18} />
 
@@ -227,24 +227,24 @@ export default function WhatWeDo() {
             return (
               <article
                 key={service.title}
-                className="group relative min-h-[330px] overflow-hidden rounded-2xl border border-[#14596a]/10 bg-white p-8 shadow-[0_12px_35px_rgba(20,89,106,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#eab943]/60 hover:shadow-[0_25px_55px_rgba(20,89,106,0.12)]"
+                className="group relative min-h-[330px] overflow-hidden rounded-2xl border border-[#4e1367]/10 bg-white p-8 shadow-[0_12px_35px_rgba(78,19,103,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#ff0f93]/60 hover:shadow-[0_25px_55px_rgba(78,19,103,0.12)]"
               >
 
                 {/* Decorative Number */}
-                <span className="absolute -right-4 -top-7 font-serif text-[110px] font-bold text-[#14596a]/[0.035]">
+                <span className="absolute -right-4 -top-7 font-serif text-[110px] font-bold text-[#4e1367]/[0.035]">
                   0{index + 1}
                 </span>
 
                 {/* Accent Line */}
-                <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#eab943] transition-all duration-500 group-hover:w-full" />
+                <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#ff0f93] transition-all duration-500 group-hover:w-full" />
 
                 {/* Icon */}
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#14596a] shadow-[0_10px_25px_rgba(20,89,106,0.18)] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#eab943]">
+                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4e1367] shadow-[0_10px_25px_rgba(78,19,103,0.18)] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#ff0f93]">
 
                   <Icon
                     size={25}
                     strokeWidth={1.8}
-                    className="text-white transition-colors duration-500 group-hover:text-[#14596a]"
+                    className="text-white transition-colors duration-500 group-hover:text-white"
                   />
 
                 </div>
@@ -252,24 +252,24 @@ export default function WhatWeDo() {
                 {/* Content */}
                 <div className="relative mt-12">
 
-                  <p className="text-[10px] font-semibold tracking-[2.5px] text-[#dcae3c]">
+                  <p className="text-[10px] font-semibold tracking-[2.5px] text-[#ed0c88]">
                     {service.category}
                   </p>
 
-                  <h3 className="mt-4 font-serif text-[25px] font-bold text-[#14596a]">
+                  <h3 className="mt-4 font-serif text-[25px] font-bold text-[#4e1367]">
                     {service.title}
                   </h3>
 
-                  <div className="mt-5 h-px w-12 bg-[#eab943] transition-all duration-500 group-hover:w-20" />
+                  <div className="mt-5 h-px w-12 bg-[#ff0f93] transition-all duration-500 group-hover:w-20" />
 
-                  <p className="mt-5 text-[14px] leading-7 text-[#687579]">
+                  <p className="mt-5 text-[14px] leading-7 text-[#706575]">
                     {service.description}
                   </p>
 
                 </div>
 
                 {/* Bottom Arrow */}
-                <div className="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full border border-[#14596a]/15 text-[#14596a] transition-all duration-300 group-hover:border-[#eab943] group-hover:bg-[#eab943]">
+                <div className="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full border border-[#4e1367]/15 text-[#4e1367] transition-all duration-300 group-hover:border-[#ff0f93] group-hover:bg-[#ff0f93]">
 
                   <ArrowUpRight size={18} />
 

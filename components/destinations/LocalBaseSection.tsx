@@ -5,12 +5,12 @@ import { ArrowRight, MapPin, Sparkles } from "lucide-react";
 
 export default function LocalBaseSection() {
   return (
-    <section className="relative overflow-hidden bg-[#faf9f5] py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#f9f6f8] py-20 lg:py-28">
       
       {/* Decorative Background Elements */}
-      <div className="absolute left-0 top-0 h-[420px] w-[420px] rounded-full bg-[#e8b84c]/5 blur-3xl" />
+      <div className="absolute left-0 top-0 h-[420px] w-[420px] rounded-full bg-[#ff1696]/5 blur-3xl" />
 
-      <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-[#14596a]/5 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-[#4e1367]/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-20">
@@ -20,63 +20,63 @@ export default function LocalBaseSection() {
 
             {/* Eyebrow */}
             <div className="mb-6 flex items-center gap-4">
-              <span className="h-[1px] w-10 bg-[#d9aa3f]" />
+              <span className="h-[1px] w-10 bg-[#e91088]" />
 
-              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#b88725]">
-                OUR LOCAL BASE
+              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#b20d67]">
+                THE HEART OF YOUR PILGRIMAGE
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="font-serif text-[38px] font-bold leading-[1.15] tracking-tight text-[#123f55] sm:text-5xl lg:text-[56px]">
-              Chhatrapati
+            <h2 className="font-serif text-[38px] font-bold leading-[1.15] tracking-tight text-[#3f1152] sm:text-5xl lg:text-[56px]">
+              Makkah
               <br />
 
-              Sambhaji Nagar
+              al-Mukarramah
 
               <span className="mt-3 block font-serif text-[24px] font-normal tracking-normal text-[#8b8f8f] sm:text-[28px]">
-                (Aurangabad)
+                (The Honoured City)
               </span>
             </h2>
 
             {/* Gold Divider */}
             <div className="mt-7 flex items-center gap-3">
-              <span className="h-[2px] w-14 bg-[#e0b044]" />
-              <span className="h-2 w-2 rounded-full bg-[#e0b044]" />
+              <span className="h-[2px] w-14 bg-[#f60f8e]" />
+              <span className="h-2 w-2 rounded-full bg-[#f60f8e]" />
             </div>
 
             {/* Description */}
-            <p className="mt-7 max-w-[560px] text-[16px] leading-8 text-[#657174] lg:text-[17px]">
-              As our operational heart, this historic city serves as the
-              perfect gateway to Maharashtra&apos;s most extraordinary
-              destinations. From here, our experienced team takes you
-              seamlessly to the UNESCO World Heritage sites of Ajanta and
-              Ellora, along with the magnificent Daulatabad Fort.
+            <p className="mt-7 max-w-[560px] text-[16px] leading-8 text-[#6c6271] lg:text-[17px]">
+              Home to Masjid al-Haram and the Kaaba, Makkah is where every
+              pilgrim performs the rites of Umrah – ihram, tawaf, sa&apos;i
+              and halq or taqsir – and where the days of Haj unfold in Mina,
+              Arafat and Muzdalifah.
             </p>
 
-            <p className="mt-5 max-w-[540px] text-[15px] leading-7 text-[#7a8385]">
-              Experience the region with the comfort, insight, and local
-              expertise that only a deeply rooted travel partner can provide.
+            <p className="mt-5 max-w-[540px] text-[15px] leading-7 text-[#827a85]">
+              Choosing the right hotel distance from the Haram makes a real
+              difference, especially for elderly pilgrims. We help you weigh
+              comfort, walking time and budget.
             </p>
 
             {/* Premium Location Detail */}
             <div className="mt-8 flex items-center gap-4">
 
-              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#e6d8b7] bg-[#fffdf8]">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#eba8cd] bg-[#fdfafc]">
                 <MapPin
                   size={19}
                   strokeWidth={1.8}
-                  className="text-[#b88725]"
+                  className="text-[#b20d67]"
                 />
               </div>
 
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9b9b9b]">
-                  Based In
+                  Located In
                 </p>
 
-                <p className="mt-1 font-serif text-[16px] font-semibold text-[#123f55]">
-                  Maharashtra, India
+                <p className="mt-1 font-serif text-[16px] font-semibold text-[#3f1152]">
+                  Saudi Arabia
                 </p>
               </div>
 
@@ -85,12 +85,12 @@ export default function LocalBaseSection() {
             {/* CTA */}
             <div className="mt-10">
               <Link
-                href="#city-base"
-                className="group inline-flex items-center gap-4 bg-[#123f55] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#0b2f42] hover:shadow-[0_15px_35px_rgba(18,63,85,0.25)]"
+                href="/tour-packages"
+                className="group inline-flex items-center gap-4 bg-[#3f1152] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#300b40] hover:shadow-[0_15px_35px_rgba(63,17,82,0.25)]"
               >
-                Explore Our City
+                View Umrah Packages
 
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#e4b544] text-[#123f55] transition-transform duration-300 group-hover:translate-x-1">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#fc0e91] text-[#3f1152] transition-transform duration-300 group-hover:translate-x-1">
                   <ArrowRight size={15} strokeWidth={2.2} />
                 </span>
               </Link>
@@ -103,22 +103,22 @@ export default function LocalBaseSection() {
           <div className="relative lg:col-span-7">
 
             {/* Decorative Gold Border */}
-            <div className="absolute -right-4 -top-4 hidden h-[180px] w-[180px] border border-[#dcb24d]/50 lg:block" />
+            <div className="absolute -right-4 -top-4 hidden h-[180px] w-[180px] border border-[#f01b90]/50 lg:block" />
 
             {/* Image Frame */}
-            <div className="relative rounded-[32px] bg-gradient-to-br from-[#f3ead4] via-[#fffdf8] to-[#e6d7b4] p-[10px] shadow-[0_30px_70px_rgba(18,63,85,0.15)]">
+            <div className="relative rounded-[32px] bg-gradient-to-br from-[#ecdbe4] via-[#fdfafc] to-[#eca4cb] p-[10px] shadow-[0_30px_70px_rgba(63,17,82,0.15)]">
 
               <div className="relative overflow-hidden rounded-[25px]">
 
                 {/* Image */}
                 <img
-                    src="/destinations/csna.jpg"
-                  alt="Bibi Ka Maqbara in Chhatrapati Sambhaji Nagar"
+                    src="/images/demo/kaaba-cloudy.jpg"
+                  alt="The Kaaba in Masjid al-Haram, Makkah"
                   className="h-[360px] w-full object-cover transition duration-[1200ms] ease-out hover:scale-105 sm:h-[460px] lg:h-[540px]"
                 />
 
                 {/* Image Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#062f3b]/55 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2a0639]/55 via-transparent to-transparent" />
 
                 {/* Image Label */}
                 <div className="absolute bottom-7 left-7 hidden items-center gap-3 text-white sm:flex">
@@ -126,17 +126,17 @@ export default function LocalBaseSection() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur-md">
                     <Sparkles
                       size={17}
-                      className="text-[#e8bb4f]"
+                      className="text-[#ff1998]"
                     />
                   </div>
 
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#e7bc54]">
-                      Heritage Gateway
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#fd2099]">
+                      Masjid al-Haram
                     </p>
 
                     <p className="mt-1 font-serif text-[18px] font-semibold">
-                      Discover Maharashtra
+                      Makkah, Saudi Arabia
                     </p>
                   </div>
 
@@ -154,12 +154,12 @@ export default function LocalBaseSection() {
                 <div className="flex items-start gap-4">
 
                   {/* Icon */}
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#123f55] shadow-lg">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#3f1152] shadow-lg">
 
                     <MapPin
                       size={21}
                       strokeWidth={1.8}
-                      className="text-[#e7b84a]"
+                      className="text-[#fe1495]"
                     />
 
                   </div>
@@ -168,17 +168,17 @@ export default function LocalBaseSection() {
                   {/* Content */}
                   <div>
 
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#b88725]">
-                      Your Starting Point
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#b20d67]">
+                      Your First Steps
                     </p>
 
-                    <h3 className="mt-2 font-serif text-[21px] font-bold text-[#123f55]">
-                      Central Hub
+                    <h3 className="mt-2 font-serif text-[21px] font-bold text-[#3f1152]">
+                      Umrah Begins Here
                     </h3>
 
-                    <p className="mt-2 text-[13px] leading-6 text-[#6c7476]">
-                      Strategically located for seamless access to
-                      Maharashtra&apos;s most iconic heritage destinations.
+                    <p className="mt-2 text-[13px] leading-6 text-[#706972]">
+                      Pilgrims enter ihram at the miqat and travel to Makkah to
+                      perform tawaf around the Kaaba.
                     </p>
 
                   </div>
@@ -186,7 +186,7 @@ export default function LocalBaseSection() {
                 </div>
 
                 {/* Bottom Accent */}
-                <div className="mt-5 h-[1px] w-full bg-gradient-to-r from-[#e3b54b] via-[#e3b54b]/30 to-transparent" />
+                <div className="mt-5 h-[1px] w-full bg-gradient-to-r from-[#f91693] via-[#f91693]/30 to-transparent" />
 
               </div>
 

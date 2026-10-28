@@ -10,10 +10,10 @@ import JsonLd from "@/components/seo/JsonLd";
 import { faqs } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
-  title: "FAQs – Tour Packages, Taxi Booking & Travel Help",
-  description: "Answers to common questions about tour packages, quotes, bookings, private taxi services and travel assistance from Global Horizons Tours & Travels.",
+  title: "FAQs – Umrah Packages, Visas, Haj & Booking Help",
+  description: "Answers to common questions about Umrah packages, visas, Haj guidance, elderly pilgrims, bookings and payments with Ayesha Tours.",
   path: "/faq",
-  keywords: ["tour booking FAQ", "taxi booking questions Aurangabad"],
+  keywords: ["Umrah FAQ", "Umrah visa documents", "Haj questions"],
 });
 
 export default function FAQPage() {

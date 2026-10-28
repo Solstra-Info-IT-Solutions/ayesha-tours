@@ -11,16 +11,16 @@ import Footer from "@/components/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "About Us – Local Travel Experts in Chhatrapati Sambhajinagar",
-  description: "Meet Global Horizons Tours & Travels, a Chhatrapati Sambhajinagar (Aurangabad) based travel company crafting tours, pilgrimages and private transport across Maharashtra and India.",
+  title: "About Us – Haj & Umrah Travel Specialists",
+  description: "Meet Ayesha Tours, a travel company focused on Umrah and Haj – helping pilgrims with packages, hotels near the Haramain, flights, visa paperwork, transfers and ziyarat.",
   path: "/about",
-  keywords: ["about Global Horizons Tours", "travel company Aurangabad", "local travel experts Maharashtra"],
+  keywords: ["about Ayesha Tours", "Haj and Umrah travel agency", "Umrah package specialists"],
 });
 
 export default function AboutPage() {
   return (
     
-    <main className="bg-[#faf9f5]">
+    <main className="bg-[#f9f6f8]">
         <Navbar/>
       <AboutHero />
       <OurStory />

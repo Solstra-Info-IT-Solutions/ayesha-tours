@@ -1,10 +1,10 @@
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Destinations – Ajanta, Ellora, Shirdi & Beyond",
-  description: "Explore destinations around Chhatrapati Sambhajinagar and across India: Ajanta and Ellora Caves, Shirdi, Grishneshwar, Daulatabad Fort and more with Global Horizons.",
+  title: "Makkah & Madinah – Holy Cities & Ziyarat Sites",
+  description: "A guide to the holy cities of Makkah and Madinah and the ziyarat sites pilgrims visit – Jabal al-Nour, Mount Uhud, Masjid Quba, Mina and Arafat – with Ayesha Tours.",
   path: "/destinations",
-  keywords: ["Aurangabad tourist places", "Maharashtra destinations", "Ajanta Ellora Shirdi tour"],
+  keywords: ["Makkah ziyarat", "Madinah ziyarat", "Umrah destinations", "Jabal al-Nour", "Mount Uhud"],
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {

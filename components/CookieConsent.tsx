@@ -81,17 +81,17 @@ export default function CookieConsent() {
   return (
     <>
       {/* Backdrop */}
-      <div className="fixed inset-0 z-[9998] bg-[#082f38]/30 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-[9998] bg-[#280836]/30 backdrop-blur-[2px]" />
 
       {/* Cookie Modal */}
       <div className="fixed inset-x-4 bottom-4 z-[9999] mx-auto w-auto max-w-[680px] sm:bottom-6">
-        <div className="relative overflow-hidden rounded-[28px] border border-[#e7ae3c]/30 bg-[#0e4655] shadow-[0_30px_100px_rgba(0,0,0,0.35)]">
+        <div className="relative overflow-hidden rounded-[28px] border border-[#ff058f]/30 bg-[#3e0e52] shadow-[0_30px_100px_rgba(0,0,0,0.35)]">
           
           {/* Gold Top Line */}
-          <div className="h-[2px] bg-gradient-to-r from-transparent via-[#e7ae3c] to-transparent" />
+          <div className="h-[2px] bg-gradient-to-r from-transparent via-[#ff058f] to-transparent" />
 
           {/* Decorative Circle */}
-          <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full border border-[#e7ae3c]/10" />
+          <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full border border-[#ff058f]/10" />
 
           <div className="relative p-5 sm:p-7">
             {/* ===============================
@@ -103,7 +103,7 @@ export default function CookieConsent() {
                 {/* Header */}
 
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#e7ae3c]/30 bg-[#e7ae3c]/10 text-[#e7ae3c]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#ff058f]/30 bg-[#ff058f]/10 text-[#ff058f]">
                     <Cookie size={22} />
                   </div>
 
@@ -111,10 +111,10 @@ export default function CookieConsent() {
                     <div className="flex items-center gap-2">
                       <ShieldCheck
                         size={14}
-                        className="text-[#e7ae3c]"
+                        className="text-[#ff058f]"
                       />
 
-                      <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#e7ae3c]">
+                      <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#ff058f]">
                         Your Privacy Matters
                       </span>
                     </div>
@@ -127,18 +127,18 @@ export default function CookieConsent() {
 
                 {/* Description */}
 
-                <p className="mt-5 text-[13px] leading-6 text-[#b8cbd0] sm:text-[14px]">
+                <p className="mt-5 text-[13px] leading-6 text-[#c9b8d0] sm:text-[14px]">
                   We use cookies to improve your browsing experience,
                   understand website usage and provide a more personalized
                   experience. You can accept all cookies or manage your
                   preferences.
                 </p>
 
-                <p className="mt-3 text-[12px] text-[#8eabb2]">
+                <p className="mt-3 text-[12px] text-[#a78eb2]">
                   Learn more in our{" "}
                   <Link
                     href="/privacy-policy"
-                    className="text-[#e7ae3c] underline underline-offset-4 transition-colors hover:text-white"
+                    className="text-[#ff058f] underline underline-offset-4 transition-colors hover:text-white"
                   >
                     Privacy Policy
                   </Link>
@@ -151,7 +151,7 @@ export default function CookieConsent() {
                   
                   <button
                     onClick={acceptAll}
-                    className="group relative inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 overflow-hidden rounded-full bg-[#e7ae3c] px-5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#0e4655] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(231,174,60,0.25)]"
+                    className="group relative inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 overflow-hidden rounded-full bg-[#ff058f] px-5 text-[10px] font-bold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(255,5,143,0.25)]"
                   >
                     <Check size={16} />
 
@@ -160,7 +160,7 @@ export default function CookieConsent() {
 
                   <button
                     onClick={rejectOptional}
-                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-full border border-white/[0.15] px-5 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-all duration-300 hover:border-[#e7ae3c]/60 hover:bg-white/[0.05]"
+                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-full border border-white/[0.15] px-5 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-all duration-300 hover:border-[#ff058f]/60 hover:bg-white/[0.05]"
                   >
                     <X size={16} />
 
@@ -169,7 +169,7 @@ export default function CookieConsent() {
 
                   <button
                     onClick={() => setShowPreferences(true)}
-                    className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e7ae3c] transition-colors hover:text-white"
+                    className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#ff058f] transition-colors hover:text-white"
                   >
                     <Settings2 size={16} />
 
@@ -188,10 +188,10 @@ export default function CookieConsent() {
                     <div className="flex items-center gap-2">
                       <Settings2
                         size={15}
-                        className="text-[#e7ae3c]"
+                        className="text-[#ff058f]"
                       />
 
-                      <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#e7ae3c]">
+                      <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#ff058f]">
                         Cookie Preferences
                       </span>
                     </div>
@@ -203,7 +203,7 @@ export default function CookieConsent() {
 
                   <button
                     onClick={() => setShowPreferences(false)}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.12] text-[#b8cbd0] transition hover:border-[#e7ae3c]/50 hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.12] text-[#c9b8d0] transition hover:border-[#ff058f]/50 hover:text-white"
                     aria-label="Close preferences"
                   >
                     <ChevronDown size={18} />
@@ -256,7 +256,7 @@ export default function CookieConsent() {
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <button
                     onClick={savePreferences}
-                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-full bg-[#e7ae3c] px-5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#0e4655] transition-all hover:-translate-y-0.5"
+                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-full bg-[#ff058f] px-5 text-[10px] font-bold uppercase tracking-[0.16em] text-white transition-all hover:-translate-y-0.5"
                   >
                     <Check size={16} />
 
@@ -265,7 +265,7 @@ export default function CookieConsent() {
 
                   <button
                     onClick={acceptAll}
-                    className="inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full border border-white/[0.15] px-5 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-all hover:border-[#e7ae3c]/60 hover:bg-white/[0.05]"
+                    className="inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full border border-white/[0.15] px-5 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-all hover:border-[#ff058f]/60 hover:bg-white/[0.05]"
                   >
                     Accept All
                   </button>
@@ -305,7 +305,7 @@ function PreferenceRow({
           {title}
         </h4>
 
-        <p className="mt-1 text-[11px] leading-5 text-[#8eabb2]">
+        <p className="mt-1 text-[11px] leading-5 text-[#a78eb2]">
           {description}
         </p>
       </div>
@@ -316,7 +316,7 @@ function PreferenceRow({
         onClick={() => !locked && onChange(!enabled)}
         className={`relative h-7 w-12 shrink-0 rounded-full transition-all duration-300 ${
           enabled
-            ? "bg-[#e7ae3c]"
+            ? "bg-[#ff058f]"
             : "bg-white/[0.12]"
         } ${locked ? "cursor-not-allowed opacity-80" : "cursor-pointer"}`}
         aria-label={`Toggle ${title}`}

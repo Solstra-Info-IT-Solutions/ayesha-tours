@@ -2,35 +2,55 @@
  * Single source of truth for business details used by SEO metadata,
  * structured data (JSON-LD), sitemap and analytics.
  * Update here once and every page picks it up.
+ *
+ * DEMO NOTE: Ayesha Tours has not yet supplied its phone, WhatsApp, email,
+ * address or production domain. Every value below can be set through the
+ * matching NEXT_PUBLIC_* environment variable; the defaults are clearly
+ * fictional placeholders (example.com is a reserved domain, and Indian
+ * mobile numbers never begin with 0) so nothing routes to a stranger.
  */
 
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.globalhorizonstravels.in"
-).replace(/\/$/, "");
+const env = (value: string | undefined) => (value || "").trim();
+
+const configuredSiteUrl = env(process.env.NEXT_PUBLIC_SITE_URL);
+
+export const SITE_URL = (configuredSiteUrl || "http://localhost:3000").replace(/\/$/, "");
+
+/** Only allow search engines once a real production domain is configured. */
+export const IS_PRODUCTION_SITE = configuredSiteUrl.length > 0;
+
+/** Shows demo labels on illustrative prices, dates and reviews. */
+export const DEMO_MODE = env(process.env.NEXT_PUBLIC_DEMO_MODE) !== "false";
+
+const phoneDigits = env(process.env.NEXT_PUBLIC_CONTACT_PHONE).replace(/[^\d]/g, "");
+const whatsappDigits = env(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER).replace(/[^\d]/g, "");
+
+const formatIndianPhone = (digits: string) =>
+  digits.length === 12 && digits.startsWith("91")
+    ? `+91 ${digits.slice(2, 7)} ${digits.slice(7)}`
+    : `+${digits}`;
 
 export const SITE = {
-  name: "Global Horizons Tours & Travels",
-  shortName: "Global Horizons",
-  tagline: "Tour Packages, Private Taxi & Heritage Travel from Chhatrapati Sambhajinagar (Aurangabad)",
+  name: "Ayesha Tours",
+  shortName: "Ayesha Tours",
+  legalName: "Ayesha Tours",
+  tagline: "Haj & Umrah Packages",
   description:
-    "Global Horizons Tours & Travels in Chhatrapati Sambhajinagar (Aurangabad) offers Ajanta & Ellora tours, Shirdi and Jyotirlinga pilgrimage packages, airport transfers and private taxi services across Maharashtra and India.",
-  phone: "+91 77700 69004",
-  phoneHref: "+917770069004",
-  whatsapp: "917770069004",
-  email: "ghtravelsinfo@gmail.com",
+    "Ayesha Tours helps pilgrims plan Umrah and Haj journeys with guidance on packages, flights, hotels near the Haramain, transport, ziyarat and visa paperwork – organised with care from enquiry to return.",
+  phone: phoneDigits ? formatIndianPhone(phoneDigits) : "+91 00000 00000",
+  phoneHref: phoneDigits ? `+${phoneDigits}` : "",
+  whatsapp: whatsappDigits || phoneDigits,
+  email: env(process.env.NEXT_PUBLIC_CONTACT_EMAIL) || "enquiry@example.com",
+  hasRealContact: phoneDigits.length > 0,
   address: {
-    street: "Collector Office Road, Ganesh Colony",
-    locality: "Chhatrapati Sambhajinagar (Aurangabad)",
-    region: "Maharashtra",
+    street: env(process.env.NEXT_PUBLIC_ADDRESS_STREET) || "Office address to be confirmed",
+    locality: env(process.env.NEXT_PUBLIC_ADDRESS_CITY) || "India",
+    region: env(process.env.NEXT_PUBLIC_ADDRESS_REGION) || "",
     country: "IN",
   },
-  socials: [
-    "https://www.facebook.com/share/19RzbooduD/",
-    "https://www.instagram.com/global_horizons_tours",
-  ],
-  // Optional: paste the Google Business Profile / Maps URL here once created
-  googleBusinessUrl: process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL || "https://www.google.com/maps/place/Global+Horizons+Tours+%26+Travels/@19.8952399,75.3417461,17z/data=!4m6!3m5!1s0x3bdba374bb326abd:0x5f2b5c4379249b21!8m2!3d19.8952399!4d75.3417461",
-  // Default social-share image. Client should upload public/og-image.jpg (1200x630)
+  hours: "Mon – Sat, 10 AM – 7 PM (TBC)",
+  socials: [] as string[],
+  googleBusinessUrl: env(process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL),
   ogImage: "/og-image.jpg",
 } as const;
 
@@ -42,8 +62,29 @@ export const ANALYTICS = {
   bingVerification: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "",
 };
 
+/**
+ * WhatsApp deep link. Until the client's WhatsApp number is configured this
+ * opens WhatsApp's own "choose a chat" screen with the message pre-filled,
+ * rather than sending it to an unknown number.
+ */
 export const whatsappLink = (text?: string) =>
   `https://wa.me/${SITE.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
 
-export const absoluteUrl = (path = "/") =>
+/** tel: link, or the contact page while no phone number is configured. */
+export const phoneLink = () => (SITE.phoneHref ? `tel:${SITE.phoneHref}` : "/contact");
+
+export const mailLink = (subject?: string) =>
+  `mailto:${SITE.email}${subject ? `?subject=${encodeURIComponent(subject)}` : ""}`;
+
+/** Office map. Set NEXT_PUBLIC_MAP_QUERY (address or "lat,lng") once confirmed. */
+const mapQuery = env(process.env.NEXT_PUBLIC_MAP_QUERY);
+export const HAS_OFFICE_LOCATION = mapQuery.length > 0;
+export const mapEmbedUrl = () =>
+  `https://www.google.com/maps?q=${encodeURIComponent(mapQuery || "India")}&z=${mapQuery ? 16 : 4}&output=embed`;
+export const mapDirectionsUrl = () =>
+  mapQuery
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`
+    : "/contact";
+
+export const absoluteUrl =(path = "/") =>
   `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;

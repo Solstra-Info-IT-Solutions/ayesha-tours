@@ -27,7 +27,7 @@ export default function VehicleDetails({
       <SectionHeading
         number="02"
         title="Vehicle Requirements"
-        description="Choose the transport that best fits your journey."
+        description="Choose the vehicle that suits your group."
       />
 
       <div className="mt-7 grid gap-5 md:grid-cols-2">
@@ -41,7 +41,7 @@ export default function VehicleDetails({
           <div className="relative">
             <Car
               size={18}
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#123f55]/50"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#3f1152]/50"
             />
 
             <select
@@ -50,17 +50,17 @@ export default function VehicleDetails({
               onChange={(event) =>
                 updateField("vehicleType", event.target.value)
               }
-              className="h-13 w-full appearance-none rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-700 outline-none transition focus:border-[#123f55] focus:ring-4 focus:ring-[#123f55]/5"
+              className="h-13 w-full appearance-none rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-700 outline-none transition focus:border-[#3f1152] focus:ring-4 focus:ring-[#3f1152]/5"
             >
               <option value="">Select vehicle</option>
               <option value="Sedan">Sedan</option>
               <option value="SUV">SUV</option>
-              <option value="Tempo Traveller">
-                Tempo Traveller
+              <option value="GMC / Family SUV">
+                GMC / Family SUV
               </option>
-              <option value="Mini Bus">Mini Bus</option>
-              <option value="Luxury Coach">
-                Luxury Coach / Bus
+              <option value="Van (Hiace)">Van (Hiace)</option>
+              <option value="Coach / Bus">
+                Coach / Bus
               </option>
             </select>
           </div>
@@ -96,14 +96,14 @@ export default function VehicleDetails({
 
       {/* Information */}
 
-      <div className="mt-6 flex gap-4 rounded-2xl border border-[#d4a139]/20 bg-[#fffaf0] p-5">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#d4a139]/10 text-[#d4a139]">
+      <div className="mt-6 flex gap-4 rounded-2xl border border-[#db1481]/20 bg-[#fcf3f8] p-5">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#db1481]/10 text-[#db1481]">
           <Bus size={19} />
         </div>
 
-        <p className="text-sm leading-6 text-[#6b6250]">
-          Not sure which vehicle is suitable? Select your passenger count and
-          our transport team will recommend the best option for your journey.
+        <p className="text-sm leading-6 text-[#65565e]">
+          Not sure which vehicle is suitable? Enter the number of pilgrims and
+            your luggage needs and we will recommend the best option.
         </p>
       </div>
     </section>
@@ -121,12 +121,12 @@ function SectionHeading({
 }) {
   return (
     <div className="flex gap-4">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#123f55] text-xs font-bold text-[#e7ae3c]">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#3f1152] text-xs font-bold text-[#ff058f]">
         {number}
       </span>
 
       <div>
-        <h3 className="font-serif text-xl font-bold text-[#123f55]">
+        <h3 className="font-serif text-xl font-bold text-[#3f1152]">
           {title}
         </h3>
 
@@ -162,7 +162,7 @@ function InputField({
       </label>
 
       <div className="relative">
-        <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#123f55]/50">
+        <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#3f1152]/50">
           {icon}
         </div>
 
@@ -173,7 +173,7 @@ function InputField({
           value={value}
           required={required}
           onChange={(event) => onChange(event.target.value)}
-          className="h-[52px] w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 outline-none transition focus:border-[#123f55] focus:ring-4 focus:ring-[#123f55]/5"
+          className="h-[52px] w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 outline-none transition focus:border-[#3f1152] focus:ring-4 focus:ring-[#3f1152]/5"
         />
       </div>
     </div>

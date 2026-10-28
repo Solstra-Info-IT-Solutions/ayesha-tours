@@ -1,3 +1,4 @@
+import { whatsappLink, phoneLink, mailLink, SITE } from "@/lib/site";
 import {
   Phone,
   Mail,
@@ -9,30 +10,30 @@ import {
 const contactItems = [
   {
     title: "Call Us",
-    description: "Speak directly with our travel specialists.",
-    value: "+91 77700 69004",
-    href: "tel:+917770069004",
+    description: "Speak directly with our team during office hours.",
+    value: SITE.phone,
+    href: phoneLink(),
     icon: Phone,
   },
   {
     title: "Email Us",
-    description: "Send us your travel requirements anytime.",
-    value: "ghtravelsinfo@gmail.com",
-    href: "mailto:ghtravelsinfo@gmail.com",
+    description: "Send your Umrah or Haj requirements anytime.",
+    value: SITE.email,
+    href: mailLink(),
     icon: Mail,
   },
   {
     title: "Visit Us",
-    description: "Come and meet our travel experts.",
-    value: "Chhatrapati Sambhajinagar",
+    description: "Meet our team at the office.",
+    value: SITE.address.street,
     href: "#location",
     icon: MapPin,
   },
   {
     title: "WhatsApp",
-    description: "Quick assistance for your travel enquiries.",
+    description: "Quick answers to your pilgrimage questions.",
     value: "Chat With Us",
-    href: "https://wa.me/917770069004",
+    href: whatsappLink(),
     icon: MessageCircle,
   },
 ];
@@ -48,33 +49,33 @@ export default function ContactInfoCards() {
             <a
               key={item.title}
               href={item.href}
-              className="group relative overflow-hidden border border-[#e6dfd3] bg-[#fffefd] p-6 shadow-[0_18px_50px_rgba(18,63,85,0.08)] transition-all duration-500 hover:-translate-y-2 hover:border-[#d9a737]/60 hover:shadow-[0_25px_60px_rgba(18,63,85,0.14)]"
+              className="group relative overflow-hidden border border-[#e2d7dd] bg-[#fffdfe] p-6 shadow-[0_18px_50px_rgba(63,17,82,0.08)] transition-all duration-500 hover:-translate-y-2 hover:border-[#e40e83]/60 hover:shadow-[0_25px_60px_rgba(63,17,82,0.14)]"
             >
               {/* Background Accent */}
 
-              <div className="absolute right-[-30px] top-[-30px] h-24 w-24 rounded-full bg-[#d9a737]/[0.05] transition-transform duration-500 group-hover:scale-150" />
+              <div className="absolute right-[-30px] top-[-30px] h-24 w-24 rounded-full bg-[#e40e83]/[0.05] transition-transform duration-500 group-hover:scale-150" />
 
               <div className="relative">
                 <div className="flex items-start justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#14596a]/10 text-[#14596a] transition-all duration-300 group-hover:bg-[#14596a] group-hover:text-white">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#4e1367]/10 text-[#4e1367] transition-all duration-300 group-hover:bg-[#4e1367] group-hover:text-white">
                     <Icon size={19} />
                   </div>
 
                   <ArrowUpRight
                     size={17}
-                    className="text-[#d9a737] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                    className="text-[#e40e83] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                   />
                 </div>
 
-                <h3 className="mt-6 font-serif text-[20px] font-bold text-[#123f55]">
+                <h3 className="mt-6 font-serif text-[20px] font-bold text-[#3f1152]">
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-[13px] leading-6 text-[#829093]">
+                <p className="mt-2 text-[13px] leading-6 text-[#8e8293]">
                   {item.description}
                 </p>
 
-                <p className="mt-5 text-[13px] font-semibold text-[#14596a]">
+                <p className="mt-5 text-[13px] font-semibold text-[#4e1367]">
                   {item.value}
                 </p>
               </div>

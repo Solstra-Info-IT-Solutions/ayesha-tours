@@ -70,15 +70,15 @@ export default function Traveler() {
               type="button"
               className={`flex h-[102px] flex-col items-center justify-center rounded-lg border transition ${
                 index === 0
-                  ? "border-[#00495a] bg-[#00495a] text-white shadow-md"
-                  : "border-gray-100 bg-white text-gray-700 shadow-sm hover:border-[#00495a]"
+                  ? "border-[#3d0057] bg-[#3d0057] text-white shadow-md"
+                  : "border-gray-100 bg-white text-gray-700 shadow-sm hover:border-[#3d0057]"
               }`}
             >
               <Icon
                 size={28}
                 strokeWidth={2}
                 className={
-                  index === 0 ? "text-[#df6b45]" : "text-[#b54b25]"
+                  index === 0 ? "text-[#ea3471]" : "text-[#bc1a50]"
                 }
               />
 
@@ -99,7 +99,7 @@ export default function Traveler() {
           >
             {/* LEFT */}
             <div>
-              <h2 className="text-xl font-semibold text-[#00495a]">
+              <h2 className="text-xl font-semibold text-[#3d0057]">
                 {item.title}
               </h2>
 
@@ -113,20 +113,20 @@ export default function Traveler() {
               {/* MINUS */}
               <button
                 type="button"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#eeece8] text-gray-800 transition hover:bg-gray-200"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#ede9eb] text-gray-800 transition hover:bg-gray-200"
               >
                 <Minus size={20} />
               </button>
 
               {/* NUMBER */}
-              <span className="w-5 text-center font-serif text-xl font-bold text-[#003f50]">
+              <span className="w-5 text-center font-serif text-xl font-bold text-[#36004e]">
                 {item.number}
               </span>
 
               {/* PLUS */}
               <button
                 type="button"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#eeece8] text-gray-800 transition hover:bg-gray-200"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#ede9eb] text-gray-800 transition hover:bg-gray-200"
               >
                 <Plus size={20} />
               </button>

@@ -14,9 +14,9 @@ export const runtime = "nodejs";
 
 const FORM_LABELS: Record<string, string> = {
   contact_form: "Contact Message",
-  travel_quote: "Travel Quote Request",
-  transport_quote: "Transport Quote Request",
-  enquiry_form: "Travel Enquiry",
+  travel_quote: "Umrah / Haj Package Quote Request",
+  transport_quote: "Transport & Ziyarat Quote Request",
+  enquiry_form: "Pilgrimage Enquiry",
 };
 
 const MAX_BODY_BYTES = 20_000;
@@ -109,13 +109,13 @@ export async function POST(request: NextRequest) {
 
     const html = `
       <div style="font-family:Arial,sans-serif;max-width:640px">
-        <h2 style="color:#0e4655;margin:0 0 4px">New ${escapeHtml(label)}</h2>
+        <h2 style="color:#3e0e52;margin:0 0 4px">New ${escapeHtml(label)}</h2>
         <p style="color:#666;margin:0 0 16px">Received from the website</p>
         <table style="border-collapse:collapse;width:100%">
           ${rows
             .map(
               ([k, v]) =>
-                `<tr><td style="padding:8px 10px;border:1px solid #e6dfd3;background:#faf9f5;font-weight:bold;vertical-align:top;width:35%">${escapeHtml(k)}</td><td style="padding:8px 10px;border:1px solid #e6dfd3;white-space:pre-wrap">${escapeHtml(v)}</td></tr>`
+                `<tr><td style="padding:8px 10px;border:1px solid #e2d7dd;background:#f9f6f8;font-weight:bold;vertical-align:top;width:35%">${escapeHtml(k)}</td><td style="padding:8px 10px;border:1px solid #e2d7dd;white-space:pre-wrap">${escapeHtml(v)}</td></tr>`
             )
             .join("")}
         </table>
@@ -135,7 +135,7 @@ export async function POST(request: NextRequest) {
     const emailOk = /^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/.test(email);
 
     await transporter.sendMail({
-      from: `"Global Horizons Website" <${user}>`,
+      from: `"Ayesha Tours Website" <${user}>`,
       to: process.env.LEAD_TO_EMAIL || user,
       replyTo: emailOk ? email : undefined,
       subject: `New ${label}${name ? ` – ${name.slice(0, 60).replace(/[\r\n]/g, " ")}` : ""}`,

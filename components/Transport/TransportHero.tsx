@@ -12,26 +12,26 @@ export default function TransportHero() {
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] hover:scale-105"
         style={{
-          backgroundImage: "url('/my-collage.png')",
+          backgroundImage: "url('/images/demo/haramain-train.jpg')",
         }}
       />
 
       {/* ================= PREMIUM OVERLAYS ================= */}
 
       {/* Main cinematic overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#082f39]/85 via-[#082f39]/55 to-[#082f39]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#290837]/85 via-[#290837]/55 to-[#290837]/20" />
 
       {/* Bottom depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#061f27]/65 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1c0626]/65 via-transparent to-transparent" />
 
       {/* Soft warm accent */}
-      <div className="absolute -left-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[#d9a737]/10 blur-3xl" />
+      <div className="absolute -left-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[#e40e83]/10 blur-3xl" />
 
       {/* ================= DECORATIVE ELEMENTS ================= */}
 
       <div className="pointer-events-none absolute left-10 top-10 hidden h-[180px] w-[180px] rounded-full border border-white/10 lg:block" />
 
-      <div className="pointer-events-none absolute bottom-10 right-10 hidden h-[220px] w-[220px] rounded-full border border-[#d9a737]/20 lg:block" />
+      <div className="pointer-events-none absolute bottom-10 right-10 hidden h-[220px] w-[220px] rounded-full border border-[#e40e83]/20 lg:block" />
 
       {/* ================= CONTENT ================= */}
 
@@ -43,17 +43,17 @@ export default function TransportHero() {
 
           <div className="flex items-center gap-4">
 
-            <span className="h-[2px] w-10 bg-[#d9a737]" />
+            <span className="h-[2px] w-10 bg-[#e40e83]" />
 
             <div className="flex items-center gap-2">
 
               <CarFront
                 size={16}
-                className="text-[#d9a737]"
+                className="text-[#e40e83]"
               />
 
               <span className="text-[10px] font-semibold uppercase tracking-[2.5px] text-white/80 sm:text-[11px]">
-                Premium Transportation
+                Transport & Ziyarat
               </span>
 
             </div>
@@ -64,14 +64,14 @@ export default function TransportHero() {
 
           <h1 className="mt-7 font-serif text-[44px] font-bold leading-[1.08] text-white sm:text-[58px] md:text-[68px] lg:text-[78px] xl:text-[86px]">
 
-            Travel
+            Arrive
 
             <span className="block">
-              Comfortably.
+              Calmly.
             </span>
 
-            <span className="mt-1 block italic text-[#e5b34d]">
-              Travel Confidently.
+            <span className="mt-1 block italic text-[#fb1895]">
+              Travel With Ease.
             </span>
 
           </h1>
@@ -80,9 +80,8 @@ export default function TransportHero() {
 
           <p className="mt-7 max-w-[680px] text-[15px] leading-7 text-white/75 sm:text-[17px] sm:leading-8">
 
-            Premium transportation solutions designed around your comfort,
-            safety and schedule — connecting you seamlessly across Maharashtra
-            and beyond.
+            Airport pickups, Makkah–Madinah transfers and ziyarat tours arranged
+            around your group, your hotel and your prayer times.
 
           </p>
 
@@ -92,10 +91,10 @@ export default function TransportHero() {
 
             <Link
               href="#fleet"
-              className="group inline-flex h-[54px] items-center justify-center gap-3 bg-[#b94721] px-8 text-[11px] font-bold uppercase tracking-[1.5px] text-white shadow-[0_15px_35px_rgba(185,71,33,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#9f3b1e] hover:shadow-[0_20px_45px_rgba(185,71,33,0.35)]"
+              className="group inline-flex h-[54px] items-center justify-center gap-3 bg-[#c0154e] px-8 text-[11px] font-bold uppercase tracking-[1.5px] text-white shadow-[0_15px_35px_rgba(192,21,78,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#a51444] hover:shadow-[0_20px_45px_rgba(192,21,78,0.35)]"
             >
 
-              Explore Our Fleet
+              View Vehicle Options
 
               <ArrowDownRight
                 size={16}
@@ -105,8 +104,8 @@ export default function TransportHero() {
             </Link>
 
             <Link
-              href="/request-quote"
-              className="inline-flex h-[54px] items-center justify-center border border-white/30 bg-white/10 px-8 text-[11px] font-bold uppercase tracking-[1.5px] text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#14596a]"
+              href="/transport-request-quote"
+              className="inline-flex h-[54px] items-center justify-center border border-white/30 bg-white/10 px-8 text-[11px] font-bold uppercase tracking-[1.5px] text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#4e1367]"
             >
               Request a Quote
             </Link>
@@ -119,36 +118,36 @@ export default function TransportHero() {
 
             <div className="flex items-center gap-3">
 
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#d9a737]/40 text-[11px] text-[#e5b34d]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e40e83]/40 text-[11px] text-[#fb1895]">
                 01
               </span>
 
               <span className="text-[11px] uppercase tracking-[1.2px] text-white/70">
-                Professional Drivers
+                Airport Pickups
               </span>
 
             </div>
 
             <div className="flex items-center gap-3">
 
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#d9a737]/40 text-[11px] text-[#e5b34d]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e40e83]/40 text-[11px] text-[#fb1895]">
                 02
               </span>
 
               <span className="text-[11px] uppercase tracking-[1.2px] text-white/70">
-                Comfortable Vehicles
+                Intercity Transfers
               </span>
 
             </div>
 
             <div className="flex items-center gap-3">
 
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#d9a737]/40 text-[11px] text-[#e5b34d]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e40e83]/40 text-[11px] text-[#fb1895]">
                 03
               </span>
 
               <span className="text-[11px] uppercase tracking-[1.2px] text-white/70">
-                Reliable Service
+                Guided Ziyarat
               </span>
 
             </div>
@@ -164,10 +163,10 @@ export default function TransportHero() {
       <div className="absolute bottom-8 right-5 hidden items-center gap-4 text-white/60 lg:right-14 lg:flex xl:right-16 2xl:right-20">
 
         <span className="text-[10px] uppercase tracking-[2px]">
-          Discover Our Fleet
+          Vehicle Options
         </span>
 
-        <span className="h-px w-14 bg-[#d9a737]" />
+        <span className="h-px w-14 bg-[#e40e83]" />
 
       </div>
 

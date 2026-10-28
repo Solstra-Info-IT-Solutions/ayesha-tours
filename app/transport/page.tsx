@@ -7,10 +7,10 @@ import Footer from "@/components/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Private Taxi, Cabs & Tempo Travellers in Aurangabad",
-  description: "Book airport transfers, outstation cabs and group transport in Chhatrapati Sambhajinagar. Sedans, SUVs and tempo travellers with professional drivers.",
+  title: "Transport & Ziyarat – Airport, Makkah–Madinah & Group Transfers",
+  description: "Request airport pickups in Jeddah and Madinah, Makkah–Madinah transfers, Haramain train guidance and ziyarat tours for families and groups with Ayesha Tours.",
   path: "/transport",
-  keywords: ["taxi service Aurangabad", "tempo traveller on rent Aurangabad", "outstation cab"],
+  keywords: ["Jeddah airport to Makkah transfer", "Makkah to Madinah transport", "ziyarat tour Madinah", "Umrah group transport"],
 });
 
 export default function TransportPage() {

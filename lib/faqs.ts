@@ -1,39 +1,48 @@
 export type Faq = { question: string; answer: string };
 
+/**
+ * General pilgrim FAQs. Answers avoid quoting fees, quotas or visa rules
+ * that change often – pilgrims are asked to confirm current requirements.
+ */
 export const faqs: Faq[] = [
   {
-    question: "How can I request a travel quote?",
+    question: "How do I request a quote for an Umrah package?",
     answer:
-      "You can submit your travel requirements through our Request a Quote page. Our team will review your destination, dates, number of travellers and preferences before preparing a personalized travel proposal.",
+      "Use the Request a Quote or Enquiry page, or message us on WhatsApp, with your preferred month, number of adults and children, departure city and hotel preference. We will reply with suitable options and a written breakdown of what each package includes.",
   },
   {
-    question: "Can I customize my tour package?",
+    question: "What is usually included in an Umrah package?",
     answer:
-      "Yes. We can help create personalized travel experiences based on your preferred destination, travel dates, accommodation preferences, transportation requirements and planned activities.",
+      "Packages commonly include return flights, Umrah visa processing, hotels in Makkah and Madinah, airport and intercity transfers and ziyarat. Inclusions vary by package, so every quote lists exactly what is and is not included before you confirm.",
   },
   {
-    question: "Do you provide transportation services?",
+    question: "Can I customise the number of nights in Makkah and Madinah?",
     answer:
-      "Yes. Global Horizon provides private taxi services, airport transfers, railway transfers and professional transportation solutions for corporate and group travel requirements.",
+      "Yes. You can usually choose how many nights to spend in each city, the hotel category and distance from the Haram, and the room sharing arrangement. Changes may affect the final price, which we confirm in writing.",
   },
   {
-    question: "Are transport services available for groups?",
+    question: "What documents do I need for an Umrah visa?",
     answer:
-      "Yes. Transportation can be arranged according to your group size and journey requirements. Contact our team with your travel details to receive suitable options.",
+      "Typically a passport with sufficient validity, recent photographs and the details requested in the visa application. Requirements – including vaccination rules – are set by the Saudi authorities and can change, so we share the current checklist when you enquire.",
   },
   {
-    question: "How do I confirm my booking?",
+    question: "Do you help with Haj as well as Umrah?",
     answer:
-      "Once your travel plan and quotation are finalized, our team will guide you through the applicable confirmation and payment process.",
+      "Yes, we offer guidance for Haj. Haj travel is subject to official quotas, registration processes and schedules, so availability and arrangements depend on the rules in force for that year. Contact us early to understand the options.",
   },
   {
-    question: "Can you help with international travel?",
+    question: "Is Umrah suitable for elderly pilgrims or wheelchair users?",
     answer:
-      "Yes. Depending on your destination and requirements, our team can assist you with planning international travel experiences and related travel arrangements.",
+      "Many elderly and less mobile pilgrims perform Umrah every year. Tell us about any mobility needs so we can suggest hotels closer to the Haram, suitable transfer timings and information about wheelchair options at the Haramain.",
   },
   {
-    question: "Do you provide 24/7 travel assistance?",
+    question: "How do I confirm my booking and make payment?",
     answer:
-      "We aim to provide travel support and assistance whenever required. The exact availability and support arrangements may depend on your confirmed travel service.",
+      "Once you are happy with the quotation, we explain the confirmation steps, payment schedule and cancellation terms in writing. Bookings are only confirmed after you receive written confirmation from us.",
+  },
+  {
+    question: "When is the best time to perform Umrah?",
+    answer:
+      "Umrah can be performed throughout the year outside the days of Haj. Ramadan and school holidays are the busiest and most expensive periods, while other months are often calmer and more affordable. We can help you compare.",
   },
 ];

@@ -55,11 +55,11 @@ export default function FormStatusModal({
   if (!isOpen) return null;
 
   const defaultTitle = isSuccess
-    ? "Your Journey Begins Here"
+    ? "Almost Done"
     : "We Couldn't Complete That";
 
   const eyebrow = isSuccess
-    ? "REQUEST SUCCESSFULLY RECEIVED"
+    ? "READY TO SEND IN WHATSAPP"
     : "REQUEST NEEDS ATTENTION";
 
   return (
@@ -74,17 +74,17 @@ export default function FormStatusModal({
       ===================================================== */}
 
       <div
-        className="absolute inset-0 bg-[#061f29]/75 backdrop-blur-md"
+        className="absolute inset-0 bg-[#1e0628]/75 backdrop-blur-md"
         onClick={onClose}
       />
 
       {/* Background glow */}
 
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#14596a]/20 blur-[130px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4e1367]/20 blur-[130px]" />
 
       <div
         className={`pointer-events-none absolute left-1/2 top-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[110px] ${
-          isSuccess ? "bg-[#d9a737]/15" : "bg-[#dc5c4f]/15"
+          isSuccess ? "bg-[#e40e83]/15" : "bg-[#dc5c4f]/15"
         }`}
       />
 
@@ -92,7 +92,7 @@ export default function FormStatusModal({
           MODAL
       ===================================================== */}
 
-      <div className="premium-modal relative w-full max-w-[540px] overflow-hidden rounded-[32px] border border-white/20 bg-[#fffefa] shadow-[0_40px_140px_rgba(0,0,0,0.45)]">
+      <div className="premium-modal relative w-full max-w-[540px] overflow-hidden rounded-[32px] border border-white/20 bg-[#fefbfd] shadow-[0_40px_140px_rgba(0,0,0,0.45)]">
         {/* =====================================================
             TOP PREMIUM ACCENT
         ===================================================== */}
@@ -101,7 +101,7 @@ export default function FormStatusModal({
           <div
             className={`absolute inset-0 ${
               isSuccess
-                ? "bg-gradient-to-r from-[#123f55] via-[#d9a737] to-[#123f55]"
+                ? "bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]"
                 : "bg-gradient-to-r from-[#7f2525] via-[#dc5c4f] to-[#7f2525]"
             }`}
           />
@@ -116,13 +116,13 @@ export default function FormStatusModal({
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           {/* Top circles */}
 
-          <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full border border-[#d9a737]/20" />
+          <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full border border-[#e40e83]/20" />
 
-          <div className="absolute -right-14 -top-14 h-40 w-40 rounded-full border border-[#d9a737]/15" />
+          <div className="absolute -right-14 -top-14 h-40 w-40 rounded-full border border-[#e40e83]/15" />
 
           {/* Bottom glow */}
 
-          <div className="absolute -bottom-32 -left-32 h-72 w-72 rounded-full bg-[#14596a]/[0.05] blur-2xl" />
+          <div className="absolute -bottom-32 -left-32 h-72 w-72 rounded-full bg-[#4e1367]/[0.05] blur-2xl" />
 
           {/* Fine grid */}
 
@@ -136,7 +136,7 @@ export default function FormStatusModal({
         <button
           type="button"
           onClick={onClose}
-          className="group absolute right-5 top-7 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-[#e5ded3] bg-white/90 text-[#758185] shadow-sm transition-all duration-300 hover:rotate-90 hover:border-[#123f55] hover:bg-[#123f55] hover:text-white sm:right-6"
+          className="group absolute right-5 top-7 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-[#e1d7dc] bg-white/90 text-[#7c7181] shadow-sm transition-all duration-300 hover:rotate-90 hover:border-[#3f1152] hover:bg-[#3f1152] hover:text-white sm:right-6"
           aria-label="Close modal"
         >
           <X
@@ -160,7 +160,7 @@ export default function FormStatusModal({
             <div
               className={`absolute inset-0 rounded-full border ${
                 isSuccess
-                  ? "border-[#d9a737]/20"
+                  ? "border-[#e40e83]/20"
                   : "border-[#dc5c4f]/20"
               } premium-spin-slow`}
             />
@@ -168,7 +168,7 @@ export default function FormStatusModal({
             <div
               className={`absolute inset-[10px] rounded-full border border-dashed ${
                 isSuccess
-                  ? "border-[#d9a737]/25"
+                  ? "border-[#e40e83]/25"
                   : "border-[#dc5c4f]/25"
               } premium-spin-reverse`}
             />
@@ -178,7 +178,7 @@ export default function FormStatusModal({
             <div
               className={`absolute inset-[25px] rounded-full blur-2xl ${
                 isSuccess
-                  ? "bg-[#d9a737]/25"
+                  ? "bg-[#e40e83]/25"
                   : "bg-[#dc5c4f]/20"
               }`}
             />
@@ -186,9 +186,9 @@ export default function FormStatusModal({
             {/* Main icon circle */}
 
             <div
-              className={`relative flex h-[92px] w-[92px] items-center justify-center rounded-full border shadow-[0_20px_60px_rgba(18,63,85,0.15)] ${
+              className={`relative flex h-[92px] w-[92px] items-center justify-center rounded-full border shadow-[0_20px_60px_rgba(63,17,82,0.15)] ${
                 isSuccess
-                  ? "border-[#d9a737]/40 bg-gradient-to-br from-[#fffdf5] to-[#fff5d8]"
+                  ? "border-[#e40e83]/40 bg-gradient-to-br from-[#fdf7fa] to-[#f6e1ec]"
                   : "border-[#dc5c4f]/30 bg-gradient-to-br from-[#fffafa] to-[#ffe9e7]"
               }`}
             >
@@ -197,17 +197,17 @@ export default function FormStatusModal({
               <div
                 className={`absolute inset-[7px] rounded-full border ${
                   isSuccess
-                    ? "border-[#d9a737]/20"
+                    ? "border-[#e40e83]/20"
                     : "border-[#dc5c4f]/20"
                 }`}
               />
 
               {isSuccess ? (
-                <div className="relative z-10 flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#14596a] text-white shadow-lg">
+                <div className="relative z-10 flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#4e1367] text-white shadow-lg">
                   <Check size={30} strokeWidth={2.5} />
                 </div>
               ) : (
-                <div className="relative z-10 flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#b04328] text-white shadow-lg">
+                <div className="relative z-10 flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#b61d50] text-white shadow-lg">
                   <XCircle size={29} strokeWidth={1.9} />
                 </div>
               )}
@@ -219,12 +219,12 @@ export default function FormStatusModal({
               <>
                 <Sparkles
                   size={16}
-                  className="absolute left-1 top-8 animate-pulse text-[#d9a737]"
+                  className="absolute left-1 top-8 animate-pulse text-[#e40e83]"
                 />
 
                 <Sparkles
                   size={12}
-                  className="absolute bottom-7 right-1 animate-pulse text-[#d9a737]"
+                  className="absolute bottom-7 right-1 animate-pulse text-[#e40e83]"
                 />
               </>
             )}
@@ -245,7 +245,7 @@ export default function FormStatusModal({
             <span
               className={`h-px w-9 ${
                 isSuccess
-                  ? "bg-gradient-to-r from-transparent to-[#d9a737]"
+                  ? "bg-gradient-to-r from-transparent to-[#e40e83]"
                   : "bg-gradient-to-r from-transparent to-[#dc5c4f]"
               }`}
             />
@@ -254,7 +254,7 @@ export default function FormStatusModal({
               {isSuccess ? (
                 <Sparkles
                   size={13}
-                  className="text-[#d9a737]"
+                  className="text-[#e40e83]"
                 />
               ) : (
                 <AlertTriangle
@@ -266,8 +266,8 @@ export default function FormStatusModal({
               <span
                 className={`text-[9px] font-bold uppercase tracking-[0.22em] ${
                   isSuccess
-                    ? "text-[#14596a]"
-                    : "text-[#b04328]"
+                    ? "text-[#4e1367]"
+                    : "text-[#b61d50]"
                 }`}
               >
                 {eyebrow}
@@ -277,7 +277,7 @@ export default function FormStatusModal({
             <span
               className={`h-px w-9 ${
                 isSuccess
-                  ? "bg-gradient-to-l from-transparent to-[#d9a737]"
+                  ? "bg-gradient-to-l from-transparent to-[#e40e83]"
                   : "bg-gradient-to-l from-transparent to-[#dc5c4f]"
               }`}
             />
@@ -289,7 +289,7 @@ export default function FormStatusModal({
 
           <h2
             id="form-status-title"
-            className="mx-auto mt-6 max-w-[440px] font-serif text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-[#123f55] sm:text-[42px]"
+            className="mx-auto mt-6 max-w-[440px] font-serif text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-[#3f1152] sm:text-[42px]"
           >
             {title || defaultTitle}
           </h2>
@@ -298,7 +298,7 @@ export default function FormStatusModal({
               MESSAGE
           ===================================================== */}
 
-          <p className="mx-auto mt-5 max-w-[410px] text-[14px] leading-7 text-[#758185] sm:text-[15px]">
+          <p className="mx-auto mt-5 max-w-[410px] text-[14px] leading-7 text-[#7c7181] sm:text-[15px]">
             {message}
           </p>
 
@@ -307,18 +307,18 @@ export default function FormStatusModal({
           ===================================================== */}
 
           {isSuccess && (
-            <div className="mx-auto mt-7 flex max-w-[390px] items-center gap-3 rounded-[18px] border border-[#d9a737]/20 bg-[#fffaf0] px-4 py-3.5 text-left">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d9a737]/10 text-[#d9a737]">
+            <div className="mx-auto mt-7 flex max-w-[390px] items-center gap-3 rounded-[18px] border border-[#e40e83]/20 bg-[#fcf3f8] px-4 py-3.5 text-left">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#e40e83]/10 text-[#e40e83]">
                 <ShieldCheck size={19} />
               </div>
 
               <div>
-                <p className="text-[11px] font-bold text-[#123f55]">
-                  Your details are safely received
+                <p className="text-[11px] font-bold text-[#3f1152]">
+                  Your message is ready in WhatsApp
                 </p>
 
-                <p className="mt-0.5 text-[10px] leading-4 text-[#8a9294]">
-                  Our travel team will review your request and contact you shortly.
+                <p className="mt-0.5 text-[10px] leading-4 text-[#918a94]">
+                  Press send in WhatsApp so our team receives it and can reply to you.
                 </p>
               </div>
             </div>
@@ -336,11 +336,11 @@ export default function FormStatusModal({
 
               <div>
                 <p className="text-[11px] font-bold text-[#7f3b35]">
-                  Your request wasn't submitted
+                  Nothing has been sent yet
                 </p>
 
                 <p className="mt-0.5 text-[10px] leading-4 text-[#96716d]">
-                  Please try again in a moment. If the issue continues, contact our team.
+                  Please check the details above and try again. If the issue continues, contact our team.
                 </p>
               </div>
             </div>
@@ -353,10 +353,10 @@ export default function FormStatusModal({
           <button
             type="button"
             onClick={onClose}
-            className={`group relative mt-8 inline-flex min-h-[56px] min-w-[220px] items-center justify-center overflow-hidden rounded-full px-8 text-[10px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_15px_35px_rgba(18,63,85,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_45px_rgba(18,63,85,0.28)] ${
+            className={`group relative mt-8 inline-flex min-h-[56px] min-w-[220px] items-center justify-center overflow-hidden rounded-full px-8 text-[10px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_15px_35px_rgba(63,17,82,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_45px_rgba(63,17,82,0.28)] ${
               isSuccess
-                ? "bg-[#123f55]"
-                : "bg-[#b04328]"
+                ? "bg-[#3f1152]"
+                : "bg-[#b61d50]"
             }`}
           >
             {/* Shine */}
@@ -368,7 +368,7 @@ export default function FormStatusModal({
             <span
               className={`absolute inset-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0 ${
                 isSuccess
-                  ? "bg-[#d9a737]"
+                  ? "bg-[#e40e83]"
                   : "bg-[#8b2e2e]"
               }`}
             />
@@ -388,13 +388,13 @@ export default function FormStatusModal({
           ===================================================== */}
 
           <div className="mt-9 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-[#123f55]/10" />
+            <span className="h-px w-8 bg-[#3f1152]/10" />
 
-            <span className="text-[8px] font-bold uppercase tracking-[0.28em] text-[#a0a8aa]">
-              Global Horizons Tours & Travels
+            <span className="text-[8px] font-bold uppercase tracking-[0.28em] text-[#a7a0aa]">
+              Ayesha Tours
             </span>
 
-            <span className="h-px w-8 bg-[#123f55]/10" />
+            <span className="h-px w-8 bg-[#3f1152]/10" />
           </div>
         </div>
       </div>
@@ -466,12 +466,12 @@ export default function FormStatusModal({
         .premium-grid {
           background-image:
             linear-gradient(
-              rgba(18, 63, 85, 0.8) 1px,
+              rgba(63,17,82,0.8) 1px,
               transparent 1px
             ),
             linear-gradient(
               90deg,
-              rgba(18, 63, 85, 0.8) 1px,
+              rgba(63,17,82,0.8) 1px,
               transparent 1px
             );
 

@@ -1,10 +1,10 @@
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Tours & Experiences – Family, Weekend, Group & Pilgrimage Trips",
-  description: "Family holidays, weekend getaways, group tours, pilgrimages and fully customised journeys planned by Global Horizons Tours & Travels.",
+  title: "Pilgrimage Journeys – Family, Group, Ramadan & Haj",
+  description: "Family Umrah, short Umrah, group pilgrimages, Ramadan Umrah and Haj guidance – pilgrimage journeys planned with care by Ayesha Tours.",
   path: "/tours",
-  keywords: ["family tour packages", "weekend getaways Maharashtra", "group tours India"],
+  keywords: ["family Umrah package", "group Umrah", "Ramadan Umrah", "Haj guidance"],
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {

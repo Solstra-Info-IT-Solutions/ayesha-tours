@@ -10,36 +10,36 @@ const features = [
     icon: Gem,
     title: "Personalised Planning",
     description:
-      "Every journey is designed around your individual preferences and requirements.",
+      "Packages adjusted around your dates, budget, family and preferred hotel distance.",
   },
   {
     icon: Map,
-    title: "Local Expertise",
+    title: "Pilgrim Guidance",
     description:
-      "Experience destinations with knowledgeable professionals and trusted local partners.",
+      "Practical guidance on visas, ihram, the rites of Umrah and what to expect on arrival.",
   },
   {
     icon: Headphones,
     title: "Dedicated Support",
     description:
-      "Professional assistance before, during and throughout your journey.",
+      "Help before you travel and a contact to reach while you are in Saudi Arabia.",
   },
   {
     icon: ShieldCheck,
-    title: "Reliable Service",
+    title: "Transparent Quotes",
     description:
-      "Thoughtful planning, trusted partners and attention to every important detail.",
+      "Itemised quotations so you know exactly what is included before you confirm.",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-[#123f55] py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-[#3f1152] py-20 sm:py-24 lg:py-28">
 
       {/* Decorative Background */}
       <div className="pointer-events-none absolute -left-40 -bottom-40 h-[500px] w-[500px] rounded-full border border-white/10" />
 
-      <div className="pointer-events-none absolute -right-32 top-10 h-[420px] w-[420px] rounded-full border border-[#e5b34d]/15" />
+      <div className="pointer-events-none absolute -right-32 top-10 h-[420px] w-[420px] rounded-full border border-[#fb1895]/15" />
 
       <div className="relative mx-auto w-full max-w-[1500px] px-6 sm:px-10 lg:px-16 xl:px-24">
 
@@ -48,13 +48,13 @@ export default function WhyChooseUs() {
 
           <div className="flex items-center justify-center gap-4">
 
-            <span className="h-px w-10 bg-[#e5b34d]" />
+            <span className="h-px w-10 bg-[#fb1895]" />
 
-            <span className="text-[10px] font-semibold uppercase tracking-[3px] text-[#e5b34d]">
-              Why Travel With Us
+            <span className="text-[10px] font-semibold uppercase tracking-[3px] text-[#fb1895]">
+              Why Pilgrims Choose Us
             </span>
 
-            <span className="h-px w-10 bg-[#e5b34d]" />
+            <span className="h-px w-10 bg-[#fb1895]" />
 
           </div>
 
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
 
             Designed Around
 
-            <span className="italic text-[#e5b34d]">
+            <span className="italic text-[#fb1895]">
               {" "}You.
             </span>
 
@@ -70,8 +70,8 @@ export default function WhyChooseUs() {
 
           <p className="mt-6 text-[15px] leading-7 text-white/65">
 
-            From the first conversation to the final journey, we focus on
-            creating a seamless and memorable travel experience.
+            From the first conversation to your return flight, we focus on
+            making your pilgrimage clear, organised and peaceful.
 
           </p>
 
@@ -88,10 +88,10 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={feature.title}
-                className="group rounded-[18px] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:border-[#e5b34d]/40 hover:bg-white/[0.07]"
+                className="group rounded-[18px] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:border-[#fb1895]/40 hover:bg-white/[0.07]"
               >
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e5b34d]/15 text-[#e5b34d] transition duration-300 group-hover:bg-[#e5b34d] group-hover:text-[#123f55]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fb1895]/15 text-[#fb1895] transition duration-300 group-hover:bg-[#fb1895] group-hover:text-white">
 
                   <Icon size={21} />
 

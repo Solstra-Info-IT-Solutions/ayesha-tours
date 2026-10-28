@@ -8,10 +8,10 @@ import Footer from "@/components/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Photo Gallery – Our Tours, Destinations & Fleet",
-  description: "Browse photos from Global Horizons tours, destinations and vehicles across Maharashtra and India.",
+  title: "Gallery – Makkah, Madinah & The Haj Sites",
+  description: "Photos of Masjid al-Haram, Masjid an-Nabawi, Quba, Mina and other places pilgrims visit on Umrah and Haj with Ayesha Tours.",
   path: "/gallery",
-  keywords: ["Aurangabad tour photos", "Ajanta Ellora gallery"],
+  keywords: ["Makkah photos", "Madinah photos", "Umrah gallery"],
 });
 
 export default function GalleryPage() {

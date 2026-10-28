@@ -7,10 +7,10 @@ const destinations = [
 
 export default function Destinations() {
   return (
-    <section id="destinations" className="py-24 bg-[#faf9f6]">
+    <section id="destinations" className="py-24 bg-[#f9f7f8]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
-          <p className="text-[#123f55] uppercase tracking-[3px] text-sm">Discover</p>
+          <p className="text-[#3f1152] uppercase tracking-[3px] text-sm">Discover</p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-3">
             Popular Destinations
           </h2>
@@ -27,7 +27,7 @@ export default function Destinations() {
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
               </div>
               <div className="p-5">
-                <h3 className="text-xl font-serif font-bold text-[#123f55]">{destination.name}</h3>
+                <h3 className="text-xl font-serif font-bold text-[#3f1152]">{destination.name}</h3>
                 <p className="text-gray-500 mt-1">{destination.country}</p>
               </div>
             </div>

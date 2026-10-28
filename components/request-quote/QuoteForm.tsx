@@ -1,5 +1,7 @@
 "use client";
 
+
+import { whatsappLink } from "@/lib/site";
 import { trackLead } from "@/lib/analytics";
 import { emailLead } from "@/lib/lead-client";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -122,7 +124,7 @@ export default function QuoteForm() {
   //       type: "error",
   //       title: "Traveller Information Required",
   //       message:
-  //         "Please enter the number of travellers.",
+  //         "Please enter the number of pilgrims travelling.",
   //     });
 
   //     return;
@@ -144,9 +146,9 @@ export default function QuoteForm() {
   //     setModal({
   //       isOpen: true,
   //       type: "error",
-  //       title: "Journey Type Required",
+  //       title: "Package Type Required",
   //       message:
-  //         "Please select the type of journey you are planning.",
+  //         "Please select the type of package you are interested in.",
   //     });
 
   //     return;
@@ -270,9 +272,9 @@ export default function QuoteForm() {
     setModal({
       isOpen: true,
       type: "error",
-      title: "Destination Required",
-      message:
-        "Please tell us where you would like to travel.",
+      title: "Departure City Required",
+          message:
+            "Please tell us which city you would like to fly from.",
     });
 
     return;
@@ -338,7 +340,7 @@ export default function QuoteForm() {
     ===================================================== */
 
     const whatsappMessage = `
-🌍 *NEW TRAVEL QUOTE REQUEST*
+🕋 *NEW UMRAH / HAJ QUOTE REQUEST*
 
 ━━━━━━━━━━━━━━━━━━
 
@@ -354,15 +356,15 @@ Preferred Contact: ${data.contactMethod}
 
 ━━━━━━━━━━━━━━━━━━
 
-✈️ *TRAVEL DETAILS*
+✈️ *PILGRIMAGE DETAILS*
 
-📍 Destination: ${data.destination}
+📍 Departure City: ${data.destination}
 
 📅 Travel Date: ${data.travelDate}
 
-👥 Travellers: ${data.travellers}
+👥 Pilgrims: ${data.travellers}
 
-🧭 Journey Type: ${data.journeyType}
+🧭 Package Type: ${data.journeyType}
 
 ━━━━━━━━━━━━━━━━━━
 
@@ -372,19 +374,11 @@ ${data.message || "No additional message provided."}
 
 ━━━━━━━━━━━━━━━━━━
 
-🌟 *Global Horizons Tours & Travels*
+🌟 *Ayesha Tours*
 *New Website Enquiry*
     `.trim();
 
-    /* =====================================================
-        CLIENT WHATSAPP NUMBER
-    ===================================================== */
-
-    const whatsappNumber = "917770069004";
-
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+    const whatsappURL = whatsappLink(whatsappMessage);
 
     /* =====================================================
         OPEN WHATSAPP
@@ -412,9 +406,9 @@ ${data.message || "No additional message provided."}
     setModal({
       isOpen: true,
       type: "success",
-      title: "Request Ready!",
-      message:
-        "Your travel quote request has been prepared successfully. WhatsApp has been opened so you can send your enquiry directly to our travel team.",
+      title: "Request Ready In WhatsApp",
+          message:
+            "WhatsApp has been opened with your quote request filled in. Please press send in WhatsApp to deliver it to our team – it has not been sent until you do.",
     });
 
   } catch (error) {
@@ -435,47 +429,46 @@ ${data.message || "No additional message provided."}
 
   return (
     <>
-      <div className="relative overflow-visible rounded-[28px] border border-[#e6dfd3] bg-[#fffefd] shadow-[0_30px_100px_rgba(18,63,85,0.12)]">
+      <div className="relative overflow-visible rounded-[28px] border border-[#e2d7dd] bg-[#fffdfe] shadow-[0_30px_100px_rgba(63,17,82,0.12)]">
         {/* Top Accent */}
-        <div className="h-[4px] w-full rounded-t-[28px] bg-gradient-to-r from-[#123f55] via-[#d9a737] to-[#123f55]" />
+        <div className="h-[4px] w-full rounded-t-[28px] bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
 
         {/* Decorative Background */}
-        <div className="pointer-events-none absolute -right-32 -top-32 h-[320px] w-[320px] rounded-full border border-[#d9a737]/15" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-[320px] w-[320px] rounded-full border border-[#e40e83]/15" />
 
-        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[380px] w-[380px] rounded-full bg-[#14596a]/[0.025] blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[380px] w-[380px] rounded-full bg-[#4e1367]/[0.025] blur-3xl" />
 
         <div className="relative px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 xl:px-14">
           {/* HEADER */}
 
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="h-[2px] w-9 bg-[#d9a737]" />
+              <span className="h-[2px] w-9 bg-[#e40e83]" />
 
               <div className="flex items-center gap-2">
                 <Sparkles
                   size={14}
-                  className="text-[#d9a737]"
+                  className="text-[#e40e83]"
                 />
 
-                <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#14596a]">
-                  Personalised Travel Planning
+                <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#4e1367]">
+                  Umrah & Haj Quote
                 </span>
               </div>
             </div>
 
-            <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.15] text-[#123f55] sm:text-[40px] lg:text-[46px]">
-              Tell Us Where You&apos;d Like
+            <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.15] text-[#3f1152] sm:text-[40px] lg:text-[46px]">
+              Tell Us About Your
 
-              <span className="block italic text-[#d9a737]">
-                To Go.
+              <span className="block italic text-[#e40e83]">
+                Pilgrimage.
               </span>
             </h2>
 
-            <p className="mt-4 max-w-2xl text-[14px] leading-7 text-[#728084] sm:text-[15px]">
-              Share your travel requirements with us and our
-              specialists will carefully prepare a personalised
-              quotation designed around your journey, preferences
-              and comfort.
+            <p className="mt-4 max-w-2xl text-[14px] leading-7 text-[#7b6f80] sm:text-[15px]">
+              Share your plans with us and our team will prepare
+              a quotation with hotel options, inclusions and
+              timings for your group.
             </p>
           </div>
 
@@ -483,6 +476,7 @@ ${data.message || "No additional message provided."}
 
           <form
             key={formKey}
+            method="post"
             onSubmit={handleSubmit}
             className="mt-10 space-y-12 lg:mt-12"
           >
@@ -538,15 +532,15 @@ ${data.message || "No additional message provided."}
 
             <FormSection
               number="02"
-              title="Your Journey"
-              subtitle="Tell us a little about the travel experience you are planning."
+              title="Your Pilgrimage"
+              subtitle="Tell us about the Umrah or Haj journey you are planning."
             >
               <div className="grid gap-x-5 gap-y-6 md:grid-cols-2">
                 <PremiumInput
                   icon={<MapPin size={17} />}
-                  label="Destination"
+                  label="Departure City"
                   name="destination"
-                  placeholder="Where would you like to travel?"
+                  placeholder="Which city will you fly from?"
                   required
                 />
 
@@ -554,27 +548,28 @@ ${data.message || "No additional message provided."}
 
                 <PremiumInput
                   icon={<Users size={17} />}
-                  label="Number of Travellers"
+                  label="Number of Pilgrims"
                   name="travellers"
                   type="number"
-                  placeholder="How many people?"
+                  placeholder="Adults and children"
                   min="1"
                   required
                 />
 
                 <PremiumSelect
-                  label="Type of Journey"
+                  label="Package Type"
                   name="journeyType"
-                  placeholder="Select your journey"
+                  placeholder="Select a package type"
                   required
                   options={[
-                    "Family Holiday",
-                    "Weekend Getaway",
-                    "Group Tour",
-                    "Pilgrimage Tour",
-                    "Corporate Travel",
-                    "Custom Holiday",
-                    "Transportation Service",
+                    "Economy Umrah",
+                    "Standard Umrah",
+                    "Premium Umrah",
+                    "Family Umrah",
+                    "Ramadan Umrah",
+                    "Group Umrah",
+                    "Haj",
+                    "Transport / Ziyarat Only",
                   ]}
                 />
               </div>
@@ -585,11 +580,11 @@ ${data.message || "No additional message provided."}
             <FormSection
               number="03"
               title="Your Requirements"
-              subtitle="Tell us about anything that will help us plan your perfect journey."
+              subtitle="Anything that will help us plan your pilgrimage properly."
             >
               <div>
-                <label className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.6px] text-[#657176]">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#14596a]/10 text-[#14596a]">
+                <label className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.6px] text-[#6e6272]">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#4e1367]/10 text-[#4e1367]">
                     <MessageSquare size={14} />
                   </span>
 
@@ -600,46 +595,46 @@ ${data.message || "No additional message provided."}
                   <textarea
                     name="message"
                     rows={6}
-                    placeholder="Tell us about your preferred destinations, accommodation, transportation, sightseeing plans, special requirements or anything else we should know..."
-                    className="w-full resize-none rounded-[16px] border border-[#ded8ce] bg-[#fcfbf8] px-5 py-4 text-[14px] leading-7 text-[#536166] outline-none transition-all duration-300 placeholder:text-[#a2aaac] hover:border-[#cfc6b8] focus:border-[#14596a] focus:bg-white focus:shadow-[0_10px_30px_rgba(20,89,106,0.08)] sm:px-6 sm:py-5"
+                    placeholder="E.g. nights in Makkah vs Madinah, hotel distance from the Haram, room sharing, wheelchair needs, ziyarat, or anything else we should know..."
+                    className="w-full resize-none rounded-[16px] border border-[#dad2d6] bg-[#fbf9fa] px-5 py-4 text-[14px] leading-7 text-[#5d5163] outline-none transition-all duration-300 placeholder:text-[#a9a2ac] hover:border-[#cabdc4] focus:border-[#4e1367] focus:bg-white focus:shadow-[0_10px_30px_rgba(78,19,103,0.08)] sm:px-6 sm:py-5"
                   />
 
-                  <div className="pointer-events-none absolute bottom-0 left-5 right-5 h-[2px] scale-x-0 bg-gradient-to-r from-[#14596a] via-[#d9a737] to-[#14596a] transition-transform duration-500 group-focus-within:scale-x-100 sm:left-6 sm:right-6" />
+                  <div className="pointer-events-none absolute bottom-0 left-5 right-5 h-[2px] scale-x-0 bg-gradient-to-r from-[#4e1367] via-[#e40e83] to-[#4e1367] transition-transform duration-500 group-focus-within:scale-x-100 sm:left-6 sm:right-6" />
                 </div>
               </div>
             </FormSection>
 
             {/* SUBMIT AREA */}
 
-            <div className="relative overflow-hidden rounded-[20px] border border-[#dfe5e4] bg-[#f6f8f7] p-6 sm:p-7 lg:p-8">
-              <div className="pointer-events-none absolute right-0 top-0 h-full w-[40%] bg-gradient-to-l from-[#14596a]/[0.035] to-transparent" />
+            <div className="relative overflow-hidden rounded-[20px] border border-[#e3dfe5] bg-[#f6f8f7] p-6 sm:p-7 lg:p-8">
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-[40%] bg-gradient-to-l from-[#4e1367]/[0.035] to-transparent" />
 
               <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="max-w-xl">
                   <div className="flex items-center gap-3">
                     <CheckCircle2
                       size={20}
-                      className="text-[#d9a737]"
+                      className="text-[#e40e83]"
                     />
 
-                    <h3 className="font-serif text-[20px] font-bold text-[#123f55]">
-                      Ready to Plan Your Journey?
+                    <h3 className="font-serif text-[20px] font-bold text-[#3f1152]">
+                      Ready To Plan Your Pilgrimage?
                     </h3>
                   </div>
 
-                  <p className="mt-3 text-[13px] leading-6 text-[#758185] sm:text-sm">
-                    Our travel specialists will review your
-                    requirements and get back to you with a
-                    carefully prepared quotation.
+                  <p className="mt-3 text-[13px] leading-6 text-[#7c7181] sm:text-sm">
+                    Your request opens in WhatsApp so you can send
+                    it to our team, who will reply with a
+                    quotation.
                   </p>
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group relative inline-flex min-h-[56px] w-full items-center justify-center gap-4 overflow-hidden bg-[#14596a] px-8 text-[10px] font-bold uppercase tracking-[1.8px] text-white shadow-[0_15px_35px_rgba(20,89,106,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#123f55] hover:shadow-[0_22px_45px_rgba(20,89,106,0.3)] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto sm:min-w-[220px]"
+                  className="group relative inline-flex min-h-[56px] w-full items-center justify-center gap-4 overflow-hidden bg-[#4e1367] px-8 text-[10px] font-bold uppercase tracking-[1.8px] text-white shadow-[0_15px_35px_rgba(78,19,103,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#3f1152] hover:shadow-[0_22px_45px_rgba(78,19,103,0.3)] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto sm:min-w-[220px]"
                 >
-                  <span className="absolute inset-0 translate-x-[-110%] bg-[#d9a737] transition-transform duration-500 group-hover:translate-x-0" />
+                  <span className="absolute inset-0 translate-x-[-110%] bg-[#e40e83] transition-transform duration-500 group-hover:translate-x-0" />
 
                   <span className="relative z-10 flex items-center gap-3">
                     {isSubmitting
@@ -657,14 +652,14 @@ ${data.message || "No additional message provided."}
 
             {/* Privacy */}
 
-            <div className="flex items-center justify-center gap-2 px-2 text-center text-[10px] leading-5 text-[#929b9d] sm:text-[11px]">
+            <div className="flex items-center justify-center gap-2 px-2 text-center text-[10px] leading-5 text-[#9a929d] sm:text-[11px]">
               <CheckCircle2
                 size={14}
-                className="shrink-0 text-[#d9a737]"
+                className="shrink-0 text-[#e40e83]"
               />
 
               Your information is kept private and used only to
-              respond to your travel enquiry.
+              respond to your pilgrimage enquiry.
             </div>
           </form>
         </div>
@@ -706,22 +701,22 @@ function FormSection({
   return (
     <section className="relative">
       <div className="mb-6 flex items-start gap-4 sm:mb-7">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d9a737]/30 bg-[#fffaf0] font-serif text-[13px] font-bold text-[#d9a737] sm:h-11 sm:w-11 sm:text-sm">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#e40e83]/30 bg-[#fcf3f8] font-serif text-[13px] font-bold text-[#e40e83] sm:h-11 sm:w-11 sm:text-sm">
           {number}
         </div>
 
         <div className="pt-0.5">
-          <h3 className="font-serif text-[21px] font-bold text-[#123f55] sm:text-[22px]">
+          <h3 className="font-serif text-[21px] font-bold text-[#3f1152] sm:text-[22px]">
             {title}
           </h3>
 
-          <p className="mt-1 text-[12px] leading-5 text-[#899396] sm:text-[13px] sm:leading-6">
+          <p className="mt-1 text-[12px] leading-5 text-[#928996] sm:text-[13px] sm:leading-6">
             {subtitle}
           </p>
         </div>
       </div>
 
-      <div className="mb-6 h-px w-full bg-gradient-to-r from-[#ded8ce] via-[#ded8ce]/60 to-transparent sm:mb-7" />
+      <div className="mb-6 h-px w-full bg-gradient-to-r from-[#dad2d6] via-[#dad2d6]/60 to-transparent sm:mb-7" />
 
       {children}
     </section>
@@ -747,9 +742,9 @@ function PremiumInput({
 }) {
   return (
     <div className="group">
-      <label className="mb-2.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#657176]">
+      <label className="mb-2.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#6e6272]">
         {icon && (
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#14596a]/8 text-[#14596a] transition-colors duration-300 group-focus-within:bg-[#14596a] group-focus-within:text-white">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#4e1367]/8 text-[#4e1367] transition-colors duration-300 group-focus-within:bg-[#4e1367] group-focus-within:text-white">
             {icon}
           </span>
         )}
@@ -760,10 +755,10 @@ function PremiumInput({
       <div className="relative">
         <input
           {...props}
-          className="h-[56px] w-full rounded-[14px] border border-[#ded8ce] bg-[#fcfbf8] px-5 text-[14px] text-[#536166] outline-none transition-all duration-300 placeholder:text-[#a2aaac] hover:border-[#cfc6b8] focus:border-[#14596a] focus:bg-white focus:shadow-[0_10px_28px_rgba(20,89,106,0.08)]"
+          className="h-[56px] w-full rounded-[14px] border border-[#dad2d6] bg-[#fbf9fa] px-5 text-[14px] text-[#5d5163] outline-none transition-all duration-300 placeholder:text-[#a9a2ac] hover:border-[#cabdc4] focus:border-[#4e1367] focus:bg-white focus:shadow-[0_10px_28px_rgba(78,19,103,0.08)]"
         />
 
-        <span className="pointer-events-none absolute bottom-0 left-[18px] right-[18px] h-[2px] scale-x-0 bg-gradient-to-r from-[#14596a] via-[#d9a737] to-[#14596a] transition-transform duration-500 group-focus-within:scale-x-100" />
+        <span className="pointer-events-none absolute bottom-0 left-[18px] right-[18px] h-[2px] scale-x-0 bg-gradient-to-r from-[#4e1367] via-[#e40e83] to-[#4e1367] transition-transform duration-500 group-focus-within:scale-x-100" />
       </div>
     </div>
   );
@@ -816,7 +811,7 @@ function PremiumSelect({
 
   return (
     <div ref={selectRef} className="group relative z-20">
-      <label className="mb-2.5 block text-[10px] font-bold uppercase tracking-[1.5px] text-[#657176]">
+      <label className="mb-2.5 block text-[10px] font-bold uppercase tracking-[1.5px] text-[#6e6272]">
         {label}
       </label>
 
@@ -825,15 +820,15 @@ function PremiumSelect({
         onClick={() => setIsOpen((previous) => !previous)}
         className={`relative flex h-[56px] w-full items-center justify-between rounded-[14px] border px-5 text-left transition-all duration-300 ${
           isOpen
-            ? "border-[#14596a] bg-white shadow-[0_10px_28px_rgba(20,89,106,0.10)]"
-            : "border-[#ded8ce] bg-[#fcfbf8] hover:border-[#cfc6b8]"
+            ? "border-[#4e1367] bg-white shadow-[0_10px_28px_rgba(78,19,103,0.10)]"
+            : "border-[#dad2d6] bg-[#fbf9fa] hover:border-[#cabdc4]"
         }`}
       >
         <span
           className={`text-[14px] ${
             selectedValue
-              ? "text-[#536166]"
-              : "text-[#a2aaac]"
+              ? "text-[#5d5163]"
+              : "text-[#a9a2ac]"
           }`}
         >
           {selectedValue || placeholder}
@@ -842,8 +837,8 @@ function PremiumSelect({
         <span
           className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 ${
             isOpen
-              ? "bg-[#14596a] text-white"
-              : "bg-[#14596a]/8 text-[#14596a]"
+              ? "bg-[#4e1367] text-white"
+              : "bg-[#4e1367]/8 text-[#4e1367]"
           }`}
         >
           <ChevronDown
@@ -863,11 +858,11 @@ function PremiumSelect({
       />
 
       {isOpen && (
-        <div className="absolute left-0 top-[calc(100%+10px)] z-[80] w-full overflow-hidden rounded-[18px] border border-[#e4ddd1] bg-[#fffefd] p-2 shadow-[0_25px_70px_rgba(18,63,85,0.18)]">
-          <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#123f55] via-[#d9a737] to-[#123f55]" />
+        <div className="absolute left-0 top-[calc(100%+10px)] z-[80] w-full overflow-hidden rounded-[18px] border border-[#e0d5db] bg-[#fffdfe] p-2 shadow-[0_25px_70px_rgba(63,17,82,0.18)]">
+          <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
 
           <div className="px-3 pb-2 pt-3">
-            <span className="text-[9px] font-bold uppercase tracking-[1.8px] text-[#9aa2a4]">
+            <span className="text-[9px] font-bold uppercase tracking-[1.8px] text-[#a19aa4]">
               Choose an option
             </span>
           </div>
@@ -887,16 +882,16 @@ function PremiumSelect({
                   }}
                   className={`flex w-full items-center justify-between rounded-[12px] px-3.5 py-3 text-left text-[13px] transition-all duration-200 ${
                     isSelected
-                      ? "bg-[#14596a] text-white shadow-[0_8px_20px_rgba(20,89,106,0.18)]"
-                      : "text-[#536166] hover:bg-[#f4f6f5] hover:text-[#14596a]"
+                      ? "bg-[#4e1367] text-white shadow-[0_8px_20px_rgba(78,19,103,0.18)]"
+                      : "text-[#5d5163] hover:bg-[#f4f6f5] hover:text-[#4e1367]"
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <span
                       className={`flex h-7 w-7 items-center justify-center rounded-full text-[9px] font-bold ${
                         isSelected
-                          ? "bg-white/15 text-[#e5b34d]"
-                          : "bg-[#14596a]/7 text-[#14596a]/60"
+                          ? "bg-white/15 text-[#fb1895]"
+                          : "bg-[#4e1367]/7 text-[#4e1367]/60"
                       }`}
                     >
                       {String(index + 1).padStart(
@@ -911,7 +906,7 @@ function PremiumSelect({
                   </div>
 
                   {isSelected && (
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#d9a737] text-[#123f55]">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#e40e83] text-white">
                       <CheckCircle2 size={14} />
                     </span>
                   )}
@@ -1087,12 +1082,12 @@ function PremiumDateInput({
 
   return (
     <div ref={calendarRef} className="group relative z-30">
-      <label className="mb-2.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#657176]">
+      <label className="mb-2.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#6e6272]">
         <span
           className={`flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300 ${
             isOpen
-              ? "bg-[#d9a737] text-white"
-              : "bg-[#d9a737]/10 text-[#b9891f]"
+              ? "bg-[#e40e83] text-white"
+              : "bg-[#e40e83]/10 text-[#b30765]"
           }`}
         >
           <CalendarDays size={15} />
@@ -1108,15 +1103,15 @@ function PremiumDateInput({
         }
         className={`relative flex h-[56px] w-full items-center justify-between rounded-[14px] border px-5 text-left transition-all duration-300 ${
           isOpen
-            ? "border-[#14596a] bg-white shadow-[0_10px_28px_rgba(20,89,106,0.10)]"
-            : "border-[#ded8ce] bg-[#fcfbf8] hover:border-[#cfc6b8]"
+            ? "border-[#4e1367] bg-white shadow-[0_10px_28px_rgba(78,19,103,0.10)]"
+            : "border-[#dad2d6] bg-[#fbf9fa] hover:border-[#cabdc4]"
         }`}
       >
         <span
           className={`text-[14px] ${
             selectedDate
-              ? "text-[#536166]"
-              : "text-[#a2aaac]"
+              ? "text-[#5d5163]"
+              : "text-[#a9a2ac]"
           }`}
         >
           {selectedDate
@@ -1127,8 +1122,8 @@ function PremiumDateInput({
         <span
           className={`flex h-9 w-9 items-center justify-center rounded-full ${
             isOpen
-              ? "bg-[#14596a] text-white"
-              : "bg-[#14596a]/8 text-[#14596a]"
+              ? "bg-[#4e1367] text-white"
+              : "bg-[#4e1367]/8 text-[#4e1367]"
           }`}
         >
           <CalendarDays size={16} />
@@ -1143,8 +1138,8 @@ function PremiumDateInput({
       />
 
       {isOpen && (
-        <div className="absolute left-0 top-[calc(100%+12px)] z-[100] w-full min-w-[310px] overflow-hidden rounded-[22px] border border-[#e4ddd1] bg-[#fffefd] p-4 shadow-[0_30px_80px_rgba(18,63,85,0.20)] sm:min-w-[350px] sm:p-5">
-          <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#123f55] via-[#d9a737] to-[#123f55]" />
+        <div className="absolute left-0 top-[calc(100%+12px)] z-[100] w-full min-w-[310px] overflow-hidden rounded-[22px] border border-[#e0d5db] bg-[#fffdfe] p-4 shadow-[0_30px_80px_rgba(63,17,82,0.20)] sm:min-w-[350px] sm:p-5">
+          <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
 
           <div className="flex items-center justify-between pt-1">
             <button
@@ -1156,13 +1151,13 @@ function PremiumDateInput({
                 currentMonth.getMonth() ===
                   today.getMonth()
               }
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#ded8ce] bg-[#faf9f5] text-[#14596a] transition-all hover:border-[#14596a] hover:bg-[#14596a] hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#dad2d6] bg-[#f9f6f8] text-[#4e1367] transition-all hover:border-[#4e1367] hover:bg-[#4e1367] hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
             >
               <ChevronLeft size={17} />
             </button>
 
             <div className="text-center">
-              <h4 className="font-serif text-lg font-bold text-[#123f55] sm:text-xl">
+              <h4 className="font-serif text-lg font-bold text-[#3f1152] sm:text-xl">
                 {currentMonth.toLocaleString(
                   "default",
                   {
@@ -1171,7 +1166,7 @@ function PremiumDateInput({
                 )}
               </h4>
 
-              <span className="mt-0.5 block text-[9px] font-bold uppercase tracking-[1.8px] text-[#d9a737]">
+              <span className="mt-0.5 block text-[9px] font-bold uppercase tracking-[1.8px] text-[#e40e83]">
                 {year}
               </span>
             </div>
@@ -1179,13 +1174,13 @@ function PremiumDateInput({
             <button
               type="button"
               onClick={nextMonth}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#ded8ce] bg-[#faf9f5] text-[#14596a] transition-all hover:border-[#14596a] hover:bg-[#14596a] hover:text-white"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#dad2d6] bg-[#f9f6f8] text-[#4e1367] transition-all hover:border-[#4e1367] hover:bg-[#4e1367] hover:text-white"
             >
               <ChevronRight size={17} />
             </button>
           </div>
 
-          <div className="my-4 h-px bg-gradient-to-r from-transparent via-[#d9a737]/40 to-transparent" />
+          <div className="my-4 h-px bg-gradient-to-r from-transparent via-[#e40e83]/40 to-transparent" />
 
           <div className="grid grid-cols-7 gap-1 text-center">
             {[
@@ -1199,7 +1194,7 @@ function PremiumDateInput({
             ].map((day) => (
               <div
                 key={day}
-                className="pb-2 text-[8px] font-bold uppercase tracking-[1px] text-[#9aa2a4]"
+                className="pb-2 text-[8px] font-bold uppercase tracking-[1px] text-[#a19aa4]"
               >
                 {day}
               </div>
@@ -1241,12 +1236,12 @@ function PremiumDateInput({
                   }}
                   className={`relative flex aspect-square items-center justify-center rounded-full text-[11px] font-semibold transition-all duration-200 ${
                     selected
-                      ? "scale-105 bg-[#14596a] text-white shadow-[0_8px_20px_rgba(20,89,106,0.30)]"
+                      ? "scale-105 bg-[#4e1367] text-white shadow-[0_8px_20px_rgba(78,19,103,0.30)]"
                       : currentDay
-                      ? "border border-[#d9a737] bg-[#fffaf0] text-[#b9891f]"
+                      ? "border border-[#e40e83] bg-[#fcf3f8] text-[#b30765]"
                       : past
                       ? "cursor-not-allowed text-[#d0d3d2]"
-                      : "text-[#536166] hover:bg-[#14596a]/10 hover:text-[#14596a]"
+                      : "text-[#5d5163] hover:bg-[#4e1367]/10 hover:text-[#4e1367]"
                   }`}
                 >
                   {day}
@@ -1255,7 +1250,7 @@ function PremiumDateInput({
             })}
           </div>
 
-          <div className="mt-4 flex items-center justify-between border-t border-[#ebe6de] pt-3">
+          <div className="mt-4 flex items-center justify-between border-t border-[#e8e1e5] pt-3">
             <button
               type="button"
               onClick={() => {
@@ -1272,7 +1267,7 @@ function PremiumDateInput({
                 setSelectedDate(now);
                 setIsOpen(false);
               }}
-              className="text-[9px] font-bold uppercase tracking-[1.3px] text-[#14596a] transition hover:text-[#d9a737]"
+              className="text-[9px] font-bold uppercase tracking-[1.3px] text-[#4e1367] transition hover:text-[#e40e83]"
             >
               Select Today
             </button>
@@ -1282,7 +1277,7 @@ function PremiumDateInput({
               onClick={() => {
                 setSelectedDate(null);
               }}
-              className="text-[9px] font-bold uppercase tracking-[1.3px] text-[#9aa2a4] transition hover:text-[#b04328]"
+              className="text-[9px] font-bold uppercase tracking-[1.3px] text-[#a19aa4] transition hover:text-[#b61d50]"
             >
               Clear Date
             </button>

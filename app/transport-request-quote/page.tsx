@@ -5,15 +5,15 @@ import WhyChooseTransport from "@/components/transport-quote/WhyChooseTransport"
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Request a Taxi or Transport Quote",
-  description: "Get a quick quote for airport transfers, outstation taxis and group transport from Chhatrapati Sambhajinagar.",
+  title: "Request a Transport & Ziyarat Quote",
+  description: "Request a quote for Jeddah and Madinah airport transfers, Makkah–Madinah transport and ziyarat tours for families and groups with Ayesha Tours.",
   path: "/transport-request-quote",
-  keywords: ["taxi quote Aurangabad", "cab booking quote"],
+  keywords: ["Umrah transport quote", "Jeddah to Makkah transfer quote", "ziyarat tour quote"],
 });
 
 export default function TransportRequestQuotePage() {
   return (
-    <main className="min-h-screen bg-[#faf9f6]">
+    <main className="min-h-screen bg-[#f9f7f8]">
       <TransportQuoteHero />
 
       <section className="relative pb-20 pt-12 sm:pb-24 sm:pt-16">

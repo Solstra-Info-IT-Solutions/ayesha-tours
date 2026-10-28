@@ -7,7 +7,7 @@ import {
 
 const benefits = [
   {
-    text: "Multi-lingual expert guides",
+    text: "Pre-departure Umrah guidance",
     icon: Globe2,
   },
   {
@@ -15,34 +15,34 @@ const benefits = [
     icon: ShieldCheck,
   },
   {
-    text: "24/7 dedicated helpline",
+    text: "A contact to reach during travel",
     icon: Headphones,
   },
   {
-    text: "Currency & local customs briefing",
+    text: "Ihram, rites & packing checklists",
     icon: Globe2,
   },
   {
-    text: "Secure, vetted transportation",
+    text: "Arranged airport & intercity transfers",
     icon: ShieldCheck,
   },
   {
-    text: "Dietary requirement management",
+    text: "Planning for elderly & wheelchair users",
     icon: Check,
   },
 ];
 
 export default function LocalPartner() {
   return (
-    <section className="relative overflow-hidden bg-[#faf9f6] px-6 py-20 md:px-10 lg:px-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#f9f7f8] px-6 py-20 md:px-10 lg:px-20 lg:py-28">
 
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-[#e5b34d]/5 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-[#fb1895]/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-[1230px]">
 
         {/* Premium Main Card */}
-        <div className="overflow-hidden rounded-[28px] border border-[#e7e1d6] bg-white shadow-[0_25px_70px_rgba(20,89,106,0.10)]">
+        <div className="overflow-hidden rounded-[28px] border border-[#e3dadf] bg-white shadow-[0_25px_70px_rgba(78,19,103,0.10)]">
 
           <div className="grid grid-cols-1 md:grid-cols-2">
 
@@ -50,30 +50,30 @@ export default function LocalPartner() {
             <div className="relative min-h-[380px] overflow-hidden md:min-h-[600px]">
 
               <img
-                src="/international-persons-exploring-india.png"
-                alt="International guests exploring India"
+                src="/images/demo/pilgrims-jeddah.jpg"
+                alt="Pilgrims arriving at Jeddah for the pilgrimage"
                 className="absolute inset-0 h-full w-full object-cover transition duration-1000 hover:scale-105"
               />
 
               {/* Luxury Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#073f4c]/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#36074a]/70 via-transparent to-transparent" />
 
               {/* Experience Badge */}
               <div className="absolute bottom-7 left-7 right-7">
 
-                <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-[#14596a]/85 px-5 py-3 text-white shadow-xl backdrop-blur-md">
+                <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-[#4e1367]/85 px-5 py-3 text-white shadow-xl backdrop-blur-md">
 
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#e5b34d] text-[#14596a]">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fb1895] text-white">
                     <Globe2 size={16} />
                   </span>
 
                   <div>
                     <p className="text-[10px] uppercase tracking-[1.5px] text-white/60">
-                      Global Hospitality
+                      First-Time Pilgrims
                     </p>
 
                     <p className="mt-1 text-[13px] font-medium">
-                      Local Expertise. World-Class Care.
+                      Clear Guidance. Gentle Care.
                     </p>
                   </div>
 
@@ -89,44 +89,43 @@ export default function LocalPartner() {
               {/* Eyebrow */}
               <div className="flex items-center gap-3">
 
-                <span className="h-[2px] w-9 bg-[#e2ad42]" />
+                <span className="h-[2px] w-9 bg-[#f90c8f]" />
 
-                <p className="text-[11px] font-semibold uppercase tracking-[2px] text-[#d9a737]">
-                  International Guests
+                <p className="text-[11px] font-semibold uppercase tracking-[2px] text-[#e40e83]">
+                  First-Time Pilgrims
                 </p>
 
               </div>
 
               {/* Heading */}
-              <h2 className="mt-6 max-w-[520px] font-serif text-[34px] font-bold leading-[1.15] text-[#14596a] sm:text-[40px] lg:text-[46px]">
+              <h2 className="mt-6 max-w-[520px] font-serif text-[34px] font-bold leading-[1.15] text-[#4e1367] sm:text-[40px] lg:text-[46px]">
 
-                Your Trusted
+                Your Guide For
                 <br />
 
-                <span className="text-[#d9a737]">
-                  Local Partner
+                <span className="text-[#e40e83]">
+                  The Holy Journey
                 </span>
 
               </h2>
 
               {/* Divider */}
-              <div className="mt-7 h-px w-full bg-gradient-to-r from-[#e5b34d]/60 to-transparent" />
+              <div className="mt-7 h-px w-full bg-gradient-to-r from-[#fb1895]/60 to-transparent" />
 
               {/* Description */}
-              <p className="mt-7 max-w-[540px] text-[15px] leading-7 text-[#687276]">
+              <p className="mt-7 max-w-[540px] text-[15px] leading-7 text-[#6e6572]">
 
-                Navigating a new country requires more than a map; it requires
-                a trusted local partner. We specialize in providing a secure,
-                culturally immersive and seamless experience for international
-                visitors.
+                Performing Umrah or Haj for the first time can feel
+                overwhelming. We explain each step – from visas and ihram to
+                tawaf and sa&apos;i – so you arrive prepared and confident.
 
               </p>
 
-              <p className="mt-4 max-w-[540px] text-[15px] leading-7 text-[#687276]">
+              <p className="mt-4 max-w-[540px] text-[15px] leading-7 text-[#6e6572]">
 
-                From the moment you arrive until your journey concludes, our
-                team ensures that every detail is handled with care,
-                professionalism and genuine local expertise.
+                From the moment you land in Jeddah or Madinah until your return
+                flight, we help ensure your arrangements are in place and
+                someone is available to answer your questions.
 
               </p>
 
@@ -139,17 +138,17 @@ export default function LocalPartner() {
                   return (
                     <div
                       key={benefit.text}
-                      className="group flex items-center gap-4 rounded-xl border border-[#ece7dd] bg-[#fcfbf8] px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-[#e5b34d]/60 hover:bg-white hover:shadow-[0_12px_30px_rgba(20,89,106,0.08)]"
+                      className="group flex items-center gap-4 rounded-xl border border-[#e9e0e5] bg-[#fbf9fa] px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-[#fb1895]/60 hover:bg-white hover:shadow-[0_12px_30px_rgba(78,19,103,0.08)]"
                     >
 
                       {/* Icon */}
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#14596a]/10 text-[#14596a] transition duration-300 group-hover:bg-[#e5b34d] group-hover:text-white">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#4e1367]/10 text-[#4e1367] transition duration-300 group-hover:bg-[#fb1895] group-hover:text-white">
 
                         <Icon size={17} strokeWidth={1.8} />
 
                       </div>
 
-                      <p className="text-[13px] font-medium leading-5 text-[#4f5b5f]">
+                      <p className="text-[13px] font-medium leading-5 text-[#574d5c]">
 
                         {benefit.text}
 
@@ -162,9 +161,9 @@ export default function LocalPartner() {
               </div>
 
               {/* Bottom Trust Message */}
-              <div className="mt-10 flex items-center gap-4 border-t border-[#ebe6dc] pt-7">
+              <div className="mt-10 flex items-center gap-4 border-t border-[#e8dfe4] pt-7">
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#14596a] text-[#e5b34d]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#4e1367] text-[#fb1895]">
 
                   <ShieldCheck size={21} />
 
@@ -172,12 +171,12 @@ export default function LocalPartner() {
 
                 <div>
 
-                  <p className="text-[13px] font-semibold text-[#14596a]">
-                    Travel With Complete Confidence
+                  <p className="text-[13px] font-semibold text-[#4e1367]">
+                    Travel With Peace Of Mind
                   </p>
 
                   <p className="mt-1 text-[12px] text-gray-500">
-                    Trusted support throughout your journey in India.
+                    Support throughout your journey to the Haramain.
                   </p>
 
                 </div>

@@ -1,5 +1,51 @@
 @import "tailwindcss";
 
+/*
+ * Ayesha Tours design tokens.
+ * Derived from the client logo: magenta #FC0084, hot pink #FE125D,
+ * purple #771BAE, green swoosh #48BB42 and near-black wordmark text.
+ * The reference layout's teal / gold / coral system was mapped onto these
+ * hues while keeping its original lightness steps, so every component
+ * keeps the same contrast relationships it was designed with.
+ */
+@theme {
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+
+  /* Brand */
+  --color-brand-plum-950: #290837;   /* deepest surfaces, overlays */
+  --color-brand-plum-900: #3e0e52;   /* footer, dark sections */
+  --color-brand-plum-800: #3f1152;   /* headings, primary dark */
+  --color-brand-plum-700: #4e1367;   /* feature bars, cards on dark */
+  --color-brand-purple: #771bae;     /* logo purple */
+  --color-brand-magenta: #e40e83;    /* primary accent (logo magenta) */
+  --color-brand-magenta-bright: #ff058f; /* accent on dark surfaces */
+  --color-brand-magenta-light: #ff36a4;
+  --color-brand-pink: #c1124c;       /* primary CTA (logo hot pink, deepened) */
+  --color-brand-pink-hover: #a00f3f;
+  --color-brand-green: #48bb42;      /* logo swoosh – success, verified */
+  --color-brand-green-dark: #2f8a2b;
+
+  /* Neutrals */
+  --color-surface: #ffffff;
+  --color-surface-blush: #f9f6f8;    /* page background */
+  --color-surface-muted: #f6f2f4;
+  --color-ink: #1d1720;              /* body text */
+  --color-ink-muted: #6e6572;
+  --color-line: #dad2d6;
+
+  /* States */
+  --color-success: #2f8a2b;
+  --color-warning: #b7791f;
+  --color-error: #dc5c4f;
+}
+
+:root {
+  --brand-primary: var(--color-brand-plum-800);
+  --brand-accent: var(--color-brand-magenta);
+  --brand-cta: var(--color-brand-pink);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,4 +53,13 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

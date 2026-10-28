@@ -1,73 +1,81 @@
-# Global Horizons – SEO & Lead Generation Setup Guide
+# Ayesha Tours – Setup & Handoff Guide
 
-This file lists what the client must supply and the one-time setup steps.
-Nothing below needs code changes except where stated.
+This site is a **demo** of the Ayesha Tours (Haj & Umrah Packages) website,
+built on the Global Horizons reference project. It keeps the reference layout,
+components and lead flow, with the Ayesha Tours logo, a palette derived from
+the logo, and pilgrimage content.
 
-## 1. Environment variables (set in Vercel / hosting → Settings → Environment Variables)
+Everything marked *demo* below must be confirmed or replaced by the client
+before launch.
+
+## 1. Environment variables (hosting → Settings → Environment Variables)
 
 | Variable | What to put | Required |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | The live domain, e.g. `https://www.yourdomain.com` (no trailing slash) | **Yes** – canonical URLs, sitemap and social previews depend on it |
-| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 Measurement ID (`G-XXXXXXXXXX`) | Yes |
-| `NEXT_PUBLIC_META_PIXEL_ID` | Meta (Facebook) Pixel ID – only if they run Facebook/Instagram ads | Optional |
-| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Token from Google Search Console "HTML tag" method (the `content` value only) | Yes |
-| `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Token from Bing Webmaster Tools | Optional |
-| `NEXT_PUBLIC_GOOGLE_BUSINESS_URL` | Public link to their Google Business Profile | Recommended |
+| `NEXT_PUBLIC_SITE_URL` | Live domain, e.g. `https://www.example.com` (no trailing slash). **Until this is set the site tells search engines not to index it** (robots.txt + `noindex`). | **Yes** |
+| `NEXT_PUBLIC_DEMO_MODE` | Set to `false` once packages and content are confirmed. Hides the "demo" banner and package labels, and publishes TouristTrip structured data. | **Yes, at launch** |
+| `NEXT_PUBLIC_CONTACT_PHONE` | Phone with country code, e.g. `+91 98xxx xxxxx`. Until set, the site shows `+91 00000 00000` and phone buttons go to the Contact page. | **Yes** |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | WhatsApp number with country code (defaults to the phone). Until set, forms open WhatsApp's "choose a chat" screen instead of a business chat. | **Yes** |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Public enquiry email. Default is the placeholder `enquiry@example.com`. | **Yes** |
+| `NEXT_PUBLIC_ADDRESS_STREET` / `NEXT_PUBLIC_ADDRESS_CITY` / `NEXT_PUBLIC_ADDRESS_REGION` | Office address shown in the footer and Contact page. | **Yes** |
+| `NEXT_PUBLIC_MAP_QUERY` | Office address or `lat,lng` for the embedded map and "Get directions". Until set, the map shows India. | Recommended |
+| `NEXT_PUBLIC_GOOGLE_BUSINESS_URL` | Public link to the Google Business Profile. | Recommended |
+| `NEXT_PUBLIC_GA_ID` / `NEXT_PUBLIC_META_PIXEL_ID` / `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` / `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Analytics and verification, as in the reference project. | Optional |
+| `SMTP_USER` / `SMTP_PASS` / `LEAD_TO_EMAIL` | Email copy of every form submission (see section 5). | Recommended |
 
-Redeploy after saving the variables.
+Office hours ("Mon – Sat, 10 AM – 7 PM (TBC)") and social links live in
+`lib/site.ts`.
 
-## 2. Files the client must upload (into the `public/` folder)
+## 2. Brand palette (from the logo)
 
-| File | Where | Spec |
+| Token (`app/globals.css`) | Value | Use |
 |---|---|---|
-| `og-image.jpg` | `public/og-image.jpg` | 1200 × 630 px, under 300 KB. Shown when the site is shared on WhatsApp/Facebook. A temporary one is already provided – replace with a branded image (logo + best photo + tagline). |
-| `logo.png` | `public/logo.png` | Square, at least 512 × 512 px, transparent or white background. Also used as the browser icon (copy it to `app/icon.png` and `app/apple-icon.png`). |
-| Real tour/destination photos | `public/packages/`, `public/destinations/`, `public/gallery/`, `public/tours/` | Their own photos (not stock). Compress to under 300 KB each, name files descriptively, e.g. `ellora-kailasa-temple.jpg`. Many existing hero images are only 512 px wide and look soft on large screens – replace with 1600 px+ wide photos. |
-| Customer photos / review screenshots | `public/gallery/` | With the customer's permission. |
+| `brand-plum-800` | `#3f1152` | Headings, primary dark |
+| `brand-plum-900` / `-950` | `#3e0e52` / `#290837` | Footer, dark sections, overlays |
+| `brand-purple` | `#771bae` | Logo purple |
+| `brand-magenta` | `#e40e83` | Accent (logo magenta `#FC0084`) |
+| `brand-magenta-bright` | `#ff058f` | Accent on dark backgrounds |
+| `brand-pink` | `#c1124c` | Primary CTA (logo hot pink `#FE125D`, deepened for contrast) |
+| `brand-green` | `#48bb42` | Logo swoosh – success states |
 
-## 3. Accounts the client must create / give access to
+The reference's teal / gold / coral colours were mapped onto these hues with
+their original lightness steps kept, so contrast relationships match the
+reference design. Fonts: Playfair Display (headings, replacing the system
+serif) and Poppins (body, close to the logo's lettering).
 
-1. **Google Business Profile** (most important for local leads) – business.google.com. Category: *Travel agency* (add *Taxi service*, *Tour operator*). Use the same name, address and phone as the website footer. Ask happy customers for Google reviews.
-2. **Google Search Console** – add the domain, verify using the variable above, then submit `https://<domain>/sitemap.xml`.
-3. **Google Analytics 4** – create a property and copy the `G-` ID. Mark the `generate_lead` event as a *Key event* (conversion).
-4. **Bing Webmaster Tools** (optional) – import from Search Console.
-5. **Meta Business / Pixel** (only if running ads).
-6. Add the website link to their Instagram and Facebook bios, and to WhatsApp Business profile.
+## 3. Demo content the client must confirm or replace
 
-## 4. What is tracked automatically
+- **Contact details** – phone, WhatsApp, email, address, map pin, office hours, social links (section 1).
+- **Packages** (`components/tours/TourPackagesGrid.tsx`, home "Packages For Every Pilgrim") – names, durations, night splits and hotel styles are illustrative. No prices are shown anywhere.
+- **About page story** – the "Our Story" section has a marked demo paragraph; founding year, licences/registrations and any credentials must come from the client. Nothing like "20+ years", ratings or awards is claimed.
+- **Pilgrim Memories / Gallery** – currently Wikimedia Commons photos of the holy sites; replace with the client's own group photos (with permission).
+- **Vehicle photos** on Transport and the enquiry wizard are generic demo images.
+- **Legal pages** (privacy, terms, booking, cancellation, payment, cookie, disclaimer) are the reference templates with light pilgrimage edits. They need review by the client / a legal adviser, especially cancellation and refund terms for Umrah/Haj.
+- **Testimonials** – none are shown. Add only real, permitted reviews.
+- **Haj** – the site offers "Haj guidance" only. Confirm whether the client is an authorised Haj group organiser before advertising Haj packages.
 
-- `generate_lead` (GA4) / `Lead` (Meta) when any of the 4 forms is submitted: Contact, Request Quote, Transport Quote, Enquiry.
-- Clicks on any phone number, email and WhatsApp link site-wide.
-- Analytics uses Google Consent Mode v2: GA4 loads for everyone, stores cookies only after the visitor accepts, and counts anonymous visits otherwise. Meta Pixel loads only after marketing consent.
+## 4. Images and licences
 
-## 5. Important notes for the client
+All demo photos are in `public/images/demo/` and come from Wikimedia Commons
+under CC0, CC BY or CC BY-SA licences. Attribution is published at
+`/image-credits` (linked in the footer) from `lib/image-credits.ts`. If you
+replace a photo, update or remove its entry; keep the page while any CC BY /
+BY-SA image remains. `public/og-image.jpg` (social share image) combines the
+logo with the CC BY-SA Kaaba photo, so it is covered by the same credit.
 
-- **Leads currently arrive only if the visitor presses "Send" in WhatsApp.** The forms open WhatsApp with a pre-filled message. If the visitor closes WhatsApp without sending, the lead is lost. Recommended next step: add an email/database fallback so every form submission is stored (a one-day task).
-- Two WhatsApp/phone numbers are used on the site (+91 77700 69004 calls, +91 77700 69004 form WhatsApp, +91 77700 69004 footer). Confirm which are correct; use one consistent primary number everywhere (also in Google Business Profile).
-- Business name appears in several variants ("Global Horizon", "Global Horizons", "Global Tours & Travels"). Choose one exact name and use it everywhere, including Google Business Profile.
-- Add real opening hours and the exact Google Maps pin location (needed for local ranking).
-- Prices: pages say "request a quote". Adding "starting from ₹X" on packages generally increases enquiries.
-- Add real customer reviews (with permission) and a Google reviews link.
+## 5. How leads work
 
-## 6. Ongoing marketing (monthly)
+1. Every form (Contact, Request Quote, Transport Quote, Enquiry wizard, home contact) validates in the browser, then opens WhatsApp with the enquiry pre-filled.
+2. The success message says WhatsApp has opened and that **nothing is sent until the visitor presses send** – it never claims the enquiry was received.
+3. In parallel, the form data is posted to `/api/lead`, which emails it to the business **if SMTP is configured**. Without `SMTP_USER`/`SMTP_PASS` the API returns 503 silently (visible in the browser console as a failed request).
 
-- Post 2–3 times a week on Instagram/Facebook; always link to a landing page.
-- Add 1–2 new landing pages/blog posts a month (edit `lib/landing-pages.ts`; pages, sitemap and structured data are generated automatically).
-- Ask every returning customer for a Google review.
-- Check Search Console monthly: which searches bring impressions, which pages need improvement.
+Email setup: sign in to the sending Gmail account, enable 2-Step Verification,
+create an app password at myaccount.google.com/apppasswords, then set
+`SMTP_USER`, `SMTP_PASS` and optionally `LEAD_TO_EMAIL` and redeploy. Submit a
+test enquiry and confirm it arrives.
 
-## 7. Email fallback for form leads (one-time setup)
+## 6. After launch
 
-Every form submission is now also emailed to the business, so a lead is never lost if the visitor closes WhatsApp.
-
-1. Sign in to the Gmail account that should send the emails (e.g. ghtravelsinfo@gmail.com) and turn on **2-Step Verification** (myaccount.google.com → Security).
-2. Go to myaccount.google.com/apppasswords, create an app password named "Website", and copy the 16-character code.
-3. Add these environment variables on the host and redeploy:
-
-| Variable | Value |
-|---|---|
-| `SMTP_USER` | the Gmail address, e.g. `ghtravelsinfo@gmail.com` |
-| `SMTP_PASS` | the 16-character app password (no spaces) |
-| `LEAD_TO_EMAIL` | optional – where leads are delivered; defaults to `SMTP_USER` |
-
-4. Submit a test enquiry on the live site and confirm the email arrives (check spam once). Replying to the email answers the customer directly.
+- Create/verify the Google Business Profile (category: *Travel agency*; add *Hajj and Umrah travel agency* if offered) with the same name, address and phone as the site.
+- Add the domain to Google Search Console and submit `https://<domain>/sitemap.xml`.
+- New SEO landing pages can be added in `lib/landing-pages.ts` (pages, sitemap and structured data are generated automatically).

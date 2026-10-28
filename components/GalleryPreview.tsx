@@ -9,34 +9,34 @@ import {
 
 const galleryImages = [
   {
-    image: "/service-travel-assistance.jpg",
-    alt: "Travel experience",
+    image: "/images/demo/kaaba-tawaf.jpg",
+    alt: "Pilgrims performing tawaf around the Kaaba",
   },
   {
-    image: "/beautiful-destination.png",
-    alt: "Beautiful destination",
+    image: "/images/demo/nabawi-portrait.jpg",
+    alt: "Masjid an-Nabawi in Madinah",
   },
   {
-    image: "/journey-memories.png",
-    alt: "Journey memories",
+    image: "/images/demo/quba-2.jpg",
+    alt: "Masjid Quba on the outskirts of Madinah",
   },
   {
-    image: "/travel-moments.png",
-    alt: "Travel moments",
+    image: "/images/demo/mina-tents.jpg",
+    alt: "The tent city of Mina during Haj",
   },
 ];
 
 export default function GalleryPreview() {
   return (
-    <section className="relative overflow-hidden bg-[#faf9f5] py-20 sm:py-24 lg:py-28 xl:py-32">
+    <section className="relative overflow-hidden bg-[#f9f6f8] py-20 sm:py-24 lg:py-28 xl:py-32">
 
       {/* ===================================================== */}
       {/* ================= BACKGROUND ======================== */}
       {/* ===================================================== */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-[#14596a]/[0.025] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-[#4e1367]/[0.025] blur-3xl" />
 
-      <div className="pointer-events-none absolute -bottom-40 right-[-120px] h-[450px] w-[450px] rounded-full bg-[#d9a737]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 right-[-120px] h-[450px] w-[450px] rounded-full bg-[#e40e83]/[0.035] blur-3xl" />
 
       {/* ===================================================== */}
       {/* ================= MAIN CONTAINER ==================== */}
@@ -56,56 +56,56 @@ export default function GalleryPreview() {
 
             <div className="flex items-center gap-3">
 
-              <span className="h-[2px] w-9 bg-[#d9a737]" />
+              <span className="h-[2px] w-9 bg-[#e40e83]" />
 
               <Camera
                 size={16}
                 strokeWidth={1.7}
-                className="text-[#d9a737]"
+                className="text-[#e40e83]"
               />
 
-              <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#14596a]">
-                Moments We Remember
+              <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#4e1367]">
+                Glimpses Of The Journey
               </span>
 
             </div>
 
             {/* Heading */}
 
-            <h2 className="mt-6 max-w-[560px] font-serif text-[42px] font-bold leading-[1.05] text-[#123f55] sm:text-5xl lg:text-[54px] xl:text-[58px]">
+            <h2 className="mt-6 max-w-[560px] font-serif text-[42px] font-bold leading-[1.05] text-[#3f1152] sm:text-5xl lg:text-[54px] xl:text-[58px]">
 
-              Memories Beyond
+              Moments Of
 
-              <span className="block italic font-medium text-[#c99420]">
-                The Horizon.
+              <span className="block italic font-medium text-[#c5066f]">
+                Devotion.
               </span>
 
             </h2>
 
             {/* Description */}
 
-            <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-[#60696d] sm:text-[16px]">
-              Every journey tells a story. Explore a collection of destinations,
-              experiences and unforgettable moments from our travels.
+            <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-[#665d6a] sm:text-[16px]">
+              From the white marble of the Haram to the green dome of Madinah,
+              explore the places pilgrims carry in their hearts.
             </p>
 
-            <p className="mt-5 max-w-[510px] text-[15px] leading-7 text-[#60696d] sm:text-[16px]">
-              From unforgettable landscapes to meaningful travel moments,
-              discover the experiences that make every journey special.
+            <p className="mt-5 max-w-[510px] text-[15px] leading-7 text-[#665d6a] sm:text-[16px]">
+              Demo photographs from Wikimedia Commons – your own pilgrim group
+              photos can replace these once available.
             </p>
 
             {/* CTA */}
 
             <Link
               href="/gallery"
-              className="group mt-9 inline-flex items-center gap-4 border-b-2 border-[#d9a737] pb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#123f55] transition-colors duration-300 hover:text-[#b9471e]"
+              className="group mt-9 inline-flex items-center gap-4 border-b-2 border-[#e40e83] pb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#3f1152] transition-colors duration-300 hover:text-[#c1124c]"
             >
-              Explore Gallery
+              View Gallery
 
               <ArrowUpRight
                 size={19}
                 strokeWidth={1.7}
-                className="text-[#c99420] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+                className="text-[#c5066f] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
               />
             </Link>
 
@@ -121,7 +121,7 @@ export default function GalleryPreview() {
             {/* DECORATIVE GOLD CORNER                           */}
             {/* ================================================= */}
 
-            <div className="pointer-events-none absolute -left-5 -top-5 z-0 h-24 w-24 border-l-2 border-t-2 border-[#d9a737]" />
+            <div className="pointer-events-none absolute -left-5 -top-5 z-0 h-24 w-24 border-l-2 border-t-2 border-[#e40e83]" />
 
             {/* ================================================= */}
             {/* MATRIX                                           */}
@@ -167,7 +167,7 @@ export default function GalleryPreview() {
             {/* DECORATIVE BOTTOM CORNER                        */}
             {/* ================================================= */}
 
-            <div className="pointer-events-none absolute -bottom-5 -right-5 z-0 h-24 w-24 border-b-2 border-r-2 border-[#14596a]/30" />
+            <div className="pointer-events-none absolute -bottom-5 -right-5 z-0 h-24 w-24 border-b-2 border-r-2 border-[#4e1367]/30" />
 
           </div>
 

@@ -17,7 +17,7 @@ export default function Date() {
         <div className="flex border-b border-gray-200">
           <button
             type="button"
-            className="rounded-t-xl bg-[#07566a] px-6 py-4 text-sm text-white"
+            className="rounded-t-xl bg-[#4a0767] px-6 py-4 text-sm text-white"
           >
             FIXED DATES
           </button>
@@ -34,15 +34,15 @@ export default function Date() {
           {/* CALENDAR */}
           <div>
             <div className="flex items-center justify-between">
-              <button type="button" className="text-2xl text-[#00495a]">
+              <button type="button" className="text-2xl text-[#3d0057]">
                 ‹
               </button>
 
-              <h2 className="text-xl font-semibold text-[#00495a]">
+              <h2 className="text-xl font-semibold text-[#3d0057]">
                 June 2024
               </h2>
 
-              <button type="button" className="text-2xl text-[#00495a]">
+              <button type="button" className="text-2xl text-[#3d0057]">
                 ›
               </button>
             </div>
@@ -65,8 +65,8 @@ export default function Date() {
                     className={`mx-auto flex h-8 w-8 items-center justify-center rounded-full ${
                       selected
                         ? day === 11 || day === 16
-                          ? "bg-[#00495a] text-white"
-                          : "bg-[#dcecf1] text-[#00495a]"
+                          ? "bg-[#3d0057] text-white"
+                          : "bg-[#ebdcf1] text-[#3d0057]"
                         : "text-gray-700"
                     }`}
                   >
@@ -84,7 +84,7 @@ export default function Date() {
             <input
               type="date"
               defaultValue="2024-06-11"
-              className="mt-2 w-full rounded-lg border border-gray-300 bg-[#faf9f6] px-4 py-4 outline-none"
+              className="mt-2 w-full rounded-lg border border-gray-300 bg-[#f9f7f8] px-4 py-4 outline-none"
             />
 
             <label className="mt-7 block text-sm text-gray-600">
@@ -94,7 +94,7 @@ export default function Date() {
             <input
               type="date"
               defaultValue="2024-06-16"
-              className="mt-2 w-full rounded-lg border border-gray-300 bg-[#faf9f6] px-4 py-4 outline-none"
+              className="mt-2 w-full rounded-lg border border-gray-300 bg-[#f9f7f8] px-4 py-4 outline-none"
             />
 
             <div className="mt-6 border-t pt-5">

@@ -26,32 +26,32 @@ const mainLinks = [
 
 const exploreLinks = [
   {
-    name: "Tour Packages",
-    description: "Curated travel experiences",
+    name: "Umrah & Haj Packages",
+    description: "Economy, standard & premium options",
     href: "/tour-packages",
     icon: Map,
   },
   {
-    name: "Tours & Experiences",
-    description: "Discover unforgettable journeys",
+    name: "Pilgrimage Journeys",
+    description: "Family, group & Ramadan Umrah",
     href: "/tours",
     icon: Plane,
   },
   {
-    name: "Transport Services",
-    description: "Comfortable travel solutions",
+    name: "Transport & Ziyarat",
+    description: "Airport, intercity & ziyarat transfers",
     href: "/transport",
     icon: Car,
   },
   {
     name: "Gallery",
-    description: "Moments from our journeys",
+    description: "Makkah, Madinah & the journey",
     href: "/gallery",
     icon: Images,
   },
   {
     name: "FAQ",
-    description: "Answers to common questions",
+    description: "Answers for first-time pilgrims",
     href: "/faq",
     icon: CircleHelp,
   },
@@ -100,60 +100,33 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-[100] w-full">
-      <nav className="relative border-b border-[#123f55]/10 bg-[#faf9f5]/95 backdrop-blur-xl">
+      <nav className="relative border-b border-[#3f1152]/10 bg-[#f9f6f8]/95 backdrop-blur-xl">
         {/* PREMIUM GOLD LINE */}
 
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d9a737]/70 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#e40e83]/70 to-transparent" />
 
         <div className="relative mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-10 xl:px-12">
           {/* =====================================================
               DESKTOP / MAIN NAVBAR
           ====================================================== */}
 
-          <div className="flex h-[74px] items-center justify-between sm:h-[82px] lg:grid lg:h-[88px] lg:grid-cols-[minmax(220px,1fr)_auto_minmax(180px,1fr)] lg:gap-5">
+          <div className="flex h-[74px] items-center justify-between sm:h-[82px] lg:grid lg:h-[88px] lg:grid-cols-[minmax(120px,1fr)_auto_minmax(180px,1fr)] lg:gap-5">
             {/* =====================================================
                 LOGO
             ====================================================== */}
 
             <Link
               href="/"
-              className="group flex min-w-0 items-center gap-3"
+              aria-label="Ayesha Tours – Haj & Umrah Packages, home"
+              className="group flex min-w-0 items-center"
             >
-              <div className="relative flex h-[44px] w-[44px] shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#d9a737]/30 bg-white shadow-[0_6px_20px_rgba(18,63,85,0.08)] transition-all duration-300 group-hover:scale-105 group-hover:border-[#d9a737]/70 sm:h-[48px] sm:w-[48px]">
-                <img
-                  src="/logo.png"
-                  alt="Global Horizons Tours & Travels"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-
-              {/* BRAND TEXT */}
-
-              <div className="hidden min-w-0 flex-col 2xl:flex">
-                <span className="whitespace-nowrap font-serif text-[17px] font-bold leading-tight text-[#123f55]">
-                  Global Horizons Tours & Travels
-                </span>
-
-                <div className="mt-1.5 flex items-center gap-2">
-                  <span className="h-px w-5 bg-[#d9a737]" />
-
-                  <span className="text-[8px] font-semibold uppercase tracking-[2.3px] text-[#123f55]/55">
-                    Explore The World
-                  </span>
-                </div>
-              </div>
-
-              {/* MEDIUM DESKTOP BRAND */}
-
-              <div className="hidden min-w-0 flex-col xl:flex 2xl:hidden">
-                <span className="whitespace-nowrap font-serif text-[16px] font-bold leading-tight text-[#123f55]">
-                  Global Horizons
-                </span>
-
-                <span className="mt-1 text-[7px] font-semibold uppercase tracking-[2px] text-[#123f55]/55">
-                  Tours & Travels
-                </span>
-              </div>
+              <img
+                src="/logo.png"
+                alt="Ayesha Tours – Haj & Umrah Packages"
+                width={1099}
+                height={684}
+                className="h-[52px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] sm:h-[60px] lg:h-[66px]"
+              />
             </Link>
 
             {/* =====================================================
@@ -161,7 +134,7 @@ export default function Navbar() {
             ====================================================== */}
 
             <div className="hidden items-center justify-center lg:flex">
-              <div className="flex items-center rounded-full border border-[#123f55]/10 bg-[#f4f2ed] p-1 shadow-[0_6px_25px_rgba(18,63,85,0.03)]">
+              <div className="flex items-center rounded-full border border-[#3f1152]/10 bg-[#f2eff1] p-1 shadow-[0_6px_25px_rgba(63,17,82,0.03)]">
                 {/* HOME */}
 
                 <DesktopNavLink
@@ -211,8 +184,8 @@ export default function Navbar() {
                     }
                     className={`group relative flex h-[44px] items-center gap-1.5 rounded-full px-4 text-[12px] font-medium transition-all duration-300 xl:px-5 xl:text-[13px] ${
                       isExploreActive
-                        ? "bg-white text-[#123f55] shadow-[0_5px_18px_rgba(18,63,85,0.10)]"
-                        : "text-[#657176] hover:bg-white/70 hover:text-[#123f55]"
+                        ? "bg-white text-[#3f1152] shadow-[0_5px_18px_rgba(63,17,82,0.10)]"
+                        : "text-[#6e6272] hover:bg-white/70 hover:text-[#3f1152]"
                     }`}
                     aria-expanded={isExploreOpen}
                   >
@@ -228,7 +201,7 @@ export default function Navbar() {
                     />
 
                     <span
-                      className={`absolute bottom-[7px] left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#d9a737] transition-all duration-300 ${
+                      className={`absolute bottom-[7px] left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#e40e83] transition-all duration-300 ${
                         isExploreActive
                           ? "w-5"
                           : "w-0 group-hover:w-5"
@@ -239,7 +212,7 @@ export default function Navbar() {
                   {/* DROPDOWN */}
 
                   <div
-                    className={`absolute left-1/2 top-[58px] w-[310px] -translate-x-1/2 overflow-hidden rounded-[22px] border border-[#e5ded3] bg-[#fffefd] p-2 shadow-[0_25px_70px_rgba(18,63,85,0.16)] transition-all duration-300 ${
+                    className={`absolute left-1/2 top-[58px] w-[310px] -translate-x-1/2 overflow-hidden rounded-[22px] border border-[#e1d7dc] bg-[#fffdfe] p-2 shadow-[0_25px_70px_rgba(63,17,82,0.16)] transition-all duration-300 ${
                       isExploreOpen
                         ? "visible translate-y-0 opacity-100"
                         : "invisible -translate-y-2 opacity-0"
@@ -251,11 +224,11 @@ export default function Navbar() {
                       <div className="flex items-center gap-2.5">
                         <Sparkles
                           size={13}
-                          className="text-[#d9a737]"
+                          className="text-[#e40e83]"
                         />
 
-                        <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#14596a]">
-                          Explore Global Horizons
+                        <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#4e1367]">
+                          Explore Ayesha Tours
                         </span>
                       </div>
                     </div>
@@ -276,15 +249,15 @@ export default function Navbar() {
                             }
                             className={`group/item flex items-center gap-3 rounded-[16px] px-3 py-3 transition-all duration-300 ${
                               active
-                                ? "bg-[#123f55] text-white"
-                                : "hover:bg-[#f6f3ed]"
+                                ? "bg-[#3f1152] text-white"
+                                : "hover:bg-[#f4eff2]"
                             }`}
                           >
                             <div
                               className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${
                                 active
-                                  ? "bg-white/10 text-[#e7ae3c]"
-                                  : "bg-[#14596a]/7 text-[#14596a]"
+                                  ? "bg-white/10 text-[#ff058f]"
+                                  : "bg-[#4e1367]/7 text-[#4e1367]"
                               }`}
                             >
                               <Icon
@@ -298,7 +271,7 @@ export default function Navbar() {
                                 className={`text-[12px] font-semibold ${
                                   active
                                     ? "text-white"
-                                    : "text-[#123f55]"
+                                    : "text-[#3f1152]"
                                 }`}
                               >
                                 {link.name}
@@ -308,7 +281,7 @@ export default function Navbar() {
                                 className={`mt-0.5 text-[10px] ${
                                   active
                                     ? "text-white/60"
-                                    : "text-[#7d8789]"
+                                    : "text-[#857d89]"
                                 }`}
                               >
                                 {link.description}
@@ -319,8 +292,8 @@ export default function Navbar() {
                               size={16}
                               className={
                                 active
-                                  ? "text-[#e7ae3c]"
-                                  : "text-[#aab1b2] transition-all group-hover/item:translate-x-1"
+                                  ? "text-[#ff058f]"
+                                  : "text-[#b0aab2] transition-all group-hover/item:translate-x-1"
                               }
                             />
                           </Link>
@@ -330,14 +303,14 @@ export default function Navbar() {
 
                     {/* FOOTER */}
 
-                    <div className="mt-2 flex items-center justify-center gap-2 border-t border-[#e7e1d7] px-3 pb-2 pt-3">
-                      <span className="h-px w-6 bg-[#d9a737]/50" />
+                    <div className="mt-2 flex items-center justify-center gap-2 border-t border-[#e3dbdf] px-3 pb-2 pt-3">
+                      <span className="h-px w-6 bg-[#e40e83]/50" />
 
-                      <span className="text-[7px] font-bold uppercase tracking-[0.2em] text-[#9ba2a3]">
-                        Travel Beyond Ordinary
+                      <span className="text-[7px] font-bold uppercase tracking-[0.2em] text-[#a19ba3]">
+                        Haj & Umrah Packages
                       </span>
 
-                      <span className="h-px w-6 bg-[#d9a737]/50" />
+                      <span className="h-px w-6 bg-[#e40e83]/50" />
                     </div>
                   </div>
                 </div>
@@ -360,11 +333,11 @@ export default function Navbar() {
             <div className="hidden items-center justify-end lg:flex">
               <Link
                 href="/enquiry"
-                className="group relative inline-flex h-[46px] items-center justify-center overflow-hidden whitespace-nowrap rounded-full bg-[#123f55] px-5 text-[9px] font-bold uppercase tracking-[1.3px] text-white shadow-[0_10px_28px_rgba(18,63,85,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_35px_rgba(18,63,85,0.25)] xl:px-6"
+                className="group relative inline-flex h-[46px] items-center justify-center overflow-hidden whitespace-nowrap rounded-full bg-[#3f1152] px-5 text-[9px] font-bold uppercase tracking-[1.3px] text-white shadow-[0_10px_28px_rgba(63,17,82,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_35px_rgba(63,17,82,0.25)] xl:px-6"
               >
-                <span className="absolute inset-0 translate-x-[-105%] bg-[#d9a737] transition-transform duration-500 group-hover:translate-x-0" />
+                <span className="absolute inset-0 translate-x-[-105%] bg-[#e40e83] transition-transform duration-500 group-hover:translate-x-0" />
 
-                <span className="relative z-10 flex items-center gap-2.5 transition-colors duration-300 group-hover:text-[#123f55]">
+                <span className="relative z-10 flex items-center gap-2.5 transition-colors duration-300 group-hover:text-white">
                   Plan Your Journey
 
                   <ArrowUpRight
@@ -384,8 +357,8 @@ export default function Navbar() {
               onClick={() => setIsOpen((prev) => !prev)}
               className={`flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full border transition-all duration-300 lg:hidden ${
                 isOpen
-                  ? "border-[#123f55] bg-[#123f55] text-white"
-                  : "border-[#123f55]/15 bg-white text-[#123f55] shadow-sm"
+                  ? "border-[#3f1152] bg-[#3f1152] text-white"
+                  : "border-[#3f1152]/15 bg-white text-[#3f1152] shadow-sm"
               }`}
               aria-label="Toggle navigation menu"
               aria-expanded={isOpen}
@@ -406,16 +379,16 @@ export default function Navbar() {
             }`}
           >
             <div className="pb-6 pt-2">
-              <div className="relative overflow-hidden rounded-[24px] border border-[#e5ded3] bg-[#fffefd] p-3 shadow-[0_20px_60px_rgba(18,63,85,0.12)]">
-                <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#123f55] via-[#d9a737] to-[#123f55]" />
+              <div className="relative overflow-hidden rounded-[24px] border border-[#e1d7dc] bg-[#fffdfe] p-3 shadow-[0_20px_60px_rgba(63,17,82,0.12)]">
+                <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
 
                 {/* HEADER */}
 
                 <div className="flex items-center gap-3 px-4 pb-3 pt-4">
-                  <span className="h-[2px] w-8 bg-[#d9a737]" />
+                  <span className="h-[2px] w-8 bg-[#e40e83]" />
 
-                  <span className="text-[9px] font-bold uppercase tracking-[2px] text-[#14596a]">
-                    Explore Our World
+                  <span className="text-[9px] font-bold uppercase tracking-[2px] text-[#4e1367]">
+                    Your Pilgrimage, Planned
                   </span>
                 </div>
 
@@ -436,16 +409,16 @@ export default function Navbar() {
 
                 {/* EXPLORE */}
 
-                <div className="mx-4 my-4 h-px bg-gradient-to-r from-transparent via-[#d9a737]/30 to-transparent" />
+                <div className="mx-4 my-4 h-px bg-gradient-to-r from-transparent via-[#e40e83]/30 to-transparent" />
 
                 <div className="px-4 pb-2">
                   <div className="flex items-center gap-2">
                     <Sparkles
                       size={12}
-                      className="text-[#d9a737]"
+                      className="text-[#e40e83]"
                     />
 
-                    <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#14596a]">
+                    <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#4e1367]">
                       More To Explore
                     </span>
                   </div>
@@ -463,16 +436,16 @@ export default function Navbar() {
                         onClick={() => setIsOpen(false)}
                         className={`group flex items-center justify-between rounded-[14px] px-4 py-3 transition-all duration-300 ${
                           active
-                            ? "bg-[#123f55] text-white"
-                            : "text-[#536166] hover:bg-[#f7f5ef]"
+                            ? "bg-[#3f1152] text-white"
+                            : "text-[#5d5163] hover:bg-[#f5f1f3]"
                         }`}
                       >
                         <div className="flex items-center gap-3">
                           <div
                             className={`flex h-8 w-8 items-center justify-center rounded-full ${
                               active
-                                ? "bg-white/10 text-[#e7ae3c]"
-                                : "bg-[#14596a]/7 text-[#14596a]"
+                                ? "bg-white/10 text-[#ff058f]"
+                                : "bg-[#4e1367]/7 text-[#4e1367]"
                             }`}
                           >
                             <Icon size={15} />
@@ -486,8 +459,8 @@ export default function Navbar() {
                         <span
                           className={`text-[9px] font-bold ${
                             active
-                              ? "text-[#e7ae3c]"
-                              : "text-[#9da5a6]"
+                              ? "text-[#ff058f]"
+                              : "text-[#a39da6]"
                           }`}
                         >
                           {String(index + 6).padStart(2, "0")}
@@ -499,18 +472,18 @@ export default function Navbar() {
 
                 {/* DIVIDER */}
 
-                <div className="mx-4 my-4 h-px bg-gradient-to-r from-transparent via-[#d9a737]/30 to-transparent" />
+                <div className="mx-4 my-4 h-px bg-gradient-to-r from-transparent via-[#e40e83]/30 to-transparent" />
 
                 {/* CTA */}
 
                 <Link
                   href="/enquiry"
                   onClick={() => setIsOpen(false)}
-                  className="group relative flex h-[56px] items-center justify-center overflow-hidden rounded-[16px] bg-[#123f55] text-[10px] font-bold uppercase tracking-[1.7px] text-white shadow-[0_10px_25px_rgba(18,63,85,0.18)]"
+                  className="group relative flex h-[56px] items-center justify-center overflow-hidden rounded-[16px] bg-[#3f1152] text-[10px] font-bold uppercase tracking-[1.7px] text-white shadow-[0_10px_25px_rgba(63,17,82,0.18)]"
                 >
-                  <span className="absolute inset-0 translate-y-full bg-[#d9a737] transition-transform duration-500 group-hover:translate-y-0" />
+                  <span className="absolute inset-0 translate-y-full bg-[#e40e83] transition-transform duration-500 group-hover:translate-y-0" />
 
-                  <span className="relative z-10 flex items-center gap-3 transition-colors duration-300 group-hover:text-[#123f55]">
+                  <span className="relative z-10 flex items-center gap-3 transition-colors duration-300 group-hover:text-white">
                     Plan Your Journey
 
                     <ArrowUpRight size={16} />
@@ -520,13 +493,13 @@ export default function Navbar() {
                 {/* FOOTER */}
 
                 <div className="flex items-center justify-center gap-3 pb-2 pt-5">
-                  <span className="h-px w-7 bg-[#d9a737]/40" />
+                  <span className="h-px w-7 bg-[#e40e83]/40" />
 
-                  <span className="text-[8px] font-semibold uppercase tracking-[2px] text-[#a0a8aa]">
-                    Travel Beyond Ordinary
+                  <span className="text-[8px] font-semibold uppercase tracking-[2px] text-[#a7a0aa]">
+                    Labbaik Allahumma Labbaik
                   </span>
 
-                  <span className="h-px w-7 bg-[#d9a737]/40" />
+                  <span className="h-px w-7 bg-[#e40e83]/40" />
                 </div>
               </div>
             </div>
@@ -555,8 +528,8 @@ function DesktopNavLink({
       href={href}
       className={`group relative flex h-[44px] items-center justify-center rounded-full px-4 text-[12px] font-medium transition-all duration-300 xl:px-5 xl:text-[13px] ${
         active
-          ? "bg-white text-[#123f55] shadow-[0_5px_18px_rgba(18,63,85,0.10)]"
-          : "text-[#657176] hover:bg-white/70 hover:text-[#123f55]"
+          ? "bg-white text-[#3f1152] shadow-[0_5px_18px_rgba(63,17,82,0.10)]"
+          : "text-[#6e6272] hover:bg-white/70 hover:text-[#3f1152]"
       }`}
     >
       <span className="relative z-10 whitespace-nowrap">
@@ -564,7 +537,7 @@ function DesktopNavLink({
       </span>
 
       <span
-        className={`absolute bottom-[7px] left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#d9a737] transition-all duration-300 ${
+        className={`absolute bottom-[7px] left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#e40e83] transition-all duration-300 ${
           active ? "w-5" : "w-0 group-hover:w-5"
         }`}
       />
@@ -595,16 +568,16 @@ function MobileNavLink({
       onClick={onClick}
       className={`group flex items-center justify-between rounded-[14px] px-4 py-3.5 transition-all duration-300 ${
         active
-          ? "bg-[#123f55] text-white shadow-[0_8px_20px_rgba(18,63,85,0.15)]"
-          : "text-[#536166] hover:bg-[#f7f5ef] hover:text-[#123f55]"
+          ? "bg-[#3f1152] text-white shadow-[0_8px_20px_rgba(63,17,82,0.15)]"
+          : "text-[#5d5163] hover:bg-[#f5f1f3] hover:text-[#3f1152]"
       }`}
     >
       <div className="flex items-center gap-3.5">
         <span
           className={`flex h-7 w-7 items-center justify-center rounded-full text-[9px] font-bold ${
             active
-              ? "bg-white/10 text-[#e5b34d]"
-              : "bg-[#14596a]/7 text-[#14596a]/60"
+              ? "bg-white/10 text-[#fb1895]"
+              : "bg-[#4e1367]/7 text-[#4e1367]/60"
           }`}
         >
           {String(index).padStart(2, "0")}
@@ -619,8 +592,8 @@ function MobileNavLink({
         size={17}
         className={`transition-all duration-300 ${
           active
-            ? "text-[#e5b34d]"
-            : "text-[#aab1b2] group-hover:translate-x-1 group-hover:text-[#14596a]"
+            ? "text-[#fb1895]"
+            : "text-[#b0aab2] group-hover:translate-x-1 group-hover:text-[#4e1367]"
         }`}
       />
     </Link>

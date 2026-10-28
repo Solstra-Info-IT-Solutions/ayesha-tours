@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Booking Policy",
-  description: "Read how bookings, confirmations and itinerary changes work with Global Horizons Tours & Travels.",
+  description: "Read how bookings, confirmations and itinerary changes work with Ayesha Tours.",
   path: "/booking-policy",
 });
 

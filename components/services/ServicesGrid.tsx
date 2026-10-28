@@ -118,12 +118,12 @@
 
 // export default function ServicesGrid() {
 //   return (
-//     <section className="relative overflow-hidden bg-[#f7f5f1] py-24 sm:py-28 lg:py-32">
+//     <section className="relative overflow-hidden bg-[#f6f2f4] py-24 sm:py-28 lg:py-32">
 
 //       {/* Background */}
-//       <div className="pointer-events-none absolute -left-64 top-[20%] h-[600px] w-[600px] rounded-full border border-[#d9a737]/10" />
+//       <div className="pointer-events-none absolute -left-64 top-[20%] h-[600px] w-[600px] rounded-full border border-[#e40e83]/10" />
 
-//       <div className="pointer-events-none absolute -right-64 bottom-[10%] h-[700px] w-[700px] rounded-full border border-[#14596a]/10" />
+//       <div className="pointer-events-none absolute -right-64 bottom-[10%] h-[700px] w-[700px] rounded-full border border-[#4e1367]/10" />
 
 //       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
 
@@ -131,23 +131,23 @@
 //         <div className="mx-auto mb-16 max-w-3xl text-center lg:mb-20">
 
 //           <div className="flex items-center justify-center gap-4">
-//             <span className="h-px w-10 bg-[#d9a737]" />
+//             <span className="h-px w-10 bg-[#e40e83]" />
 
-//             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#14596a]">
+//             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#4e1367]">
 //               What We Offer
 //             </span>
 
-//             <span className="h-px w-10 bg-[#d9a737]" />
+//             <span className="h-px w-10 bg-[#e40e83]" />
 //           </div>
 
-//           <h2 className="mt-6 font-serif text-[40px] font-bold leading-tight text-[#123f55] sm:text-5xl lg:text-[60px]">
-//             Travel Services For
-//             <span className="block italic font-medium text-[#d9a737]">
-//               Every Kind Of Journey.
+//           <h2 className="mt-6 font-serif text-[40px] font-bold leading-tight text-[#3f1152] sm:text-5xl lg:text-[60px]">
+//             Pilgrimage Services For
+//             <span className="block italic font-medium text-[#e40e83]">
+//               Every Kind Of Pilgrim.
 //             </span>
 //           </h2>
 
-//           <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-8 text-[#687276]">
+//           <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-8 text-[#6e6572]">
 //             Whether you are travelling for business, leisure, family or
 //             exploration, our services are designed to make your journey
 //             easier from beginning to end.
@@ -169,15 +169,15 @@
 //             return (
 //               <article
 //                 key={service.number}
-//                 className="group relative min-h-[360px] overflow-hidden rounded-[32px] border border-[#dfd9ce] bg-[#fbfaf8] p-7 transition-all duration-500 sm:p-8 hover:-translate-y-2 hover:border-[#d9a737]/50 hover:bg-white hover:shadow-[0_30px_70px_rgba(18,63,85,0.12)]"
+//                 className="group relative min-h-[360px] overflow-hidden rounded-[32px] border border-[#dbd2d7] bg-[#faf9fa] p-7 transition-all duration-500 sm:p-8 hover:-translate-y-2 hover:border-[#e40e83]/50 hover:bg-white hover:shadow-[0_30px_70px_rgba(63,17,82,0.12)]"
 //               >
 
 //                 {/* Background Number */}
 //                 <span
 //                   className={`pointer-events-none absolute right-4 top-[-10px] font-serif text-[110px] font-bold leading-none tracking-[-0.08em] ${
 //                     isGold
-//                       ? "text-[#d9a737]/[0.05]"
-//                       : "text-[#123f55]/[0.035]"
+//                       ? "text-[#e40e83]/[0.05]"
+//                       : "text-[#3f1152]/[0.035]"
 //                   }`}
 //                 >
 //                   {service.number}
@@ -188,16 +188,16 @@
 //                 <div
 //                   className={`relative flex h-[64px] w-[64px] items-center justify-center rounded-full border transition-all duration-500 group-hover:scale-110 ${
 //                     isGold
-//                       ? "border-[#d9a737]/30 bg-[#fbf4e3] text-[#c99528]"
-//                       : "border-[#14596a]/20 bg-[#eaf3f4] text-[#14596a]"
+//                       ? "border-[#e40e83]/30 bg-[#f6e8ef] text-[#c50e72]"
+//                       : "border-[#4e1367]/20 bg-[#f1eaf4] text-[#4e1367]"
 //                   }`}
 //                 >
 
 //                   <div
 //                     className={`absolute inset-[5px] rounded-full border ${
 //                       isGold
-//                         ? "border-[#d9a737]/20"
-//                         : "border-[#14596a]/15"
+//                         ? "border-[#e40e83]/20"
+//                         : "border-[#4e1367]/15"
 //                     }`}
 //                   />
 
@@ -216,16 +216,16 @@
 //                   <span
 //                     className={`h-px w-9 transition-all duration-500 group-hover:w-14 ${
 //                       isGold
-//                         ? "bg-[#d9a737]"
-//                         : "bg-[#14596a]"
+//                         ? "bg-[#e40e83]"
+//                         : "bg-[#4e1367]"
 //                     }`}
 //                   />
 
 //                   <span
 //                     className={`text-[9px] font-bold uppercase tracking-[0.22em] ${
 //                       isGold
-//                         ? "text-[#b98a2c]"
-//                         : "text-[#14596a]"
+//                         ? "text-[#b3146b]"
+//                         : "text-[#4e1367]"
 //                     }`}
 //                   >
 //                     {service.eyebrow}
@@ -235,13 +235,13 @@
 
 
 //                 {/* Title */}
-//                 <h3 className="mt-6 font-serif text-[29px] font-bold leading-tight text-[#123f55]">
+//                 <h3 className="mt-6 font-serif text-[29px] font-bold leading-tight text-[#3f1152]">
 //                   {service.title}
 //                 </h3>
 
 
 //                 {/* Description */}
-//                 <p className="mt-4 max-w-[330px] text-[14px] leading-7 text-[#687276]">
+//                 <p className="mt-4 max-w-[330px] text-[14px] leading-7 text-[#6e6572]">
 //                   {service.description}
 //                 </p>
 
@@ -249,19 +249,19 @@
 //                 {/* Bottom */}
 //                 <div className="absolute bottom-0 left-7 right-7 sm:left-8 sm:right-8">
 
-//                   <div className="h-px bg-[#ded8cd]" />
+//                   <div className="h-px bg-[#dad1d6]" />
 
 //                   <div className="flex items-center justify-between py-5">
 
-//                     <span className="text-[8px] font-bold uppercase tracking-[0.28em] text-[#8a9496]">
-//                       Global Horizon
+//                     <span className="text-[8px] font-bold uppercase tracking-[0.28em] text-[#928a96]">
+//                       Ayesha Tours
 //                     </span>
 
 //                     <span
 //                       className={`h-2 w-2 rounded-full transition-transform duration-500 group-hover:scale-150 ${
 //                         isGold
-//                           ? "bg-[#d9a737]"
-//                           : "bg-[#14596a]"
+//                           ? "bg-[#e40e83]"
+//                           : "bg-[#4e1367]"
 //                       }`}
 //                     />
 
@@ -284,109 +284,109 @@
 "use client";
 
 import {
-  Car,
+  Moon,
   Plane,
   TrainFront,
-  BriefcaseBusiness,
-  Palmtree,
+  FileCheck2,
+  Tent,
   Map,
   Hotel,
   Users,
   Landmark,
-  Camera,
-  BadgeIndianRupee,
+  Compass,
+  Banknote,
   Sparkles,
 } from "lucide-react";
 
 const services = [
   {
     number: "01",
-    title: "Private Taxi",
-    eyebrow: "Personal Mobility",
+    title: "Umrah Packages",
+    eyebrow: "All Year Round",
     description:
-      "Comfortable and professionally managed transportation designed around your personal schedule and destination.",
-    icon: Car,
+      "Economy, standard and premium Umrah packages with clear details of flights, hotels, transfers and ziyarat.",
+    icon: Landmark,
     accent: "teal",
   },
   {
     number: "02",
     title: "Airport Transfers",
-    eyebrow: "Seamless Arrivals",
+    eyebrow: "Jeddah & Madinah",
     description:
-      "Reliable airport pickups and drop-offs designed to make every journey smooth, punctual and stress-free.",
+      "Pickups and drop-offs at Jeddah and Madinah airports so your group reaches the hotel without stress.",
     icon: Plane,
     accent: "gold",
   },
   {
     number: "03",
-    title: "Railway Transfers",
-    eyebrow: "Connected Journeys",
+    title: "Haramain Train",
+    eyebrow: "Makkah ⇄ Madinah",
     description:
-      "Convenient transportation to and from railway stations with comfort and dependable travel assistance.",
+      "Guidance on high-speed train tickets between Makkah, Jeddah and Madinah, with station transfers on request.",
     icon: TrainFront,
     accent: "teal",
   },
   {
     number: "04",
-    title: "Corporate Travel",
-    eyebrow: "Business Mobility",
+    title: "Visa Assistance",
+    eyebrow: "Paperwork Made Simple",
     description:
-      "Professional transportation solutions for executives, corporate teams, delegates and important events.",
-    icon: BriefcaseBusiness,
+      "Help preparing Umrah visa applications and the supporting documents, with a clear checklist before you apply.",
+    icon: FileCheck2,
     accent: "gold",
   },
   {
     number: "05",
-    title: "Holiday Packages",
-    eyebrow: "Beautiful Escapes",
+    title: "Haj Guidance",
+    eyebrow: "Journey Of A Lifetime",
     description:
-      "Carefully planned holiday experiences that combine comfort, discovery and unforgettable destinations.",
-    icon: Palmtree,
+      "Help understanding Haj options, eligibility, documentation and preparation for the days of Mina, Arafat and Muzdalifah.",
+    icon: Tent,
     accent: "gold",
   },
   {
     number: "06",
-    title: "Customized Tours",
-    eyebrow: "Travel Your Way",
+    title: "Custom Umrah Plans",
+    eyebrow: "Your Dates, Your Needs",
     description:
-      "Personalized travel itineraries created around your interests, preferred destinations and schedule.",
+      "Tailor the number of nights in Makkah and Madinah, hotel category and room sharing to suit your family.",
     icon: Map,
     accent: "teal",
   },
   {
     number: "07",
-    title: "Hotel Reservations",
-    eyebrow: "Comfortable Stays",
+    title: "Hotels Near Haram",
+    eyebrow: "Makkah & Madinah",
     description:
-      "Assistance with selecting comfortable accommodation that perfectly fits your travel plans and preferences.",
+      "Help choosing hotels by walking distance to Masjid al-Haram and Masjid an-Nabawi, budget and room type.",
     icon: Hotel,
     accent: "gold",
   },
   {
     number: "08",
-    title: "Group & Family Tours",
-    eyebrow: "Together We Travel",
+    title: "Group & Family Umrah",
+    eyebrow: "Travel Together",
     description:
-      "Well-organized travel experiences designed for families, friends and groups travelling together.",
+      "Well-organised pilgrimages for families, community groups and friends travelling together.",
     icon: Users,
     accent: "teal",
   },
   {
     number: "09",
-    title: "Pilgrimage Tours",
-    eyebrow: "Meaningful Journeys",
+    title: "Ramadan Umrah",
+    eyebrow: "Blessed Month",
     description:
-      "Thoughtfully arranged spiritual journeys focused on comfort, convenience and peaceful travel.",
-    icon: Landmark,
+      "Umrah during Ramadan, including the last ten nights, planned early for the busiest season of the year.",
+    icon: Moon,
     accent: "gold",
   },
   {
     number: "10",
-    title: "Sightseeing Tours",
-    eyebrow: "Discover More",
+    title: "Ziyarat Tours",
+    eyebrow: "Historic Sites",
     description:
-      "Explore iconic landmarks, hidden gems and memorable destinations with comfortable local travel.",
-    icon: Camera,
+      "Guided visits to Jabal al-Nour, Mount Uhud, Masjid Quba and other historic sites of Makkah and Madinah.",
+    icon: Compass,
     accent: "teal",
   },
 
@@ -396,27 +396,27 @@ const services = [
 
   {
     number: "11",
-    title: "Foreign Exchange Assistance",
-    eyebrow: "Travel Currency Solutions",
+    title: "Saudi Riyal Guidance",
+    eyebrow: "Travel Currency Help",
     description:
-      "Convenient travel currency assistance designed to help you prepare for international journeys with confidence, comfort and complete travel readiness.",
-    icon: BadgeIndianRupee,
+      "Practical guidance on carrying Saudi Riyals, cards and cash for your stay in Makkah and Madinah, so you travel prepared.",
+    icon: Banknote,
     accent: "premium",
   },
 ];
 
 export default function ServicesGrid() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f5f1] py-24 sm:py-28 lg:py-32">
+    <section className="relative overflow-hidden bg-[#f6f2f4] py-24 sm:py-28 lg:py-32">
       {/* =====================================================
           BACKGROUND DECORATION
       ===================================================== */}
 
-      <div className="pointer-events-none absolute -left-64 top-[20%] h-[600px] w-[600px] rounded-full border border-[#d9a737]/10" />
+      <div className="pointer-events-none absolute -left-64 top-[20%] h-[600px] w-[600px] rounded-full border border-[#e40e83]/10" />
 
-      <div className="pointer-events-none absolute -right-64 bottom-[10%] h-[700px] w-[700px] rounded-full border border-[#14596a]/10" />
+      <div className="pointer-events-none absolute -right-64 bottom-[10%] h-[700px] w-[700px] rounded-full border border-[#4e1367]/10" />
 
-      <div className="pointer-events-none absolute left-1/2 top-[10%] h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[#d9a737]/[0.025] blur-[140px]" />
+      <div className="pointer-events-none absolute left-1/2 top-[10%] h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[#e40e83]/[0.025] blur-[140px]" />
 
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
         {/* =====================================================
@@ -425,27 +425,27 @@ export default function ServicesGrid() {
 
         <div className="mx-auto mb-16 max-w-3xl text-center lg:mb-20">
           <div className="flex items-center justify-center gap-4">
-            <span className="h-px w-10 bg-[#d9a737]" />
+            <span className="h-px w-10 bg-[#e40e83]" />
 
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#14596a]">
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#4e1367]">
               What We Offer
             </span>
 
-            <span className="h-px w-10 bg-[#d9a737]" />
+            <span className="h-px w-10 bg-[#e40e83]" />
           </div>
 
-          <h2 className="mt-6 font-serif text-[40px] font-bold leading-tight text-[#123f55] sm:text-5xl lg:text-[60px]">
-            Travel Services For
+          <h2 className="mt-6 font-serif text-[40px] font-bold leading-tight text-[#3f1152] sm:text-5xl lg:text-[60px]">
+            Pilgrimage Services For
 
-            <span className="block italic font-medium text-[#d9a737]">
-              Every Kind Of Journey.
+            <span className="block italic font-medium text-[#e40e83]">
+              Every Kind Of Pilgrim.
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-8 text-[#687276]">
-            Whether you are travelling for business, leisure, family or
-            exploration, our services are designed to make your journey
-            easier from beginning to end.
+          <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-8 text-[#6e6572]">
+            Whether you are travelling alone, with your family or in a group,
+            our services are designed to make your Umrah or Haj easier from
+            beginning to end.
           </p>
         </div>
 
@@ -467,8 +467,8 @@ export default function ServicesGrid() {
                 key={service.number}
                 className={`group relative min-h-[370px] overflow-hidden rounded-[32px] border p-7 transition-all duration-500 sm:p-8 ${
                   isPremium
-                    ? "border-[#d9a737]/35 bg-gradient-to-br from-[#082f3a] via-[#123f55] to-[#14596a] shadow-[0_25px_70px_rgba(18,63,85,0.22)] hover:-translate-y-2 hover:border-[#d9a737]/70 hover:shadow-[0_35px_90px_rgba(18,63,85,0.30)]"
-                    : "border-[#dfd9ce] bg-[#fbfaf8] hover:-translate-y-2 hover:border-[#d9a737]/50 hover:bg-white hover:shadow-[0_30px_70px_rgba(18,63,85,0.12)]"
+                    ? "border-[#e40e83]/35 bg-gradient-to-br from-[#2a0838] via-[#3f1152] to-[#4e1367] shadow-[0_25px_70px_rgba(63,17,82,0.22)] hover:-translate-y-2 hover:border-[#e40e83]/70 hover:shadow-[0_35px_90px_rgba(63,17,82,0.30)]"
+                    : "border-[#dbd2d7] bg-[#faf9fa] hover:-translate-y-2 hover:border-[#e40e83]/50 hover:bg-white hover:shadow-[0_30px_70px_rgba(63,17,82,0.12)]"
                 }`}
               >
                 {/* =====================================================
@@ -479,9 +479,9 @@ export default function ServicesGrid() {
                   <>
                     {/* GOLD GLOW */}
 
-                    <div className="pointer-events-none absolute -right-24 -top-24 h-[300px] w-[300px] rounded-full bg-[#d9a737]/15 blur-[90px]" />
+                    <div className="pointer-events-none absolute -right-24 -top-24 h-[300px] w-[300px] rounded-full bg-[#e40e83]/15 blur-[90px]" />
 
-                    <div className="pointer-events-none absolute -bottom-32 -left-32 h-[280px] w-[280px] rounded-full bg-[#14596a]/60 blur-[100px]" />
+                    <div className="pointer-events-none absolute -bottom-32 -left-32 h-[280px] w-[280px] rounded-full bg-[#4e1367]/60 blur-[100px]" />
 
                     {/* PREMIUM GRID */}
 
@@ -496,18 +496,18 @@ export default function ServicesGrid() {
 
                     {/* TOP GOLD LINE */}
 
-                    <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#d9a737] to-transparent" />
+                    <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#e40e83] to-transparent" />
 
                     {/* PREMIUM BADGE */}
 
-                    <div className="absolute right-6 top-6 flex items-center gap-2 rounded-full border border-[#d9a737]/30 bg-[#d9a737]/10 px-3 py-1.5 backdrop-blur-md">
+                    <div className="absolute right-6 top-6 flex items-center gap-2 rounded-full border border-[#e40e83]/30 bg-[#e40e83]/10 px-3 py-1.5 backdrop-blur-md">
                       <Sparkles
                         size={10}
-                        className="text-[#f3cf73]"
+                        className="text-[#ff5db6]"
                       />
 
-                      <span className="text-[7px] font-bold uppercase tracking-[0.18em] text-[#f3cf73]">
-                        International Travel
+                      <span className="text-[7px] font-bold uppercase tracking-[0.18em] text-[#ff5db6]">
+                        Travelling Abroad
                       </span>
                     </div>
                   </>
@@ -522,8 +522,8 @@ export default function ServicesGrid() {
                     isPremium
                       ? "text-white/[0.05]"
                       : isGold
-                      ? "text-[#d9a737]/[0.05]"
-                      : "text-[#123f55]/[0.035]"
+                      ? "text-[#e40e83]/[0.05]"
+                      : "text-[#3f1152]/[0.035]"
                   }`}
                 >
                   {service.number}
@@ -536,10 +536,10 @@ export default function ServicesGrid() {
                 <div
                   className={`relative flex h-[64px] w-[64px] items-center justify-center rounded-full border transition-all duration-500 group-hover:scale-110 ${
                     isPremium
-                      ? "border-[#d9a737]/50 bg-[#d9a737]/15 text-[#f3cf73] shadow-[0_0_35px_rgba(217,167,55,0.16)]"
+                      ? "border-[#e40e83]/50 bg-[#e40e83]/15 text-[#ff5db6] shadow-[0_0_35px_rgba(228,14,131,0.16)]"
                       : isGold
-                      ? "border-[#d9a737]/30 bg-[#fbf4e3] text-[#c99528]"
-                      : "border-[#14596a]/20 bg-[#eaf3f4] text-[#14596a]"
+                      ? "border-[#e40e83]/30 bg-[#f6e8ef] text-[#c50e72]"
+                      : "border-[#4e1367]/20 bg-[#f1eaf4] text-[#4e1367]"
                   }`}
                 >
                   {/* INNER RING */}
@@ -547,10 +547,10 @@ export default function ServicesGrid() {
                   <div
                     className={`absolute inset-[5px] rounded-full border ${
                       isPremium
-                        ? "border-[#d9a737]/25"
+                        ? "border-[#e40e83]/25"
                         : isGold
-                        ? "border-[#d9a737]/20"
-                        : "border-[#14596a]/15"
+                        ? "border-[#e40e83]/20"
+                        : "border-[#4e1367]/15"
                     }`}
                   />
 
@@ -569,20 +569,20 @@ export default function ServicesGrid() {
                   <span
                     className={`h-px w-9 transition-all duration-500 group-hover:w-14 ${
                       isPremium
-                        ? "bg-[#d9a737]"
+                        ? "bg-[#e40e83]"
                         : isGold
-                        ? "bg-[#d9a737]"
-                        : "bg-[#14596a]"
+                        ? "bg-[#e40e83]"
+                        : "bg-[#4e1367]"
                     }`}
                   />
 
                   <span
                     className={`text-[9px] font-bold uppercase tracking-[0.22em] ${
                       isPremium
-                        ? "text-[#f3cf73]"
+                        ? "text-[#ff5db6]"
                         : isGold
-                        ? "text-[#b98a2c]"
-                        : "text-[#14596a]"
+                        ? "text-[#b3146b]"
+                        : "text-[#4e1367]"
                     }`}
                   >
                     {service.eyebrow}
@@ -597,7 +597,7 @@ export default function ServicesGrid() {
                   className={`relative mt-6 font-serif text-[28px] font-bold leading-tight sm:text-[30px] ${
                     isPremium
                       ? "text-white"
-                      : "text-[#123f55]"
+                      : "text-[#3f1152]"
                   }`}
                 >
                   {service.title}
@@ -610,8 +610,8 @@ export default function ServicesGrid() {
                 <p
                   className={`relative mt-4 max-w-[340px] text-[14px] leading-7 ${
                     isPremium
-                      ? "text-[#c7d7db]"
-                      : "text-[#687276]"
+                      ? "text-[#d5c7db]"
+                      : "text-[#6e6572]"
                   }`}
                 >
                   {service.description}
@@ -623,11 +623,11 @@ export default function ServicesGrid() {
 
                 {isPremium && (
                   <div className="relative mt-6 flex flex-wrap gap-2">
-                    {["USD", "EUR", "GBP", "AED"].map(
+                    {["SAR", "INR", "USD", "AED"].map(
                       (currency) => (
                         <span
                           key={currency}
-                          className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-[8px] font-bold tracking-[0.16em] text-[#f3cf73] backdrop-blur-sm transition-all duration-300 hover:border-[#d9a737]/50 hover:bg-[#d9a737]/10"
+                          className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-[8px] font-bold tracking-[0.16em] text-[#ff5db6] backdrop-blur-sm transition-all duration-300 hover:border-[#e40e83]/50 hover:bg-[#e40e83]/10"
                         >
                           {currency}
                         </span>
@@ -645,7 +645,7 @@ export default function ServicesGrid() {
                     className={`h-px ${
                       isPremium
                         ? "bg-white/10"
-                        : "bg-[#ded8cd]"
+                        : "bg-[#dad1d6]"
                     }`}
                   />
 
@@ -654,15 +654,15 @@ export default function ServicesGrid() {
                       className={`text-[8px] font-bold uppercase tracking-[0.28em] ${
                         isPremium
                           ? "text-white/45"
-                          : "text-[#8a9496]"
+                          : "text-[#928a96]"
                       }`}
                     >
-                      Global Horizon
+                      Ayesha Tours
                     </span>
 
                     <div className="flex items-center gap-2">
                       {isPremium && (
-                        <span className="text-[7px] font-semibold uppercase tracking-[0.15em] text-[#d9a737]/70">
+                        <span className="text-[7px] font-semibold uppercase tracking-[0.15em] text-[#e40e83]/70">
                           Travel Ready
                         </span>
                       )}
@@ -670,10 +670,10 @@ export default function ServicesGrid() {
                       <span
                         className={`h-2 w-2 rounded-full transition-transform duration-500 group-hover:scale-150 ${
                           isPremium
-                            ? "bg-[#d9a737]"
+                            ? "bg-[#e40e83]"
                             : isGold
-                            ? "bg-[#d9a737]"
-                            : "bg-[#14596a]"
+                            ? "bg-[#e40e83]"
+                            : "bg-[#4e1367]"
                         }`}
                       />
                     </div>
@@ -690,18 +690,18 @@ export default function ServicesGrid() {
 
         <div className="mt-16 flex flex-col items-center justify-center gap-4 text-center sm:mt-20">
           <div className="flex items-center gap-4">
-            <span className="h-px w-12 bg-[#d9a737]/40" />
+            <span className="h-px w-12 bg-[#e40e83]/40" />
 
             <Sparkles
               size={13}
-              className="text-[#d9a737]"
+              className="text-[#e40e83]"
             />
 
-            <span className="h-px w-12 bg-[#d9a737]/40" />
+            <span className="h-px w-12 bg-[#e40e83]/40" />
           </div>
 
-          <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#8b9698]">
-            Every Journey. Thoughtfully Planned.
+          <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#948b98]">
+            Every Pilgrim. Carefully Guided.
           </p>
         </div>
       </div>

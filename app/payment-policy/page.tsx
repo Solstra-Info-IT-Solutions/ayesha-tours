@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Payment Policy",
-  description: "Accepted payment methods and payment terms for Global Horizons Tours & Travels bookings.",
+  description: "Accepted payment methods and payment terms for Ayesha Tours bookings.",
   path: "/payment-policy",
 });
 
@@ -13,7 +13,7 @@ export default function PaymentPolicyPage() {
     {
       title: "Payment Requirements",
       content: [
-        "Depending on the type of service, Global Horizon Tours & Travels may require an advance payment, partial payment or full payment before booking confirmation.",
+        "Depending on the type of service, Ayesha Tours may require an advance payment, partial payment or full payment before booking confirmation.",
         "Payment requirements will be communicated during the booking process.",
       ],
     },

@@ -29,6 +29,7 @@ const corePages: Entry[] = [
   { path: "/payment-policy", priority: 0.2, freq: "yearly" },
   { path: "/cookie-policy", priority: 0.2, freq: "yearly" },
   { path: "/disclaimer", priority: 0.2, freq: "yearly" },
+  { path: "/image-credits", priority: 0.1, freq: "yearly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

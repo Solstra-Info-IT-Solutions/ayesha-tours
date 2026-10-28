@@ -12,35 +12,35 @@ const steps = [
     number: "01",
     title: "Tell Us",
     description:
-      "Share your destination, dates, travel preferences and the kind of experience you are looking for.",
+      "Share whether you plan Umrah or Haj, your preferred month, group size, budget and any special needs.",
     icon: MessageCircle,
   },
   {
     number: "02",
-    title: "We Plan",
+    title: "We Advise",
     description:
-      "Our team carefully creates a journey around your requirements, comfort and travel expectations.",
+      "We suggest suitable packages, hotels and flight options and explain exactly what is and isn't included.",
     icon: Map,
   },
   {
     number: "03",
     title: "We Confirm",
     description:
-      "Once everything is perfect, we organise and confirm the important details of your journey.",
+      "Once you are happy, we guide you through documents, visa paperwork and confirmation of your bookings.",
     icon: ClipboardCheck,
   },
   {
     number: "04",
     title: "You Travel",
     description:
-      "Relax, explore and enjoy a seamless travel experience while creating memories that last.",
+      "Set out with a clear itinerary, checklists and a contact to reach while you are in Makkah and Madinah.",
     icon: Plane,
   },
 ];
 
 export default function JourneyTimeline() {
   return (
-    <section className="relative overflow-hidden bg-[#123f55] py-20 text-white sm:py-24 lg:py-28 xl:py-32">
+    <section className="relative overflow-hidden bg-[#3f1152] py-20 text-white sm:py-24 lg:py-28 xl:py-32">
       {/* BACKGROUND */}
 
       <div className="pointer-events-none absolute inset-0">
@@ -48,7 +48,7 @@ export default function JourneyTimeline() {
 
         <div className="absolute right-[10%] top-0 h-full w-px bg-white/[0.05]" />
 
-        <div className="absolute -right-40 top-1/4 h-[450px] w-[450px] rounded-full border border-[#d9a737]/10" />
+        <div className="absolute -right-40 top-1/4 h-[450px] w-[450px] rounded-full border border-[#e40e83]/10" />
 
         <div className="absolute -left-52 bottom-[-250px] h-[550px] w-[550px] rounded-full border border-white/[0.05]" />
       </div>
@@ -58,26 +58,26 @@ export default function JourneyTimeline() {
 
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex items-center justify-center gap-4">
-            <span className="h-px w-10 bg-[#d9a737]" />
+            <span className="h-px w-10 bg-[#e40e83]" />
 
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#e7ae3c]">
+            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#ff058f]">
               Our Simple Process
             </span>
 
-            <span className="h-px w-10 bg-[#d9a737]" />
+            <span className="h-px w-10 bg-[#e40e83]" />
           </div>
 
           <h2 className="mt-6 font-serif text-[40px] font-bold leading-[1.1] sm:text-5xl lg:text-[58px]">
             How We Plan
-            <span className="italic font-medium text-[#e7ae3c]">
+            <span className="italic font-medium text-[#ff058f]">
               {" "}
-              Your Journey.
+              Your Pilgrimage.
             </span>
           </h2>
 
           <p className="mt-6 text-[14px] leading-7 text-white/65 sm:text-[15px]">
-            A thoughtful process designed to make travel planning simple,
-            organised and completely stress-free.
+            A clear, step-by-step process so you always know what happens
+            next – from your first message to the day you fly.
           </p>
         </div>
 
@@ -92,12 +92,12 @@ export default function JourneyTimeline() {
                 {/* CONNECTOR */}
 
                 {index !== steps.length - 1 && (
-                  <div className="absolute left-[65%] top-[34px] hidden h-px w-[70%] bg-gradient-to-r from-[#d9a737]/50 to-transparent xl:block" />
+                  <div className="absolute left-[65%] top-[34px] hidden h-px w-[70%] bg-gradient-to-r from-[#e40e83]/50 to-transparent xl:block" />
                 )}
 
-                <div className="relative border border-white/[0.10] bg-white/[0.035] p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#d9a737]/40 hover:bg-white/[0.06]">
+                <div className="relative border border-white/[0.10] bg-white/[0.035] p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#e40e83]/40 hover:bg-white/[0.06]">
                   <div className="flex items-start justify-between">
-                    <div className="flex h-[62px] w-[62px] items-center justify-center rounded-full border border-[#d9a737]/30 bg-[#d9a737]/10 text-[#e7ae3c]">
+                    <div className="flex h-[62px] w-[62px] items-center justify-center rounded-full border border-[#e40e83]/30 bg-[#e40e83]/10 text-[#ff058f]">
                       <Icon size={23} strokeWidth={1.6} />
                     </div>
 
@@ -115,9 +115,9 @@ export default function JourneyTimeline() {
                   </p>
 
                   <div className="mt-7 flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#d9a737]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#e40e83]" />
 
-                    <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-[#e7ae3c]">
+                    <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-[#ff058f]">
                       Step {step.number}
                     </span>
                   </div>

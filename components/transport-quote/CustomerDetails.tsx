@@ -72,7 +72,7 @@ export default function CustomerDetails({
         <div className="relative">
           <MessageSquare
             size={18}
-            className="pointer-events-none absolute left-4 top-4 text-[#123f55]/50"
+            className="pointer-events-none absolute left-4 top-4 text-[#3f1152]/50"
           />
 
           <textarea
@@ -81,8 +81,8 @@ export default function CustomerDetails({
             onChange={(event) =>
               updateField("requirements", event.target.value)
             }
-            placeholder="Tell us about any special requirements for your journey..."
-            className="w-full resize-none rounded-xl border border-gray-200 bg-white pb-4 pl-11 pr-4 pt-4 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-[#123f55] focus:ring-4 focus:ring-[#123f55]/5"
+            placeholder="E.g. flight number, wheelchair user, child seats, extra luggage, ziyarat sites you'd like to visit..."
+            className="w-full resize-none rounded-xl border border-gray-200 bg-white pb-4 pl-11 pr-4 pt-4 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-[#3f1152] focus:ring-4 focus:ring-[#3f1152]/5"
           />
         </div>
       </div>
@@ -101,12 +101,12 @@ function SectionHeading({
 }) {
   return (
     <div className="flex gap-4">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#123f55] text-xs font-bold text-[#e7ae3c]">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#3f1152] text-xs font-bold text-[#ff058f]">
         {number}
       </span>
 
       <div>
-        <h3 className="font-serif text-xl font-bold text-[#123f55]">
+        <h3 className="font-serif text-xl font-bold text-[#3f1152]">
           {title}
         </h3>
 
@@ -142,7 +142,7 @@ function InputField({
       </label>
 
       <div className="relative">
-        <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#123f55]/50">
+        <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#3f1152]/50">
           {icon}
         </div>
 
@@ -152,7 +152,7 @@ function InputField({
           value={value}
           required={required}
           onChange={(event) => onChange(event.target.value)}
-          className="h-[52px] w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 outline-none transition focus:border-[#123f55] focus:ring-4 focus:ring-[#123f55]/5"
+          className="h-[52px] w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 outline-none transition focus:border-[#3f1152] focus:ring-4 focus:ring-[#3f1152]/5"
         />
       </div>
     </div>

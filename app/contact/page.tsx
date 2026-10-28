@@ -9,15 +9,15 @@ import Footer from "@/components/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Contact Us – Call, WhatsApp or Visit Our Aurangabad Office",
-  description: "Contact Global Horizons Tours & Travels on +91 77700 69004 or WhatsApp. Visit us at Collector Office Road, Ganesh Colony, Chhatrapati Sambhajinagar.",
+  title: "Contact Us – Umrah & Haj Enquiries by Phone, WhatsApp or Email",
+  description: "Contact Ayesha Tours about Umrah packages, Haj guidance, visas and transfers. Send us a message on WhatsApp, by email or through our enquiry form.",
   path: "/contact",
-  keywords: ["contact travel agent Aurangabad", "Global Horizons Tours phone number"],
+  keywords: ["Umrah travel agent contact", "Ayesha Tours contact", "Haj enquiry"],
 });
 
 export default function ContactPage() {
   return (
-    <main className="overflow-hidden bg-[#fcfbf8]">
+    <main className="overflow-hidden bg-[#fbf9fa]">
        <Navbar />     
       <ContactHero />
 

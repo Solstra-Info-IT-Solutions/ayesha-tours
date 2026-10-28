@@ -1,10 +1,10 @@
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Plan Your Journey – Travel Enquiry",
-  description: "Tell us your destination, dates and preferences and Global Horizons Tours & Travels will design a personalised travel plan for you.",
+  title: "Plan Your Umrah or Haj – Pilgrimage Enquiry",
+  description: "Tell us your pilgrimage type, dates, group and services needed, and Ayesha Tours will reply with suitable Umrah or Haj options.",
   path: "/enquiry",
-  keywords: ["travel enquiry Aurangabad", "customised tour planning"],
+  keywords: ["Umrah enquiry", "Haj enquiry", "plan Umrah"],
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
