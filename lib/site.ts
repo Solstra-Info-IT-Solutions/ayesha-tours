@@ -14,7 +14,14 @@ const env = (value: string | undefined) => (value || "").trim();
 
 const configuredSiteUrl = env(process.env.NEXT_PUBLIC_SITE_URL);
 
-export const SITE_URL = (configuredSiteUrl || "http://localhost:3000").replace(/\/$/, "");
+// On Vercel, fall back to the project's production hostname so share
+// previews and canonical URLs work on the demo link (still noindex below).
+const vercelProductionHost = env(process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL);
+
+export const SITE_URL = (
+  configuredSiteUrl ||
+  (vercelProductionHost ? `https://${vercelProductionHost}` : "http://localhost:3000")
+).replace(/\/$/, "");
 
 /** Only allow search engines once a real production domain is configured. */
 export const IS_PRODUCTION_SITE = configuredSiteUrl.length > 0;
