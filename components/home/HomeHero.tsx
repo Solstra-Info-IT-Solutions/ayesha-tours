@@ -68,10 +68,8 @@ export default function HomeHero() {
         <div className="absolute inset-0 bg-gradient-to-t from-night/95 via-night/45 to-night/35 sm:from-night/90 sm:via-transparent" />
       </div>
 
-      {/* Architectural frame lines */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-5 bottom-28 top-24 hidden border-x border-ivory/10 sm:inset-x-8 lg:inset-x-12 lg:block" />
 
-      <div className="relative mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-28 pt-28 sm:px-8 sm:pb-32 lg:px-12 lg:pb-36">
+      <div className="relative mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-40 pt-28 sm:px-8 sm:pb-48 lg:px-12 lg:pb-52">
         <div className="grid items-end gap-12 lg:grid-cols-[1fr_300px]">
           <div className="max-w-[980px]">
             <p className="veil-fade flex items-center gap-4 text-[12px] font-medium uppercase tracking-[0.32em] text-gold" style={{ ["--line-delay" as string]: "300ms" }}>
@@ -125,7 +123,7 @@ export default function HomeHero() {
             onMouseLeave={() => setPaused(false)}
             onFocus={() => setPaused(true)}
             onBlur={() => setPaused(false)}
-            className="veil-fade hidden lg:block"
+            className="veil-fade hidden rounded-2xl bg-night/45 px-5 py-2 backdrop-blur-md lg:block"
             style={{ ["--line-delay" as string]: "1200ms" }}
           >
             <ol className="space-y-1">
@@ -140,10 +138,10 @@ export default function HomeHero() {
                       className="group w-full py-3 text-left"
                     >
                       <span className="flex items-baseline justify-between gap-4">
-                        <span className={`font-serif text-[26px] leading-none transition-colors ${isActive ? "text-ivory" : "text-ivory/45 group-hover:text-ivory/80"}`}>
+                        <span className={`font-serif text-[26px] leading-none transition-colors ${isActive ? "text-ivory" : "text-ivory/75 group-hover:text-ivory"}`}>
                           {item.label}
                         </span>
-                        <span lang="ar" dir="rtl" className={`font-arabic text-[18px] transition-colors ${isActive ? "text-gold" : "text-ivory/60"}`}>
+                        <span lang="ar" dir="rtl" className={`font-arabic text-[18px] transition-colors ${isActive ? "text-gold" : "text-ivory/75"}`}>
                           {item.arabic}
                         </span>
                       </span>
@@ -166,7 +164,7 @@ export default function HomeHero() {
       </div>
 
       {/* Bottom strip: caption, mobile chapter dots, scroll cue */}
-      <div className="absolute inset-x-0 bottom-0">
+      <div className="absolute inset-x-0 bottom-16 sm:bottom-20">
         <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6 border-t border-ivory/10 px-5 py-5 text-[12px] text-ivory/70 sm:px-8 lg:px-12">
           <p aria-live="polite" className="min-w-0 truncate">
             <span className="text-gold">{chapter.coords}</span>

@@ -317,13 +317,14 @@ export default function QuickTravelAssistant() {
     href={whatsappLink("Assalamu alaikum Ayesha Tours, I would like to know more about your Umrah and Haj packages")}
     target="_blank"
     rel="noopener noreferrer"
-    className="group flex items-center gap-3 rounded-full bg-[#0f7a41] px-4 py-3 text-white shadow-[0_15px_40px_rgba(37,211,102,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(37,211,102,0.38)] sm:px-5 sm:py-3.5"
+    title="WhatsApp us"
+    className="group flex items-center rounded-full bg-[#0f7a41] p-1.5 text-white shadow-[0_12px_30px_rgba(15,122,65,0.32)] transition-all duration-300 hover:-translate-y-0.5"
   >
-    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
-      <MessageCircle size={20} />
+    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15">
+      <MessageCircle size={20} aria-hidden />
     </div>
 
-    <div className="hidden pr-1 text-left sm:block">
+    <div className="sr-only">
       <p className="text-[10px] font-bold tracking-[0.18em]">
         WHATSAPP US
       </p>
@@ -346,7 +347,8 @@ export default function QuickTravelAssistant() {
               openAssistant();
             }
           }}
-          className={`group flex items-center gap-3 rounded-full px-3.5 py-3 text-white shadow-[0_15px_40px_rgba(20,49,41,0.30)] transition-all duration-300 hover:-translate-y-1 sm:px-5 sm:py-3.5 ${
+          title="Quick help"
+          className={`group flex items-center rounded-full p-1.5 text-white shadow-[0_12px_30px_rgba(20,49,41,0.30)] transition-all duration-300 hover:-translate-y-0.5 ${
             isOpen
               ? "bg-[#16322a]"
               : "bg-[#1a3e34] hover:bg-[#16322a]"
@@ -354,7 +356,7 @@ export default function QuickTravelAssistant() {
           aria-label="Toggle pilgrim assistant"
           aria-expanded={isOpen}
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10">
             {isOpen ? (
               <X size={20} />
             ) : (
@@ -362,7 +364,7 @@ export default function QuickTravelAssistant() {
             )}
           </div>
 
-          <div className="hidden pr-1 text-left sm:block">
+          <div className="sr-only">
             <p className="text-[10px] font-bold tracking-[0.18em] text-white">
               QUICK HELP
             </p>

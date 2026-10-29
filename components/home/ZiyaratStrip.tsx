@@ -30,7 +30,7 @@ export default function ZiyaratStrip() {
       <ul
         ref={trackRef}
         aria-label="Ziyarat sites"
-        className="scroll-strip flex gap-6 overflow-x-auto px-5 pb-2 sm:px-8 lg:px-[max(3rem,calc((100vw_-_1600px)/2_+_3rem))]"
+        className="scroll-strip flex gap-6 overflow-x-auto scroll-px-5 px-5 pb-2 sm:scroll-px-8 sm:px-8 lg:scroll-px-[max(3rem,calc((100vw_-_1600px)/2_+_3rem))] lg:px-[max(3rem,calc((100vw_-_1600px)/2_+_3rem))]"
       >
         {sites.map((site, index) => (
           <li

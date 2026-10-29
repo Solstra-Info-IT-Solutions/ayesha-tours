@@ -81,7 +81,7 @@ export default function OurValues() {
                 <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#b79b66] transition-all duration-500 group-hover:w-full" />
 
                 {/* Background Number */}
-                <span className="absolute -right-2 -top-7 font-serif text-[90px] font-bold leading-none text-[#1a3e34]/[0.035] transition duration-500 group-hover:text-[#b79b66]/[0.08]">
+                <span aria-hidden className="pointer-events-none absolute right-6 top-6 font-serif text-[56px] font-bold leading-none text-[#1a3e34]/[0.06] transition duration-500 group-hover:text-[#b79b66]/[0.16]">
                   0{index + 1}
                 </span>
 

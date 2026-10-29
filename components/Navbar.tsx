@@ -77,7 +77,7 @@ export default function Navbar({ variant = "solid", hideCta = false }: NavbarPro
     href === "/" ? pathname === "/" : pathname?.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-[100] w-full">
+    <header className="sticky top-0 z-[140] w-full">
       <div
         className={`relative transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
           transparent

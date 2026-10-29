@@ -173,14 +173,14 @@ export default function HeritageWondersSection() {
 
         <div
           ref={scrollContainerRef}
-          className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-8 pt-2 sm:gap-6 lg:gap-7 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-8 pt-3 sm:gap-6 lg:gap-7 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
 
           {heritageSites.map((site, index) => (
 
             <article
               key={site.id}
-              className="group relative flex w-[290px] shrink-0 snap-start flex-col overflow-hidden rounded-[22px] border border-[#e6e1d8] bg-white shadow-[0_12px_30px_rgba(26,62,52,0.06)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(26,62,52,0.15)] sm:w-[320px] md:w-[340px] xl:w-[360px]"
+              className="group relative flex w-[290px] shrink-0 snap-start flex-col overflow-hidden rounded-[22px] border border-[#e6e1d8] bg-white shadow-[0_12px_30px_rgba(26,62,52,0.06)] transition-shadow duration-500 hover:shadow-[0_25px_55px_rgba(26,62,52,0.15)] sm:w-[320px] md:w-[340px] xl:w-[360px]"
             >
 
               {/* ================= IMAGE ================= */}
@@ -190,12 +190,12 @@ export default function HeritageWondersSection() {
                 <img
                   src={site.image}
                   alt={site.title}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Cinematic Overlay */}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d211b]/75 via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d211b]/75 via-transparent to-[#0d211b]/30 opacity-90" />
 
                 {/* Number */}
 
