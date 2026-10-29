@@ -55,7 +55,7 @@ export default function CookiePolicyPage() {
         description="Learn how cookies and similar technologies may be used to improve your browsing experience."
       />
 
-      <main className="bg-[#f6f2f4] py-16 sm:py-20 lg:py-24">
+      <main className="bg-[#f7f5f1] py-16 sm:py-20 lg:py-24">
         <div className="mx-auto grid max-w-[1280px] gap-8 px-5 sm:px-8 lg:grid-cols-[280px_1fr] lg:px-12">
           <LegalNavigation />
 

@@ -26,22 +26,26 @@ before launch.
 Office hours ("Mon – Sat, 10 AM – 7 PM (TBC)") and social links live in
 `lib/site.ts`.
 
-## 2. Brand palette (from the logo)
+## 2. Design system – "A Journey Beyond Distance"
+
+The creative direction, research and reasoning are in
+`docs/ayesha-tours-market-research.md`; the build notes are in
+`docs/redesign-implementation-report.md`.
 
 | Token (`app/globals.css`) | Value | Use |
 |---|---|---|
-| `brand-plum-800` | `#3f1152` | Headings, primary dark |
-| `brand-plum-900` / `-950` | `#3e0e52` / `#290837` | Footer, dark sections, overlays |
-| `brand-purple` | `#771bae` | Logo purple |
-| `brand-magenta` | `#e40e83` | Accent (logo magenta `#FC0084`) |
-| `brand-magenta-bright` | `#ff058f` | Accent on dark backgrounds |
-| `brand-pink` | `#c1124c` | Primary CTA (logo hot pink `#FE125D`, deepened for contrast) |
-| `brand-green` | `#48bb42` | Logo swoosh – success states |
+| `night` | `#0e1f1b` | Deepest chapter backgrounds, header, footer |
+| `emerald` / `emerald-soft` | `#102b25` / `#1c3b33` | Dark sections, raised dark surfaces |
+| `ivory` / `ivory-deep` | `#f5f0e7` / `#ece4d6` | Light reading spreads, text on dark |
+| `stone` | `#d9d2c6` | Lines and muted surfaces |
+| `charcoal` / `mist` | `#202622` / `#5c6660` | Body and secondary text on ivory |
+| `sage` | `#a9b8b0` | Secondary text on dark |
+| `gold` / `gold-ink` | `#b89a62` / `#7a6236` | Accents on dark / gold text on ivory |
 
-The reference's teal / gold / coral colours were mapped onto these hues with
-their original lightness steps kept, so contrast relationships match the
-reference design. Fonts: Playfair Display (headings, replacing the system
-serif) and Poppins (body, close to the logo's lettering).
+The logo keeps its own magenta, purple and green and always sits on an
+ivory plate. Fonts: Cormorant Garamond (display), Manrope (interface and
+body) and Amiri (only for the Arabic names of the holy cities and the
+Talbiyah).
 
 ## 3. Demo content the client must confirm or replace
 

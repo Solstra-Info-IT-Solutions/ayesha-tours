@@ -49,12 +49,12 @@ const services = [
 
 export default function WhatWeDo() {
   return (
-    <section className="relative overflow-hidden bg-[#f9f6f8] px-6 py-20 md:px-10 lg:px-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#faf8f5] px-6 py-20 md:px-10 lg:px-20 lg:py-28">
 
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute left-[-100px] top-[20%] h-[350px] w-[350px] rounded-full bg-[#4e1367]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute left-[-100px] top-[20%] h-[350px] w-[350px] rounded-full bg-[#1a3e34]/[0.035] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-[-100px] right-[-100px] h-[400px] w-[400px] rounded-full bg-[#ff0f93]/[0.06] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-100px] right-[-100px] h-[400px] w-[400px] rounded-full bg-[#b79b66]/[0.06] blur-3xl" />
 
       <div className="relative mx-auto max-w-[1200px]">
 
@@ -64,21 +64,21 @@ export default function WhatWeDo() {
           {/* Premium Eyebrow */}
           <div className="flex items-center gap-4">
 
-            <span className="h-px w-10 bg-[#fa078d]" />
+            <span className="h-px w-10 bg-[#b79b66]" />
 
-            <p className="text-[11px] font-semibold uppercase tracking-[3px] text-[#ed0c88]">
+            <p className="text-[11px] font-semibold uppercase tracking-[3px] text-[#7b6337]">
               Comprehensive Expertise
             </p>
 
           </div>
 
           {/* Heading */}
-          <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-[#4e1367] md:text-[44px]">
+          <h2 className="mt-5 font-serif text-3xl font-bold leading-tight text-[#1a3e34] md:text-[44px]">
             What We Do
           </h2>
 
           {/* Description */}
-          <p className="mt-5 max-w-[600px] text-[15px] leading-7 text-[#706575]">
+          <p className="mt-5 max-w-[600px] text-[15px] leading-7 text-[#69716d]">
             From your first question to your return flight, we help with the
             practical parts of Umrah and Haj so nothing important is left to
             chance.
@@ -97,7 +97,7 @@ export default function WhatWeDo() {
               return (
                 <article
                   key={service.title}
-                  className={`group relative min-h-[330px] overflow-hidden rounded-2xl shadow-[0_15px_40px_rgba(78,19,103,0.12)] ${service.className}`}
+                  className={`group relative min-h-[330px] overflow-hidden rounded-2xl shadow-[0_15px_40px_rgba(26,62,52,0.12)] ${service.className}`}
                 >
                   {/* Background Image */}
                   <img
@@ -107,7 +107,7 @@ export default function WhatWeDo() {
                   />
 
                   {/* Premium Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#36064b]/95 via-[#400658]/45 to-[#400658]/15" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#102a23]/95 via-[#133128]/45 to-[#133128]/15" />
 
                   {/* Top Icon */}
                   <div className="absolute left-7 top-7 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md">
@@ -115,7 +115,7 @@ export default function WhatWeDo() {
                     <Icon
                       size={25}
                       strokeWidth={1.7}
-                      className="text-[#ff1797]"
+                      className="text-[#b79b66]"
                     />
 
                   </div>
@@ -131,9 +131,9 @@ export default function WhatWeDo() {
                     {/* Category */}
                     <div className="mb-4 flex items-center gap-3">
 
-                      <span className="h-[2px] w-8 bg-[#ff0f93]" />
+                      <span className="h-[2px] w-8 bg-[#b79b66]" />
 
-                      <span className="text-[10px] font-semibold tracking-[2.5px] text-[#ff1797]">
+                      <span className="text-[10px] font-semibold tracking-[2.5px] text-[#b79b66]">
                         {service.category}
                       </span>
 
@@ -152,7 +152,7 @@ export default function WhatWeDo() {
                       </div>
 
                       {/* Arrow */}
-                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition-all duration-300 group-hover:bg-[#ff0f93] group-hover:text-white md:flex">
+                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition-all duration-300 group-hover:bg-[#b79b66] group-hover:text-[#0e1f1b] md:flex">
 
                         <ArrowUpRight size={19} />
 
@@ -171,7 +171,7 @@ export default function WhatWeDo() {
               return (
                 <article
                   key={service.title}
-                  className="group relative min-h-[330px] overflow-hidden rounded-2xl bg-[#4e1367] p-8 text-white shadow-[0_15px_40px_rgba(78,19,103,0.14)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(78,19,103,0.22)]"
+                  className="group relative min-h-[330px] overflow-hidden rounded-2xl bg-[#1a3e34] p-8 text-white shadow-[0_15px_40px_rgba(26,62,52,0.14)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(26,62,52,0.22)]"
                 >
 
                   {/* Decorative Number */}
@@ -180,15 +180,15 @@ export default function WhatWeDo() {
                   </span>
 
                   {/* Gold Accent */}
-                  <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#ff0f93] transition-all duration-500 group-hover:w-full" />
+                  <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#b79b66] transition-all duration-500 group-hover:w-full" />
 
                   {/* Icon */}
-                  <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ff0f93] shadow-[0_10px_25px_rgba(0,0,0,0.15)]">
+                  <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#b79b66] shadow-[0_10px_25px_rgba(0,0,0,0.15)]">
 
                     <Icon
                       size={25}
                       strokeWidth={1.8}
-                      className="text-[#4e1367]"
+                      className="text-[#1a3e34]"
                     />
 
                   </div>
@@ -196,7 +196,7 @@ export default function WhatWeDo() {
                   {/* Content */}
                   <div className="relative mt-12">
 
-                    <p className="text-[10px] font-semibold tracking-[2.5px] text-[#ff0f93]">
+                    <p className="text-[10px] font-semibold tracking-[2.5px] text-[#b79b66]">
                       {service.category}
                     </p>
 
@@ -204,7 +204,7 @@ export default function WhatWeDo() {
                       {service.title}
                     </h3>
 
-                    <div className="mt-5 h-px w-12 bg-white/20 transition-all duration-500 group-hover:w-20 group-hover:bg-[#ff0f93]" />
+                    <div className="mt-5 h-px w-12 bg-white/20 transition-all duration-500 group-hover:w-20 group-hover:bg-[#b79b66]" />
 
                     <p className="mt-5 text-[14px] leading-7 text-white/70">
                       {service.description}
@@ -213,7 +213,7 @@ export default function WhatWeDo() {
                   </div>
 
                   {/* Bottom Arrow */}
-                  <div className="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 group-hover:border-[#ff0f93] group-hover:bg-[#ff0f93] group-hover:text-white">
+                  <div className="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 group-hover:border-[#b79b66] group-hover:bg-[#b79b66] group-hover:text-[#0e1f1b]">
 
                     <ArrowUpRight size={18} />
 
@@ -227,19 +227,19 @@ export default function WhatWeDo() {
             return (
               <article
                 key={service.title}
-                className="group relative min-h-[330px] overflow-hidden rounded-2xl border border-[#4e1367]/10 bg-white p-8 shadow-[0_12px_35px_rgba(78,19,103,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#ff0f93]/60 hover:shadow-[0_25px_55px_rgba(78,19,103,0.12)]"
+                className="group relative min-h-[330px] overflow-hidden rounded-2xl border border-[#1a3e34]/10 bg-white p-8 shadow-[0_12px_35px_rgba(26,62,52,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#b79b66]/60 hover:shadow-[0_25px_55px_rgba(26,62,52,0.12)]"
               >
 
                 {/* Decorative Number */}
-                <span className="absolute -right-4 -top-7 font-serif text-[110px] font-bold text-[#4e1367]/[0.035]">
+                <span className="absolute -right-4 -top-7 font-serif text-[110px] font-bold text-[#1a3e34]/[0.035]">
                   0{index + 1}
                 </span>
 
                 {/* Accent Line */}
-                <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#ff0f93] transition-all duration-500 group-hover:w-full" />
+                <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#b79b66] transition-all duration-500 group-hover:w-full" />
 
                 {/* Icon */}
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4e1367] shadow-[0_10px_25px_rgba(78,19,103,0.18)] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#ff0f93]">
+                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1a3e34] shadow-[0_10px_25px_rgba(26,62,52,0.18)] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#b79b66]">
 
                   <Icon
                     size={25}
@@ -252,24 +252,24 @@ export default function WhatWeDo() {
                 {/* Content */}
                 <div className="relative mt-12">
 
-                  <p className="text-[10px] font-semibold tracking-[2.5px] text-[#ed0c88]">
+                  <p className="text-[10px] font-semibold tracking-[2.5px] text-[#7b6337]">
                     {service.category}
                   </p>
 
-                  <h3 className="mt-4 font-serif text-[25px] font-bold text-[#4e1367]">
+                  <h3 className="mt-4 font-serif text-[25px] font-bold text-[#1a3e34]">
                     {service.title}
                   </h3>
 
-                  <div className="mt-5 h-px w-12 bg-[#ff0f93] transition-all duration-500 group-hover:w-20" />
+                  <div className="mt-5 h-px w-12 bg-[#b79b66] transition-all duration-500 group-hover:w-20" />
 
-                  <p className="mt-5 text-[14px] leading-7 text-[#706575]">
+                  <p className="mt-5 text-[14px] leading-7 text-[#69716d]">
                     {service.description}
                   </p>
 
                 </div>
 
                 {/* Bottom Arrow */}
-                <div className="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full border border-[#4e1367]/15 text-[#4e1367] transition-all duration-300 group-hover:border-[#ff0f93] group-hover:bg-[#ff0f93]">
+                <div className="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full border border-[#1a3e34]/15 text-[#1a3e34] transition-all duration-300 group-hover:border-[#b79b66] group-hover:bg-[#b79b66]">
 
                   <ArrowUpRight size={18} />
 

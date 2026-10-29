@@ -18,36 +18,36 @@ export default function ContactMap() {
             <div className="flex items-center gap-3">
               <MapPin
                 size={18}
-                className="text-[#e40e83]"
+                className="text-[#7b6337]"
               />
 
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#4e1367]">
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#1a3e34]">
                 Find Us
               </span>
             </div>
 
-            <h2 className="mt-6 font-serif text-[36px] font-bold text-[#3f1152]">
+            <h2 className="mt-6 font-serif text-[36px] font-bold text-[#16322a]">
               Visit Our
 
-              <span className="block italic text-[#e40e83]">
+              <span className="block italic text-[#7b6337]">
                 Office.
               </span>
             </h2>
 
-            <p className="mt-5 max-w-[420px] text-[14px] leading-7 text-[#7c7181]">
+            <p className="mt-5 max-w-[420px] text-[14px] leading-7 text-[#5c6660]">
               Visit us to discuss your Umrah or Haj plans in person. Please call
             or message ahead so the right person is available.
             </p>
 
 
-            <div className="mt-8 flex items-start gap-4 border-l-2 border-[#e40e83] bg-white p-5 shadow-sm">
+            <div className="mt-8 flex items-start gap-4 border-l-2 border-[#7b6337] bg-white p-5 shadow-sm">
 
               <MapPin
                 size={20}
-                className="mt-1 text-[#4e1367]"
+                className="mt-1 text-[#1a3e34]"
               />
 
-              <p className="text-[14px] leading-7 text-[#5d5163]">
+              <p className="text-[14px] leading-7 text-[#555f5a]">
                 {SITE.address.street}
                 <br />
                 {SITE.address.locality}
@@ -61,7 +61,7 @@ export default function ContactMap() {
 
           {/* Map */}
 
-          <div className="overflow-hidden border border-[#dad2d6] bg-white p-2 shadow-[0_20px_60px_rgba(63,17,82,0.10)]">
+          <div className="overflow-hidden border border-[#dfd9cd] bg-white p-2 shadow-[0_20px_60px_rgba(22,50,42,0.10)]">
 
             <div className="relative h-[400px] overflow-hidden">
 
@@ -74,7 +74,7 @@ export default function ContactMap() {
                 className="border-0 grayscale-[15%]"
               />
 
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#16322a] via-[#7b6337] to-[#16322a]" />
 
             </div>
 

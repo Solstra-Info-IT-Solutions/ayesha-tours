@@ -28,15 +28,15 @@ const galleryImages = [
 
 export default function GalleryPreview() {
   return (
-    <section className="relative overflow-hidden bg-[#f9f6f8] py-20 sm:py-24 lg:py-28 xl:py-32">
+    <section className="relative overflow-hidden bg-[#faf8f5] py-20 sm:py-24 lg:py-28 xl:py-32">
 
       {/* ===================================================== */}
       {/* ================= BACKGROUND ======================== */}
       {/* ===================================================== */}
 
-      <div className="pointer-events-none absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-[#4e1367]/[0.025] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-[#1a3e34]/[0.025] blur-3xl" />
 
-      <div className="pointer-events-none absolute -bottom-40 right-[-120px] h-[450px] w-[450px] rounded-full bg-[#e40e83]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 right-[-120px] h-[450px] w-[450px] rounded-full bg-[#7b6337]/[0.035] blur-3xl" />
 
       {/* ===================================================== */}
       {/* ================= MAIN CONTAINER ==================== */}
@@ -56,15 +56,15 @@ export default function GalleryPreview() {
 
             <div className="flex items-center gap-3">
 
-              <span className="h-[2px] w-9 bg-[#e40e83]" />
+              <span className="h-[2px] w-9 bg-[#7b6337]" />
 
               <Camera
                 size={16}
                 strokeWidth={1.7}
-                className="text-[#e40e83]"
+                className="text-[#7b6337]"
               />
 
-              <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#4e1367]">
+              <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#1a3e34]">
                 Glimpses Of The Journey
               </span>
 
@@ -72,11 +72,11 @@ export default function GalleryPreview() {
 
             {/* Heading */}
 
-            <h2 className="mt-6 max-w-[560px] font-serif text-[42px] font-bold leading-[1.05] text-[#3f1152] sm:text-5xl lg:text-[54px] xl:text-[58px]">
+            <h2 className="mt-6 max-w-[560px] font-serif text-[42px] font-bold leading-[1.05] text-[#16322a] sm:text-5xl lg:text-[54px] xl:text-[58px]">
 
               Moments Of
 
-              <span className="block italic font-medium text-[#c5066f]">
+              <span className="block italic font-medium text-[#7b6337]">
                 Devotion.
               </span>
 
@@ -84,12 +84,12 @@ export default function GalleryPreview() {
 
             {/* Description */}
 
-            <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-[#665d6a] sm:text-[16px]">
+            <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-[#606764] sm:text-[16px]">
               From the white marble of the Haram to the green dome of Madinah,
               explore the places pilgrims carry in their hearts.
             </p>
 
-            <p className="mt-5 max-w-[510px] text-[15px] leading-7 text-[#665d6a] sm:text-[16px]">
+            <p className="mt-5 max-w-[510px] text-[15px] leading-7 text-[#606764] sm:text-[16px]">
               Demo photographs from Wikimedia Commons – your own pilgrim group
               photos can replace these once available.
             </p>
@@ -98,14 +98,14 @@ export default function GalleryPreview() {
 
             <Link
               href="/gallery"
-              className="group mt-9 inline-flex items-center gap-4 border-b-2 border-[#e40e83] pb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#3f1152] transition-colors duration-300 hover:text-[#c1124c]"
+              className="group mt-9 inline-flex items-center gap-4 border-b-2 border-[#7b6337] pb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#16322a] transition-colors duration-300 hover:text-[#193830]"
             >
               View Gallery
 
               <ArrowUpRight
                 size={19}
                 strokeWidth={1.7}
-                className="text-[#c5066f] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+                className="text-[#7b6337] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
               />
             </Link>
 
@@ -121,7 +121,7 @@ export default function GalleryPreview() {
             {/* DECORATIVE GOLD CORNER                           */}
             {/* ================================================= */}
 
-            <div className="pointer-events-none absolute -left-5 -top-5 z-0 h-24 w-24 border-l-2 border-t-2 border-[#e40e83]" />
+            <div className="pointer-events-none absolute -left-5 -top-5 z-0 h-24 w-24 border-l-2 border-t-2 border-[#7b6337]" />
 
             {/* ================================================= */}
             {/* MATRIX                                           */}
@@ -167,7 +167,7 @@ export default function GalleryPreview() {
             {/* DECORATIVE BOTTOM CORNER                        */}
             {/* ================================================= */}
 
-            <div className="pointer-events-none absolute -bottom-5 -right-5 z-0 h-24 w-24 border-b-2 border-r-2 border-[#4e1367]/30" />
+            <div className="pointer-events-none absolute -bottom-5 -right-5 z-0 h-24 w-24 border-b-2 border-r-2 border-[#1a3e34]/30" />
 
           </div>
 

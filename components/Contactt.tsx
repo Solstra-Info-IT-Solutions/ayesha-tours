@@ -4,8 +4,8 @@ export default function Contact() {
   return (
     <div className="w-full">
       {/* FINAL STEP */}
-      <div className="mb-6 inline-flex rounded-full border border-[#f3b7cb] bg-[#ffeff4] px-4 py-2">
-        <span className="text-xs font-medium tracking-[1px] text-[#bc1a50]">
+      <div className="mb-6 inline-flex rounded-full border border-[#e7dbc3] bg-[#faf8f4] px-4 py-2">
+        <span className="text-xs font-medium tracking-[1px] text-[#193830]">
           FINAL STEP
         </span>
       </div>
@@ -34,7 +34,7 @@ export default function Contact() {
           <input
             type="text"
             placeholder="Jane Doe"
-            className="mt-3 w-full border-0 border-b border-[#c0b8c3] bg-transparent px-0 pb-4 text-[17px] text-gray-700 outline-none placeholder:text-[#b8b8b8] focus:border-[#3d0057]"
+            className="mt-3 w-full border-0 border-b border-[#bac1be] bg-transparent px-0 pb-4 text-[17px] text-gray-700 outline-none placeholder:text-[#b8b8b8] focus:border-[#112d25]"
           />
         </div>
 
@@ -49,7 +49,7 @@ export default function Contact() {
             <input
               type="email"
               placeholder="jane@example.com"
-              className="mt-3 w-full border-0 border-b border-[#c0b8c3] bg-transparent px-0 pb-4 text-[17px] text-gray-700 outline-none placeholder:text-[#b8b8b8] focus:border-[#3d0057]"
+              className="mt-3 w-full border-0 border-b border-[#bac1be] bg-transparent px-0 pb-4 text-[17px] text-gray-700 outline-none placeholder:text-[#b8b8b8] focus:border-[#112d25]"
             />
           </div>
 
@@ -62,7 +62,7 @@ export default function Contact() {
             <input
               type="tel"
               placeholder="+1 (555) 000-0000"
-              className="mt-3 w-full border-0 border-b border-[#c0b8c3] bg-transparent px-0 pb-4 text-[17px] text-gray-700 outline-none placeholder:text-[#b8b8b8] focus:border-[#3d0057]"
+              className="mt-3 w-full border-0 border-b border-[#bac1be] bg-transparent px-0 pb-4 text-[17px] text-gray-700 outline-none placeholder:text-[#b8b8b8] focus:border-[#112d25]"
             />
           </div>
         </div>
@@ -76,18 +76,18 @@ export default function Contact() {
           <textarea
             rows={2}
             placeholder="Special occasions, dietary requirements..."
-            className="mt-3 w-full resize-none border-0 border-b border-[#c0b8c3] bg-transparent px-0 pb-4 text-[17px] text-gray-700 outline-none placeholder:text-[#b8b8b8] focus:border-[#3d0057]"
+            className="mt-3 w-full resize-none border-0 border-b border-[#bac1be] bg-transparent px-0 pb-4 text-[17px] text-gray-700 outline-none placeholder:text-[#b8b8b8] focus:border-[#112d25]"
           />
         </div>
 
         {/* HUMAN TOUCH BOX */}
-        <div className="mt-7 flex overflow-hidden rounded-lg bg-[#f1eef0]">
+        <div className="mt-7 flex overflow-hidden rounded-lg bg-[#f3f1ec]">
           {/* LEFT BORDER */}
-          <div className="w-1 shrink-0 bg-[#3d0057]" />
+          <div className="w-1 shrink-0 bg-[#112d25]" />
 
           <div className="flex gap-4 px-5 py-5">
             {/* ICON */}
-            <div className="mt-1 shrink-0 text-[#3d0057]">
+            <div className="mt-1 shrink-0 text-[#112d25]">
               <svg
                 width="22"
                 height="22"

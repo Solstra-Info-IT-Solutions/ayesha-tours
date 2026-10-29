@@ -12,7 +12,7 @@ export default function QuoteSuccessModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#3f1152]/50 p-4 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#16322a]/50 p-4 backdrop-blur-sm">
       <div className="relative w-full max-w-md rounded-[28px] bg-white p-7 text-center shadow-2xl sm:p-9">
         <button
           onClick={onClose}
@@ -26,7 +26,7 @@ export default function QuoteSuccessModal({
           <CheckCircle2 size={34} className="text-green-600" />
         </div>
 
-        <h3 className="mt-6 font-serif text-3xl font-bold text-[#3f1152]">
+        <h3 className="mt-6 font-serif text-3xl font-bold text-[#16322a]">
           Request Ready
         </h3>
 
@@ -37,7 +37,7 @@ export default function QuoteSuccessModal({
 
         <button
           onClick={onClose}
-          className="mt-7 w-full rounded-xl bg-[#3f1152] px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-[#4b0d66]"
+          className="mt-7 w-full rounded-xl bg-[#16322a] px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-[#173c31]"
         >
           Continue Exploring
         </button>

@@ -429,43 +429,43 @@ ${data.message || "No additional message provided."}
 
   return (
     <>
-      <div className="relative overflow-visible rounded-[28px] border border-[#e2d7dd] bg-[#fffdfe] shadow-[0_30px_100px_rgba(63,17,82,0.12)]">
+      <div className="relative overflow-visible rounded-[28px] border border-[#e6e0d3] bg-[#fefefe] shadow-[0_30px_100px_rgba(22,50,42,0.12)]">
         {/* Top Accent */}
-        <div className="h-[4px] w-full rounded-t-[28px] bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
+        <div className="h-[4px] w-full rounded-t-[28px] bg-gradient-to-r from-[#16322a] via-[#7b6337] to-[#16322a]" />
 
         {/* Decorative Background */}
-        <div className="pointer-events-none absolute -right-32 -top-32 h-[320px] w-[320px] rounded-full border border-[#e40e83]/15" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-[320px] w-[320px] rounded-full border border-[#7b6337]/15" />
 
-        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[380px] w-[380px] rounded-full bg-[#4e1367]/[0.025] blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[380px] w-[380px] rounded-full bg-[#1a3e34]/[0.025] blur-3xl" />
 
         <div className="relative px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 xl:px-14">
           {/* HEADER */}
 
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="h-[2px] w-9 bg-[#e40e83]" />
+              <span className="h-[2px] w-9 bg-[#7b6337]" />
 
               <div className="flex items-center gap-2">
                 <Sparkles
                   size={14}
-                  className="text-[#e40e83]"
+                  className="text-[#7b6337]"
                 />
 
-                <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#4e1367]">
+                <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#1a3e34]">
                   Umrah & Haj Quote
                 </span>
               </div>
             </div>
 
-            <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.15] text-[#3f1152] sm:text-[40px] lg:text-[46px]">
+            <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.15] text-[#16322a] sm:text-[40px] lg:text-[46px]">
               Tell Us About Your
 
-              <span className="block italic text-[#e40e83]">
+              <span className="block italic text-[#7b6337]">
                 Pilgrimage.
               </span>
             </h2>
 
-            <p className="mt-4 max-w-2xl text-[14px] leading-7 text-[#7b6f80] sm:text-[15px]">
+            <p className="mt-4 max-w-2xl text-[14px] leading-7 text-[#5c6660] sm:text-[15px]">
               Share your plans with us and our team will prepare
               a quotation with hotel options, inclusions and
               timings for your group.
@@ -583,8 +583,8 @@ ${data.message || "No additional message provided."}
               subtitle="Anything that will help us plan your pilgrimage properly."
             >
               <div>
-                <label className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.6px] text-[#6e6272]">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#4e1367]/10 text-[#4e1367]">
+                <label className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.6px] text-[#666e6a]">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1a3e34]/10 text-[#1a3e34]">
                     <MessageSquare size={14} />
                   </span>
 
@@ -596,33 +596,33 @@ ${data.message || "No additional message provided."}
                     name="message"
                     rows={6}
                     placeholder="E.g. nights in Makkah vs Madinah, hotel distance from the Haram, room sharing, wheelchair needs, ziyarat, or anything else we should know..."
-                    className="w-full resize-none rounded-[16px] border border-[#dad2d6] bg-[#fbf9fa] px-5 py-4 text-[14px] leading-7 text-[#5d5163] outline-none transition-all duration-300 placeholder:text-[#a9a2ac] hover:border-[#cabdc4] focus:border-[#4e1367] focus:bg-white focus:shadow-[0_10px_30px_rgba(78,19,103,0.08)] sm:px-6 sm:py-5"
+                    className="w-full resize-none rounded-[16px] border border-[#dfd9cd] bg-[#fbfbf9] px-5 py-4 text-[14px] leading-7 text-[#555f5a] outline-none transition-all duration-300 placeholder:text-[#5c6660] hover:border-[#c0c7c3] focus:border-[#1a3e34] focus:bg-white focus:shadow-[0_10px_30px_rgba(26,62,52,0.08)] sm:px-6 sm:py-5"
                   />
 
-                  <div className="pointer-events-none absolute bottom-0 left-5 right-5 h-[2px] scale-x-0 bg-gradient-to-r from-[#4e1367] via-[#e40e83] to-[#4e1367] transition-transform duration-500 group-focus-within:scale-x-100 sm:left-6 sm:right-6" />
+                  <div className="pointer-events-none absolute bottom-0 left-5 right-5 h-[2px] scale-x-0 bg-gradient-to-r from-[#1a3e34] via-[#7b6337] to-[#1a3e34] transition-transform duration-500 group-focus-within:scale-x-100 sm:left-6 sm:right-6" />
                 </div>
               </div>
             </FormSection>
 
             {/* SUBMIT AREA */}
 
-            <div className="relative overflow-hidden rounded-[20px] border border-[#e3dfe5] bg-[#f6f8f7] p-6 sm:p-7 lg:p-8">
-              <div className="pointer-events-none absolute right-0 top-0 h-full w-[40%] bg-gradient-to-l from-[#4e1367]/[0.035] to-transparent" />
+            <div className="relative overflow-hidden rounded-[20px] border border-[#e8e4dc] bg-[#f6f8f7] p-6 sm:p-7 lg:p-8">
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-[40%] bg-gradient-to-l from-[#1a3e34]/[0.035] to-transparent" />
 
               <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="max-w-xl">
                   <div className="flex items-center gap-3">
                     <CheckCircle2
                       size={20}
-                      className="text-[#e40e83]"
+                      className="text-[#7b6337]"
                     />
 
-                    <h3 className="font-serif text-[20px] font-bold text-[#3f1152]">
+                    <h3 className="font-serif text-[20px] font-bold text-[#16322a]">
                       Ready To Plan Your Pilgrimage?
                     </h3>
                   </div>
 
-                  <p className="mt-3 text-[13px] leading-6 text-[#7c7181] sm:text-sm">
+                  <p className="mt-3 text-[13px] leading-6 text-[#5c6660] sm:text-sm">
                     Your request opens in WhatsApp so you can send
                     it to our team, who will reply with a
                     quotation.
@@ -632,9 +632,9 @@ ${data.message || "No additional message provided."}
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group relative inline-flex min-h-[56px] w-full items-center justify-center gap-4 overflow-hidden bg-[#4e1367] px-8 text-[10px] font-bold uppercase tracking-[1.8px] text-white shadow-[0_15px_35px_rgba(78,19,103,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#3f1152] hover:shadow-[0_22px_45px_rgba(78,19,103,0.3)] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto sm:min-w-[220px]"
+                  className="group relative inline-flex min-h-[56px] w-full items-center justify-center gap-4 overflow-hidden bg-[#1a3e34] px-8 text-[10px] font-bold uppercase tracking-[1.8px] text-white shadow-[0_15px_35px_rgba(26,62,52,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#16322a] hover:shadow-[0_22px_45px_rgba(26,62,52,0.3)] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto sm:min-w-[220px]"
                 >
-                  <span className="absolute inset-0 translate-x-[-110%] bg-[#e40e83] transition-transform duration-500 group-hover:translate-x-0" />
+                  <span className="absolute inset-0 translate-x-[-110%] bg-[#7b6337] transition-transform duration-500 group-hover:translate-x-0" />
 
                   <span className="relative z-10 flex items-center gap-3">
                     {isSubmitting
@@ -652,10 +652,10 @@ ${data.message || "No additional message provided."}
 
             {/* Privacy */}
 
-            <div className="flex items-center justify-center gap-2 px-2 text-center text-[10px] leading-5 text-[#9a929d] sm:text-[11px]">
+            <div className="flex items-center justify-center gap-2 px-2 text-center text-[10px] leading-5 text-[#5c6660] sm:text-[11px]">
               <CheckCircle2
                 size={14}
-                className="shrink-0 text-[#e40e83]"
+                className="shrink-0 text-[#7b6337]"
               />
 
               Your information is kept private and used only to
@@ -701,22 +701,22 @@ function FormSection({
   return (
     <section className="relative">
       <div className="mb-6 flex items-start gap-4 sm:mb-7">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#e40e83]/30 bg-[#fcf3f8] font-serif text-[13px] font-bold text-[#e40e83] sm:h-11 sm:w-11 sm:text-sm">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#7b6337]/30 bg-[#fbf9f4] font-serif text-[13px] font-bold text-[#7b6337] sm:h-11 sm:w-11 sm:text-sm">
           {number}
         </div>
 
         <div className="pt-0.5">
-          <h3 className="font-serif text-[21px] font-bold text-[#3f1152] sm:text-[22px]">
+          <h3 className="font-serif text-[21px] font-bold text-[#16322a] sm:text-[22px]">
             {title}
           </h3>
 
-          <p className="mt-1 text-[12px] leading-5 text-[#928996] sm:text-[13px] sm:leading-6">
+          <p className="mt-1 text-[12px] leading-5 text-[#5c6660] sm:text-[13px] sm:leading-6">
             {subtitle}
           </p>
         </div>
       </div>
 
-      <div className="mb-6 h-px w-full bg-gradient-to-r from-[#dad2d6] via-[#dad2d6]/60 to-transparent sm:mb-7" />
+      <div className="mb-6 h-px w-full bg-gradient-to-r from-[#dfd9cd] via-[#dfd9cd]/60 to-transparent sm:mb-7" />
 
       {children}
     </section>
@@ -742,9 +742,9 @@ function PremiumInput({
 }) {
   return (
     <div className="group">
-      <label className="mb-2.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#6e6272]">
+      <label className="mb-2.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#666e6a]">
         {icon && (
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#4e1367]/8 text-[#4e1367] transition-colors duration-300 group-focus-within:bg-[#4e1367] group-focus-within:text-white">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1a3e34]/8 text-[#1a3e34] transition-colors duration-300 group-focus-within:bg-[#1a3e34] group-focus-within:text-white">
             {icon}
           </span>
         )}
@@ -755,10 +755,10 @@ function PremiumInput({
       <div className="relative">
         <input
           {...props}
-          className="h-[56px] w-full rounded-[14px] border border-[#dad2d6] bg-[#fbf9fa] px-5 text-[14px] text-[#5d5163] outline-none transition-all duration-300 placeholder:text-[#a9a2ac] hover:border-[#cabdc4] focus:border-[#4e1367] focus:bg-white focus:shadow-[0_10px_28px_rgba(78,19,103,0.08)]"
+          className="h-[56px] w-full rounded-[14px] border border-[#dfd9cd] bg-[#fbfbf9] px-5 text-[14px] text-[#555f5a] outline-none transition-all duration-300 placeholder:text-[#5c6660] hover:border-[#c0c7c3] focus:border-[#1a3e34] focus:bg-white focus:shadow-[0_10px_28px_rgba(26,62,52,0.08)]"
         />
 
-        <span className="pointer-events-none absolute bottom-0 left-[18px] right-[18px] h-[2px] scale-x-0 bg-gradient-to-r from-[#4e1367] via-[#e40e83] to-[#4e1367] transition-transform duration-500 group-focus-within:scale-x-100" />
+        <span className="pointer-events-none absolute bottom-0 left-[18px] right-[18px] h-[2px] scale-x-0 bg-gradient-to-r from-[#1a3e34] via-[#7b6337] to-[#1a3e34] transition-transform duration-500 group-focus-within:scale-x-100" />
       </div>
     </div>
   );
@@ -811,7 +811,7 @@ function PremiumSelect({
 
   return (
     <div ref={selectRef} className="group relative z-20">
-      <label className="mb-2.5 block text-[10px] font-bold uppercase tracking-[1.5px] text-[#6e6272]">
+      <label className="mb-2.5 block text-[10px] font-bold uppercase tracking-[1.5px] text-[#666e6a]">
         {label}
       </label>
 
@@ -820,15 +820,15 @@ function PremiumSelect({
         onClick={() => setIsOpen((previous) => !previous)}
         className={`relative flex h-[56px] w-full items-center justify-between rounded-[14px] border px-5 text-left transition-all duration-300 ${
           isOpen
-            ? "border-[#4e1367] bg-white shadow-[0_10px_28px_rgba(78,19,103,0.10)]"
-            : "border-[#dad2d6] bg-[#fbf9fa] hover:border-[#cabdc4]"
+            ? "border-[#1a3e34] bg-white shadow-[0_10px_28px_rgba(26,62,52,0.10)]"
+            : "border-[#dfd9cd] bg-[#fbfbf9] hover:border-[#c0c7c3]"
         }`}
       >
         <span
           className={`text-[14px] ${
             selectedValue
-              ? "text-[#5d5163]"
-              : "text-[#a9a2ac]"
+              ? "text-[#555f5a]"
+              : "text-[#5c6660]"
           }`}
         >
           {selectedValue || placeholder}
@@ -837,8 +837,8 @@ function PremiumSelect({
         <span
           className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 ${
             isOpen
-              ? "bg-[#4e1367] text-white"
-              : "bg-[#4e1367]/8 text-[#4e1367]"
+              ? "bg-[#1a3e34] text-white"
+              : "bg-[#1a3e34]/8 text-[#1a3e34]"
           }`}
         >
           <ChevronDown
@@ -858,11 +858,11 @@ function PremiumSelect({
       />
 
       {isOpen && (
-        <div className="absolute left-0 top-[calc(100%+10px)] z-[80] w-full overflow-hidden rounded-[18px] border border-[#e0d5db] bg-[#fffdfe] p-2 shadow-[0_25px_70px_rgba(63,17,82,0.18)]">
-          <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
+        <div className="absolute left-0 top-[calc(100%+10px)] z-[80] w-full overflow-hidden rounded-[18px] border border-[#e4ded1] bg-[#fefefe] p-2 shadow-[0_25px_70px_rgba(22,50,42,0.18)]">
+          <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#16322a] via-[#7b6337] to-[#16322a]" />
 
           <div className="px-3 pb-2 pt-3">
-            <span className="text-[9px] font-bold uppercase tracking-[1.8px] text-[#a19aa4]">
+            <span className="text-[9px] font-bold uppercase tracking-[1.8px] text-[#9ca29f]">
               Choose an option
             </span>
           </div>
@@ -882,16 +882,16 @@ function PremiumSelect({
                   }}
                   className={`flex w-full items-center justify-between rounded-[12px] px-3.5 py-3 text-left text-[13px] transition-all duration-200 ${
                     isSelected
-                      ? "bg-[#4e1367] text-white shadow-[0_8px_20px_rgba(78,19,103,0.18)]"
-                      : "text-[#5d5163] hover:bg-[#f4f6f5] hover:text-[#4e1367]"
+                      ? "bg-[#1a3e34] text-white shadow-[0_8px_20px_rgba(26,62,52,0.18)]"
+                      : "text-[#555f5a] hover:bg-[#f4f6f5] hover:text-[#1a3e34]"
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <span
                       className={`flex h-7 w-7 items-center justify-center rounded-full text-[9px] font-bold ${
                         isSelected
-                          ? "bg-white/15 text-[#fb1895]"
-                          : "bg-[#4e1367]/7 text-[#4e1367]/60"
+                          ? "bg-white/15 text-[#b79b66]"
+                          : "bg-[#1a3e34]/7 text-[#1a3e34]/60"
                       }`}
                     >
                       {String(index + 1).padStart(
@@ -906,7 +906,7 @@ function PremiumSelect({
                   </div>
 
                   {isSelected && (
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#e40e83] text-white">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#7b6337] text-white">
                       <CheckCircle2 size={14} />
                     </span>
                   )}
@@ -1082,12 +1082,12 @@ function PremiumDateInput({
 
   return (
     <div ref={calendarRef} className="group relative z-30">
-      <label className="mb-2.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#6e6272]">
+      <label className="mb-2.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#666e6a]">
         <span
           className={`flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300 ${
             isOpen
-              ? "bg-[#e40e83] text-white"
-              : "bg-[#e40e83]/10 text-[#b30765]"
+              ? "bg-[#7b6337] text-white"
+              : "bg-[#7b6337]/10 text-[#7b6337]"
           }`}
         >
           <CalendarDays size={15} />
@@ -1103,15 +1103,15 @@ function PremiumDateInput({
         }
         className={`relative flex h-[56px] w-full items-center justify-between rounded-[14px] border px-5 text-left transition-all duration-300 ${
           isOpen
-            ? "border-[#4e1367] bg-white shadow-[0_10px_28px_rgba(78,19,103,0.10)]"
-            : "border-[#dad2d6] bg-[#fbf9fa] hover:border-[#cabdc4]"
+            ? "border-[#1a3e34] bg-white shadow-[0_10px_28px_rgba(26,62,52,0.10)]"
+            : "border-[#dfd9cd] bg-[#fbfbf9] hover:border-[#c0c7c3]"
         }`}
       >
         <span
           className={`text-[14px] ${
             selectedDate
-              ? "text-[#5d5163]"
-              : "text-[#a9a2ac]"
+              ? "text-[#555f5a]"
+              : "text-[#5c6660]"
           }`}
         >
           {selectedDate
@@ -1122,8 +1122,8 @@ function PremiumDateInput({
         <span
           className={`flex h-9 w-9 items-center justify-center rounded-full ${
             isOpen
-              ? "bg-[#4e1367] text-white"
-              : "bg-[#4e1367]/8 text-[#4e1367]"
+              ? "bg-[#1a3e34] text-white"
+              : "bg-[#1a3e34]/8 text-[#1a3e34]"
           }`}
         >
           <CalendarDays size={16} />
@@ -1138,8 +1138,8 @@ function PremiumDateInput({
       />
 
       {isOpen && (
-        <div className="absolute left-0 top-[calc(100%+12px)] z-[100] w-full min-w-[310px] overflow-hidden rounded-[22px] border border-[#e0d5db] bg-[#fffdfe] p-4 shadow-[0_30px_80px_rgba(63,17,82,0.20)] sm:min-w-[350px] sm:p-5">
-          <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
+        <div className="absolute left-0 top-[calc(100%+12px)] z-[100] w-full min-w-[310px] overflow-hidden rounded-[22px] border border-[#e4ded1] bg-[#fefefe] p-4 shadow-[0_30px_80px_rgba(22,50,42,0.20)] sm:min-w-[350px] sm:p-5">
+          <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#16322a] via-[#7b6337] to-[#16322a]" />
 
           <div className="flex items-center justify-between pt-1">
             <button
@@ -1151,13 +1151,13 @@ function PremiumDateInput({
                 currentMonth.getMonth() ===
                   today.getMonth()
               }
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#dad2d6] bg-[#f9f6f8] text-[#4e1367] transition-all hover:border-[#4e1367] hover:bg-[#4e1367] hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#dfd9cd] bg-[#faf8f5] text-[#1a3e34] transition-all hover:border-[#1a3e34] hover:bg-[#1a3e34] hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
             >
               <ChevronLeft size={17} />
             </button>
 
             <div className="text-center">
-              <h4 className="font-serif text-lg font-bold text-[#3f1152] sm:text-xl">
+              <h4 className="font-serif text-lg font-bold text-[#16322a] sm:text-xl">
                 {currentMonth.toLocaleString(
                   "default",
                   {
@@ -1166,7 +1166,7 @@ function PremiumDateInput({
                 )}
               </h4>
 
-              <span className="mt-0.5 block text-[9px] font-bold uppercase tracking-[1.8px] text-[#e40e83]">
+              <span className="mt-0.5 block text-[9px] font-bold uppercase tracking-[1.8px] text-[#7b6337]">
                 {year}
               </span>
             </div>
@@ -1174,13 +1174,13 @@ function PremiumDateInput({
             <button
               type="button"
               onClick={nextMonth}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#dad2d6] bg-[#f9f6f8] text-[#4e1367] transition-all hover:border-[#4e1367] hover:bg-[#4e1367] hover:text-white"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#dfd9cd] bg-[#faf8f5] text-[#1a3e34] transition-all hover:border-[#1a3e34] hover:bg-[#1a3e34] hover:text-white"
             >
               <ChevronRight size={17} />
             </button>
           </div>
 
-          <div className="my-4 h-px bg-gradient-to-r from-transparent via-[#e40e83]/40 to-transparent" />
+          <div className="my-4 h-px bg-gradient-to-r from-transparent via-[#7b6337]/40 to-transparent" />
 
           <div className="grid grid-cols-7 gap-1 text-center">
             {[
@@ -1194,7 +1194,7 @@ function PremiumDateInput({
             ].map((day) => (
               <div
                 key={day}
-                className="pb-2 text-[8px] font-bold uppercase tracking-[1px] text-[#a19aa4]"
+                className="pb-2 text-[8px] font-bold uppercase tracking-[1px] text-[#9ca29f]"
               >
                 {day}
               </div>
@@ -1236,12 +1236,12 @@ function PremiumDateInput({
                   }}
                   className={`relative flex aspect-square items-center justify-center rounded-full text-[11px] font-semibold transition-all duration-200 ${
                     selected
-                      ? "scale-105 bg-[#4e1367] text-white shadow-[0_8px_20px_rgba(78,19,103,0.30)]"
+                      ? "scale-105 bg-[#1a3e34] text-white shadow-[0_8px_20px_rgba(26,62,52,0.30)]"
                       : currentDay
-                      ? "border border-[#e40e83] bg-[#fcf3f8] text-[#b30765]"
+                      ? "border border-[#7b6337] bg-[#fbf9f4] text-[#7b6337]"
                       : past
                       ? "cursor-not-allowed text-[#d0d3d2]"
-                      : "text-[#5d5163] hover:bg-[#4e1367]/10 hover:text-[#4e1367]"
+                      : "text-[#555f5a] hover:bg-[#1a3e34]/10 hover:text-[#1a3e34]"
                   }`}
                 >
                   {day}
@@ -1250,7 +1250,7 @@ function PremiumDateInput({
             })}
           </div>
 
-          <div className="mt-4 flex items-center justify-between border-t border-[#e8e1e5] pt-3">
+          <div className="mt-4 flex items-center justify-between border-t border-[#ebe7de] pt-3">
             <button
               type="button"
               onClick={() => {
@@ -1267,7 +1267,7 @@ function PremiumDateInput({
                 setSelectedDate(now);
                 setIsOpen(false);
               }}
-              className="text-[9px] font-bold uppercase tracking-[1.3px] text-[#4e1367] transition hover:text-[#e40e83]"
+              className="text-[9px] font-bold uppercase tracking-[1.3px] text-[#1a3e34] transition hover:text-[#7b6337]"
             >
               Select Today
             </button>
@@ -1277,7 +1277,7 @@ function PremiumDateInput({
               onClick={() => {
                 setSelectedDate(null);
               }}
-              className="text-[9px] font-bold uppercase tracking-[1.3px] text-[#a19aa4] transition hover:text-[#b61d50]"
+              className="text-[9px] font-bold uppercase tracking-[1.3px] text-[#9ca29f] transition hover:text-[#193830]"
             >
               Clear Date
             </button>

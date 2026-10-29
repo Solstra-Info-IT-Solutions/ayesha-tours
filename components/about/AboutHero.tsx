@@ -14,13 +14,13 @@ export default function AboutHero() {
       {/* ================= PREMIUM OVERLAYS ================= */}
 
       {/* Main Dark Overlay */}
-      <div className="absolute inset-0 bg-[#36064b]/70" />
+      <div className="absolute inset-0 bg-[#102a23]/70" />
 
       {/* Gradient Depth */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#270435]/80 via-[#36064b]/55 to-[#36064b]/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0b1e19]/80 via-[#102a23]/55 to-[#102a23]/30" />
 
       {/* Bottom Gradient */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#36064b]/70 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#102a23]/70 to-transparent" />
 
       {/* Decorative Lines */}
       <div className="absolute left-0 top-0 h-full w-px bg-white/10" />
@@ -28,7 +28,7 @@ export default function AboutHero() {
       <div className="absolute right-[10%] top-0 h-full w-px bg-white/[0.06]" />
 
       {/* Decorative Circle */}
-      <div className="absolute -right-40 -top-40 h-[420px] w-[420px] rounded-full border border-[#ff0a91]/20" />
+      <div className="absolute -right-40 -top-40 h-[420px] w-[420px] rounded-full border border-[#b79b66]/20" />
 
       <div className="absolute -right-24 -top-24 h-[300px] w-[300px] rounded-full border border-white/10" />
 
@@ -39,21 +39,21 @@ export default function AboutHero() {
         <div className="mb-8 flex items-center gap-2 text-xs font-medium tracking-[0.12em] text-white/70">
           <Link
             href="/"
-            className="transition hover:text-[#ff0a91]"
+            className="transition hover:text-[#b79b66]"
           >
             HOME
           </Link>
 
-          <ChevronRight size={14} className="text-[#ff0a91]" />
+          <ChevronRight size={14} className="text-[#b79b66]" />
 
-          <span className="text-[#ff0a91]">ABOUT US</span>
+          <span className="text-[#b79b66]">ABOUT US</span>
         </div>
 
         {/* Premium Label */}
         <div className="mb-6 flex items-center gap-4">
-          <span className="h-px w-10 bg-[#ff0a91]" />
+          <span className="h-px w-10 bg-[#b79b66]" />
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#ff0a91]">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#b79b66]">
             ABOUT AYESHA TOURS
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function AboutHero() {
         {/* Heading */}
         <h1 className="max-w-[800px] font-serif text-4xl font-bold leading-[1.12] text-white md:text-5xl lg:text-[62px]">
           Your Pilgrimage,
-          <span className="block italic text-[#ff0a91]">
+          <span className="block italic text-[#b79b66]">
             Supported With Care.
           </span>
         </h1>
@@ -75,7 +75,7 @@ export default function AboutHero() {
 
         {/* Bottom Accent */}
         <div className="mt-10 flex items-center gap-4">
-          <span className="h-10 w-px bg-[#ff0a91]" />
+          <span className="h-10 w-px bg-[#b79b66]" />
 
           <div>
             <p className="text-sm font-medium text-white">
@@ -90,7 +90,7 @@ export default function AboutHero() {
       </div>
 
       {/* ================= BOTTOM GOLD ACCENT ================= */}
-      <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-[#ff0a91] via-[#ff4daf] to-transparent" />
+      <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-[#b79b66] via-[#b79b66] to-transparent" />
     </section>
   );
 }

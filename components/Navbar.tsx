@@ -3,599 +3,252 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import {
-  Menu,
-  X,
-  ChevronRight,
-  ChevronDown,
-  ArrowUpRight,
-  Map,
-  Plane,
-  Car,
-  Images,
-  CircleHelp,
-  Sparkles,
-} from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { ArrowUpRight, Mail, MessageCircle, Phone, X } from "lucide-react";
+import { SITE, mailLink, phoneLink, whatsappLink } from "@/lib/site";
 
-const mainLinks = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
+const primaryLinks = [
+  { name: "Journeys", href: "/tour-packages" },
+  { name: "Makkah & Madinah", href: "/destinations" },
   { name: "Services", href: "/services" },
-  { name: "Destinations", href: "/destinations" },
+  { name: "About", href: "/about" },
 ];
 
-const exploreLinks = [
-  {
-    name: "Umrah & Haj Packages",
-    description: "Economy, standard & premium options",
-    href: "/tour-packages",
-    icon: Map,
-  },
-  {
-    name: "Pilgrimage Journeys",
-    description: "Family, group & Ramadan Umrah",
-    href: "/tours",
-    icon: Plane,
-  },
-  {
-    name: "Transport & Ziyarat",
-    description: "Airport, intercity & ziyarat transfers",
-    href: "/transport",
-    icon: Car,
-  },
-  {
-    name: "Gallery",
-    description: "Makkah, Madinah & the journey",
-    href: "/gallery",
-    icon: Images,
-  },
-  {
-    name: "FAQ",
-    description: "Answers for first-time pilgrims",
-    href: "/faq",
-    icon: CircleHelp,
-  },
+const menuLinks = [
+  { name: "Home", href: "/" },
+  { name: "Umrah & Haj Journeys", href: "/tour-packages" },
+  { name: "Makkah & Madinah", href: "/destinations" },
+  { name: "Pilgrimage Styles", href: "/tours" },
+  { name: "Services", href: "/services" },
+  { name: "Transport & Ziyarat", href: "/transport" },
+  { name: "About Ayesha Tours", href: "/about" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Questions", href: "/faq" },
+  { name: "Contact", href: "/contact" },
 ];
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isExploreOpen, setIsExploreOpen] = useState(false);
+type NavbarProps = {
+  /** Transparent over a full-bleed hero until the page is scrolled. */
+  variant?: "solid" | "overlay";
+  /** Hides the primary CTA (used on the enquiry page itself). */
+  hideCta?: boolean;
+};
 
+export default function Navbar({ variant = "solid", hideCta = false }: NavbarProps) {
   const pathname = usePathname();
-  const exploreRef = useRef<HTMLDivElement>(null);
-
-  const isActive = (href: string) => {
-    if (href === "/") {
-      return pathname === "/";
-    }
-
-    return pathname === href;
-  };
-
-  const isExploreActive = exploreLinks.some(
-    (link) => pathname === link.href
-  );
+  const reduceMotion = useReducedMotion();
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        exploreRef.current &&
-        !exploreRef.current.contains(event.target as Node)
-      ) {
-        setIsExploreOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
+  // Close the menu when the route changes (adjusting state during render).
+  const [menuPath, setMenuPath] = useState(pathname);
+  if (menuPath !== pathname) {
+    setMenuPath(pathname);
     setIsOpen(false);
-    setIsExploreOpen(false);
-  }, [pathname]);
+  }
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    firstLinkRef.current?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previous;
+      window.removeEventListener("keydown", onKey);
+      menuButtonRef.current?.focus();
+    };
+  }, [isOpen]);
+
+  const transparent = variant === "overlay" && !scrolled && !isOpen;
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname?.startsWith(href);
 
   return (
     <header className="sticky top-0 z-[100] w-full">
-      <nav className="relative border-b border-[#3f1152]/10 bg-[#f9f6f8]/95 backdrop-blur-xl">
-        {/* PREMIUM GOLD LINE */}
+      <div
+        className={`relative transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
+          transparent
+            ? "bg-gradient-to-b from-night/70 via-night/25 to-transparent"
+            : "bg-night/95 shadow-[0_1px_0_rgba(184,154,98,0.18)] backdrop-blur-xl"
+        }`}
+      >
+        <nav
+          aria-label="Main"
+          className="mx-auto flex h-[72px] w-full max-w-[1600px] items-center justify-between gap-6 px-4 sm:h-[84px] sm:px-8 lg:px-12"
+        >
+          <Link
+            href="/"
+            aria-label="Ayesha Tours – Haj & Umrah Packages, home"
+            className="group flex shrink-0 items-center rounded-[14px] bg-ivory px-3 py-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.18)] transition-transform duration-500 hover:-translate-y-0.5"
+          >
+            <img
+              src="/logo.png"
+              alt="Ayesha Tours – Haj & Umrah Packages"
+              width={1099}
+              height={684}
+              className="h-[40px] w-auto sm:h-[48px]"
+            />
+          </Link>
 
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#e40e83]/70 to-transparent" />
-
-        <div className="relative mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-10 xl:px-12">
-          {/* =====================================================
-              DESKTOP / MAIN NAVBAR
-          ====================================================== */}
-
-          <div className="flex h-[74px] items-center justify-between sm:h-[82px] lg:grid lg:h-[88px] lg:grid-cols-[minmax(120px,1fr)_auto_minmax(180px,1fr)] lg:gap-5">
-            {/* =====================================================
-                LOGO
-            ====================================================== */}
-
-            <Link
-              href="/"
-              aria-label="Ayesha Tours – Haj & Umrah Packages, home"
-              className="group flex min-w-0 items-center"
-            >
-              <img
-                src="/logo.png"
-                alt="Ayesha Tours – Haj & Umrah Packages"
-                width={1099}
-                height={684}
-                className="h-[52px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] sm:h-[60px] lg:h-[66px]"
-              />
-            </Link>
-
-            {/* =====================================================
-                DESKTOP NAVIGATION
-            ====================================================== */}
-
-            <div className="hidden items-center justify-center lg:flex">
-              <div className="flex items-center rounded-full border border-[#3f1152]/10 bg-[#f2eff1] p-1 shadow-[0_6px_25px_rgba(63,17,82,0.03)]">
-                {/* HOME */}
-
-                <DesktopNavLink
-                  href="/"
-                  active={isActive("/")}
+          <ul className="hidden items-center gap-9 lg:flex">
+            {primaryLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                  className="group relative py-2 text-[13px] font-medium tracking-[0.04em] text-ivory/85 transition-colors hover:text-ivory"
                 >
-                  Home
-                </DesktopNavLink>
-
-                {/* ABOUT */}
-
-                <DesktopNavLink
-                  href="/about"
-                  active={isActive("/about")}
-                >
-                  About Us
-                </DesktopNavLink>
-
-                {/* SERVICES */}
-
-                <DesktopNavLink
-                  href="/services"
-                  active={isActive("/services")}
-                >
-                  Services
-                </DesktopNavLink>
-
-                {/* DESTINATIONS */}
-
-                <DesktopNavLink
-                  href="/destinations"
-                  active={isActive("/destinations")}
-                >
-                  Destinations
-                </DesktopNavLink>
-
-                {/* EXPLORE */}
-
-                <div
-                  ref={exploreRef}
-                  className="relative"
-                >
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setIsExploreOpen((prev) => !prev)
-                    }
-                    className={`group relative flex h-[44px] items-center gap-1.5 rounded-full px-4 text-[12px] font-medium transition-all duration-300 xl:px-5 xl:text-[13px] ${
-                      isExploreActive
-                        ? "bg-white text-[#3f1152] shadow-[0_5px_18px_rgba(63,17,82,0.10)]"
-                        : "text-[#6e6272] hover:bg-white/70 hover:text-[#3f1152]"
+                  {link.name}
+                  <span
+                    className={`absolute -bottom-0.5 left-0 h-px bg-gold transition-all duration-500 ${
+                      isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
                     }`}
-                    aria-expanded={isExploreOpen}
-                  >
-                    <span className="relative z-10 whitespace-nowrap">
-                      Explore
-                    </span>
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-                    <ChevronDown
-                      size={14}
-                      className={`relative z-10 transition-transform duration-300 ${
-                        isExploreOpen ? "rotate-180" : ""
-                      }`}
-                    />
-
-                    <span
-                      className={`absolute bottom-[7px] left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#e40e83] transition-all duration-300 ${
-                        isExploreActive
-                          ? "w-5"
-                          : "w-0 group-hover:w-5"
-                      }`}
-                    />
-                  </button>
-
-                  {/* DROPDOWN */}
-
-                  <div
-                    className={`absolute left-1/2 top-[58px] w-[310px] -translate-x-1/2 overflow-hidden rounded-[22px] border border-[#e1d7dc] bg-[#fffdfe] p-2 shadow-[0_25px_70px_rgba(63,17,82,0.16)] transition-all duration-300 ${
-                      isExploreOpen
-                        ? "visible translate-y-0 opacity-100"
-                        : "invisible -translate-y-2 opacity-0"
-                    }`}
-                  >
-                    {/* HEADER */}
-
-                    <div className="px-4 pb-3 pt-3">
-                      <div className="flex items-center gap-2.5">
-                        <Sparkles
-                          size={13}
-                          className="text-[#e40e83]"
-                        />
-
-                        <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#4e1367]">
-                          Explore Ayesha Tours
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* LINKS */}
-
-                    <div className="space-y-1">
-                      {exploreLinks.map((link) => {
-                        const Icon = link.icon;
-                        const active = isActive(link.href);
-
-                        return (
-                          <Link
-                            key={link.name}
-                            href={link.href}
-                            onClick={() =>
-                              setIsExploreOpen(false)
-                            }
-                            className={`group/item flex items-center gap-3 rounded-[16px] px-3 py-3 transition-all duration-300 ${
-                              active
-                                ? "bg-[#3f1152] text-white"
-                                : "hover:bg-[#f4eff2]"
-                            }`}
-                          >
-                            <div
-                              className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${
-                                active
-                                  ? "bg-white/10 text-[#ff058f]"
-                                  : "bg-[#4e1367]/7 text-[#4e1367]"
-                              }`}
-                            >
-                              <Icon
-                                size={17}
-                                strokeWidth={1.7}
-                              />
-                            </div>
-
-                            <div className="min-w-0 flex-1">
-                              <p
-                                className={`text-[12px] font-semibold ${
-                                  active
-                                    ? "text-white"
-                                    : "text-[#3f1152]"
-                                }`}
-                              >
-                                {link.name}
-                              </p>
-
-                              <p
-                                className={`mt-0.5 text-[10px] ${
-                                  active
-                                    ? "text-white/60"
-                                    : "text-[#857d89]"
-                                }`}
-                              >
-                                {link.description}
-                              </p>
-                            </div>
-
-                            <ChevronRight
-                              size={16}
-                              className={
-                                active
-                                  ? "text-[#ff058f]"
-                                  : "text-[#b0aab2] transition-all group-hover/item:translate-x-1"
-                              }
-                            />
-                          </Link>
-                        );
-                      })}
-                    </div>
-
-                    {/* FOOTER */}
-
-                    <div className="mt-2 flex items-center justify-center gap-2 border-t border-[#e3dbdf] px-3 pb-2 pt-3">
-                      <span className="h-px w-6 bg-[#e40e83]/50" />
-
-                      <span className="text-[7px] font-bold uppercase tracking-[0.2em] text-[#a19ba3]">
-                        Haj & Umrah Packages
-                      </span>
-
-                      <span className="h-px w-6 bg-[#e40e83]/50" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* CONTACT */}
-
-                <DesktopNavLink
-                  href="/contact"
-                  active={isActive("/contact")}
-                >
-                  Contact Us
-                </DesktopNavLink>
-              </div>
-            </div>
-
-            {/* =====================================================
-                DESKTOP CTA
-            ====================================================== */}
-
-            <div className="hidden items-center justify-end lg:flex">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {!hideCta && (
               <Link
                 href="/enquiry"
-                className="group relative inline-flex h-[46px] items-center justify-center overflow-hidden whitespace-nowrap rounded-full bg-[#3f1152] px-5 text-[9px] font-bold uppercase tracking-[1.3px] text-white shadow-[0_10px_28px_rgba(63,17,82,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_35px_rgba(63,17,82,0.25)] xl:px-6"
+                className="hidden h-11 items-center gap-2 rounded-full bg-ivory px-5 text-[13px] font-semibold text-night transition-all duration-300 hover:bg-gold hover:text-night sm:inline-flex"
               >
-                <span className="absolute inset-0 translate-x-[-105%] bg-[#e40e83] transition-transform duration-500 group-hover:translate-x-0" />
-
-                <span className="relative z-10 flex items-center gap-2.5 transition-colors duration-300 group-hover:text-white">
-                  Plan Your Journey
-
-                  <ArrowUpRight
-                    size={15}
-                    className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                </span>
+                Plan My Pilgrimage
+                <ArrowUpRight size={16} aria-hidden />
               </Link>
-            </div>
-
-            {/* =====================================================
-                MOBILE BUTTON
-            ====================================================== */}
+            )}
 
             <button
+              ref={menuButtonRef}
               type="button"
-              onClick={() => setIsOpen((prev) => !prev)}
-              className={`flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full border transition-all duration-300 lg:hidden ${
-                isOpen
-                  ? "border-[#3f1152] bg-[#3f1152] text-white"
-                  : "border-[#3f1152]/15 bg-white text-[#3f1152] shadow-sm"
-              }`}
-              aria-label="Toggle navigation menu"
+              onClick={() => setIsOpen((open) => !open)}
               aria-expanded={isOpen}
+              aria-controls="site-menu"
+              className="flex h-11 items-center gap-3 rounded-full border border-ivory/25 px-4 text-[13px] font-medium text-ivory transition-colors hover:border-gold hover:text-gold"
             >
-              {isOpen ? <X size={20} /> : <Menu size={21} />}
+              <span>{isOpen ? "Close" : "Menu"}</span>
+              <span aria-hidden className="relative block h-3 w-5">
+                <span
+                  className={`absolute left-0 h-px w-5 bg-current transition-transform duration-300 ${
+                    isOpen ? "top-1.5 rotate-45" : "top-0.5"
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 h-px w-5 bg-current transition-transform duration-300 ${
+                    isOpen ? "top-1.5 -rotate-45" : "top-2.5"
+                  }`}
+                />
+              </span>
             </button>
           </div>
+        </nav>
+      </div>
 
-          {/* =====================================================
-              MOBILE MENU
-          ====================================================== */}
-
-          <div
-            className={`overflow-hidden transition-all duration-500 ease-in-out lg:hidden ${
-              isOpen
-                ? "max-h-[900px] opacity-100"
-                : "max-h-0 opacity-0"
-            }`}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            id="site-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site menu"
+            initial={reduceMotion ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }}
+            animate={reduceMotion ? { opacity: 1 } : { clipPath: "inset(0 0 0% 0)" }}
+            exit={reduceMotion ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-x-0 bottom-0 top-[72px] overflow-y-auto bg-night text-ivory sm:top-[84px]"
           >
-            <div className="pb-6 pt-2">
-              <div className="relative overflow-hidden rounded-[24px] border border-[#e1d7dc] bg-[#fffdfe] p-3 shadow-[0_20px_60px_rgba(63,17,82,0.12)]">
-                <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
-
-                {/* HEADER */}
-
-                <div className="flex items-center gap-3 px-4 pb-3 pt-4">
-                  <span className="h-[2px] w-8 bg-[#e40e83]" />
-
-                  <span className="text-[9px] font-bold uppercase tracking-[2px] text-[#4e1367]">
-                    Your Pilgrimage, Planned
-                  </span>
-                </div>
-
-                {/* MAIN LINKS */}
-
-                <div className="space-y-1">
-                  {mainLinks.map((link, index) => (
-                    <MobileNavLink
-                      key={link.name}
+            <div className="mx-auto grid min-h-full max-w-[1600px] gap-12 px-5 py-10 sm:px-8 lg:grid-cols-[1.4fr_1fr] lg:px-12 lg:py-16">
+              <ol className="space-y-1">
+                {menuLinks.map((link, index) => (
+                  <motion.li
+                    key={link.href}
+                    initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: reduceMotion ? 0 : 0.15 + index * 0.04, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <Link
+                      ref={index === 0 ? firstLinkRef : undefined}
                       href={link.href}
-                      label={link.name}
-                      index={index + 1}
-                      active={isActive(link.href)}
-                      onClick={() => setIsOpen(false)}
-                    />
-                  ))}
-                </div>
-
-                {/* EXPLORE */}
-
-                <div className="mx-4 my-4 h-px bg-gradient-to-r from-transparent via-[#e40e83]/30 to-transparent" />
-
-                <div className="px-4 pb-2">
-                  <div className="flex items-center gap-2">
-                    <Sparkles
-                      size={12}
-                      className="text-[#e40e83]"
-                    />
-
-                    <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#4e1367]">
-                      More To Explore
-                    </span>
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  {exploreLinks.map((link, index) => {
-                    const Icon = link.icon;
-                    const active = isActive(link.href);
-
-                    return (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        onClick={() => setIsOpen(false)}
-                        className={`group flex items-center justify-between rounded-[14px] px-4 py-3 transition-all duration-300 ${
-                          active
-                            ? "bg-[#3f1152] text-white"
-                            : "text-[#5d5163] hover:bg-[#f5f1f3]"
+                      aria-current={isActive(link.href) ? "page" : undefined}
+                      className="group flex items-baseline gap-5 border-b border-emerald-line/70 py-3 sm:py-4"
+                    >
+                      <span className="w-8 shrink-0 text-[12px] tabular-nums text-gold">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span
+                        className={`font-serif text-[30px] leading-none transition-colors duration-300 sm:text-[44px] ${
+                          isActive(link.href) ? "text-gold" : "text-ivory group-hover:text-gold"
                         }`}
                       >
-                        <div className="flex items-center gap-3">
-                          <div
-                            className={`flex h-8 w-8 items-center justify-center rounded-full ${
-                              active
-                                ? "bg-white/10 text-[#ff058f]"
-                                : "bg-[#4e1367]/7 text-[#4e1367]"
-                            }`}
-                          >
-                            <Icon size={15} />
-                          </div>
+                        {link.name}
+                      </span>
+                    </Link>
+                  </motion.li>
+                ))}
+              </ol>
 
-                          <span className="text-[13px] font-semibold">
-                            {link.name}
-                          </span>
-                        </div>
-
-                        <span
-                          className={`text-[9px] font-bold ${
-                            active
-                              ? "text-[#ff058f]"
-                              : "text-[#a39da6]"
-                          }`}
-                        >
-                          {String(index + 6).padStart(2, "0")}
-                        </span>
-                      </Link>
-                    );
-                  })}
+              <div className="flex flex-col justify-between gap-10 lg:pl-12">
+                <div>
+                  <p className="text-[12px] uppercase tracking-[0.28em] text-gold">
+                    Speak with us
+                  </p>
+                  <p className="mt-5 max-w-sm font-serif text-[28px] leading-tight text-ivory">
+                    Every journey begins with a conversation.
+                  </p>
+                  <ul className="mt-8 space-y-4 text-[15px] text-sage">
+                    <li>
+                      <a href={whatsappLink("Assalamu alaikum Ayesha Tours, I would like to plan my pilgrimage.")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 hover:text-ivory">
+                        <MessageCircle size={17} className="text-gold" aria-hidden /> WhatsApp
+                      </a>
+                    </li>
+                    <li>
+                      <a href={phoneLink()} className="inline-flex items-center gap-3 hover:text-ivory">
+                        <Phone size={17} className="text-gold" aria-hidden /> {SITE.phone}
+                      </a>
+                    </li>
+                    <li>
+                      <a href={mailLink("Umrah / Haj enquiry")} className="inline-flex items-center gap-3 break-all hover:text-ivory">
+                        <Mail size={17} className="text-gold" aria-hidden /> {SITE.email}
+                      </a>
+                    </li>
+                  </ul>
                 </div>
 
-                {/* DIVIDER */}
-
-                <div className="mx-4 my-4 h-px bg-gradient-to-r from-transparent via-[#e40e83]/30 to-transparent" />
-
-                {/* CTA */}
-
-                <Link
-                  href="/enquiry"
-                  onClick={() => setIsOpen(false)}
-                  className="group relative flex h-[56px] items-center justify-center overflow-hidden rounded-[16px] bg-[#3f1152] text-[10px] font-bold uppercase tracking-[1.7px] text-white shadow-[0_10px_25px_rgba(63,17,82,0.18)]"
-                >
-                  <span className="absolute inset-0 translate-y-full bg-[#e40e83] transition-transform duration-500 group-hover:translate-y-0" />
-
-                  <span className="relative z-10 flex items-center gap-3 transition-colors duration-300 group-hover:text-white">
-                    Plan Your Journey
-
-                    <ArrowUpRight size={16} />
-                  </span>
-                </Link>
-
-                {/* FOOTER */}
-
-                <div className="flex items-center justify-center gap-3 pb-2 pt-5">
-                  <span className="h-px w-7 bg-[#e40e83]/40" />
-
-                  <span className="text-[8px] font-semibold uppercase tracking-[2px] text-[#a7a0aa]">
-                    Labbaik Allahumma Labbaik
-                  </span>
-
-                  <span className="h-px w-7 bg-[#e40e83]/40" />
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href="/enquiry"
+                    className="inline-flex h-12 items-center gap-2 rounded-full bg-ivory px-6 text-[14px] font-semibold text-night transition-colors hover:bg-gold"
+                  >
+                    Plan My Pilgrimage <ArrowUpRight size={16} aria-hidden />
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={() => setIsOpen(false)}
+                    className="inline-flex h-12 items-center gap-2 rounded-full border border-ivory/25 px-6 text-[14px] text-ivory hover:border-gold hover:text-gold"
+                  >
+                    <X size={16} aria-hidden /> Close menu
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
-  );
-}
-
-/* =====================================================
-   DESKTOP NAV LINK
-===================================================== */
-
-function DesktopNavLink({
-  href,
-  active,
-  children,
-}: {
-  href: string;
-  active: boolean;
-  children: React.ReactNode;
-}) {
-  return (
-    <Link
-      href={href}
-      className={`group relative flex h-[44px] items-center justify-center rounded-full px-4 text-[12px] font-medium transition-all duration-300 xl:px-5 xl:text-[13px] ${
-        active
-          ? "bg-white text-[#3f1152] shadow-[0_5px_18px_rgba(63,17,82,0.10)]"
-          : "text-[#6e6272] hover:bg-white/70 hover:text-[#3f1152]"
-      }`}
-    >
-      <span className="relative z-10 whitespace-nowrap">
-        {children}
-      </span>
-
-      <span
-        className={`absolute bottom-[7px] left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#e40e83] transition-all duration-300 ${
-          active ? "w-5" : "w-0 group-hover:w-5"
-        }`}
-      />
-    </Link>
-  );
-}
-
-/* =====================================================
-   MOBILE NAV LINK
-===================================================== */
-
-function MobileNavLink({
-  href,
-  label,
-  index,
-  active,
-  onClick,
-}: {
-  href: string;
-  label: string;
-  index: number;
-  active: boolean;
-  onClick: () => void;
-}) {
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className={`group flex items-center justify-between rounded-[14px] px-4 py-3.5 transition-all duration-300 ${
-        active
-          ? "bg-[#3f1152] text-white shadow-[0_8px_20px_rgba(63,17,82,0.15)]"
-          : "text-[#5d5163] hover:bg-[#f5f1f3] hover:text-[#3f1152]"
-      }`}
-    >
-      <div className="flex items-center gap-3.5">
-        <span
-          className={`flex h-7 w-7 items-center justify-center rounded-full text-[9px] font-bold ${
-            active
-              ? "bg-white/10 text-[#fb1895]"
-              : "bg-[#4e1367]/7 text-[#4e1367]/60"
-          }`}
-        >
-          {String(index).padStart(2, "0")}
-        </span>
-
-        <span className="text-[14px] font-semibold">
-          {label}
-        </span>
-      </div>
-
-      <ChevronRight
-        size={17}
-        className={`transition-all duration-300 ${
-          active
-            ? "text-[#fb1895]"
-            : "text-[#b0aab2] group-hover:translate-x-1 group-hover:text-[#4e1367]"
-        }`}
-      />
-    </Link>
   );
 }

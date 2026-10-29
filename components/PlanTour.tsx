@@ -8,12 +8,12 @@ import {
 
 export default function PlanTour() {
   return (
-    <section className="relative overflow-hidden bg-[#f9f6f8] px-6 py-20 md:px-10 lg:px-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[#faf8f5] px-6 py-20 md:px-10 lg:px-20 lg:py-24">
 
       {/* ================= DECORATIVE BACKGROUND ================= */}
-      <div className="pointer-events-none absolute left-[-120px] top-20 h-[350px] w-[350px] rounded-full bg-[#4b1164]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute left-[-120px] top-20 h-[350px] w-[350px] rounded-full bg-[#183c32]/[0.035] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-[-100px] right-[-80px] h-[380px] w-[380px] rounded-full bg-[#ff0b91]/[0.05] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-100px] right-[-80px] h-[380px] w-[380px] rounded-full bg-[#b79b66]/[0.05] blur-3xl" />
 
       {/* ================= MAIN CONTAINER ================= */}
       <div className="relative mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-20">
@@ -26,9 +26,9 @@ export default function PlanTour() {
 
           {/* Premium Eyebrow */}
           <div className="flex items-center gap-4">
-            <span className="h-[2px] w-10 bg-[#ff0b91]" />
+            <span className="h-[2px] w-10 bg-[#b79b66]" />
 
-            <p className="text-xs font-semibold tracking-[3px] text-[#4b1164]">
+            <p className="text-xs font-semibold tracking-[3px] text-[#183c32]">
               PLAN YOUR PILGRIMAGE
             </p>
           </div>
@@ -38,20 +38,20 @@ export default function PlanTour() {
             <Sparkles
               size={18}
               strokeWidth={1.8}
-              className="text-[#ff0b91]"
+              className="text-[#b79b66]"
             />
 
-            <p className="font-serif text-xl italic text-[#c1124c] md:text-2xl">
+            <p className="font-serif text-xl italic text-[#193830] md:text-2xl">
               Let&apos;s Go Together
             </p>
           </div>
 
           {/* Main Heading */}
-          <h2 className="mt-4 max-w-[620px] font-serif text-4xl font-bold leading-[1.12] text-[#3f1152] md:text-5xl lg:text-[52px]">
+          <h2 className="mt-4 max-w-[620px] font-serif text-4xl font-bold leading-[1.12] text-[#16322a] md:text-5xl lg:text-[52px]">
             Prepare For The
             <br />
 
-            <span className="italic text-[#c1124c]">
+            <span className="italic text-[#193830]">
               Journey Of A Lifetime.
             </span>
           </h2>
@@ -74,12 +74,12 @@ export default function PlanTour() {
 
             {/* Trusted Service */}
             <div className="flex items-center gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#4b1164] text-[#ff0b91] shadow-sm">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#183c32] text-[#b79b66] shadow-sm">
                 <ShieldCheck size={20} strokeWidth={1.8} />
               </div>
 
               <div>
-                <p className="font-semibold text-[#3f1152]">
+                <p className="font-semibold text-[#16322a]">
                   Clear Guidance
                 </p>
 
@@ -91,12 +91,12 @@ export default function PlanTour() {
 
             {/* Custom Tours */}
             <div className="flex items-center gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e9d1de] text-[#c1124c] shadow-sm">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ebe2cf] text-[#193830] shadow-sm">
                 <MapPin size={20} strokeWidth={1.8} />
               </div>
 
               <div>
-                <p className="font-semibold text-[#3f1152]">
+                <p className="font-semibold text-[#16322a]">
                   Group &amp; Family
                 </p>
 
@@ -114,7 +114,7 @@ export default function PlanTour() {
             {/* Explore Tours */}
             <Link
               href="/tours"
-              className="group inline-flex h-[58px] items-center justify-center gap-3 bg-[#c1124c] px-8 text-sm font-semibold tracking-[1px] text-white shadow-lg shadow-[#c1124c]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#9d0a3b] hover:shadow-xl"
+              className="group inline-flex h-[58px] items-center justify-center gap-3 bg-[#193830] px-8 text-sm font-semibold tracking-[1px] text-white shadow-lg shadow-[#193830]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#193830] hover:shadow-xl"
             >
               EXPLORE JOURNEYS
 
@@ -128,7 +128,7 @@ export default function PlanTour() {
             {/* Custom Trip */}
             <Link
               href="/enquiry"
-              className="group inline-flex h-[58px] items-center justify-center gap-3 border border-[#4b1164]/20 bg-white px-8 text-sm font-semibold tracking-[1px] text-[#4b1164] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#4b1164] hover:bg-[#4b1164] hover:text-white"
+              className="group inline-flex h-[58px] items-center justify-center gap-3 border border-[#183c32]/20 bg-white px-8 text-sm font-semibold tracking-[1px] text-[#183c32] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#183c32] hover:bg-[#183c32] hover:text-white"
             >
               SEND AN ENQUIRY
 
@@ -150,9 +150,9 @@ export default function PlanTour() {
 
           {/* ================= DECORATIVE CORNERS ================= */}
 
-          <div className="absolute -left-5 -top-5 h-28 w-28 border-l border-t border-[#ff0b91]" />
+          <div className="absolute -left-5 -top-5 h-28 w-28 border-l border-t border-[#b79b66]" />
 
-          <div className="absolute -bottom-5 -right-5 h-28 w-28 border-b border-r border-[#4b1164]/30" />
+          <div className="absolute -bottom-5 -right-5 h-28 w-28 border-b border-r border-[#183c32]/30" />
 
           {/* ================= IMAGE COLLAGE ================= */}
 
@@ -165,7 +165,7 @@ export default function PlanTour() {
             <div className="grid gap-5">
 
               {/* ---------- TOP IMAGE ---------- */}
-              <div className="group relative overflow-hidden rounded-tl-[90px] rounded-br-2xl border border-white bg-[#f1edef] shadow-[0_18px_45px_rgba(63,17,82,0.12)]">
+              <div className="group relative overflow-hidden rounded-tl-[90px] rounded-br-2xl border border-white bg-[#f3f0eb] shadow-[0_18px_45px_rgba(22,50,42,0.12)]">
 
                 <div className="flex min-h-[145px] items-center justify-center p-1">
                   <img
@@ -181,7 +181,7 @@ export default function PlanTour() {
               </div>
 
               {/* ---------- MAIN IMAGE ---------- */}
-              <div className="group relative overflow-hidden rounded-bl-[90px] rounded-tr-2xl border border-white bg-[#f1edef] shadow-[0_20px_50px_rgba(63,17,82,0.14)]">
+              <div className="group relative overflow-hidden rounded-bl-[90px] rounded-tr-2xl border border-white bg-[#f3f0eb] shadow-[0_20px_50px_rgba(22,50,42,0.14)]">
 
                 <div className="flex min-h-[330px] items-center justify-center p-1">
                   <img
@@ -205,7 +205,7 @@ export default function PlanTour() {
             <div className="grid gap-5">
 
               {/* ---------- SIDE TOP ---------- */}
-              <div className="group relative overflow-hidden rounded-tr-[55px] rounded-bl-xl border border-white bg-[#f1edef] shadow-[0_15px_40px_rgba(63,17,82,0.11)]">
+              <div className="group relative overflow-hidden rounded-tr-[55px] rounded-bl-xl border border-white bg-[#f3f0eb] shadow-[0_15px_40px_rgba(22,50,42,0.11)]">
 
                 <div className="flex min-h-[145px] items-center justify-center p-1">
                   <img
@@ -221,7 +221,7 @@ export default function PlanTour() {
               </div>
 
               {/* ---------- SIDE BOTTOM ---------- */}
-              <div className="group relative overflow-hidden rounded-br-[80px] rounded-tl-xl border border-white bg-[#f1edef] shadow-[0_20px_45px_rgba(63,17,82,0.13)]">
+              <div className="group relative overflow-hidden rounded-br-[80px] rounded-tl-xl border border-white bg-[#f3f0eb] shadow-[0_20px_45px_rgba(22,50,42,0.13)]">
 
                 <div className="flex min-h-[330px] items-center justify-center p-1">
                   <img
@@ -246,12 +246,12 @@ export default function PlanTour() {
 
           <div className="absolute -bottom-7 left-1/2 z-20 -translate-x-1/2">
 
-            <div className="relative min-w-[205px] rounded-2xl border border-white/30 bg-[#4b1164] px-7 py-5 text-center shadow-[0_18px_45px_rgba(63,17,82,0.25)]">
+            <div className="relative min-w-[205px] rounded-2xl border border-white/30 bg-[#183c32] px-7 py-5 text-center shadow-[0_18px_45px_rgba(22,50,42,0.25)]">
 
               {/* Gold Accent */}
-              <div className="absolute left-1/2 top-0 h-[3px] w-12 -translate-x-1/2 rounded-full bg-[#ff0b91]" />
+              <div className="absolute left-1/2 top-0 h-[3px] w-12 -translate-x-1/2 rounded-full bg-[#b79b66]" />
 
-              <p className="font-serif text-2xl font-bold tracking-wide text-[#ff0b91]">
+              <p className="font-serif text-2xl font-bold tracking-wide text-[#b79b66]">
                 Your Ibadah
               </p>
 

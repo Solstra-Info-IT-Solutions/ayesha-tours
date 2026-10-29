@@ -19,19 +19,19 @@ export default function TransportHero() {
       {/* ================= PREMIUM OVERLAYS ================= */}
 
       {/* Main cinematic overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#290837]/85 via-[#290837]/55 to-[#290837]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0d211b]/85 via-[#0d211b]/55 to-[#0d211b]/20" />
 
       {/* Bottom depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#1c0626]/65 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#091713]/65 via-transparent to-transparent" />
 
       {/* Soft warm accent */}
-      <div className="absolute -left-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[#e40e83]/10 blur-3xl" />
+      <div className="absolute -left-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[#7b6337]/10 blur-3xl" />
 
       {/* ================= DECORATIVE ELEMENTS ================= */}
 
       <div className="pointer-events-none absolute left-10 top-10 hidden h-[180px] w-[180px] rounded-full border border-white/10 lg:block" />
 
-      <div className="pointer-events-none absolute bottom-10 right-10 hidden h-[220px] w-[220px] rounded-full border border-[#e40e83]/20 lg:block" />
+      <div className="pointer-events-none absolute bottom-10 right-10 hidden h-[220px] w-[220px] rounded-full border border-[#7b6337]/20 lg:block" />
 
       {/* ================= CONTENT ================= */}
 
@@ -43,13 +43,13 @@ export default function TransportHero() {
 
           <div className="flex items-center gap-4">
 
-            <span className="h-[2px] w-10 bg-[#e40e83]" />
+            <span className="h-[2px] w-10 bg-[#7b6337]" />
 
             <div className="flex items-center gap-2">
 
               <CarFront
                 size={16}
-                className="text-[#e40e83]"
+                className="text-[#7b6337]"
               />
 
               <span className="text-[10px] font-semibold uppercase tracking-[2.5px] text-white/80 sm:text-[11px]">
@@ -70,7 +70,7 @@ export default function TransportHero() {
               Calmly.
             </span>
 
-            <span className="mt-1 block italic text-[#fb1895]">
+            <span className="mt-1 block italic text-[#b79b66]">
               Travel With Ease.
             </span>
 
@@ -91,7 +91,7 @@ export default function TransportHero() {
 
             <Link
               href="#fleet"
-              className="group inline-flex h-[54px] items-center justify-center gap-3 bg-[#c0154e] px-8 text-[11px] font-bold uppercase tracking-[1.5px] text-white shadow-[0_15px_35px_rgba(192,21,78,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#a51444] hover:shadow-[0_20px_45px_rgba(192,21,78,0.35)]"
+              className="group inline-flex h-[54px] items-center justify-center gap-3 bg-[#193830] px-8 text-[11px] font-bold uppercase tracking-[1.5px] text-white shadow-[0_15px_35px_rgba(25,56,48,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-[#193830] hover:shadow-[0_20px_45px_rgba(25,56,48,0.35)]"
             >
 
               View Vehicle Options
@@ -105,7 +105,7 @@ export default function TransportHero() {
 
             <Link
               href="/transport-request-quote"
-              className="inline-flex h-[54px] items-center justify-center border border-white/30 bg-white/10 px-8 text-[11px] font-bold uppercase tracking-[1.5px] text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#4e1367]"
+              className="inline-flex h-[54px] items-center justify-center border border-white/30 bg-white/10 px-8 text-[11px] font-bold uppercase tracking-[1.5px] text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#1a3e34]"
             >
               Request a Quote
             </Link>
@@ -118,7 +118,7 @@ export default function TransportHero() {
 
             <div className="flex items-center gap-3">
 
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e40e83]/40 text-[11px] text-[#fb1895]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#7b6337]/40 text-[11px] text-[#b79b66]">
                 01
               </span>
 
@@ -130,7 +130,7 @@ export default function TransportHero() {
 
             <div className="flex items-center gap-3">
 
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e40e83]/40 text-[11px] text-[#fb1895]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#7b6337]/40 text-[11px] text-[#b79b66]">
                 02
               </span>
 
@@ -142,7 +142,7 @@ export default function TransportHero() {
 
             <div className="flex items-center gap-3">
 
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e40e83]/40 text-[11px] text-[#fb1895]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#7b6337]/40 text-[11px] text-[#b79b66]">
                 03
               </span>
 
@@ -166,7 +166,7 @@ export default function TransportHero() {
           Vehicle Options
         </span>
 
-        <span className="h-px w-14 bg-[#e40e83]" />
+        <span className="h-px w-14 bg-[#7b6337]" />
 
       </div>
 

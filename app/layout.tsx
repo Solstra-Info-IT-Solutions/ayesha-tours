@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Poppins } from "next/font/google";
+import { Amiri, Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import FloatingActions from "@/components/FloatingActions";
 import CookieConsent from "@/components/CookieConsent";
@@ -7,20 +7,36 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import Analytics from "@/components/seo/Analytics";
 import ClickTracker from "@/components/seo/ClickTracker";
 import JsonLd from "@/components/seo/JsonLd";
+import RevealObserver from "@/components/motion/RevealObserver";
 import { ANALYTICS, IS_PRODUCTION_SITE, SITE, SITE_URL, absoluteUrl } from "@/lib/site";
 
-const poppins = Poppins({
+// Editorial display serif, functional sans and an Arabic face used only
+// for the names of the two holy cities.
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-manrope",
   display: "swap",
 });
+
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: ["400"],
+  variable: "--font-amiri",
+  display: "swap",
+});
+
+// Marks the document as able to run reveal animations before first paint,
+// so content is only ever hidden when JavaScript is actually running.
+const motionBootstrap =
+  "try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion-ok')}}catch(e){}";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -86,7 +102,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#3e0e52",
+  themeColor: "#102B25",
 };
 
 const businessLd = {
@@ -125,8 +141,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={`${poppins.variable} ${playfair.variable}`} suppressHydrationWarning>
+    <html lang="en-IN" className={`${cormorant.variable} ${manrope.variable} ${amiri.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <script dangerouslySetInnerHTML={{ __html: motionBootstrap }} />
         <JsonLd data={businessLd} />
         <JsonLd data={websiteLd} />
         <AnnouncementBar />
@@ -135,6 +152,7 @@ export default function RootLayout({
         <CookieConsent />
         <Analytics />
         <ClickTracker />
+        <RevealObserver />
       </body>
     </html>
   );

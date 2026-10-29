@@ -239,13 +239,13 @@ New enquiry received from the website.
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-[1100px] px-5 sm:px-8 lg:px-10">
 
-          <div className="relative overflow-hidden border border-[#e2d7dd] bg-[#fffdfe] shadow-[0_30px_100px_rgba(63,17,82,0.10)]">
+          <div className="relative overflow-hidden border border-[#e6e0d3] bg-[#fefefe] shadow-[0_30px_100px_rgba(22,50,42,0.10)]">
 
             {/* Top Accent */}
 
-            <div className="h-[4px] bg-gradient-to-r from-[#3f1152] via-[#e40e83] to-[#3f1152]" />
+            <div className="h-[4px] bg-gradient-to-r from-[#16322a] via-[#7b6337] to-[#16322a]" />
 
-            <div className="pointer-events-none absolute -right-32 -top-32 h-[320px] w-[320px] rounded-full border border-[#e40e83]/15" />
+            <div className="pointer-events-none absolute -right-32 -top-32 h-[320px] w-[320px] rounded-full border border-[#7b6337]/15" />
 
             <div className="relative p-6 sm:p-10 lg:p-14">
 
@@ -254,29 +254,29 @@ New enquiry received from the website.
               <div className="max-w-[650px]">
 
                 <div className="flex items-center gap-4">
-                  <span className="h-px w-10 bg-[#e40e83]" />
+                  <span className="h-px w-10 bg-[#7b6337]" />
 
                   <div className="flex items-center gap-2">
                     <Sparkles
                       size={13}
-                      className="text-[#e40e83]"
+                      className="text-[#7b6337]"
                     />
 
-                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#4e1367]">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#1a3e34]">
                       Send Us A Message
                     </span>
                   </div>
                 </div>
 
-                <h2 className="mt-6 font-serif text-[34px] font-bold leading-tight text-[#3f1152] sm:text-[42px]">
+                <h2 className="mt-6 font-serif text-[34px] font-bold leading-tight text-[#16322a] sm:text-[42px]">
                   We&apos;d Love To Hear
 
-                  <span className="block italic text-[#e40e83]">
+                  <span className="block italic text-[#7b6337]">
                     From You.
                   </span>
                 </h2>
 
-                <p className="mt-5 text-[14px] leading-7 text-[#887b8d]">
+                <p className="mt-5 text-[14px] leading-7 text-[#5c6660]">
                   Tell us how we can help. Your message opens in WhatsApp so you
                   can send it straight to our team.
                 </p>
@@ -329,9 +329,9 @@ New enquiry received from the website.
 
                 <div className="md:col-span-2">
 
-                  <label className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.6px] text-[#6e6272]">
+                  <label className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.6px] text-[#666e6a]">
 
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#4e1367]/10 text-[#4e1367]">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1a3e34]/10 text-[#1a3e34]">
                       <MessageSquare size={14} />
                     </span>
 
@@ -344,7 +344,7 @@ New enquiry received from the website.
                     rows={6}
                     required
                     placeholder="E.g. Umrah for 2 adults in March, hotel within walking distance of the Haram..."
-                    className="w-full resize-none border border-[#dad2d6] bg-[#fbf9fa] px-5 py-4 text-[14px] text-[#5d5163] outline-none transition-all duration-300 placeholder:text-[#a9a2ac] focus:border-[#4e1367] focus:bg-white focus:shadow-[0_10px_28px_rgba(78,19,103,0.08)]"
+                    className="w-full resize-none border border-[#dfd9cd] bg-[#fbfbf9] px-5 py-4 text-[14px] text-[#555f5a] outline-none transition-all duration-300 placeholder:text-[#5c6660] focus:border-[#1a3e34] focus:bg-white focus:shadow-[0_10px_28px_rgba(26,62,52,0.08)]"
                   />
 
                 </div>
@@ -356,10 +356,10 @@ New enquiry received from the website.
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group relative inline-flex min-h-[56px] min-w-[220px] items-center justify-center gap-4 overflow-hidden bg-[#4e1367] px-8 text-[10px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_15px_35px_rgba(78,19,103,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#3f1152] disabled:cursor-not-allowed disabled:opacity-70"
+                    className="group relative inline-flex min-h-[56px] min-w-[220px] items-center justify-center gap-4 overflow-hidden bg-[#1a3e34] px-8 text-[10px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_15px_35px_rgba(26,62,52,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#16322a] disabled:cursor-not-allowed disabled:opacity-70"
                   >
 
-                    <span className="absolute inset-0 translate-x-[-110%] bg-[#e40e83] transition-transform duration-500 group-hover:translate-x-0" />
+                    <span className="absolute inset-0 translate-x-[-110%] bg-[#7b6337] transition-transform duration-500 group-hover:translate-x-0" />
 
                     <span className="relative z-10 flex items-center gap-3">
 
@@ -382,11 +382,11 @@ New enquiry received from the website.
 
               {/* Privacy */}
 
-              <div className="mt-8 flex items-center gap-2 text-[11px] text-[#9a929d]">
+              <div className="mt-8 flex items-center gap-2 text-[11px] text-[#5c6660]">
 
                 <CheckCircle2
                   size={14}
-                  className="text-[#e40e83]"
+                  className="text-[#7b6337]"
                 />
 
                 Your details are only used to answer your enquiry. See our Privacy Policy.
@@ -431,9 +431,9 @@ function PremiumField({
   return (
     <div className="group">
 
-      <label className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.6px] text-[#6e6272]">
+      <label className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1.6px] text-[#666e6a]">
 
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#4e1367]/10 text-[#4e1367] transition-all duration-300 group-focus-within:bg-[#4e1367] group-focus-within:text-white">
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1a3e34]/10 text-[#1a3e34] transition-all duration-300 group-focus-within:bg-[#1a3e34] group-focus-within:text-white">
           {icon}
         </span>
 
@@ -443,7 +443,7 @@ function PremiumField({
 
       <input
         {...props}
-        className="h-[56px] w-full border border-[#dad2d6] bg-[#fbf9fa] px-5 text-[14px] text-[#5d5163] outline-none transition-all duration-300 placeholder:text-[#a9a2ac] focus:border-[#4e1367] focus:bg-white focus:shadow-[0_10px_28px_rgba(78,19,103,0.08)]"
+        className="h-[56px] w-full border border-[#dfd9cd] bg-[#fbfbf9] px-5 text-[14px] text-[#555f5a] outline-none transition-all duration-300 placeholder:text-[#5c6660] focus:border-[#1a3e34] focus:bg-white focus:shadow-[0_10px_28px_rgba(26,62,52,0.08)]"
       />
 
     </div>

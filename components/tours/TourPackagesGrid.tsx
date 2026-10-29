@@ -83,29 +83,29 @@ export default function TourPackagesGrid({
       : packages.filter((tour) => tour.category === category);
 
   return (
-    <section className="bg-[#f6f2f4] py-20 sm:py-24 lg:py-28">
+    <section className="bg-[#f7f5f1] py-20 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-10">
 
         {/* Header */}
 
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <div className="flex items-center justify-center gap-3">
-            <Sparkles size={13} className="text-[#ff058f]" />
+            <Sparkles size={13} className="text-[#b79b66]" />
 
-            <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#4e1367]">
+            <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#1a3e34]">
               Umrah & Haj Packages
             </span>
           </div>
 
-          <h2 className="mt-5 font-serif text-[38px] font-bold text-[#3f1152] sm:text-5xl">
+          <h2 className="mt-5 font-serif text-[38px] font-bold text-[#16322a] sm:text-5xl">
             Packages For{" "}
 
-            <span className="italic font-medium text-[#e40e83]">
+            <span className="italic font-medium text-[#7b6337]">
               Every Pilgrim.
             </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-7 text-[#6e6572]">
+          <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-7 text-[#686f6c]">
             Compare our package styles below. Every package can be adjusted, and
             final hotels, dates and inclusions are confirmed in your quote.
           </p>
@@ -117,7 +117,7 @@ export default function TourPackagesGrid({
           {visible.map((tour, index) => (
             <article
               key={tour.title}
-              className="group overflow-hidden rounded-[28px] border border-[#dfd8dc] bg-white shadow-[0_15px_45px_rgba(63,17,82,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#ff058f]/50 hover:shadow-[0_30px_70px_rgba(63,17,82,0.14)]"
+              className="group overflow-hidden rounded-[28px] border border-[#e3ded4] bg-white shadow-[0_15px_45px_rgba(22,50,42,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#b79b66]/50 hover:shadow-[0_30px_70px_rgba(22,50,42,0.14)]"
             >
               {/* Image */}
 
@@ -128,13 +128,13 @@ export default function TourPackagesGrid({
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#3e0e52]/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#143129]/70 via-transparent to-transparent" />
 
-                <span className="absolute left-5 top-5 rounded-full border border-white/20 bg-[#3e0e52]/70 px-3 py-2 text-[9px] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-md">
+                <span className="absolute left-5 top-5 rounded-full border border-white/20 bg-[#143129]/70 px-3 py-2 text-[9px] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-md">
                   0{index + 1}
                 </span>
 
-                <span className="absolute bottom-5 left-5 rounded-full bg-[#ff058f] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.16em] text-white">
+                <span className="absolute bottom-5 left-5 rounded-full bg-[#b79b66] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.16em] text-[#0e1f1b]">
                   {tour.category}
                 </span>
               </div>
@@ -142,7 +142,7 @@ export default function TourPackagesGrid({
               {/* Content */}
 
               <div className="p-6 sm:p-7">
-                <h3 className="font-serif text-[27px] font-bold leading-tight text-[#3f1152]">
+                <h3 className="font-serif text-[27px] font-bold leading-tight text-[#16322a]">
                   {tour.title}
                 </h3>
 
@@ -164,20 +164,20 @@ export default function TourPackagesGrid({
                 </div>
 
                 {DEMO_MODE && (
-                  <p className="mt-4 rounded-lg bg-[#f6eef3] px-3 py-2 text-[11px] leading-5 text-[#7a4a68]">
+                  <p className="mt-4 rounded-lg bg-[#f7f4ed] px-3 py-2 text-[11px] leading-5 text-[#7b6337]">
                     Demo package – details are illustrative and subject to confirmation.
                   </p>
                 )}
 
                 <Link
                   href="/request-quote"
-                  className="group/link mt-7 flex items-center justify-between border-t border-[#e2dbdf] pt-5"
+                  className="group/link mt-7 flex items-center justify-between border-t border-[#e6e1d7] pt-5"
                 >
-                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#4e1367]">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1a3e34]">
                     Request A Quote
                   </span>
 
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f3edf5] text-[#4e1367] transition-all duration-300 group-hover/link:bg-[#4e1367] group-hover/link:text-white">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f6f3ec] text-[#1a3e34] transition-all duration-300 group-hover/link:bg-[#1a3e34] group-hover/link:text-white">
                     <ArrowUpRight size={17} />
                   </span>
                 </Link>
@@ -198,8 +198,8 @@ function InfoRow({
   text: string;
 }) {
   return (
-    <div className="flex items-center gap-3 text-[13px] text-[#736a76]">
-      <span className="text-[#e40e83]">
+    <div className="flex items-center gap-3 text-[13px] text-[#6d7370]">
+      <span className="text-[#7b6337]">
         {icon}
       </span>
 

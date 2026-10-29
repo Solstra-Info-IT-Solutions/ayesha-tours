@@ -34,12 +34,12 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-[#3f1152] py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-[#16322a] py-20 sm:py-24 lg:py-28">
 
       {/* Decorative Background */}
       <div className="pointer-events-none absolute -left-40 -bottom-40 h-[500px] w-[500px] rounded-full border border-white/10" />
 
-      <div className="pointer-events-none absolute -right-32 top-10 h-[420px] w-[420px] rounded-full border border-[#fb1895]/15" />
+      <div className="pointer-events-none absolute -right-32 top-10 h-[420px] w-[420px] rounded-full border border-[#b79b66]/15" />
 
       <div className="relative mx-auto w-full max-w-[1500px] px-6 sm:px-10 lg:px-16 xl:px-24">
 
@@ -48,13 +48,13 @@ export default function WhyChooseUs() {
 
           <div className="flex items-center justify-center gap-4">
 
-            <span className="h-px w-10 bg-[#fb1895]" />
+            <span className="h-px w-10 bg-[#b79b66]" />
 
-            <span className="text-[10px] font-semibold uppercase tracking-[3px] text-[#fb1895]">
+            <span className="text-[10px] font-semibold uppercase tracking-[3px] text-[#b79b66]">
               Why Pilgrims Choose Us
             </span>
 
-            <span className="h-px w-10 bg-[#fb1895]" />
+            <span className="h-px w-10 bg-[#b79b66]" />
 
           </div>
 
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
 
             Designed Around
 
-            <span className="italic text-[#fb1895]">
+            <span className="italic text-[#b79b66]">
               {" "}You.
             </span>
 
@@ -88,10 +88,10 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={feature.title}
-                className="group rounded-[18px] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:border-[#fb1895]/40 hover:bg-white/[0.07]"
+                className="group rounded-[18px] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:border-[#b79b66]/40 hover:bg-white/[0.07]"
               >
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fb1895]/15 text-[#fb1895] transition duration-300 group-hover:bg-[#fb1895] group-hover:text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#b79b66]/15 text-[#b79b66] transition duration-300 group-hover:bg-[#b79b66] group-hover:text-[#0e1f1b]">
 
                   <Icon size={21} />
 

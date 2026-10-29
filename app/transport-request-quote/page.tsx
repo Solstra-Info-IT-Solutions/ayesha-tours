@@ -13,7 +13,7 @@ export const metadata = buildMetadata({
 
 export default function TransportRequestQuotePage() {
   return (
-    <main className="min-h-screen bg-[#f9f7f8]">
+    <main className="min-h-screen bg-[#faf9f6]">
       <TransportQuoteHero />
 
       <section className="relative pb-20 pt-12 sm:pb-24 sm:pt-16">

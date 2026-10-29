@@ -49,33 +49,33 @@ export default function ContactInfoCards() {
             <a
               key={item.title}
               href={item.href}
-              className="group relative overflow-hidden border border-[#e2d7dd] bg-[#fffdfe] p-6 shadow-[0_18px_50px_rgba(63,17,82,0.08)] transition-all duration-500 hover:-translate-y-2 hover:border-[#e40e83]/60 hover:shadow-[0_25px_60px_rgba(63,17,82,0.14)]"
+              className="group relative overflow-hidden border border-[#e6e0d3] bg-[#fefefe] p-6 shadow-[0_18px_50px_rgba(22,50,42,0.08)] transition-all duration-500 hover:-translate-y-2 hover:border-[#7b6337]/60 hover:shadow-[0_25px_60px_rgba(22,50,42,0.14)]"
             >
               {/* Background Accent */}
 
-              <div className="absolute right-[-30px] top-[-30px] h-24 w-24 rounded-full bg-[#e40e83]/[0.05] transition-transform duration-500 group-hover:scale-150" />
+              <div className="absolute right-[-30px] top-[-30px] h-24 w-24 rounded-full bg-[#7b6337]/[0.05] transition-transform duration-500 group-hover:scale-150" />
 
               <div className="relative">
                 <div className="flex items-start justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#4e1367]/10 text-[#4e1367] transition-all duration-300 group-hover:bg-[#4e1367] group-hover:text-white">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1a3e34]/10 text-[#1a3e34] transition-all duration-300 group-hover:bg-[#1a3e34] group-hover:text-white">
                     <Icon size={19} />
                   </div>
 
                   <ArrowUpRight
                     size={17}
-                    className="text-[#e40e83] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                    className="text-[#7b6337] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                   />
                 </div>
 
-                <h3 className="mt-6 font-serif text-[20px] font-bold text-[#3f1152]">
+                <h3 className="mt-6 font-serif text-[20px] font-bold text-[#16322a]">
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-[13px] leading-6 text-[#8e8293]">
+                <p className="mt-2 text-[13px] leading-6 text-[#5c6660]">
                   {item.description}
                 </p>
 
-                <p className="mt-5 text-[13px] font-semibold text-[#4e1367]">
+                <p className="mt-5 text-[13px] font-semibold text-[#1a3e34]">
                   {item.value}
                 </p>
               </div>

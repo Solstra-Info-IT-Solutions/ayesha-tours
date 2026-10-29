@@ -255,10 +255,10 @@ export default function QuickTravelAssistant() {
               setActiveMenu(null);
             }
           }}
-          className={`group flex items-center gap-3 rounded-full px-5 py-3.5 text-white shadow-[0_15px_40px_rgba(62,14,82,0.3)] transition-all duration-300 hover:-translate-y-1 ${
+          className={`group flex items-center gap-3 rounded-full px-5 py-3.5 text-white shadow-[0_15px_40px_rgba(20,49,41,0.3)] transition-all duration-300 hover:-translate-y-1 ${
             isOpen
-              ? "bg-[#3f1152]"
-              : "bg-[#4e1367] hover:bg-[#3f1152]"
+              ? "bg-[#16322a]"
+              : "bg-[#1a3e34] hover:bg-[#16322a]"
           }`}
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10">
@@ -289,19 +289,19 @@ export default function QuickTravelAssistant() {
             : "pointer-events-none translate-y-5 scale-95 opacity-0"
         }`}
       >
-        <div className="overflow-hidden rounded-[26px] border border-white/70 bg-[#f9f7f8]/95 shadow-[0_25px_70px_rgba(62,14,82,0.25)] backdrop-blur-xl">
+        <div className="overflow-hidden rounded-[26px] border border-white/70 bg-[#faf9f6]/95 shadow-[0_25px_70px_rgba(20,49,41,0.25)] backdrop-blur-xl">
 
           {/* =====================================================
               HEADER
           ====================================================== */}
 
-          <div className="relative overflow-hidden border-b border-[#3f1152]/10 px-5 pb-5 pt-5 sm:px-6">
+          <div className="relative overflow-hidden border-b border-[#16322a]/10 px-5 pb-5 pt-5 sm:px-6">
 
             {/* Background Decoration */}
 
-            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-[#ff058f]/20" />
+            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-[#b79b66]/20" />
 
-            <div className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full border border-[#ff058f]/15" />
+            <div className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full border border-[#b79b66]/15" />
 
             {/* Back Button */}
 
@@ -309,7 +309,7 @@ export default function QuickTravelAssistant() {
               <button
                 type="button"
                 onClick={() => setActiveMenu(null)}
-                className="relative z-10 mb-4 flex items-center gap-1.5 text-[10px] font-bold tracking-[0.12em] text-[#4e1367] transition hover:text-[#ff058f]"
+                className="relative z-10 mb-4 flex items-center gap-1.5 text-[10px] font-bold tracking-[0.12em] text-[#1a3e34] transition hover:text-[#b79b66]"
               >
                 <ChevronLeft size={15} />
                 BACK
@@ -320,14 +320,14 @@ export default function QuickTravelAssistant() {
 
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="h-px w-6 bg-[#ff058f]" />
+                  <span className="h-px w-6 bg-[#b79b66]" />
 
-                  <span className="text-[9px] font-bold tracking-[0.2em] text-[#ff058f]">
+                  <span className="text-[9px] font-bold tracking-[0.2em] text-[#b79b66]">
                     AYESHA TOURS
                   </span>
                 </div>
 
-                <h3 className="mt-3 font-serif text-[24px] font-bold leading-tight text-[#3f1152]">
+                <h3 className="mt-3 font-serif text-[24px] font-bold leading-tight text-[#16322a]">
                   {getTitle()}
                 </h3>
 
@@ -342,7 +342,7 @@ export default function QuickTravelAssistant() {
                   setIsOpen(false);
                   setActiveMenu(null);
                 }}
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-400 transition hover:text-[#3f1152]"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 transition hover:text-[#16322a]"
                 aria-label="Close assistant"
               >
                 <X size={17} />
@@ -369,18 +369,18 @@ export default function QuickTravelAssistant() {
                       handleAction(item.id);
                     }
                   }}
-                  className="group flex w-full items-center gap-3 rounded-2xl border border-transparent px-3 py-3 text-left transition-all duration-300 hover:border-[#3f1152]/10 hover:bg-white hover:shadow-[0_8px_25px_rgba(63,17,82,0.07)]"
+                  className="group flex w-full items-center gap-3 rounded-2xl border border-transparent px-3 py-3 text-left transition-all duration-300 hover:border-[#16322a]/10 hover:bg-white hover:shadow-[0_8px_25px_rgba(22,50,42,0.07)]"
                 >
                   {/* Icon */}
 
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ede7f0] text-[#4e1367] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#4e1367] group-hover:text-white">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f2eee5] text-[#1a3e34] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#1a3e34] group-hover:text-white">
                     {item.icon}
                   </div>
 
                   {/* Text */}
 
                   <div className="min-w-0 flex-1">
-                    <p className="text-[13px] font-semibold text-[#3f1152]">
+                    <p className="text-[13px] font-semibold text-[#16322a]">
                       {item.title}
                     </p>
 
@@ -391,7 +391,7 @@ export default function QuickTravelAssistant() {
 
                   {/* Arrow */}
 
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f1f0f2] text-[#4e1367] transition-all duration-300 group-hover:bg-[#ff058f] group-hover:text-white">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f4f2ee] text-[#1a3e34] transition-all duration-300 group-hover:bg-[#b79b66] group-hover:text-[#0e1f1b]">
                     <ChevronRight
                       size={16}
                       className="transition-transform duration-300 group-hover:translate-x-0.5"
@@ -407,11 +407,11 @@ export default function QuickTravelAssistant() {
               FOOTER
           ====================================================== */}
 
-          <div className="border-t border-[#3f1152]/10 bg-[#f4f1f3] px-5 py-3">
+          <div className="border-t border-[#16322a]/10 bg-[#f5f3f0] px-5 py-3">
             <div className="flex items-center justify-center gap-2">
-              <Sparkles size={12} className="text-[#ff058f]" />
+              <Sparkles size={12} className="text-[#b79b66]" />
 
-              <span className="text-center text-[8px] font-bold tracking-[0.22em] text-[#3f1152]/55">
+              <span className="text-center text-[8px] font-bold tracking-[0.22em] text-[#16322a]/55">
                 YOUR PILGRIMAGE STARTS HERE
               </span>
             </div>

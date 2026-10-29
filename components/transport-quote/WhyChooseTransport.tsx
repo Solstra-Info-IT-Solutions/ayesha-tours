@@ -28,18 +28,18 @@ export default function WhyChooseTransport() {
   ];
 
   return (
-    <div className="overflow-hidden rounded-[28px] bg-[#3f1152] p-7 text-white shadow-xl">
+    <div className="overflow-hidden rounded-[28px] bg-[#16322a] p-7 text-white shadow-xl">
       <div className="flex items-center gap-3">
-        <Sparkles size={17} className="text-[#ff058f]" />
+        <Sparkles size={17} className="text-[#b79b66]" />
 
-        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#ff058f]">
+        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#b79b66]">
           Travel With Confidence
         </span>
       </div>
 
       <h3 className="mt-5 font-serif text-3xl font-bold leading-tight">
         Calm Transfers.
-        <span className="block italic font-medium text-[#ff058f]">
+        <span className="block italic font-medium text-[#b79b66]">
           Every Pilgrim.
         </span>
       </h3>
@@ -50,7 +50,7 @@ export default function WhyChooseTransport() {
 
           return (
             <div key={feature.title} className="flex gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#ff058f]">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#b79b66]">
                 <Icon size={18} />
               </div>
 

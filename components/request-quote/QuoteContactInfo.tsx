@@ -35,26 +35,26 @@ export default function QuoteContactInfo() {
       {/* Eyebrow */}
       <div className="flex items-center gap-3">
 
-        <span className="h-[2px] w-9 bg-[#e40e83]" />
+        <span className="h-[2px] w-9 bg-[#7b6337]" />
 
-        <span className="text-[10px] font-semibold uppercase tracking-[2.5px] text-[#4e1367]">
+        <span className="text-[10px] font-semibold uppercase tracking-[2.5px] text-[#1a3e34]">
           Travel With Peace Of Mind
         </span>
 
       </div>
 
       {/* Heading */}
-      <h2 className="mt-6 font-serif text-4xl font-bold leading-[1.15] text-[#3f1152]">
+      <h2 className="mt-6 font-serif text-4xl font-bold leading-[1.15] text-[#16322a]">
 
         Your Pilgrimage
 
-        <span className="block italic text-[#e40e83]">
+        <span className="block italic text-[#7b6337]">
           Starts Here.
         </span>
 
       </h2>
 
-      <p className="mt-6 max-w-md text-[15px] leading-7 text-[#6e6572]">
+      <p className="mt-6 max-w-md text-[15px] leading-7 text-[#686f6c]">
 
         Whether you're planning a family Umrah, a group journey, Ramadan
           Umrah or Haj, we're here to help you plan every detail.
@@ -73,7 +73,7 @@ export default function QuoteContactInfo() {
               className="flex gap-4"
             >
 
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#edd8e3] text-[#4e1367]">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#eee6d7] text-[#1a3e34]">
 
                 <Icon size={19} />
 
@@ -81,11 +81,11 @@ export default function QuoteContactInfo() {
 
               <div>
 
-                <h3 className="font-serif text-lg font-bold text-[#3f1152]">
+                <h3 className="font-serif text-lg font-bold text-[#16322a]">
                   {benefit.title}
                 </h3>
 
-                <p className="mt-1 text-[13px] leading-6 text-[#847a88]">
+                <p className="mt-1 text-[13px] leading-6 text-[#5c6660]">
                   {benefit.description}
                 </p>
 
@@ -98,9 +98,9 @@ export default function QuoteContactInfo() {
       </div>
 
       {/* Contact Card */}
-      <div className="mt-12 rounded-[20px] bg-[#3f1152] p-7 text-white shadow-[0_20px_50px_rgba(63,17,82,0.18)]">
+      <div className="mt-12 rounded-[20px] bg-[#16322a] p-7 text-white shadow-[0_20px_50px_rgba(22,50,42,0.18)]">
 
-        <p className="text-[10px] font-semibold uppercase tracking-[2px] text-[#fb1895]">
+        <p className="text-[10px] font-semibold uppercase tracking-[2px] text-[#b79b66]">
           Prefer To Speak Directly?
         </p>
 
@@ -115,7 +115,7 @@ export default function QuoteContactInfo() {
             className="flex items-center gap-3 text-sm text-white/75 transition hover:text-white"
           >
 
-            <Phone size={16} className="text-[#fb1895]" />
+            <Phone size={16} className="text-[#b79b66]" />
 
             {SITE.phone}
           </a>
@@ -125,7 +125,7 @@ export default function QuoteContactInfo() {
             className="flex items-center gap-3 text-sm text-white/75 transition hover:text-white"
           >
 
-            <Mail size={16} className="text-[#fb1895]" />
+            <Mail size={16} className="text-[#b79b66]" />
 
             {SITE.email}
           </a>

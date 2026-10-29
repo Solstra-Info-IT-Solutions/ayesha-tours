@@ -109,13 +109,13 @@ export async function POST(request: NextRequest) {
 
     const html = `
       <div style="font-family:Arial,sans-serif;max-width:640px">
-        <h2 style="color:#3e0e52;margin:0 0 4px">New ${escapeHtml(label)}</h2>
+        <h2 style="color:#143129;margin:0 0 4px">New ${escapeHtml(label)}</h2>
         <p style="color:#666;margin:0 0 16px">Received from the website</p>
         <table style="border-collapse:collapse;width:100%">
           ${rows
             .map(
               ([k, v]) =>
-                `<tr><td style="padding:8px 10px;border:1px solid #e2d7dd;background:#f9f6f8;font-weight:bold;vertical-align:top;width:35%">${escapeHtml(k)}</td><td style="padding:8px 10px;border:1px solid #e2d7dd;white-space:pre-wrap">${escapeHtml(v)}</td></tr>`
+                `<tr><td style="padding:8px 10px;border:1px solid #e6e0d3;background:#faf8f5;font-weight:bold;vertical-align:top;width:35%">${escapeHtml(k)}</td><td style="padding:8px 10px;border:1px solid #e6e0d3;white-space:pre-wrap">${escapeHtml(v)}</td></tr>`
             )
             .join("")}
         </table>

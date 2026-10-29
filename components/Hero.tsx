@@ -22,12 +22,12 @@ export default function Hero() {
         />
 
         {/* PREMIUM OVERLAYS */}
-        <div className="absolute inset-0 bg-[#1d0727]/60" />
+        <div className="absolute inset-0 bg-[#0a1714]/60" />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-[#1d0727]/45 to-[#1d0727]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-[#0a1714]/45 to-[#0a1714]/80" />
 
         {/* DECORATIVE GRADIENT */}
-        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#4e1368]/70 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#1a3f34]/70 to-transparent" />
 
         {/* CONTENT */}
         <div className="relative z-10 flex min-h-[760px] items-center justify-center px-5 py-24 sm:px-6">
@@ -36,11 +36,11 @@ export default function Hero() {
             {/* EXPERIENCE BADGE */}
             <div className="mb-9 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-5 py-3 shadow-2xl backdrop-blur-md">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ff38a5] opacity-60" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#ff38a5]" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#b79b66] opacity-60" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#b79b66]" />
               </span>
 
-              <Sparkles size={15} className="text-[#ff38a5]" />
+              <Sparkles size={15} className="text-[#b79b66]" />
 
               <span className="font-serif text-[11px] font-bold tracking-[2.5px] text-white sm:text-xs">
                 UMRAH & HAJ PACKAGES
@@ -52,17 +52,17 @@ export default function Hero() {
               A Sacred Journey,
               <br />
 
-              <span className="relative inline-block italic text-[#fb1895]">
+              <span className="relative inline-block italic text-[#b79b66]">
                 Thoughtfully Planned.
-                <span className="absolute -bottom-2 left-1/2 h-px w-3/4 -translate-x-1/2 bg-[#fb1895]/60" />
+                <span className="absolute -bottom-2 left-1/2 h-px w-3/4 -translate-x-1/2 bg-[#b79b66]/60" />
               </span>
             </h1>
 
             {/* PREMIUM DIVIDER */}
             <div className="mx-auto mt-10 flex items-center justify-center gap-4">
-              <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#ff36a4]" />
-              <span className="h-2 w-2 rotate-45 border border-[#ff36a4]" />
-              <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#ff36a4]" />
+              <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#b79b66]" />
+              <span className="h-2 w-2 rotate-45 border border-[#b79b66]" />
+              <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#b79b66]" />
             </div>
 
             {/* DESCRIPTION */}
@@ -82,9 +82,9 @@ export default function Hero() {
               {/* PLAN YOUR TRIP */}
               <a
                 href="/enquiry"
-                className="group relative flex h-[60px] min-w-[220px] items-center justify-center gap-3 overflow-hidden rounded-full bg-[#c1124c] px-8 font-serif text-[12px] font-bold tracking-[1.5px] text-white shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="group relative flex h-[60px] min-w-[220px] items-center justify-center gap-3 overflow-hidden rounded-full bg-[#193830] px-8 font-serif text-[12px] font-bold tracking-[1.5px] text-white shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
-                <span className="absolute inset-0 translate-y-full bg-[#9d0a3b] transition-transform duration-300 group-hover:translate-y-0" />
+                <span className="absolute inset-0 translate-y-full bg-[#193830] transition-transform duration-300 group-hover:translate-y-0" />
 
                 <span className="relative z-10">
                   PLAN YOUR UMRAH
@@ -101,7 +101,7 @@ export default function Hero() {
                 href={whatsappLink("Assalamu alaikum, I would like to know about your Umrah packages.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex h-[60px] min-w-[220px] items-center justify-center gap-3 rounded-full border border-white/30 bg-white/10 px-8 font-serif text-[12px] font-bold tracking-[1.5px] text-white shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/60 hover:bg-white hover:text-[#3f1152]"
+                className="group flex h-[60px] min-w-[220px] items-center justify-center gap-3 rounded-full border border-white/30 bg-white/10 px-8 font-serif text-[12px] font-bold tracking-[1.5px] text-white shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/60 hover:bg-white hover:text-[#16322a]"
               >
                 <MessageSquare
                   size={18}
@@ -121,13 +121,13 @@ export default function Hero() {
           </span>
 
           <div className="flex h-10 w-6 justify-center rounded-full border border-white/30 p-1">
-            <span className="h-2 w-1 animate-bounce rounded-full bg-[#ff36a4]" />
+            <span className="h-2 w-1 animate-bounce rounded-full bg-[#b79b66]" />
           </div>
         </div>
       </section>
 
       {/* ================= FEATURE BAR ================= */}
-      <section className="relative overflow-hidden bg-[#4e1368]">
+      <section className="relative overflow-hidden bg-[#1a3f34]">
         {/* SUBTLE BACKGROUND DECORATION */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
           <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full border-[40px] border-white" />
@@ -139,16 +139,16 @@ export default function Hero() {
 
             {/* FEATURE 1 */}
             <div className="group flex items-center gap-5 border-b border-white/15 py-8 transition md:border-b-0 md:border-r md:pr-8">
-              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#5e2775] shadow-lg transition duration-300 group-hover:-translate-y-1 group-hover:scale-105">
+              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#27493f] shadow-lg transition duration-300 group-hover:-translate-y-1 group-hover:scale-105">
                 <BadgeCheck
                   size={31}
                   strokeWidth={1.7}
-                  className="text-[#ff36a4]"
+                  className="text-[#b79b66]"
                 />
               </div>
 
               <div>
-                <p className="font-serif text-[17px] font-bold text-[#ff36a4]">
+                <p className="font-serif text-[17px] font-bold text-[#b79b66]">
                   Umrah & Haj
                 </p>
 
@@ -160,16 +160,16 @@ export default function Hero() {
 
             {/* FEATURE 2 */}
             <div className="group flex items-center gap-5 border-b border-white/15 py-8 transition md:border-b-0 md:border-r md:px-8">
-              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#5e2775] shadow-lg transition duration-300 group-hover:-translate-y-1 group-hover:scale-105">
+              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#27493f] shadow-lg transition duration-300 group-hover:-translate-y-1 group-hover:scale-105">
                 <Car
                   size={31}
                   strokeWidth={1.7}
-                  className="text-[#ff36a4]"
+                  className="text-[#b79b66]"
                 />
               </div>
 
               <div>
-                <p className="font-serif text-[17px] font-bold text-[#ff36a4]">
+                <p className="font-serif text-[17px] font-bold text-[#b79b66]">
                   Hotels Near Haram
                 </p>
 
@@ -181,16 +181,16 @@ export default function Hero() {
 
             {/* FEATURE 3 */}
             <div className="group flex items-center gap-5 py-8 transition md:pl-8">
-              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#5e2775] shadow-lg transition duration-300 group-hover:-translate-y-1 group-hover:scale-105">
+              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#27493f] shadow-lg transition duration-300 group-hover:-translate-y-1 group-hover:scale-105">
                 <Map
                   size={31}
                   strokeWidth={1.7}
-                  className="text-[#ff36a4]"
+                  className="text-[#b79b66]"
                 />
               </div>
 
               <div>
-                <p className="font-serif text-[17px] font-bold text-[#ff36a4]">
+                <p className="font-serif text-[17px] font-bold text-[#b79b66]">
                   Ziyarat & Transfers
                 </p>
 

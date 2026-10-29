@@ -878,12 +878,12 @@ _New pilgrimage enquiry from the website._
   ========================================================= */
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f6f3f5] text-[#291631]">
+    <main className="min-h-screen overflow-hidden bg-[#f7f5f2] text-[#141f1c]">
       <Navbar />
 
       {/* HERO HEADER */}
 
-      <section className="relative overflow-hidden bg-[#36004e] px-4 pb-28 pt-12 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[#0f2922] px-4 pb-28 pt-12 sm:px-6 lg:px-8">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full border border-white/30" />
           <div className="absolute -right-40 -top-40 h-[600px] w-[600px] rounded-full border border-white/20" />
@@ -891,18 +891,18 @@ _New pilgrimage enquiry from the website._
 
         <div className="relative mx-auto max-w-7xl">
           <div className="flex items-center justify-center gap-3">
-            <Sparkles className="text-[#ea3471]" size={20} />
-            <span className="text-xs font-semibold tracking-[4px] text-[#e3d9e8]">
+            <Sparkles className="text-[#b79b66]" size={20} />
+            <span className="text-xs font-semibold tracking-[4px] text-[#ebe4d6]">
               AYESHA TOURS
             </span>
           </div>
 
           <h1 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
             Plan Your
-            <span className="block text-[#ea3471]">Pilgrimage</span>
+            <span className="block text-[#b79b66]">Pilgrimage</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-7 text-[#d6c8dc] sm:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-7 text-[#e0d7c4] sm:text-lg">
             Tell us about your Umrah or Haj plans in six short steps, and our team will
             reply with suitable options for you and your family.
           </p>
@@ -912,10 +912,10 @@ _New pilgrimage enquiry from the website._
       {/* MAIN CARD */}
 
       <section className="relative z-10 mx-auto -mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-[32px] border border-white bg-white shadow-[0_30px_100px_rgba(54,0,78,0.15)]">
+        <div className="overflow-hidden rounded-[32px] border border-white bg-white shadow-[0_30px_100px_rgba(15,41,34,0.15)]">
           {/* PROGRESS */}
 
-          <div className="border-b border-gray-100 bg-[#fcfafb] px-4 py-6 sm:px-8 lg:px-12">
+          <div className="border-b border-gray-100 bg-[#fcfbfa] px-4 py-6 sm:px-8 lg:px-12">
             <div className="hidden items-center justify-between md:flex">
               {steps.map((item, index) => {
                 const number = index + 1;
@@ -926,10 +926,10 @@ _New pilgrimage enquiry from the website._
                       <div
                         className={`flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold transition ${
                           step > number
-                            ? "bg-[#ea3471] text-white"
+                            ? "bg-[#193830] text-white"
                             : step === number
-                            ? "bg-[#3d0057] text-white shadow-lg shadow-[#3d0057]/20"
-                            : "bg-[#edf0ef] text-gray-400"
+                            ? "bg-[#112d25] text-white shadow-lg shadow-[#112d25]/20"
+                            : "bg-[#edf0ef] text-gray-500"
                         }`}
                       >
                         {step > number ? <Check size={18} /> : number}
@@ -938,7 +938,7 @@ _New pilgrimage enquiry from the website._
                       <div>
                         <p
                           className={`text-xs font-bold uppercase tracking-wider ${
-                            step >= number ? "text-[#3d0057]" : "text-gray-400"
+                            step >= number ? "text-[#112d25]" : "text-gray-500"
                           }`}
                         >
                           Step {number}
@@ -951,7 +951,7 @@ _New pilgrimage enquiry from the website._
                     {index !== steps.length - 1 && (
                       <div
                         className={`mx-4 h-[2px] flex-1 ${
-                          step > number ? "bg-[#ea3471]" : "bg-gray-200"
+                          step > number ? "bg-[#193830]" : "bg-gray-200"
                         }`}
                       />
                     )}
@@ -965,14 +965,14 @@ _New pilgrimage enquiry from the website._
             <div className="md:hidden">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[2px] text-[#ea3471]">
+                  <p className="text-xs font-bold uppercase tracking-[2px] text-[#193830]">
                     Step {step} of 6
                   </p>
 
-                  <h2 className="mt-1 text-lg font-bold text-[#3d0057]">{steps[step - 1]}</h2>
+                  <h2 className="mt-1 text-lg font-bold text-[#112d25]">{steps[step - 1]}</h2>
                 </div>
 
-                <div className="text-3xl font-serif font-bold text-[#3d0057]">
+                <div className="text-3xl font-serif font-bold text-[#112d25]">
                   {step}
                   <span className="text-gray-300">/6</span>
                 </div>
@@ -980,7 +980,7 @@ _New pilgrimage enquiry from the website._
 
               <div className="mt-4 h-2 overflow-hidden rounded-full bg-gray-200">
                 <div
-                  className="h-full rounded-full bg-[#ea3471] transition-all duration-500"
+                  className="h-full rounded-full bg-[#193830] transition-all duration-500"
                   style={{ width: `${(step / 6) * 100}%` }}
                 />
               </div>
@@ -995,14 +995,14 @@ _New pilgrimage enquiry from the website._
             {step === 1 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#ffebf2] px-4 py-2 text-xs font-bold tracking-[2px] text-[#bc1a50]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f9f6f1] px-4 py-2 text-xs font-bold tracking-[2px] text-[#193830]">
                     <MapPin size={14} />
                     YOUR PILGRIMAGE
                   </span>
 
-                  <h2 className="mt-6 font-serif text-3xl font-bold text-[#291631] sm:text-4xl">
+                  <h2 className="mt-6 font-serif text-3xl font-bold text-[#141f1c] sm:text-4xl">
                     What are you
-                    <span className="text-[#ea3471]"> planning?</span>
+                    <span className="text-[#193830]"> planning?</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
@@ -1021,7 +1021,7 @@ _New pilgrimage enquiry from the website._
                         onClick={() => setSelectedDestination(destination.title)}
                         className={`group relative h-[260px] overflow-hidden rounded-[24px] text-left transition-all duration-300 ${
                           selected
-                            ? "scale-[1.015] ring-4 ring-[#ea3471]/30"
+                            ? "scale-[1.015] ring-4 ring-[#193830]/30"
                             : "hover:-translate-y-1 hover:shadow-2xl"
                         }`}
                       >
@@ -1038,7 +1038,7 @@ _New pilgrimage enquiry from the website._
                         <div
                           className={`absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border-2 transition ${
                             selected
-                              ? "border-[#ea3471] bg-[#ea3471] text-white"
+                              ? "border-[#193830] bg-[#193830] text-white"
                               : "border-white bg-black/20"
                           }`}
                         >
@@ -1046,7 +1046,7 @@ _New pilgrimage enquiry from the website._
                         </div>
 
                         <div className="absolute bottom-0 left-0 right-0 p-7 text-white">
-                          <p className="text-xs font-bold tracking-[3px] text-[#fc93b6]">
+                          <p className="text-xs font-bold tracking-[3px] text-[#193830]">
                             PILGRIMAGE TYPE
                           </p>
 
@@ -1061,8 +1061,8 @@ _New pilgrimage enquiry from the website._
                   })}
                 </div>
 
-                <div className="mt-8 rounded-2xl border border-gray-200 bg-[#faf8f9] p-6">
-                  <label className="text-xs font-bold tracking-[2px] text-[#3d0057]">
+                <div className="mt-8 rounded-2xl border border-gray-200 bg-[#fbfaf7] p-6">
+                  <label className="text-xs font-bold tracking-[2px] text-[#112d25]">
                     DEPARTURE CITY / NOTES (OPTIONAL)
                   </label>
 
@@ -1070,7 +1070,7 @@ _New pilgrimage enquiry from the website._
                     value={specificLocation}
                     onChange={(event) => setSpecificLocation(event.target.value)}
                     placeholder="E.g. flying from Mumbai, prefer more nights in Madinah..."
-                    className="mt-4 w-full rounded-xl border border-gray-200 bg-white px-5 py-4 text-gray-700 outline-none transition placeholder:text-gray-400 focus:border-[#3d0057] focus:ring-4 focus:ring-[#3d0057]/10"
+                    className="mt-4 w-full rounded-xl border border-gray-200 bg-white px-5 py-4 text-gray-700 outline-none transition placeholder:text-gray-500 focus:border-[#112d25] focus:ring-4 focus:ring-[#112d25]/10"
                   />
                 </div>
               </div>
@@ -1081,14 +1081,14 @@ _New pilgrimage enquiry from the website._
             {step === 2 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f2eaf5] px-4 py-2 text-xs font-bold tracking-[2px] text-[#3d0057]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f6f2e9] px-4 py-2 text-xs font-bold tracking-[2px] text-[#112d25]">
                     <CalendarDays size={14} />
                     TRAVEL PERIOD
                   </span>
 
                   <h2 className="mt-6 font-serif text-3xl font-bold sm:text-4xl">
                     Choose your
-                    <span className="text-[#ea3471]"> travel dates.</span>
+                    <span className="text-[#193830]"> travel dates.</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
@@ -1103,17 +1103,17 @@ _New pilgrimage enquiry from the website._
                       <button
                         type="button"
                         onClick={() => setCalendarMonth(new Date(year, month - 1, 1))}
-                        className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition hover:border-[#3d0057] hover:bg-[#3d0057] hover:text-white"
+                        className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition hover:border-[#112d25] hover:bg-[#112d25] hover:text-white"
                       >
                         <ChevronLeft size={20} />
                       </button>
 
                       <div className="text-center">
-                        <p className="text-xs font-bold tracking-[3px] text-[#ea3471]">
+                        <p className="text-xs font-bold tracking-[3px] text-[#193830]">
                           SELECT DATES
                         </p>
 
-                        <h3 className="mt-2 font-serif text-2xl font-bold text-[#3d0057]">
+                        <h3 className="mt-2 font-serif text-2xl font-bold text-[#112d25]">
                           {calendarMonth.toLocaleDateString("en-US", {
                             month: "long",
                             year: "numeric",
@@ -1124,7 +1124,7 @@ _New pilgrimage enquiry from the website._
                       <button
                         type="button"
                         onClick={() => setCalendarMonth(new Date(year, month + 1, 1))}
-                        className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition hover:border-[#3d0057] hover:bg-[#3d0057] hover:text-white"
+                        className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition hover:border-[#112d25] hover:bg-[#112d25] hover:text-white"
                       >
                         <ChevronRight size={20} />
                       </button>
@@ -1134,7 +1134,7 @@ _New pilgrimage enquiry from the website._
                       {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
                         <div
                           key={day}
-                          className="pb-5 text-xs font-bold uppercase tracking-wider text-gray-400"
+                          className="pb-5 text-xs font-bold uppercase tracking-wider text-gray-500"
                         >
                           {day}
                         </div>
@@ -1157,7 +1157,7 @@ _New pilgrimage enquiry from the website._
                           <div
                             key={date.toISOString()}
                             className={`relative flex aspect-square items-center justify-center ${
-                              between ? "bg-[#efe7f2]" : ""
+                              between ? "bg-[#f4efe5]" : ""
                             }`}
                           >
                             <button
@@ -1169,10 +1169,10 @@ _New pilgrimage enquiry from the website._
                                 past
                                   ? "cursor-not-allowed text-gray-300"
                                   : selectedStart || selectedEnd
-                                  ? "scale-110 bg-[#3d0057] text-white shadow-lg shadow-[#3d0057]/30"
+                                  ? "scale-110 bg-[#112d25] text-white shadow-lg shadow-[#112d25]/30"
                                   : today
-                                  ? "border-2 border-[#ea3471] text-[#ea3471]"
-                                  : "text-gray-700 hover:bg-[#f1eef0]"
+                                  ? "border-2 border-[#193830] text-[#193830]"
+                                  : "text-gray-700 hover:bg-[#f3f1ec]"
                               }`}
                             >
                               {date.getDate()}
@@ -1184,24 +1184,24 @@ _New pilgrimage enquiry from the website._
 
                     <div className="mt-8 flex flex-wrap items-center gap-5 border-t border-gray-100 pt-6 text-sm text-gray-500">
                       <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-full bg-[#3d0057]" />
+                        <span className="h-3 w-3 rounded-full bg-[#112d25]" />
                         Selected date
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-full bg-[#efe7f2]" />
+                        <span className="h-3 w-3 rounded-full bg-[#f4efe5]" />
                         Your journey
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-full border-2 border-[#ea3471]" />
+                        <span className="h-3 w-3 rounded-full border-2 border-[#193830]" />
                         Today
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-[#36004e] p-7 text-white sm:p-10">
-                    <p className="text-xs font-bold tracking-[3px] text-[#ea3471]">
+                  <div className="bg-[#0f2922] p-7 text-white sm:p-10">
+                    <p className="text-xs font-bold tracking-[3px] text-[#193830]">
                       YOUR TRAVEL PLAN
                     </p>
 
@@ -1229,7 +1229,7 @@ _New pilgrimage enquiry from the website._
                       </div>
                     </div>
 
-                    <div className="mt-10 rounded-2xl bg-[#ea3471] p-6">
+                    <div className="mt-10 rounded-2xl bg-[#193830] p-6">
                       <p className="text-xs font-bold tracking-[2px] text-white/70">
                         JOURNEY DURATION
                       </p>
@@ -1253,14 +1253,14 @@ _New pilgrimage enquiry from the website._
             {step === 3 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#ffebf2] px-4 py-2 text-xs font-bold tracking-[2px] text-[#bc1a50]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f9f6f1] px-4 py-2 text-xs font-bold tracking-[2px] text-[#193830]">
                     <Users size={14} />
                     TRAVEL PARTY
                   </span>
 
                   <h2 className="mt-6 font-serif text-3xl font-bold sm:text-4xl">
                     Who is joining
-                    <span className="text-[#ea3471]"> the pilgrimage?</span>
+                    <span className="text-[#193830]"> the pilgrimage?</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
@@ -1281,27 +1281,27 @@ _New pilgrimage enquiry from the website._
                         onClick={() => setTravelerType(option.id)}
                         className={`relative overflow-hidden rounded-2xl border p-6 text-left transition-all duration-300 ${
                           selected
-                            ? "border-[#3d0057] bg-[#3d0057] text-white shadow-xl shadow-[#3d0057]/20"
-                            : "border-gray-200 bg-white hover:-translate-y-1 hover:border-[#ea3471]"
+                            ? "border-[#112d25] bg-[#112d25] text-white shadow-xl shadow-[#112d25]/20"
+                            : "border-gray-200 bg-white hover:-translate-y-1 hover:border-[#193830]"
                         }`}
                       >
                         {selected && (
-                          <div className="absolute right-4 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-[#ea3471]">
+                          <div className="absolute right-4 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-[#193830]">
                             <Check size={15} />
                           </div>
                         )}
 
                         <div
                           className={`flex h-14 w-14 items-center justify-center rounded-xl ${
-                            selected ? "bg-white/10" : "bg-[#f1eef0]"
+                            selected ? "bg-white/10" : "bg-[#f3f1ec]"
                           }`}
                         >
-                          <Icon size={27} className={selected ? "text-[#ea3471]" : "text-[#3d0057]"} />
+                          <Icon size={27} className={selected ? "text-[#193830]" : "text-[#112d25]"} />
                         </div>
 
                         <h3 className="mt-5 text-xl font-bold">{option.title}</h3>
 
-                        <p className={`mt-1 text-sm ${selected ? "text-white/60" : "text-gray-400"}`}>
+                        <p className={`mt-1 text-sm ${selected ? "text-white/60" : "text-gray-500"}`}>
                           {option.subtitle}
                         </p>
                       </button>
@@ -1310,8 +1310,8 @@ _New pilgrimage enquiry from the website._
                 </div>
 
                 {travelerType === "family" && (
-                  <div className="mt-8 rounded-3xl border border-gray-200 bg-[#faf8f9] p-6 sm:p-8">
-                    <h3 className="font-serif text-2xl font-bold text-[#3d0057]">
+                  <div className="mt-8 rounded-3xl border border-gray-200 bg-[#fbfaf7] p-6 sm:p-8">
+                    <h3 className="font-serif text-2xl font-bold text-[#112d25]">
                       Family Composition
                     </h3>
 
@@ -1340,27 +1340,27 @@ _New pilgrimage enquiry from the website._
                         },
                       ].map((item) => (
                         <div key={item.label} className="rounded-2xl bg-white p-5 shadow-sm">
-                          <p className="font-bold text-[#3d0057]">{item.label}</p>
+                          <p className="font-bold text-[#112d25]">{item.label}</p>
 
-                          <p className="mt-1 text-xs text-gray-400">{item.subtitle}</p>
+                          <p className="mt-1 text-xs text-gray-500">{item.subtitle}</p>
 
                           <div className="mt-5 flex items-center justify-between">
                             <button
                               type="button"
                               onClick={() => item.setValue(Math.max(item.min, item.value - 1))}
-                              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f1eef0] transition hover:bg-gray-200"
+                              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f3f1ec] transition hover:bg-gray-200"
                             >
                               <Minus size={18} />
                             </button>
 
-                            <span className="font-serif text-3xl font-bold text-[#3d0057]">
+                            <span className="font-serif text-3xl font-bold text-[#112d25]">
                               {item.value}
                             </span>
 
                             <button
                               type="button"
                               onClick={() => item.setValue(item.value + 1)}
-                              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3d0057] text-white transition hover:bg-[#300044]"
+                              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#112d25] text-white transition hover:bg-[#0d231d]"
                             >
                               <Plus size={18} />
                             </button>
@@ -1372,10 +1372,10 @@ _New pilgrimage enquiry from the website._
                 )}
 
                 {travelerType === "group" && (
-                  <div className="mt-8 rounded-3xl border border-gray-200 bg-[#faf8f9] p-6 sm:p-8">
+                  <div className="mt-8 rounded-3xl border border-gray-200 bg-[#fbfaf7] p-6 sm:p-8">
                     <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
                       <div>
-                        <h3 className="font-serif text-2xl font-bold text-[#3d0057]">
+                        <h3 className="font-serif text-2xl font-bold text-[#112d25]">
                           Group Size
                         </h3>
 
@@ -1388,19 +1388,19 @@ _New pilgrimage enquiry from the website._
                         <button
                           type="button"
                           onClick={() => setGroupCount((value) => Math.max(2, value - 1))}
-                          className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f1eef0]"
+                          className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f3f1ec]"
                         >
                           <Minus size={18} />
                         </button>
 
-                        <span className="min-w-[50px] text-center font-serif text-3xl font-bold text-[#3d0057]">
+                        <span className="min-w-[50px] text-center font-serif text-3xl font-bold text-[#112d25]">
                           {groupCount}
                         </span>
 
                         <button
                           type="button"
                           onClick={() => setGroupCount((value) => Math.min(20, value + 1))}
-                          className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#3d0057] text-white"
+                          className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#112d25] text-white"
                         >
                           <Plus size={18} />
                         </button>
@@ -1412,11 +1412,11 @@ _New pilgrimage enquiry from the website._
                 <div className="mt-8">
                   <div className="flex items-end justify-between gap-5">
                     <div>
-                      <p className="text-xs font-bold tracking-[2px] text-[#ea3471]">
+                      <p className="text-xs font-bold tracking-[2px] text-[#193830]">
                         TRAVELER DETAILS
                       </p>
 
-                      <h3 className="mt-2 font-serif text-2xl font-bold text-[#3d0057]">
+                      <h3 className="mt-2 font-serif text-2xl font-bold text-[#112d25]">
                         {travelerType === "solo"
                           ? "Tell us about yourself"
                           : travelerType === "couple"
@@ -1427,7 +1427,7 @@ _New pilgrimage enquiry from the website._
                       </h3>
                     </div>
 
-                    <span className="rounded-full bg-[#f2eaf5] px-4 py-2 text-sm font-bold text-[#3d0057]">
+                    <span className="rounded-full bg-[#f6f2e9] px-4 py-2 text-sm font-bold text-[#112d25]">
                       {activeMembers.length} Traveler{activeMembers.length !== 1 ? "s" : ""}
                     </span>
                   </div>
@@ -1457,15 +1457,15 @@ _New pilgrimage enquiry from the website._
                       return (
                         <div
                           key={member.id}
-                          className="group rounded-2xl border border-gray-200 bg-white p-5 transition hover:border-[#3d0057]/40 hover:shadow-lg"
+                          className="group rounded-2xl border border-gray-200 bg-white p-5 transition hover:border-[#112d25]/40 hover:shadow-lg"
                         >
                           <div className="flex flex-col gap-5 md:flex-row md:items-center">
-                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f2eaf5] font-serif text-lg font-bold text-[#3d0057]">
+                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f6f2e9] font-serif text-lg font-bold text-[#112d25]">
                               {index + 1}
                             </div>
 
                             <div className="flex-1">
-                              <p className="text-xs font-bold tracking-[2px] text-[#ea3471]">
+                              <p className="text-xs font-bold tracking-[2px] text-[#193830]">
                                 {label.toUpperCase()}
                               </p>
 
@@ -1476,7 +1476,7 @@ _New pilgrimage enquiry from the website._
                                     updateMember(travelerType, index, "name", event.target.value)
                                   }
                                   placeholder="Full name"
-                                  className="rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#3d0057] focus:ring-4 focus:ring-[#3d0057]/10"
+                                  className="rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#112d25] focus:ring-4 focus:ring-[#112d25]/10"
                                 />
 
                                 <input
@@ -1487,7 +1487,7 @@ _New pilgrimage enquiry from the website._
                                     updateMember(travelerType, index, "age", event.target.value)
                                   }
                                   placeholder="Age"
-                                  className="rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#3d0057] focus:ring-4 focus:ring-[#3d0057]/10"
+                                  className="rounded-xl border border-gray-200 px-4 py-3 outline-none transition focus:border-[#112d25] focus:ring-4 focus:ring-[#112d25]/10"
                                 />
                               </div>
                             </div>
@@ -1505,14 +1505,14 @@ _New pilgrimage enquiry from the website._
             {step === 4 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f2eaf5] px-4 py-2 text-xs font-bold tracking-[2px] text-[#3d0057]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f6f2e9] px-4 py-2 text-xs font-bold tracking-[2px] text-[#112d25]">
                     <Sparkles size={14} />
                     CHOOSE YOUR SERVICES
                   </span>
 
                   <h2 className="mt-6 font-serif text-3xl font-bold sm:text-4xl">
                     What should we
-                    <span className="text-[#ea3471]"> arrange for you?</span>
+                    <span className="text-[#193830]"> arrange for you?</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
@@ -1534,8 +1534,8 @@ _New pilgrimage enquiry from the website._
                         className={`group relative min-h-[280px] overflow-hidden rounded-[24px] border p-7 text-left transition-all duration-300 ${
                           selected
                             ? fullPackage
-                              ? "border-[#ea3471] bg-[#fff3f7] shadow-xl shadow-[#ea3471]/10"
-                              : "border-[#3d0057] bg-[#f9f5fb] shadow-xl shadow-[#3d0057]/10"
+                              ? "border-[#193830] bg-[#fcfaf6] shadow-xl shadow-[#193830]/10"
+                              : "border-[#112d25] bg-[#fbf9f5] shadow-xl shadow-[#112d25]/10"
                             : "border-gray-200 bg-white hover:-translate-y-1 hover:shadow-xl"
                         }`}
                       >
@@ -1543,8 +1543,8 @@ _New pilgrimage enquiry from the website._
                           className={`absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full border-2 ${
                             selected
                               ? fullPackage
-                                ? "border-[#ea3471] bg-[#ea3471] text-white"
-                                : "border-[#3d0057] bg-[#3d0057] text-white"
+                                ? "border-[#193830] bg-[#193830] text-white"
+                                : "border-[#112d25] bg-[#112d25] text-white"
                               : "border-gray-300"
                           }`}
                         >
@@ -1553,10 +1553,10 @@ _New pilgrimage enquiry from the website._
 
                         <div
                           className={`flex h-16 w-16 items-center justify-center rounded-2xl ${
-                            selected && fullPackage ? "bg-[#fcd2e0]" : "bg-[#f1eef0]"
+                            selected && fullPackage ? "bg-[#f1eadd]" : "bg-[#f3f1ec]"
                           }`}
                         >
-                          <Icon size={30} className={fullPackage ? "text-[#ea3471]" : "text-[#3d0057]"} />
+                          <Icon size={30} className={fullPackage ? "text-[#193830]" : "text-[#112d25]"} />
                         </div>
 
                         <h3 className="mt-7 font-serif text-2xl font-bold">{service.title}</h3>
@@ -1578,14 +1578,14 @@ _New pilgrimage enquiry from the website._
             {step === 5 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#ffebf2] px-4 py-2 text-xs font-bold tracking-[2px] text-[#bc1a50]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f9f6f1] px-4 py-2 text-xs font-bold tracking-[2px] text-[#193830]">
                     <Car size={14} />
                     TRANSFERS IN SAUDI ARABIA
                   </span>
 
                   <h2 className="mt-6 font-serif text-3xl font-bold sm:text-4xl">
                     Travel in
-                    <span className="text-[#ea3471]"> comfort.</span>
+                    <span className="text-[#193830]"> comfort.</span>
                   </h2>
 
                   <p className="mt-4 text-lg leading-8 text-gray-500">
@@ -1604,7 +1604,7 @@ _New pilgrimage enquiry from the website._
                         onClick={() => setSelectedVehicle(vehicle.title)}
                         className={`group overflow-hidden rounded-[24px] border text-left transition-all duration-300 ${
                           selected
-                            ? "border-[#3d0057] shadow-2xl shadow-[#3d0057]/15"
+                            ? "border-[#112d25] shadow-2xl shadow-[#112d25]/15"
                             : "border-gray-200 hover:-translate-y-2 hover:shadow-xl"
                         }`}
                       >
@@ -1618,7 +1618,7 @@ _New pilgrimage enquiry from the website._
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/10" />
 
                           {vehicle.popular && (
-                            <span className="absolute left-5 top-5 rounded-full bg-[#ea3471] px-4 py-2 text-xs font-bold tracking-wider text-white">
+                            <span className="absolute left-5 top-5 rounded-full bg-[#193830] px-4 py-2 text-xs font-bold tracking-wider text-white">
                               MOST POPULAR
                             </span>
                           )}
@@ -1626,7 +1626,7 @@ _New pilgrimage enquiry from the website._
                           <div
                             className={`absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border-2 ${
                               selected
-                                ? "border-[#ea3471] bg-[#ea3471] text-white"
+                                ? "border-[#193830] bg-[#193830] text-white"
                                 : "border-white bg-black/20 text-white"
                             }`}
                           >
@@ -1640,18 +1640,18 @@ _New pilgrimage enquiry from the website._
                         </div>
 
                         <div className="p-6">
-                          <h3 className="font-serif text-2xl font-bold text-[#291631]">
+                          <h3 className="font-serif text-2xl font-bold text-[#141f1c]">
                             {vehicle.title}
                           </h3>
 
                           <div className="mt-5 space-y-3 text-sm text-gray-500">
                             <div className="flex items-center gap-3">
-                              <Users size={17} className="text-[#3d0057]" />
+                              <Users size={17} className="text-[#112d25]" />
                               {vehicle.passengers}
                             </div>
 
                             <div className="flex items-center gap-3">
-                              <Luggage size={17} className="text-[#3d0057]" />
+                              <Luggage size={17} className="text-[#112d25]" />
                               {vehicle.bags}
                             </div>
                           </div>
@@ -1672,14 +1672,14 @@ _New pilgrimage enquiry from the website._
             {step === 6 && (
               <div className="animate-in fade-in slide-in-from-bottom-3 duration-500">
                 <div className="max-w-3xl">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#ffebf2] px-4 py-2 text-xs font-bold tracking-[2px] text-[#bc1a50]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f9f6f1] px-4 py-2 text-xs font-bold tracking-[2px] text-[#193830]">
                     <Sparkles size={14} />
                     FINAL STEP
                   </span>
 
                   <h2 className="mt-6 font-serif text-4xl font-bold leading-tight sm:text-5xl">
                     Almost there.
-                    <span className="block text-[#ea3471]">How can we reach you?</span>
+                    <span className="block text-[#193830]">How can we reach you?</span>
                   </h2>
 
                   <p className="mt-5 text-lg leading-8 text-gray-500">
@@ -1692,7 +1692,7 @@ _New pilgrimage enquiry from the website._
                   <div className="rounded-[28px] border border-gray-200 bg-white p-6 sm:p-9">
                     <div className="space-y-7">
                       <div>
-                        <label className="text-xs font-bold tracking-[2px] text-[#3d0057]">
+                        <label className="text-xs font-bold tracking-[2px] text-[#112d25]">
                           FULL NAME
                         </label>
 
@@ -1702,13 +1702,13 @@ _New pilgrimage enquiry from the website._
                             setContact({ ...contact, name: event.target.value })
                           }
                           placeholder="Your full name"
-                          className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 text-lg outline-none transition placeholder:text-gray-300 focus:border-[#3d0057]"
+                          className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 text-lg outline-none transition placeholder:text-gray-300 focus:border-[#112d25]"
                         />
                       </div>
 
                       <div className="grid gap-7 md:grid-cols-2">
                         <div>
-                          <label className="flex items-center gap-2 text-xs font-bold tracking-[2px] text-[#3d0057]">
+                          <label className="flex items-center gap-2 text-xs font-bold tracking-[2px] text-[#112d25]">
                             <Mail size={14} />
                             EMAIL ADDRESS
                           </label>
@@ -1720,12 +1720,12 @@ _New pilgrimage enquiry from the website._
                               setContact({ ...contact, email: event.target.value })
                             }
                             placeholder="you@example.com"
-                            className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 outline-none transition focus:border-[#3d0057]"
+                            className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 outline-none transition focus:border-[#112d25]"
                           />
                         </div>
 
                         <div>
-                          <label className="flex items-center gap-2 text-xs font-bold tracking-[2px] text-[#3d0057]">
+                          <label className="flex items-center gap-2 text-xs font-bold tracking-[2px] text-[#112d25]">
                             <Phone size={14} />
                             MOBILE / WHATSAPP
                           </label>
@@ -1736,13 +1736,13 @@ _New pilgrimage enquiry from the website._
                               setContact({ ...contact, phone: event.target.value })
                             }
                             placeholder="+91 XXXXX XXXXX"
-                            className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 outline-none transition focus:border-[#3d0057]"
+                            className="mt-3 w-full border-b border-gray-300 bg-transparent py-4 outline-none transition focus:border-[#112d25]"
                           />
                         </div>
                       </div>
 
                       <div>
-                        <label className="text-xs font-bold tracking-[2px] text-[#3d0057]">
+                        <label className="text-xs font-bold tracking-[2px] text-[#112d25]">
                           ANYTHING ELSE WE SHOULD KNOW?
                         </label>
 
@@ -1753,16 +1753,16 @@ _New pilgrimage enquiry from the website._
                             setContact({ ...contact, message: event.target.value })
                           }
                           placeholder="Wheelchair needs, room sharing, preferred hotel distance..."
-                          className="mt-3 w-full resize-none rounded-xl border border-gray-200 p-4 outline-none transition focus:border-[#3d0057] focus:ring-4 focus:ring-[#3d0057]/10"
+                          className="mt-3 w-full resize-none rounded-xl border border-gray-200 p-4 outline-none transition focus:border-[#112d25] focus:ring-4 focus:ring-[#112d25]/10"
                         />
                       </div>
                     </div>
 
-                    <div className="mt-8 flex gap-4 rounded-2xl bg-[#f1eef0] p-5">
-                      <ShieldCheck className="mt-1 shrink-0 text-[#3d0057]" size={23} />
+                    <div className="mt-8 flex gap-4 rounded-2xl bg-[#f3f1ec] p-5">
+                      <ShieldCheck className="mt-1 shrink-0 text-[#112d25]" size={23} />
 
                       <div>
-                        <h3 className="font-bold text-[#291631]">Human Touch Guaranteed</h3>
+                        <h3 className="font-bold text-[#141f1c]">Human Touch Guaranteed</h3>
 
                         <p className="mt-2 text-sm leading-6 text-gray-500">
                           No automated booking. Our team personally reviews every enquiry and
@@ -1772,8 +1772,8 @@ _New pilgrimage enquiry from the website._
                     </div>
                   </div>
 
-                  <div className="rounded-[28px] bg-[#36004e] p-7 text-white sm:p-9">
-                    <p className="text-xs font-bold tracking-[3px] text-[#ea3471]">
+                  <div className="rounded-[28px] bg-[#0f2922] p-7 text-white sm:p-9">
+                    <p className="text-xs font-bold tracking-[3px] text-[#193830]">
                       YOUR ENQUIRY SUMMARY
                     </p>
 
@@ -1835,13 +1835,13 @@ _New pilgrimage enquiry from the website._
 
           {/* BOTTOM NAVIGATION */}
 
-          <div className="flex flex-col gap-4 border-t border-gray-100 bg-[#fcfafb] px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16">
+          <div className="flex flex-col gap-4 border-t border-gray-100 bg-[#fcfbfa] px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16">
             <div>
               {step > 1 && (
                 <button
                   type="button"
                   onClick={() => setStep((value) => Math.max(1, value - 1))}
-                  className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-gray-500 transition hover:bg-gray-100 hover:text-[#3d0057]"
+                  className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-gray-500 transition hover:bg-gray-100 hover:text-[#112d25]"
                 >
                   <ArrowLeft size={18} />
                   Previous Step
@@ -1854,7 +1854,7 @@ _New pilgrimage enquiry from the website._
                 type="button"
                 disabled={!canContinue()}
                 onClick={() => canContinue() && setStep((value) => Math.min(6, value + 1))}
-                className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#3d0057] px-8 py-4 font-bold text-white shadow-lg shadow-[#3d0057]/20 transition hover:bg-[#300044] disabled:cursor-not-allowed disabled:opacity-40"
+                className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#112d25] px-8 py-4 font-bold text-white shadow-lg shadow-[#112d25]/20 transition hover:bg-[#0d231d] disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Continue
                 <ArrowRight size={19} />
@@ -1864,14 +1864,14 @@ _New pilgrimage enquiry from the website._
                 type="button"
                 onClick={submitEnquiry}
                 disabled={isSubmitting}
-                className={`group relative inline-flex min-h-[54px] min-w-[220px] items-center justify-center gap-3 overflow-hidden rounded-full px-8 text-[10px] font-bold uppercase tracking-[0.14em] shadow-[0_15px_35px_rgba(63,17,82,0.22)] transition-all duration-300 ${
+                className={`group relative inline-flex min-h-[54px] min-w-[220px] items-center justify-center gap-3 overflow-hidden rounded-full px-8 text-[10px] font-bold uppercase tracking-[0.14em] shadow-[0_15px_35px_rgba(22,50,42,0.22)] transition-all duration-300 ${
                   isSubmitting
-                    ? "cursor-not-allowed bg-[#3f1152]/60 text-white/70"
-                    : "bg-[#3f1152] text-white hover:-translate-y-1 hover:shadow-[0_22px_45px_rgba(63,17,82,0.32)]"
+                    ? "cursor-not-allowed bg-[#16322a]/60 text-white/70"
+                    : "bg-[#16322a] text-white hover:-translate-y-1 hover:shadow-[0_22px_45px_rgba(22,50,42,0.32)]"
                 }`}
               >
                 {!isSubmitting && (
-                  <span className="absolute inset-0 translate-y-full bg-[#e40e83] transition-transform duration-500 group-hover:translate-y-0" />
+                  <span className="absolute inset-0 translate-y-full bg-[#7b6337] transition-transform duration-500 group-hover:translate-y-0" />
                 )}
 
                 <span className="relative z-10 flex items-center gap-3">

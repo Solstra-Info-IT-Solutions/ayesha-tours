@@ -68,7 +68,7 @@ export default function Requirements() {
               type="button"
               className={`group relative min-h-[310px] rounded-xl border p-8 text-left transition hover:-translate-y-1 hover:shadow-md ${
                 isFullPackage
-                  ? "border-[#ea3471] bg-[#fef4f7]"
+                  ? "border-[#193830] bg-[#fcfaf6]"
                   : "border-gray-100 bg-white"
               }`}
             >
@@ -76,12 +76,12 @@ export default function Requirements() {
               <div
                 className={`absolute right-5 top-5 flex h-6 w-6 items-center justify-center rounded-full border-2 ${
                   isFullPackage
-                    ? "border-[#ea3471]"
-                    : "border-[#cdc5d0]"
+                    ? "border-[#193830]"
+                    : "border-[#c7cecb]"
                 }`}
               >
                 {isFullPackage && (
-                  <div className="h-3 w-3 rounded-full bg-[#ea3471]" />
+                  <div className="h-3 w-3 rounded-full bg-[#193830]" />
                 )}
               </div>
 
@@ -89,8 +89,8 @@ export default function Requirements() {
               <div
                 className={`flex h-16 w-16 items-center justify-center rounded-xl ${
                   isFullPackage
-                    ? "bg-[#f6dde5]"
-                    : "bg-[#eeebed]"
+                    ? "bg-[#f3ede0]"
+                    : "bg-[#f0eee9]"
                 }`}
               >
                 <Icon
@@ -98,8 +98,8 @@ export default function Requirements() {
                   strokeWidth={2}
                   className={
                     isFullPackage
-                      ? "text-[#bc1a50]"
-                      : "text-[#36004e]"
+                      ? "text-[#193830]"
+                      : "text-[#0f2922]"
                   }
                 />
               </div>

@@ -72,30 +72,30 @@ window.open(url, "_blank", "noopener,noreferrer");
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[#f9f6f8] px-6 py-20 md:px-10 md:py-24 lg:px-20"
+      className="relative overflow-hidden bg-[#faf8f5] px-6 py-20 md:px-10 md:py-24 lg:px-20"
     >
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute left-[-100px] top-20 h-72 w-72 rounded-full bg-[#4e1367]/5 blur-3xl" />
+      <div className="pointer-events-none absolute left-[-100px] top-20 h-72 w-72 rounded-full bg-[#1a3e34]/5 blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-0 right-[-100px] h-80 w-80 rounded-full bg-[#e73570]/5 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 right-[-100px] h-80 w-80 rounded-full bg-[#193830]/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-[1200px]">
 
         {/* ================= HEADER ================= */}
         <div className="mb-14 text-center md:mb-16">
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-10 bg-[#e73570]/60" />
+            <span className="h-px w-10 bg-[#193830]/60" />
 
-            <span className="h-2 w-2 rotate-45 bg-[#e73570]" />
+            <span className="h-2 w-2 rotate-45 bg-[#193830]" />
 
-            <span className="h-px w-10 bg-[#e73570]/60" />
+            <span className="h-px w-10 bg-[#193830]/60" />
           </div>
 
-          <p className="text-[12px] font-semibold tracking-[2.5px] text-[#4e1367]">
+          <p className="text-[12px] font-semibold tracking-[2.5px] text-[#1a3e34]">
             LET&apos;S PLAN YOUR PILGRIMAGE
           </p>
 
-          <h2 className="mt-4 font-serif text-4xl font-bold text-[#3f1152] md:text-5xl lg:text-[56px]">
+          <h2 className="mt-4 font-serif text-4xl font-bold text-[#16322a] md:text-5xl lg:text-[56px]">
             Contact Us
           </h2>
 
@@ -107,7 +107,7 @@ window.open(url, "_blank", "noopener,noreferrer");
         </div>
 
         {/* ================= MAIN CARD ================= */}
-        <div className="overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_25px_80px_rgba(63,17,82,0.08)]">
+        <div className="overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_25px_80px_rgba(22,50,42,0.08)]">
 
           <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr]">
 
@@ -116,11 +116,11 @@ window.open(url, "_blank", "noopener,noreferrer");
 
               {/* Top Label */}
               <div className="mb-8">
-                <p className="text-xs font-semibold tracking-[2px] text-[#e73570]">
+                <p className="text-xs font-semibold tracking-[2px] text-[#193830]">
                   SEND US A MESSAGE
                 </p>
 
-                <h3 className="mt-3 font-serif text-3xl font-bold text-[#3f1152]">
+                <h3 className="mt-3 font-serif text-3xl font-bold text-[#16322a]">
                   Start Your Enquiry
                 </h3>
 
@@ -140,7 +140,7 @@ window.open(url, "_blank", "noopener,noreferrer");
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-2 block text-[13px] font-semibold tracking-[1px] text-[#3f1152]"
+                    className="mb-2 block text-[13px] font-semibold tracking-[1px] text-[#16322a]"
                   >
                     FULL NAME
                   </label>
@@ -151,7 +151,7 @@ window.open(url, "_blank", "noopener,noreferrer");
                     type="text"
                     required
                     placeholder="Enter your full name"
-                    className="h-14 w-full rounded-xl border border-gray-200 bg-[#f9f6f8] px-5 text-[15px] text-gray-800 outline-none transition-all placeholder:text-gray-400 focus:border-[#4e1367] focus:bg-white focus:ring-4 focus:ring-[#4e1367]/5"
+                    className="h-14 w-full rounded-xl border border-gray-200 bg-[#faf8f5] px-5 text-[15px] text-gray-800 outline-none transition-all placeholder:text-gray-500 focus:border-[#1a3e34] focus:bg-white focus:ring-4 focus:ring-[#1a3e34]/5"
                   />
                 </div>
 
@@ -159,7 +159,7 @@ window.open(url, "_blank", "noopener,noreferrer");
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-[13px] font-semibold tracking-[1px] text-[#3f1152]"
+                    className="mb-2 block text-[13px] font-semibold tracking-[1px] text-[#16322a]"
                   >
                     EMAIL ADDRESS
                   </label>
@@ -170,7 +170,7 @@ window.open(url, "_blank", "noopener,noreferrer");
                     type="email"
                     required
                     placeholder="Enter your email address"
-                    className="h-14 w-full rounded-xl border border-gray-200 bg-[#f9f6f8] px-5 text-[15px] text-gray-800 outline-none transition-all placeholder:text-gray-400 focus:border-[#4e1367] focus:bg-white focus:ring-4 focus:ring-[#4e1367]/5"
+                    className="h-14 w-full rounded-xl border border-gray-200 bg-[#faf8f5] px-5 text-[15px] text-gray-800 outline-none transition-all placeholder:text-gray-500 focus:border-[#1a3e34] focus:bg-white focus:ring-4 focus:ring-[#1a3e34]/5"
                   />
                 </div>
 
@@ -178,18 +178,18 @@ window.open(url, "_blank", "noopener,noreferrer");
                 <div>
                   <label
                     htmlFor="phone"
-                    className="mb-2 block text-[13px] font-semibold tracking-[1px] text-[#3f1152]"
+                    className="mb-2 block text-[13px] font-semibold tracking-[1px] text-[#16322a]"
                   >
                     PHONE NUMBER
                   </label>
 
-                  <div className="relative flex h-14 w-full rounded-xl border border-gray-200 bg-[#f9f6f8] transition focus-within:border-[#4e1367] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#4e1367]/5">
+                  <div className="relative flex h-14 w-full rounded-xl border border-gray-200 bg-[#faf8f5] transition focus-within:border-[#1a3e34] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#1a3e34]/5">
 
                     {/* Country Code */}
                     <button
                       type="button"
                       onClick={() => setCountryOpen(!countryOpen)}
-                      className="flex w-[110px] items-center justify-between border-r border-gray-200 px-4 text-[15px] font-medium text-[#3f1152]"
+                      className="flex w-[110px] items-center justify-between border-r border-gray-200 px-4 text-[15px] font-medium text-[#16322a]"
                     >
                       <span>{country}</span>
 
@@ -212,11 +212,11 @@ window.open(url, "_blank", "noopener,noreferrer");
                               setCountry(item.code);
                               setCountryOpen(false);
                             }}
-                            className="flex w-full items-center justify-between px-4 py-3 text-left text-sm text-gray-700 transition hover:bg-[#f9f6f8]"
+                            className="flex w-full items-center justify-between px-4 py-3 text-left text-sm text-gray-700 transition hover:bg-[#faf8f5]"
                           >
                             <span>{item.country}</span>
 
-                            <span className="font-medium text-[#4e1367]">
+                            <span className="font-medium text-[#1a3e34]">
                               {item.code}
                             </span>
                           </button>
@@ -230,7 +230,7 @@ window.open(url, "_blank", "noopener,noreferrer");
                       type="tel"
                       required
                       placeholder="01234 567890"
-                      className="min-w-0 flex-1 rounded-r-xl bg-transparent px-5 text-[15px] text-gray-800 outline-none placeholder:text-gray-400"
+                      className="min-w-0 flex-1 rounded-r-xl bg-transparent px-5 text-[15px] text-gray-800 outline-none placeholder:text-gray-500"
                     />
                   </div>
                 </div>
@@ -239,7 +239,7 @@ window.open(url, "_blank", "noopener,noreferrer");
                 <div>
                   <label
                     htmlFor="message"
-                    className="mb-2 block text-[13px] font-semibold tracking-[1px] text-[#3f1152]"
+                    className="mb-2 block text-[13px] font-semibold tracking-[1px] text-[#16322a]"
                   >
                     HOW CAN WE HELP YOU?
                   </label>
@@ -250,14 +250,14 @@ window.open(url, "_blank", "noopener,noreferrer");
                     rows={5}
                     required
                     placeholder="E.g. Umrah for 4 adults in December, hotel close to the Haram..."
-                    className="w-full resize-none rounded-xl border border-gray-200 bg-[#f9f6f8] px-5 py-4 text-[15px] text-gray-800 outline-none transition-all placeholder:text-gray-400 focus:border-[#4e1367] focus:bg-white focus:ring-4 focus:ring-[#4e1367]/5"
+                    className="w-full resize-none rounded-xl border border-gray-200 bg-[#faf8f5] px-5 py-4 text-[15px] text-gray-800 outline-none transition-all placeholder:text-gray-500 focus:border-[#1a3e34] focus:bg-white focus:ring-4 focus:ring-[#1a3e34]/5"
                   />
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="group flex h-[58px] w-full items-center justify-center gap-3 rounded-xl bg-[#e73570] px-8 text-[13px] font-semibold tracking-[1.5px] text-white shadow-[0_12px_25px_rgba(231,53,112,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ce265e] hover:shadow-[0_18px_35px_rgba(231,53,112,0.28)]"
+                  className="group flex h-[58px] w-full items-center justify-center gap-3 rounded-xl bg-[#193830] px-8 text-[13px] font-semibold tracking-[1.5px] text-white shadow-[0_12px_25px_rgba(25,56,48,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#193830] hover:shadow-[0_18px_35px_rgba(25,56,48,0.28)]"
                 >
                   SEND YOUR QUERY
 
@@ -271,15 +271,15 @@ window.open(url, "_blank", "noopener,noreferrer");
             </div>
 
             {/* ================= RIGHT SIDE ================= */}
-            <div className="bg-[#f2eff1] p-7 md:p-10 lg:p-12">
+            <div className="bg-[#f4f2ed] p-7 md:p-10 lg:p-12">
 
               {/* Heading */}
               <div className="mb-7">
-                <p className="text-xs font-semibold tracking-[2px] text-[#e73570]">
+                <p className="text-xs font-semibold tracking-[2px] text-[#193830]">
                   FIND US
                 </p>
 
-                <h3 className="mt-3 font-serif text-3xl font-bold text-[#3f1152]">
+                <h3 className="mt-3 font-serif text-3xl font-bold text-[#16322a]">
                   Our Office
                 </h3>
               </div>
@@ -299,15 +299,15 @@ window.open(url, "_blank", "noopener,noreferrer");
 
                   <div className="flex gap-4">
 
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#ede7f0]">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f2eee5]">
                       <MapPin
                         size={22}
-                        className="text-[#4e1367]"
+                        className="text-[#1a3e34]"
                       />
                     </div>
 
                     <div className="min-w-0">
-                      <h4 className="font-serif text-lg font-bold text-[#3f1152]">
+                      <h4 className="font-serif text-lg font-bold text-[#16322a]">
                         {HAS_OFFICE_LOCATION ? SITE.address.locality : "Office Location"}
                       </h4>
 
@@ -319,7 +319,7 @@ window.open(url, "_blank", "noopener,noreferrer");
                         href={mapDirectionsUrl()}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-3 inline-flex items-center gap-2 text-xs font-semibold tracking-[1px] text-[#4e1367] transition hover:text-[#e73570]"
+                        className="mt-3 inline-flex items-center gap-2 text-xs font-semibold tracking-[1px] text-[#1a3e34] transition hover:text-[#193830]"
                       >
                         GET DIRECTIONS
 
@@ -336,31 +336,31 @@ window.open(url, "_blank", "noopener,noreferrer");
               <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
 
                 {/* 24/7 Availability */}
-<div className="relative overflow-hidden rounded-2xl border border-[#e4dce8] bg-white p-6 shadow-[0_12px_35px_rgba(63,17,82,0.06)]">
+<div className="relative overflow-hidden rounded-2xl border border-[#ebe5d9] bg-white p-6 shadow-[0_12px_35px_rgba(22,50,42,0.06)]">
 
   {/* Decorative Background */}
-  <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#e40e83]/10 blur-2xl" />
+  <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#7b6337]/10 blur-2xl" />
 
   <div className="relative">
 
     {/* Header */}
     <div className="flex items-center gap-4">
 
-      <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-[#4e1367] text-white shadow-[0_8px_20px_rgba(78,19,103,0.18)]">
+      <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-[#1a3e34] text-white shadow-[0_8px_20px_rgba(26,62,52,0.18)]">
 
         <Clock3 size={20} />
 
         {/* Online Indicator */}
-        <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full border-2 border-white bg-[#e40e83]" />
+        <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full border-2 border-white bg-[#7b6337]" />
 
       </div>
 
       <div>
-        <p className="text-[10px] font-bold uppercase tracking-[1.8px] text-[#e40e83]">
+        <p className="text-[10px] font-bold uppercase tracking-[1.8px] text-[#7b6337]">
           Office Hours
         </p>
 
-        <h4 className="mt-1 font-serif text-[18px] font-bold text-[#3f1152]">
+        <h4 className="mt-1 font-serif text-[18px] font-bold text-[#16322a]">
           {SITE.hours}
         </h4>
       </div>
@@ -369,14 +369,14 @@ window.open(url, "_blank", "noopener,noreferrer");
 
 
     {/* Divider */}
-    <div className="my-5 h-px bg-gradient-to-r from-[#4e1367]/15 via-[#e40e83]/30 to-transparent" />
+    <div className="my-5 h-px bg-gradient-to-r from-[#1a3e34]/15 via-[#7b6337]/30 to-transparent" />
 
 
     {/* Content */}
     <div className="flex items-center gap-3">
 
       {/* Status */}
-      <div className="flex items-center gap-2 rounded-full bg-[#4e1367]/7 px-3 py-2">
+      <div className="flex items-center gap-2 rounded-full bg-[#1a3e34]/7 px-3 py-2">
 
         <span className="relative flex h-2.5 w-2.5">
 
@@ -386,7 +386,7 @@ window.open(url, "_blank", "noopener,noreferrer");
 
         </span>
 
-        <span className="text-[10px] font-bold uppercase tracking-[1.3px] text-[#4e1367]">
+        <span className="text-[10px] font-bold uppercase tracking-[1.3px] text-[#1a3e34]">
           Enquiries Welcome
         </span>
 
@@ -395,7 +395,7 @@ window.open(url, "_blank", "noopener,noreferrer");
     </div>
 
 
-    <p className="mt-4 text-[13px] leading-6 text-[#7b6f80]">
+    <p className="mt-4 text-[13px] leading-6 text-[#5c6660]">
       Send your questions any time on WhatsApp or by email and our team
       will reply during office hours.
     </p>
@@ -404,13 +404,13 @@ window.open(url, "_blank", "noopener,noreferrer");
     {/* Bottom Premium Text */}
     <div className="mt-5 flex items-center gap-3">
 
-      <span className="h-px flex-1 bg-[#e8e5e9]" />
+      <span className="h-px flex-1 bg-[#ece9e2]" />
 
-      <span className="text-[9px] font-bold uppercase tracking-[1.6px] text-[#a39aa7]">
+      <span className="text-[9px] font-bold uppercase tracking-[1.6px] text-[#9da4a1]">
         Guidance For Every Pilgrim
       </span>
 
-      <span className="h-px flex-1 bg-[#e8e5e9]" />
+      <span className="h-px flex-1 bg-[#ece9e2]" />
 
     </div>
 
@@ -421,7 +421,7 @@ window.open(url, "_blank", "noopener,noreferrer");
                 {/* Contact Details */}
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 
-                  <h4 className="text-[13px] font-semibold tracking-[1px] text-[#3f1152]">
+                  <h4 className="text-[13px] font-semibold tracking-[1px] text-[#16322a]">
                     CONTACT DETAILS
                   </h4>
 
@@ -431,10 +431,10 @@ window.open(url, "_blank", "noopener,noreferrer");
                       href={phoneLink()}
                       className="group flex items-center gap-3"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ede7f0] transition group-hover:bg-[#4e1367]">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f2eee5] transition group-hover:bg-[#1a3e34]">
                         <Phone
                           size={18}
-                          className="text-[#4e1367] transition group-hover:text-white"
+                          className="text-[#1a3e34] transition group-hover:text-white"
                         />
                       </div>
 
@@ -453,10 +453,10 @@ window.open(url, "_blank", "noopener,noreferrer");
                       href={mailLink("Umrah / Haj enquiry")}
                       className="group flex items-center gap-3"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ede7f0] transition group-hover:bg-[#4e1367]">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f2eee5] transition group-hover:bg-[#1a3e34]">
                         <Mail
                           size={18}
-                          className="text-[#4e1367] transition group-hover:text-white"
+                          className="text-[#1a3e34] transition group-hover:text-white"
                         />
                       </div>
 
@@ -479,7 +479,7 @@ window.open(url, "_blank", "noopener,noreferrer");
     rel="noopener noreferrer"
     className="group flex items-center gap-3"
   >
-    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ede7f0] transition group-hover:bg-[#25D366]">
+    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f2eee5] transition group-hover:bg-[#25D366]">
       <MessageCircle
         size={18}
         className="text-[#25D366] transition group-hover:text-white"

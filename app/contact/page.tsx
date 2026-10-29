@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
 
 export default function ContactPage() {
   return (
-    <main className="overflow-hidden bg-[#fbf9fa]">
+    <main className="overflow-hidden bg-[#fbfbf9]">
        <Navbar />     
       <ContactHero />
 

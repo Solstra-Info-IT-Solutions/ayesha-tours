@@ -65,8 +65,8 @@ export default function Transport() {
               onClick={() => setSelected(vehicle.title)}
               className={`overflow-hidden rounded-lg border text-left transition ${
                 isSelected
-                  ? "border-[#3d0057] shadow-md"
-                  : "border-gray-200 hover:border-[#3d0057]"
+                  ? "border-[#112d25] shadow-md"
+                  : "border-gray-200 hover:border-[#112d25]"
               }`}
             >
               {/* IMAGE */}
@@ -82,7 +82,7 @@ export default function Transport() {
 
                 {/* POPULAR */}
                 {vehicle.popular && (
-                  <span className="absolute right-3 top-3 rounded-full bg-[#3d0057] px-4 py-2 text-xs font-medium text-white">
+                  <span className="absolute right-3 top-3 rounded-full bg-[#112d25] px-4 py-2 text-xs font-medium text-white">
                     POPULAR
                   </span>
                 )}
@@ -100,12 +100,12 @@ export default function Transport() {
                 <div
                   className={`absolute right-5 top-6 flex h-6 w-6 items-center justify-center rounded-full border-2 ${
                     isSelected
-                      ? "border-[#3d0057]"
-                      : "border-[#cdc5d0]"
+                      ? "border-[#112d25]"
+                      : "border-[#c7cecb]"
                   }`}
                 >
                   {isSelected && (
-                    <div className="h-3 w-3 rounded-full bg-[#3d0057]" />
+                    <div className="h-3 w-3 rounded-full bg-[#112d25]" />
                   )}
                 </div>
 
@@ -116,13 +116,13 @@ export default function Transport() {
 
                 {/* PASSENGERS */}
                 <div className="mt-3 flex items-center gap-2 text-sm text-gray-600">
-                  <Users size={16} className="text-[#3d0057]" />
+                  <Users size={16} className="text-[#112d25]" />
                   {vehicle.passengers}
                 </div>
 
                 {/* BAGS */}
                 <div className="mt-2 flex items-center gap-2 text-sm text-gray-600">
-                  <Luggage size={16} className="text-[#3d0057]" />
+                  <Luggage size={16} className="text-[#112d25]" />
                   {vehicle.bags}
                 </div>
 
@@ -139,7 +139,7 @@ export default function Transport() {
       {/* SELECTED VALUE */}
       <p className="mt-4 text-sm text-gray-500">
         Selected:{" "}
-        <span className="font-medium text-[#3d0057]">{selected}</span>
+        <span className="font-medium text-[#112d25]">{selected}</span>
       </p>
     </div>
   );

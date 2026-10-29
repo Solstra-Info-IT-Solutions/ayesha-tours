@@ -26,12 +26,12 @@ const legalLinks = [
 export default function LegalNavigation() {
   return (
     <aside className="lg:sticky lg:top-28 lg:self-start">
-      <div className="rounded-[24px] border border-[#e2dcdf] bg-white p-6 shadow-[0_15px_45px_rgba(63,17,82,0.06)]">
-        <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#e40e83]">
+      <div className="rounded-[24px] border border-[#e6e1d8] bg-white p-6 shadow-[0_15px_45px_rgba(22,50,42,0.06)]">
+        <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#7b6337]">
           Legal Information
         </p>
 
-        <h3 className="mt-3 font-serif text-[24px] font-bold text-[#3f1152]">
+        <h3 className="mt-3 font-serif text-[24px] font-bold text-[#16322a]">
           Policies & Terms
         </h3>
 
@@ -40,11 +40,11 @@ export default function LegalNavigation() {
             <Link
               key={link.href}
               href={link.href}
-              className="group flex items-center justify-between rounded-xl px-4 py-3 text-sm text-[#6e6572] transition-all duration-300 hover:bg-[#f6f2f4] hover:text-[#3f1152]"
+              className="group flex items-center justify-between rounded-xl px-4 py-3 text-sm text-[#686f6c] transition-all duration-300 hover:bg-[#f7f5f1] hover:text-[#16322a]"
             >
               <span>{link.label}</span>
 
-              <span className="text-[#e40e83] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
+              <span className="text-[#7b6337] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
                 →
               </span>
             </Link>

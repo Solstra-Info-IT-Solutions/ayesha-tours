@@ -38,7 +38,7 @@ export default function PremiumLoader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-[#2a0838] transition-opacity duration-700 ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-[#0d211c] transition-opacity duration-700 ${
         progress >= 100 ? "opacity-0" : "opacity-100"
       }`}
     >
@@ -50,23 +50,23 @@ export default function PremiumLoader() {
 
         {/* Main Gradient */}
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(78,19,103,0.45),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(26,62,52,0.45),transparent_55%)]" />
 
         {/* Gold Glow */}
 
-        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e40e83]/[0.06] blur-[120px]" />
+        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7b6337]/[0.06] blur-[120px]" />
 
         {/* Decorative Lines */}
 
-        <div className="absolute left-[10%] top-0 h-full w-px bg-gradient-to-b from-transparent via-[#e40e83]/20 to-transparent" />
+        <div className="absolute left-[10%] top-0 h-full w-px bg-gradient-to-b from-transparent via-[#7b6337]/20 to-transparent" />
 
-        <div className="absolute right-[10%] top-0 h-full w-px bg-gradient-to-b from-transparent via-[#e40e83]/20 to-transparent" />
+        <div className="absolute right-[10%] top-0 h-full w-px bg-gradient-to-b from-transparent via-[#7b6337]/20 to-transparent" />
 
         {/* Large Circles */}
 
         <div className="absolute -left-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full border border-white/[0.03]" />
 
-        <div className="absolute -right-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full border border-[#e40e83]/10" />
+        <div className="absolute -right-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full border border-[#7b6337]/10" />
 
         {/* Stars */}
 
@@ -93,11 +93,11 @@ export default function PremiumLoader() {
 
           {/* Outer Rotating Ring */}
 
-          <div className="absolute inset-0 rounded-full border border-[#e40e83]/20 loader-spin-slow" />
+          <div className="absolute inset-0 rounded-full border border-[#7b6337]/20 loader-spin-slow" />
 
           {/* Dashed Ring */}
 
-          <div className="absolute inset-[12px] rounded-full border border-dashed border-[#e40e83]/30 loader-spin-reverse" />
+          <div className="absolute inset-[12px] rounded-full border border-dashed border-[#7b6337]/30 loader-spin-reverse" />
 
           {/* Inner Ring */}
 
@@ -105,44 +105,44 @@ export default function PremiumLoader() {
 
           {/* Compass Lines */}
 
-          <div className="absolute h-[2px] w-full bg-gradient-to-r from-transparent via-[#e40e83]/40 to-transparent" />
+          <div className="absolute h-[2px] w-full bg-gradient-to-r from-transparent via-[#7b6337]/40 to-transparent" />
 
-          <div className="absolute h-full w-[2px] bg-gradient-to-b from-transparent via-[#e40e83]/40 to-transparent" />
+          <div className="absolute h-full w-[2px] bg-gradient-to-b from-transparent via-[#7b6337]/40 to-transparent" />
 
           {/* Compass Points */}
 
-          <span className="absolute top-[-8px] text-[9px] font-bold tracking-[0.25em] text-[#e40e83]">
+          <span className="absolute top-[-8px] text-[9px] font-bold tracking-[0.25em] text-[#7b6337]">
             N
           </span>
 
-          <span className="absolute bottom-[-8px] text-[9px] font-bold tracking-[0.25em] text-[#e40e83]/50">
+          <span className="absolute bottom-[-8px] text-[9px] font-bold tracking-[0.25em] text-[#7b6337]/50">
             S
           </span>
 
-          <span className="absolute left-[-8px] text-[9px] font-bold tracking-[0.25em] text-[#e40e83]/50">
+          <span className="absolute left-[-8px] text-[9px] font-bold tracking-[0.25em] text-[#7b6337]/50">
             W
           </span>
 
-          <span className="absolute right-[-8px] text-[9px] font-bold tracking-[0.25em] text-[#e40e83]/50">
+          <span className="absolute right-[-8px] text-[9px] font-bold tracking-[0.25em] text-[#7b6337]/50">
             E
           </span>
 
 
           {/* Center Glow */}
 
-          <div className="absolute h-[92px] w-[92px] rounded-full bg-[#4e1367]/40 blur-xl" />
+          <div className="absolute h-[92px] w-[92px] rounded-full bg-[#1a3e34]/40 blur-xl" />
 
 
           {/* Plane */}
 
-          <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-[#e40e83]/40 bg-[#3e0e52] shadow-[0_0_50px_rgba(228,14,131,0.18)]">
+          <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-[#7b6337]/40 bg-[#143129] shadow-[0_0_50px_rgba(123,99,55,0.18)]">
 
-            <div className="absolute inset-[6px] rounded-full border border-[#e40e83]/15" />
+            <div className="absolute inset-[6px] rounded-full border border-[#7b6337]/15" />
 
             <Plane
               size={30}
               strokeWidth={1.5}
-              className="relative z-10 rotate-[-35deg] text-[#e40e83] loader-plane"
+              className="relative z-10 rotate-[-35deg] text-[#7b6337] loader-plane"
             />
 
           </div>
@@ -154,7 +154,7 @@ export default function PremiumLoader() {
 
             <div className="absolute left-1/2 top-[-7px] -translate-x-1/2">
 
-              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e40e83]/40 bg-[#3e0e52] text-[#e40e83] shadow-lg">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#7b6337]/40 bg-[#143129] text-[#7b6337] shadow-lg">
 
                 <MapPin size={14} />
 
@@ -173,22 +173,22 @@ export default function PremiumLoader() {
 
         <div className="flex items-center gap-3">
 
-          <span className="h-px w-8 bg-[#e40e83]/70" />
+          <span className="h-px w-8 bg-[#7b6337]/70" />
 
           <div className="flex items-center gap-2">
 
             <Sparkles
               size={13}
-              className="animate-pulse text-[#e40e83]"
+              className="animate-pulse text-[#7b6337]"
             />
 
-            <span className="text-[9px] font-bold uppercase tracking-[0.35em] text-[#e40e83]">
+            <span className="text-[9px] font-bold uppercase tracking-[0.35em] text-[#7b6337]">
               Preparing Your Pilgrimage
             </span>
 
           </div>
 
-          <span className="h-px w-8 bg-[#e40e83]/70" />
+          <span className="h-px w-8 bg-[#7b6337]/70" />
 
         </div>
 
@@ -200,7 +200,7 @@ export default function PremiumLoader() {
         </p>
 
 
-        <p className="mt-2 text-[9px] font-bold uppercase tracking-[0.32em] text-[#b49bbf]">
+        <p className="mt-2 text-[9px] font-bold uppercase tracking-[0.32em] text-[#a2b8b2]">
 
           Haj &amp; Umrah Packages
 
@@ -211,7 +211,7 @@ export default function PremiumLoader() {
             JOURNEY TEXT
         ====================================================== */}
 
-        <p className="mt-8 text-[13px] leading-6 text-[#beaac6]">
+        <p className="mt-8 text-[13px] leading-6 text-[#b0c0b8]">
 
           Preparing your pilgrimage details…
 
@@ -231,7 +231,7 @@ export default function PremiumLoader() {
             {/* Progress */}
 
             <div
-              className="absolute left-0 top-0 h-full rounded-full bg-gradient-to-r from-[#4e1367] via-[#e40e83] to-[#ff5db6] transition-all duration-100"
+              className="absolute left-0 top-0 h-full rounded-full bg-gradient-to-r from-[#1a3e34] via-[#7b6337] to-[#b79b66] transition-all duration-100"
               style={{
                 width: `${progress}%`,
               }}
@@ -240,7 +240,7 @@ export default function PremiumLoader() {
             {/* Moving Glow */}
 
             <div
-              className="absolute top-1/2 h-6 w-20 -translate-y-1/2 bg-[#e40e83]/40 blur-lg transition-all duration-100"
+              className="absolute top-1/2 h-6 w-20 -translate-y-1/2 bg-[#7b6337]/40 blur-lg transition-all duration-100"
               style={{
                 left: `${Math.max(progress - 10, 0)}%`,
               }}
@@ -251,20 +251,20 @@ export default function PremiumLoader() {
 
           {/* Starting Point */}
 
-          <div className="absolute left-0 top-1/2 flex h-4 w-4 -translate-y-1/2 items-center justify-center rounded-full border border-[#e40e83]/60 bg-[#2a0838]">
+          <div className="absolute left-0 top-1/2 flex h-4 w-4 -translate-y-1/2 items-center justify-center rounded-full border border-[#7b6337]/60 bg-[#0d211c]">
 
-            <div className="h-1.5 w-1.5 rounded-full bg-[#e40e83]" />
+            <div className="h-1.5 w-1.5 rounded-full bg-[#7b6337]" />
 
           </div>
 
 
           {/* Destination Point */}
 
-          <div className="absolute right-0 top-1/2 flex h-4 w-4 -translate-y-1/2 items-center justify-center rounded-full border border-[#e40e83]/60 bg-[#2a0838]">
+          <div className="absolute right-0 top-1/2 flex h-4 w-4 -translate-y-1/2 items-center justify-center rounded-full border border-[#7b6337]/60 bg-[#0d211c]">
 
             <MapPin
               size={9}
-              className="text-[#e40e83]"
+              className="text-[#7b6337]"
             />
 
           </div>
@@ -278,7 +278,7 @@ export default function PremiumLoader() {
 
         <div className="mt-4 flex w-full max-w-[360px] items-center justify-between">
 
-          <span className="text-[8px] font-bold uppercase tracking-[0.22em] text-[#90719d]">
+          <span className="text-[8px] font-bold uppercase tracking-[0.22em] text-[#7b9387]">
 
             {progress < 30
               ? "Preparing Experience"
@@ -293,7 +293,7 @@ export default function PremiumLoader() {
           </span>
 
 
-          <span className="font-mono text-[10px] font-semibold tracking-[0.15em] text-[#e40e83]">
+          <span className="font-mono text-[10px] font-semibold tracking-[0.15em] text-[#7b6337]">
 
             {progress.toString().padStart(2, "0")}%
 
@@ -310,7 +310,7 @@ export default function PremiumLoader() {
 
           <span className="h-px w-7 bg-white/10" />
 
-          <p className="text-[8px] font-bold uppercase tracking-[0.3em] text-[#7f638b]">
+          <p className="text-[8px] font-bold uppercase tracking-[0.3em] text-[#6c8277]">
 
             Labbaik Allahumma Labbaik
 
@@ -402,7 +402,7 @@ export default function PremiumLoader() {
           width: 4px;
           height: 4px;
           border-radius: 9999px;
-          background: #e40e83;
+          background: #7b6337;
           animation: loaderStar 2s ease-in-out infinite;
         }
 

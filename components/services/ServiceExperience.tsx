@@ -34,11 +34,11 @@ const features = [
 
 export default function ServiceExperience() {
   return (
-    <section className="relative overflow-hidden bg-[#3f1152] py-24 sm:py-28 lg:py-32">
+    <section className="relative overflow-hidden bg-[#16322a] py-24 sm:py-28 lg:py-32">
 
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e40e83]/[0.06] blur-[150px]" />
+        <div className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#b79b66]/[0.06] blur-[150px]" />
       </div>
 
       <div className="relative mx-auto max-w-[1300px] px-5 sm:px-8 lg:px-12">
@@ -48,18 +48,18 @@ export default function ServiceExperience() {
           {/* Left */}
           <div>
 
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#e40e83]">
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#b79b66]">
               The Ayesha Tours Experience
             </span>
 
             <h2 className="mt-6 font-serif text-[42px] font-bold leading-[1.1] text-white sm:text-5xl lg:text-[60px]">
               More Than Just
-              <span className="block italic font-medium text-[#e40e83]">
+              <span className="block italic font-medium text-[#b79b66]">
                 A Travel Booking.
               </span>
             </h2>
 
-            <p className="mt-7 max-w-xl text-[15px] leading-8 text-[#c9b9d0]">
+            <p className="mt-7 max-w-xl text-[15px] leading-8 text-[#becbc4]">
               A meaningful pilgrimage starts long before you reach Makkah. Our
             focus is on making every stage of the journey clear, organised
             and as comfortable as possible.
@@ -77,10 +77,10 @@ export default function ServiceExperience() {
               return (
                 <div
                   key={feature.title}
-                  className="group rounded-[28px] border border-white/[0.10] bg-white/[0.04] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#e40e83]/40 hover:bg-white/[0.07]"
+                  className="group rounded-[28px] border border-white/[0.10] bg-white/[0.04] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#b79b66]/40 hover:bg-white/[0.07]"
                 >
 
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#e40e83]/25 bg-[#e40e83]/10 text-[#e40e83] transition-transform duration-500 group-hover:scale-110">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#b79b66]/25 bg-[#b79b66]/10 text-[#b79b66] transition-transform duration-500 group-hover:scale-110">
                     <Icon size={21} />
                   </div>
 
@@ -88,7 +88,7 @@ export default function ServiceExperience() {
                     {feature.title}
                   </h3>
 
-                  <p className="mt-3 text-[13px] leading-7 text-[#bda9c5]">
+                  <p className="mt-3 text-[13px] leading-7 text-[#afbfb7]">
                     {feature.description}
                   </p>
 

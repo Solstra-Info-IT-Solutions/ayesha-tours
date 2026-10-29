@@ -41,7 +41,7 @@ export default function VehicleDetails({
           <div className="relative">
             <Car
               size={18}
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#3f1152]/50"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#16322a]/50"
             />
 
             <select
@@ -50,7 +50,7 @@ export default function VehicleDetails({
               onChange={(event) =>
                 updateField("vehicleType", event.target.value)
               }
-              className="h-13 w-full appearance-none rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-700 outline-none transition focus:border-[#3f1152] focus:ring-4 focus:ring-[#3f1152]/5"
+              className="h-13 w-full appearance-none rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-700 outline-none transition focus:border-[#16322a] focus:ring-4 focus:ring-[#16322a]/5"
             >
               <option value="">Select vehicle</option>
               <option value="Sedan">Sedan</option>
@@ -96,12 +96,12 @@ export default function VehicleDetails({
 
       {/* Information */}
 
-      <div className="mt-6 flex gap-4 rounded-2xl border border-[#db1481]/20 bg-[#fcf3f8] p-5">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#db1481]/10 text-[#db1481]">
+      <div className="mt-6 flex gap-4 rounded-2xl border border-[#7b6337]/20 bg-[#fbf9f4] p-5">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#7b6337]/10 text-[#7b6337]">
           <Bus size={19} />
         </div>
 
-        <p className="text-sm leading-6 text-[#65565e]">
+        <p className="text-sm leading-6 text-[#59625e]">
           Not sure which vehicle is suitable? Enter the number of pilgrims and
             your luggage needs and we will recommend the best option.
         </p>
@@ -121,12 +121,12 @@ function SectionHeading({
 }) {
   return (
     <div className="flex gap-4">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#3f1152] text-xs font-bold text-[#ff058f]">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#16322a] text-xs font-bold text-[#b79b66]">
         {number}
       </span>
 
       <div>
-        <h3 className="font-serif text-xl font-bold text-[#3f1152]">
+        <h3 className="font-serif text-xl font-bold text-[#16322a]">
           {title}
         </h3>
 
@@ -162,7 +162,7 @@ function InputField({
       </label>
 
       <div className="relative">
-        <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#3f1152]/50">
+        <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#16322a]/50">
           {icon}
         </div>
 
@@ -173,7 +173,7 @@ function InputField({
           value={value}
           required={required}
           onChange={(event) => onChange(event.target.value)}
-          className="h-[52px] w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 outline-none transition focus:border-[#3f1152] focus:ring-4 focus:ring-[#3f1152]/5"
+          className="h-[52px] w-full rounded-xl border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 outline-none transition focus:border-[#16322a] focus:ring-4 focus:ring-[#16322a]/5"
         />
       </div>
     </div>

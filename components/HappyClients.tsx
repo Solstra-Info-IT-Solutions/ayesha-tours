@@ -25,13 +25,13 @@ const clients = [
 
 export default function HappyClients() {
   return (
-    <section className="relative overflow-hidden bg-[#4e1367] px-6 py-20 md:px-10 md:py-24 lg:px-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#1a3e34] px-6 py-20 md:px-10 md:py-24 lg:px-20 lg:py-28">
 
       {/* ===================================================== */}
       {/* ================= DECORATIVE BACKGROUND ============= */}
       {/* ===================================================== */}
 
-      <div className="pointer-events-none absolute -left-32 top-[-80px] h-[360px] w-[360px] rounded-full bg-[#ff1094]/[0.045] blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-[-80px] h-[360px] w-[360px] rounded-full bg-[#b79b66]/[0.045] blur-3xl" />
 
       <div className="pointer-events-none absolute -bottom-40 -right-32 h-[440px] w-[440px] rounded-full bg-black/[0.12] blur-3xl" />
 
@@ -53,16 +53,16 @@ export default function HappyClients() {
           {/* Premium Accent */}
           <div className="mb-5 flex items-center justify-center gap-3">
 
-            <span className="h-px w-10 bg-[#ff1094]/70" />
+            <span className="h-px w-10 bg-[#b79b66]/70" />
 
-            <span className="h-2 w-2 rotate-45 border border-[#ff1094] bg-[#ff1094]" />
+            <span className="h-2 w-2 rotate-45 border border-[#b79b66] bg-[#b79b66]" />
 
-            <span className="h-px w-10 bg-[#ff1094]/70" />
+            <span className="h-px w-10 bg-[#b79b66]/70" />
 
           </div>
 
           {/* Eyebrow */}
-          <p className="text-[11px] font-semibold uppercase tracking-[3px] text-[#ff1094] md:text-[12px]">
+          <p className="text-[11px] font-semibold uppercase tracking-[3px] text-[#b79b66] md:text-[12px]">
             MOMENTS FROM THE JOURNEY
           </p>
 
@@ -117,7 +117,7 @@ export default function HappyClients() {
             <div className="relative rounded-[24px] border border-white/15 bg-white/[0.045] p-2 shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
 
               {/* Inner Image Container */}
-              <div className="relative h-[500px] overflow-hidden rounded-[17px] bg-[#420f58] md:h-[545px]">
+              <div className="relative h-[500px] overflow-hidden rounded-[17px] bg-[#15352c] md:h-[545px]">
 
                 <img
                   src={clients[1].image}
@@ -149,9 +149,9 @@ export default function HappyClients() {
             </div>
 
             {/* Gold Decorative Corner */}
-            <div className="pointer-events-none absolute -right-3 -top-3 h-14 w-14 border-r border-t border-[#ff1094]/70" />
+            <div className="pointer-events-none absolute -right-3 -top-3 h-14 w-14 border-r border-t border-[#b79b66]/70" />
 
-            <div className="pointer-events-none absolute -bottom-3 -left-3 h-14 w-14 border-b border-l border-[#ff1094]/40" />
+            <div className="pointer-events-none absolute -bottom-3 -left-3 h-14 w-14 border-b border-l border-[#b79b66]/40" />
 
           </div>
 
@@ -227,7 +227,7 @@ function GalleryImage({
 
       {/* Image Frame */}
       <div
-        className={`relative ${height} overflow-hidden bg-[#420f58] ${radius}`}
+        className={`relative ${height} overflow-hidden bg-[#15352c] ${radius}`}
       >
 
         <img
@@ -245,7 +245,7 @@ function GalleryImage({
         />
 
         {/* Gold Bottom Accent */}
-        <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#ff1094] transition-all duration-500 group-hover:w-full" />
+        <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#b79b66] transition-all duration-500 group-hover:w-full" />
 
       </div>
 

@@ -28,16 +28,16 @@ const features = [
 
 export default function WhyTravelWithUs() {
   return (
-    <section className="relative overflow-hidden bg-[#3e0e52] py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-[#143129] py-20 sm:py-24 lg:py-28">
       <div className="absolute right-[-150px] top-[-150px] h-[450px] w-[450px] rounded-full border border-white/[0.06]" />
 
       <div className="relative mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-10">
 
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex items-center justify-center gap-3">
-            <Sparkles size={13} className="text-[#ff058f]" />
+            <Sparkles size={13} className="text-[#b79b66]" />
 
-            <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#ff058f]">
+            <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#b79b66]">
               The Ayesha Tours Difference
             </span>
           </div>
@@ -45,7 +45,7 @@ export default function WhyTravelWithUs() {
           <h2 className="mt-5 font-serif text-[38px] font-bold text-white sm:text-5xl">
             Travel With{" "}
 
-            <span className="italic font-medium text-[#ff058f]">
+            <span className="italic font-medium text-[#b79b66]">
               Confidence.
             </span>
           </h2>
@@ -58,9 +58,9 @@ export default function WhyTravelWithUs() {
             return (
               <div
                 key={feature.title}
-                className="rounded-[24px] border border-white/[0.10] bg-white/[0.035] p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#ff058f]/40"
+                className="rounded-[24px] border border-white/[0.10] bg-white/[0.035] p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#b79b66]/40"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#ff058f]/30 bg-[#ff058f]/10 text-[#ff058f]">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#b79b66]/30 bg-[#b79b66]/10 text-[#b79b66]">
                   <Icon size={24} />
                 </div>
 
@@ -68,7 +68,7 @@ export default function WhyTravelWithUs() {
                   {feature.title}
                 </h3>
 
-                <p className="mt-4 text-[14px] leading-7 text-[#c1afc8]">
+                <p className="mt-4 text-[14px] leading-7 text-[#b5c2bc]">
                   {feature.description}
                 </p>
               </div>

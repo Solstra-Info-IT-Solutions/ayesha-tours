@@ -1,40 +1,29 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Destinations from "@/components/Destinations";
-import Services from "@/components/Services";
-import About from "@/app/about/page";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Destinationss from "@/components/Destinationss";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import PlanTour from "@/components/PlanTour";
-import HappyClients from "@/components/HappyClients";
-import HomeServices from "@/components/HomeServices";
-import FeaturedTourPackages from "@/components/FeaturedTourPackages";
-import JourneyTimeline from "@/components/JourneyTimeline";
-import HomeTransportServices from "@/components/HomeTransportServices";
-import DestinationCTA from "@/components/DestinationCTA";
-import GalleryPreview from "@/components/GalleryPreview";
-import PersonalizedJourneyCTA from "@/components/PersonalizedJourneyCTA";
+import HomeHero from "@/components/home/HomeHero";
+import JourneyComposer from "@/components/home/JourneyComposer";
+import TwoCities from "@/components/home/TwoCities";
+import CuratedJourneys from "@/components/home/CuratedJourneys";
+import JourneyArranged from "@/components/home/JourneyArranged";
+import Expectations from "@/components/home/Expectations";
+import Conversation from "@/components/home/Conversation";
 
+/**
+ * "A Journey Beyond Distance" – see docs/ayesha-tours-market-research.md.
+ * Opening → planner → the two cities → journeys → process → trust → conversation.
+ */
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar variant="overlay" />
       <main>
-        <Hero />
-        <HomeServices />
-        <Destinationss/>
-        <FeaturedTourPackages />
-         <JourneyTimeline />
-          <HomeTransportServices />
-           <DestinationCTA />
-            <GalleryPreview />
- <PersonalizedJourneyCTA />
-        <WhyChooseUs/>
-        <PlanTour/>
-        <HappyClients/>
-        <Contact />
+        <HomeHero />
+        <JourneyComposer />
+        <TwoCities />
+        <CuratedJourneys />
+        <JourneyArranged />
+        <Expectations />
+        <Conversation />
       </main>
       <Footer />
     </>

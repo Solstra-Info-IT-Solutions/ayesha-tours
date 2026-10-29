@@ -58,12 +58,12 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose-us"
-      className="relative overflow-hidden bg-[#f9f6f8] px-6 py-20 md:px-10 lg:px-20 lg:py-28"
+      className="relative overflow-hidden bg-[#faf8f5] px-6 py-20 md:px-10 lg:px-20 lg:py-28"
     >
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute left-0 top-0 h-[350px] w-[350px] rounded-full bg-[#4b1164]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-0 h-[350px] w-[350px] rounded-full bg-[#183c32]/[0.035] blur-3xl" />
 
-      <div className="pointer-events-none absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-[#ff0b91]/[0.04] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-[#b79b66]/[0.04] blur-3xl" />
 
       <div className="relative mx-auto max-w-[1200px]">
 
@@ -72,19 +72,19 @@ export default function WhyChooseUs() {
 
           {/* Small Heading */}
           <div className="flex items-center gap-4">
-            <span className="h-[2px] w-10 bg-[#ff0b91]" />
+            <span className="h-[2px] w-10 bg-[#b79b66]" />
 
-            <span className="text-xs font-semibold tracking-[3px] text-[#4b1164]">
+            <span className="text-xs font-semibold tracking-[3px] text-[#183c32]">
               WHY PILGRIMS CHOOSE US
             </span>
           </div>
 
           {/* Heading */}
-          <h2 className="mt-5 font-serif text-4xl font-bold leading-tight text-[#3f1152] md:text-5xl">
+          <h2 className="mt-5 font-serif text-4xl font-bold leading-tight text-[#16322a] md:text-5xl">
             More Than a Package.
             <br />
 
-            <span className="italic text-[#c1124c]">
+            <span className="italic text-[#193830]">
               It&apos;s Your Ibadah.
             </span>
           </h2>
@@ -104,9 +104,9 @@ export default function WhyChooseUs() {
           <div className="relative">
 
             {/* Gold Border Decoration */}
-            <div className="absolute -left-4 -top-4 h-28 w-28 border-l-2 border-t-2 border-[#ff0b91]" />
+            <div className="absolute -left-4 -top-4 h-28 w-28 border-l-2 border-t-2 border-[#b79b66]" />
 
-            <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_60px_rgba(63,17,82,0.16)]">
+            <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_60px_rgba(22,50,42,0.16)]">
 
               <img
                 src="/images/demo/haram-supplication.jpg"
@@ -115,14 +115,14 @@ export default function WhyChooseUs() {
               />
 
               {/* Image Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2a0639]/75 via-[#2a0639]/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c211b]/75 via-[#0c211b]/10 to-transparent" />
 
               {/* Experience Card */}
               <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/20 bg-white/10 p-5 text-white backdrop-blur-md">
 
                 <div className="flex items-center gap-4">
 
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#ff0b91] text-[#3f1152]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#b79b66] text-[#16322a]">
                     <Compass size={22} />
                   </div>
 
@@ -142,13 +142,13 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Floating Experience Badge */}
-            <div className="absolute -bottom-7 -right-4 hidden rounded-xl border border-[#4b1164]/10 bg-white px-6 py-5 shadow-xl md:block">
+            <div className="absolute -bottom-7 -right-4 hidden rounded-xl border border-[#183c32]/10 bg-white px-6 py-5 shadow-xl md:block">
 
-              <p className="font-serif text-3xl font-bold text-[#c1124c]">
+              <p className="font-serif text-3xl font-bold text-[#193830]">
                 Haj
               </p>
 
-              <p className="mt-1 text-xs font-semibold tracking-[1.5px] text-[#4b1164]">
+              <p className="mt-1 text-xs font-semibold tracking-[1.5px] text-[#183c32]">
                 & UMRAH FOCUSED
               </p>
 
@@ -168,8 +168,8 @@ export default function WhyChooseUs() {
                   key={feature.title}
                   className={`group overflow-hidden rounded-xl border transition-all duration-300 ${
                     isOpen
-                      ? "border-[#4b1164]/30 bg-white shadow-[0_15px_35px_rgba(63,17,82,0.08)]"
-                      : "border-[#4b1164]/10 bg-white/70 hover:border-[#4b1164]/25"
+                      ? "border-[#183c32]/30 bg-white shadow-[0_15px_35px_rgba(22,50,42,0.08)]"
+                      : "border-[#183c32]/10 bg-white/70 hover:border-[#183c32]/25"
                   }`}
                 >
                   {/* Header */}
@@ -184,8 +184,8 @@ export default function WhyChooseUs() {
                     <span
                       className={`font-serif text-sm font-bold ${
                         isOpen
-                          ? "text-[#c1124c]"
-                          : "text-[#4b1164]/40"
+                          ? "text-[#193830]"
+                          : "text-[#183c32]/40"
                       }`}
                     >
                       {feature.number}
@@ -195,8 +195,8 @@ export default function WhyChooseUs() {
                     <div
                       className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg transition ${
                         isOpen
-                          ? "bg-[#4b1164] text-[#ff0b91]"
-                          : "bg-[#f0ecee] text-[#4b1164]"
+                          ? "bg-[#183c32] text-[#b79b66]"
+                          : "bg-[#f2efea] text-[#183c32]"
                       }`}
                     >
                       <Icon size={20} strokeWidth={1.8} />
@@ -206,7 +206,7 @@ export default function WhyChooseUs() {
                     <span
                       className={`flex-1 font-serif text-lg font-bold transition ${
                         isOpen
-                          ? "text-[#3f1152]"
+                          ? "text-[#16322a]"
                           : "text-[#202020]"
                       }`}
                     >
@@ -217,8 +217,8 @@ export default function WhyChooseUs() {
                     <span
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition ${
                         isOpen
-                          ? "border-[#c1124c] bg-[#c1124c] text-white"
-                          : "border-[#4b1164]/15 text-[#4b1164]"
+                          ? "border-[#193830] bg-[#193830] text-white"
+                          : "border-[#183c32]/15 text-[#183c32]"
                       }`}
                     >
                       <ChevronDown
@@ -242,7 +242,7 @@ export default function WhyChooseUs() {
                   >
                     <div className="overflow-hidden">
 
-                      <div className="mx-7 border-t border-[#4b1164]/10 pb-6 pt-5 md:ml-[105px]">
+                      <div className="mx-7 border-t border-[#183c32]/10 pb-6 pt-5 md:ml-[105px]">
 
                         <p className="max-w-xl text-[15px] leading-7 text-gray-600">
                           {feature.description}
@@ -262,24 +262,24 @@ export default function WhyChooseUs() {
         </div>
 
         {/* ================= BOTTOM STATEMENT ================= */}
-        <div className="mt-20 border-t border-[#4b1164]/10 pt-10">
+        <div className="mt-20 border-t border-[#183c32]/10 pt-10">
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center">
 
-            <p className="max-w-3xl font-serif text-xl leading-8 text-[#3f1152] md:text-2xl">
+            <p className="max-w-3xl font-serif text-xl leading-8 text-[#16322a] md:text-2xl">
               We don&apos;t simply book a trip. We help you prepare for a
               journey of worship, with care at every step.
             </p>
 
             <div className="flex justify-start md:justify-end">
 
-              <div className="border-l-2 border-[#ff0b91] pl-5">
+              <div className="border-l-2 border-[#b79b66] pl-5">
 
-                <p className="text-2xl font-serif font-bold text-[#c1124c]">
+                <p className="text-2xl font-serif font-bold text-[#193830]">
                   Labbaik
                 </p>
 
-                <p className="mt-1 text-xs font-semibold tracking-[2px] text-[#4b1164]">
+                <p className="mt-1 text-xs font-semibold tracking-[2px] text-[#183c32]">
                   ALLAHUMMA LABBAIK
                 </p>
 

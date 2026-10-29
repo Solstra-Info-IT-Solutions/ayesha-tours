@@ -73,12 +73,12 @@ export default function HeritageWondersSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#f9f6f8] py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-[#faf8f5] py-20 sm:py-24 lg:py-28">
       {/* ================= DECORATIVE BACKGROUND ================= */}
 
-      <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full border border-[#fb1895]/15" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full border border-[#b79b66]/15" />
 
-      <div className="pointer-events-none absolute right-[-180px] top-1/3 h-[450px] w-[450px] rounded-full bg-[#4e1367]/[0.025] blur-3xl" />
+      <div className="pointer-events-none absolute right-[-180px] top-1/3 h-[450px] w-[450px] rounded-full bg-[#1a3e34]/[0.025] blur-3xl" />
 
       {/* ================= MAIN CONTAINER ================= */}
 
@@ -96,16 +96,16 @@ export default function HeritageWondersSection() {
 
             <div className="flex items-center gap-4">
 
-              <span className="h-[2px] w-10 bg-[#e40e83]" />
+              <span className="h-[2px] w-10 bg-[#7b6337]" />
 
               <div className="flex items-center gap-2">
 
                 <Landmark
                   size={15}
-                  className="text-[#4e1367]"
+                  className="text-[#1a3e34]"
                 />
 
-                <span className="text-[10px] font-semibold uppercase tracking-[2px] text-[#4e1367] sm:text-[11px] sm:tracking-[2.5px]">
+                <span className="text-[10px] font-semibold uppercase tracking-[2px] text-[#1a3e34] sm:text-[11px] sm:tracking-[2.5px]">
                   Ziyarat Sites
                 </span>
 
@@ -115,11 +115,11 @@ export default function HeritageWondersSection() {
 
             {/* Heading */}
 
-            <h2 className="mt-6 font-serif text-[36px] font-bold leading-[1.1] text-[#3f1152] sm:text-[46px] lg:text-[52px]">
+            <h2 className="mt-6 font-serif text-[36px] font-bold leading-[1.1] text-[#16322a] sm:text-[46px] lg:text-[52px]">
 
               Places Of
 
-              <span className="italic text-[#e40e83]">
+              <span className="italic text-[#7b6337]">
                 {" "}Remembrance
               </span>
 
@@ -127,7 +127,7 @@ export default function HeritageWondersSection() {
 
             {/* Description */}
 
-            <p className="mt-6 max-w-[650px] text-[15px] leading-7 text-[#6e6272] sm:text-[16px]">
+            <p className="mt-6 max-w-[650px] text-[15px] leading-7 text-[#666e6a] sm:text-[16px]">
 
               Historic sites in and around Makkah and Madinah that connect you
               with the life of the Prophet ﷺ and his companions. Ziyarat can
@@ -145,7 +145,7 @@ export default function HeritageWondersSection() {
               type="button"
               onClick={() => handleScroll("left")}
               aria-label="Previous heritage wonder"
-              className="group flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#4e1367]/20 bg-white text-[#4e1367] shadow-[0_8px_20px_rgba(78,19,103,0.08)] transition duration-300 hover:-translate-y-1 hover:border-[#4e1367] hover:bg-[#4e1367] hover:text-white"
+              className="group flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#1a3e34]/20 bg-white text-[#1a3e34] shadow-[0_8px_20px_rgba(26,62,52,0.08)] transition duration-300 hover:-translate-y-1 hover:border-[#1a3e34] hover:bg-[#1a3e34] hover:text-white"
             >
               <ChevronLeft
                 size={21}
@@ -157,7 +157,7 @@ export default function HeritageWondersSection() {
               type="button"
               onClick={() => handleScroll("right")}
               aria-label="Next heritage wonder"
-              className="group flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#4e1367] text-white shadow-[0_12px_25px_rgba(78,19,103,0.22)] transition duration-300 hover:-translate-y-1 hover:bg-[#3d0f51] hover:shadow-[0_18px_35px_rgba(78,19,103,0.30)]"
+              className="group flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#1a3e34] text-white shadow-[0_12px_25px_rgba(26,62,52,0.22)] transition duration-300 hover:-translate-y-1 hover:bg-[#143129] hover:shadow-[0_18px_35px_rgba(26,62,52,0.30)]"
             >
               <ChevronRight
                 size={21}
@@ -180,7 +180,7 @@ export default function HeritageWondersSection() {
 
             <article
               key={site.id}
-              className="group relative flex w-[290px] shrink-0 snap-start flex-col overflow-hidden rounded-[22px] border border-[#e3dbdf] bg-white shadow-[0_12px_30px_rgba(78,19,103,0.06)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(78,19,103,0.15)] sm:w-[320px] md:w-[340px] xl:w-[360px]"
+              className="group relative flex w-[290px] shrink-0 snap-start flex-col overflow-hidden rounded-[22px] border border-[#e6e1d8] bg-white shadow-[0_12px_30px_rgba(26,62,52,0.06)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_rgba(26,62,52,0.15)] sm:w-[320px] md:w-[340px] xl:w-[360px]"
             >
 
               {/* ================= IMAGE ================= */}
@@ -195,7 +195,7 @@ export default function HeritageWondersSection() {
 
                 {/* Cinematic Overlay */}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#290837]/75 via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d211b]/75 via-transparent to-transparent opacity-80" />
 
                 {/* Number */}
 
@@ -208,11 +208,11 @@ export default function HeritageWondersSection() {
                 {site.badge && (
                   <div className="absolute left-5 top-5">
 
-                    <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#4e1367]/85 px-4 py-2 text-[10px] font-semibold uppercase tracking-[1px] text-white shadow-lg backdrop-blur-md">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#1a3e34]/85 px-4 py-2 text-[10px] font-semibold uppercase tracking-[1px] text-white shadow-lg backdrop-blur-md">
 
                       <Sparkles
                         size={12}
-                        className="text-[#fb1895]"
+                        className="text-[#b79b66]"
                       />
 
                       {site.badge}
@@ -228,17 +228,17 @@ export default function HeritageWondersSection() {
 
               <div className="flex flex-1 flex-col px-6 pb-6 pt-7">
 
-                <h3 className="font-serif text-[23px] font-bold text-[#3f1152] transition-colors duration-300 group-hover:text-[#4e1367]">
+                <h3 className="font-serif text-[23px] font-bold text-[#16322a] transition-colors duration-300 group-hover:text-[#1a3e34]">
                   {site.title}
                 </h3>
 
                 {/* Gold Line */}
 
-                <div className="mt-4 h-px w-12 bg-[#fb1895] transition-all duration-500 group-hover:w-20" />
+                <div className="mt-4 h-px w-12 bg-[#b79b66] transition-all duration-500 group-hover:w-20" />
 
                 {/* Description */}
 
-                <p className="mt-5 flex-1 text-[14px] leading-6 text-[#6e6572]">
+                <p className="mt-5 flex-1 text-[14px] leading-6 text-[#686f6c]">
                   {site.description}
                 </p>
 
@@ -246,14 +246,14 @@ export default function HeritageWondersSection() {
 
                 <Link
                   href={site.link}
-                  className="group/link mt-7 inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[1.5px] text-[#4e1367]"
+                  className="group/link mt-7 inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[1.5px] text-[#1a3e34]"
                 >
 
-                  <span className="transition-colors duration-300 group-hover/link:text-[#b61d50]">
+                  <span className="transition-colors duration-300 group-hover/link:text-[#193830]">
                     Add To My Ziyarat
                   </span>
 
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#4e1367]/20 transition duration-300 group-hover/link:border-[#b61d50] group-hover/link:bg-[#b61d50] group-hover/link:text-white">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#1a3e34]/20 transition duration-300 group-hover/link:border-[#193830] group-hover/link:bg-[#193830] group-hover/link:text-white">
 
                     <ArrowUpRight
                       size={14}
@@ -274,13 +274,13 @@ export default function HeritageWondersSection() {
 
         {/* ================= BOTTOM HINT ================= */}
 
-        <div className="mt-2 flex items-center justify-center gap-3 text-center text-[10px] uppercase tracking-[2px] text-[#948b98] sm:text-[11px]">
+        <div className="mt-2 flex items-center justify-center gap-3 text-center text-[10px] uppercase tracking-[2px] text-[#5c6660] sm:text-[11px]">
 
-          <span className="h-px w-8 bg-[#e40e83]/60 sm:w-10" />
+          <span className="h-px w-8 bg-[#7b6337]/60 sm:w-10" />
 
           Makkah • Madinah
 
-          <span className="h-px w-8 bg-[#e40e83]/60 sm:w-10" />
+          <span className="h-px w-8 bg-[#7b6337]/60 sm:w-10" />
 
         </div>
 

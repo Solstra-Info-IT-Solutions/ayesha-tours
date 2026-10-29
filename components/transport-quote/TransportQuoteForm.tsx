@@ -311,18 +311,18 @@ ${
       <form
         method="post"
         onSubmit={handleSubmit}
-        className="overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_20px_70px_rgba(63,17,82,0.08)]"
+        className="overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_20px_70px_rgba(22,50,42,0.08)]"
       >
         {/* Form Header */}
 
         <div className="border-b border-gray-100 px-6 py-7 sm:px-8">
           <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#ede7f0] text-[#3f1152]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f2eee5] text-[#16322a]">
               <Send size={20} />
             </div>
 
             <div>
-              <h2 className="font-serif text-2xl font-bold text-[#3f1152]">
+              <h2 className="font-serif text-2xl font-bold text-[#16322a]">
                 Tell Us About Your Journey
               </h2>
 
@@ -358,7 +358,7 @@ ${
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group flex w-full items-center justify-center gap-3 rounded-xl bg-[#3f1152] px-6 py-4 text-sm font-semibold text-white shadow-lg shadow-[#3f1152]/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#4b0d66] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
+              className="group flex w-full items-center justify-center gap-3 rounded-xl bg-[#16322a] px-6 py-4 text-sm font-semibold text-white shadow-lg shadow-[#16322a]/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#173c31] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
             >
               {isSubmitting ? (
                 <>
@@ -381,10 +381,10 @@ ${
               )}
             </button>
 
-            <div className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-gray-400">
+            <div className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-gray-500">
               <ShieldCheck
                 size={15}
-                className="text-[#db1481]"
+                className="text-[#7b6337]"
               />
 
               Your details are only used to answer your transport enquiry.

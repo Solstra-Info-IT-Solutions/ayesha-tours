@@ -20,7 +20,7 @@ export const metadata = buildMetadata({
 export default function AboutPage() {
   return (
     
-    <main className="bg-[#f9f6f8]">
+    <main className="bg-[#faf8f5]">
         <Navbar/>
       <AboutHero />
       <OurStory />

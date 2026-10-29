@@ -59,15 +59,15 @@ export default function GalleryGrid() {
     useState<(typeof images)[0] | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-[#f9f6f8] py-20 sm:py-24 lg:py-28 xl:py-32">
+    <section className="relative overflow-hidden bg-[#faf8f5] py-20 sm:py-24 lg:py-28 xl:py-32">
 
       {/* ===================================================== */}
       {/* ================= BACKGROUND ======================== */}
       {/* ===================================================== */}
 
-      <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#4e1367]/[0.025] blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#1a3e34]/[0.025] blur-3xl" />
 
-      <div className="pointer-events-none absolute -bottom-40 -right-32 h-[450px] w-[450px] rounded-full bg-[#e40e83]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-32 h-[450px] w-[450px] rounded-full bg-[#7b6337]/[0.035] blur-3xl" />
 
       {/* ===================================================== */}
       {/* ================= CONTAINER ========================= */}
@@ -84,36 +84,36 @@ export default function GalleryGrid() {
           {/* Accent */}
           <div className="mb-5 flex items-center justify-center gap-3">
 
-            <span className="h-px w-10 bg-[#e40e83]" />
+            <span className="h-px w-10 bg-[#7b6337]" />
 
             <Camera
               size={15}
               strokeWidth={1.7}
-              className="text-[#e40e83]"
+              className="text-[#7b6337]"
             />
 
-            <span className="h-px w-10 bg-[#e40e83]" />
+            <span className="h-px w-10 bg-[#7b6337]" />
 
           </div>
 
           {/* Eyebrow */}
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#4e1367]">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1a3e34]">
             Pilgrimage Gallery
           </p>
 
           {/* Heading */}
-          <h2 className="mt-4 font-serif text-[38px] font-bold leading-[1.1] text-[#3f1152] sm:text-5xl lg:text-[52px]">
+          <h2 className="mt-4 font-serif text-[38px] font-bold leading-[1.1] text-[#16322a] sm:text-5xl lg:text-[52px]">
 
             Every Pilgrimage Leaves A{" "}
 
-            <span className="italic font-medium text-[#e40e83]">
+            <span className="italic font-medium text-[#7b6337]">
               Memory.
             </span>
 
           </h2>
 
           {/* Description */}
-          <p className="mx-auto mt-5 max-w-[600px] text-sm leading-7 text-[#6e6572] md:text-[15px]">
+          <p className="mx-auto mt-5 max-w-[600px] text-sm leading-7 text-[#686f6c] md:text-[15px]">
             Demo photographs of Makkah, Madinah and the Haj sites from
             Wikimedia Commons. Ayesha Tours group photos will replace these.
           </p>
@@ -135,7 +135,7 @@ export default function GalleryGrid() {
                 type="button"
                 onClick={() => setSelectedImage(image)}
                 aria-label={`View ${image.title}`}
-                className={`group relative overflow-hidden rounded-[24px] border border-white bg-[#eeeaec] p-1.5 text-left shadow-[0_15px_45px_rgba(63,17,82,0.08)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(63,17,82,0.14)] ${
+                className={`group relative overflow-hidden rounded-[24px] border border-white bg-[#f0ede8] p-1.5 text-left shadow-[0_15px_45px_rgba(22,50,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(22,50,42,0.14)] ${
                   isFeatured
                     ? "sm:col-span-2 lg:col-span-2"
                     : ""
@@ -147,7 +147,7 @@ export default function GalleryGrid() {
                 {/* ================================================= */}
 
                 <div
-                  className={`relative overflow-hidden rounded-[18px] bg-[#e7e2e5] ${
+                  className={`relative overflow-hidden rounded-[18px] bg-[#eae6df] ${
                     isFeatured
                       ? "h-[420px] sm:h-[500px]"
                       : "h-[280px] sm:h-[300px]"
@@ -166,13 +166,13 @@ export default function GalleryGrid() {
                   {/* ================= OVERLAY ======================= */}
                   {/* ================================================= */}
 
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#3e0e52]/75 via-[#3e0e52]/5 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-75" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#143129]/75 via-[#143129]/5 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-75" />
 
                   {/* Inner Border */}
                   <div className="pointer-events-none absolute inset-0 rounded-[18px] ring-1 ring-inset ring-black/[0.04]" />
 
                   {/* Gold Bottom Accent */}
-                  <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#e40e83] transition-all duration-500 group-hover:w-full" />
+                  <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#7b6337] transition-all duration-500 group-hover:w-full" />
 
                   {/* ================================================= */}
                   {/* ================= CONTENT ======================= */}
@@ -183,7 +183,7 @@ export default function GalleryGrid() {
                     {/* Title */}
                     <div>
 
-                      <p className="mb-1 text-[9px] font-semibold uppercase tracking-[2.5px] text-[#e40e83]">
+                      <p className="mb-1 text-[9px] font-semibold uppercase tracking-[2.5px] text-[#7b6337]">
                         Holy Cities
                       </p>
 
@@ -194,7 +194,7 @@ export default function GalleryGrid() {
                     </div>
 
                     {/* Zoom Button */}
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#e40e83] text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#7b6337] text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
 
                       <ZoomIn
                         size={18}
@@ -221,13 +221,13 @@ export default function GalleryGrid() {
 
           <div className="mx-auto flex max-w-fit items-center gap-4">
 
-            <span className="h-px w-8 bg-[#4e1367]/20" />
+            <span className="h-px w-8 bg-[#1a3e34]/20" />
 
-            <p className="font-serif text-lg italic text-[#3f1152]/70">
+            <p className="font-serif text-lg italic text-[#16322a]/70">
               Places close to every pilgrim&apos;s heart.
             </p>
 
-            <span className="h-px w-8 bg-[#4e1367]/20" />
+            <span className="h-px w-8 bg-[#1a3e34]/20" />
 
           </div>
 
@@ -241,7 +241,7 @@ export default function GalleryGrid() {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#1c0725]/95 p-4 sm:p-6"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#091613]/95 p-4 sm:p-6"
           onClick={() => setSelectedImage(null)}
           role="dialog"
           aria-modal="true"
@@ -282,7 +282,7 @@ export default function GalleryGrid() {
 
             <div className="mt-5 text-center">
 
-              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-[#e40e83]">
+              <p className="text-[9px] font-semibold uppercase tracking-[3px] text-[#7b6337]">
                 Pilgrimage Gallery
               </p>
 

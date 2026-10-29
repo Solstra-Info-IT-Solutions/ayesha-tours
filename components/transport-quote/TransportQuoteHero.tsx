@@ -2,23 +2,23 @@ import { Bus, ChevronRight } from "lucide-react";
 
 export default function TransportQuoteHero() {
   return (
-    <section className="relative overflow-hidden bg-[#3f1152]">
+    <section className="relative overflow-hidden bg-[#16322a]">
       {/* Background Decorations */}
       <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full border border-white/10" />
 
-      <div className="pointer-events-none absolute -bottom-40 -left-40 h-[380px] w-[380px] rounded-full border border-[#ff058f]/20" />
+      <div className="pointer-events-none absolute -bottom-40 -left-40 h-[380px] w-[380px] rounded-full border border-[#b79b66]/20" />
 
       <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#ff058f]/40 bg-[#ff058f]/10">
-              <Bus size={21} className="text-[#ff058f]" />
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#b79b66]/40 bg-[#b79b66]/10">
+              <Bus size={21} className="text-[#b79b66]" />
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="h-px w-8 bg-[#ff058f]" />
+              <span className="h-px w-8 bg-[#b79b66]" />
 
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#ff058f]">
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#b79b66]">
                 Transport & Ziyarat
               </span>
             </div>
@@ -26,7 +26,7 @@ export default function TransportQuoteHero() {
 
           <h1 className="mt-7 font-serif text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
             Request Your
-            <span className="block italic font-medium text-[#ff058f]">
+            <span className="block italic font-medium text-[#b79b66]">
               Transport Quote.
             </span>
           </h1>
@@ -46,7 +46,7 @@ export default function TransportQuoteHero() {
 
             <ChevronRight size={15} />
 
-            <span className="text-[#ff058f]">Request Quote</span>
+            <span className="text-[#b79b66]">Request Quote</span>
           </div>
         </div>
       </div>

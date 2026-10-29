@@ -34,15 +34,15 @@ const benefits = [
 
 export default function LocalPartner() {
   return (
-    <section className="relative overflow-hidden bg-[#f9f7f8] px-6 py-20 md:px-10 lg:px-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#faf9f6] px-6 py-20 md:px-10 lg:px-20 lg:py-28">
 
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-[#fb1895]/5 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-[#b79b66]/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-[1230px]">
 
         {/* Premium Main Card */}
-        <div className="overflow-hidden rounded-[28px] border border-[#e3dadf] bg-white shadow-[0_25px_70px_rgba(78,19,103,0.10)]">
+        <div className="overflow-hidden rounded-[28px] border border-[#e6e1d7] bg-white shadow-[0_25px_70px_rgba(26,62,52,0.10)]">
 
           <div className="grid grid-cols-1 md:grid-cols-2">
 
@@ -56,14 +56,14 @@ export default function LocalPartner() {
               />
 
               {/* Luxury Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#36074a]/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#102a23]/70 via-transparent to-transparent" />
 
               {/* Experience Badge */}
               <div className="absolute bottom-7 left-7 right-7">
 
-                <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-[#4e1367]/85 px-5 py-3 text-white shadow-xl backdrop-blur-md">
+                <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-[#1a3e34]/85 px-5 py-3 text-white shadow-xl backdrop-blur-md">
 
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fb1895] text-white">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#b79b66] text-[#0e1f1b]">
                     <Globe2 size={16} />
                   </span>
 
@@ -89,31 +89,31 @@ export default function LocalPartner() {
               {/* Eyebrow */}
               <div className="flex items-center gap-3">
 
-                <span className="h-[2px] w-9 bg-[#f90c8f]" />
+                <span className="h-[2px] w-9 bg-[#b79b66]" />
 
-                <p className="text-[11px] font-semibold uppercase tracking-[2px] text-[#e40e83]">
+                <p className="text-[11px] font-semibold uppercase tracking-[2px] text-[#7b6337]">
                   First-Time Pilgrims
                 </p>
 
               </div>
 
               {/* Heading */}
-              <h2 className="mt-6 max-w-[520px] font-serif text-[34px] font-bold leading-[1.15] text-[#4e1367] sm:text-[40px] lg:text-[46px]">
+              <h2 className="mt-6 max-w-[520px] font-serif text-[34px] font-bold leading-[1.15] text-[#1a3e34] sm:text-[40px] lg:text-[46px]">
 
                 Your Guide For
                 <br />
 
-                <span className="text-[#e40e83]">
+                <span className="text-[#7b6337]">
                   The Holy Journey
                 </span>
 
               </h2>
 
               {/* Divider */}
-              <div className="mt-7 h-px w-full bg-gradient-to-r from-[#fb1895]/60 to-transparent" />
+              <div className="mt-7 h-px w-full bg-gradient-to-r from-[#b79b66]/60 to-transparent" />
 
               {/* Description */}
-              <p className="mt-7 max-w-[540px] text-[15px] leading-7 text-[#6e6572]">
+              <p className="mt-7 max-w-[540px] text-[15px] leading-7 text-[#686f6c]">
 
                 Performing Umrah or Haj for the first time can feel
                 overwhelming. We explain each step – from visas and ihram to
@@ -121,7 +121,7 @@ export default function LocalPartner() {
 
               </p>
 
-              <p className="mt-4 max-w-[540px] text-[15px] leading-7 text-[#6e6572]">
+              <p className="mt-4 max-w-[540px] text-[15px] leading-7 text-[#686f6c]">
 
                 From the moment you land in Jeddah or Madinah until your return
                 flight, we help ensure your arrangements are in place and
@@ -138,17 +138,17 @@ export default function LocalPartner() {
                   return (
                     <div
                       key={benefit.text}
-                      className="group flex items-center gap-4 rounded-xl border border-[#e9e0e5] bg-[#fbf9fa] px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-[#fb1895]/60 hover:bg-white hover:shadow-[0_12px_30px_rgba(78,19,103,0.08)]"
+                      className="group flex items-center gap-4 rounded-xl border border-[#ece7dd] bg-[#fbfbf9] px-4 py-4 transition duration-300 hover:-translate-y-1 hover:border-[#b79b66]/60 hover:bg-white hover:shadow-[0_12px_30px_rgba(26,62,52,0.08)]"
                     >
 
                       {/* Icon */}
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#4e1367]/10 text-[#4e1367] transition duration-300 group-hover:bg-[#fb1895] group-hover:text-white">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1a3e34]/10 text-[#1a3e34] transition duration-300 group-hover:bg-[#b79b66] group-hover:text-[#0e1f1b]">
 
                         <Icon size={17} strokeWidth={1.8} />
 
                       </div>
 
-                      <p className="text-[13px] font-medium leading-5 text-[#574d5c]">
+                      <p className="text-[13px] font-medium leading-5 text-[#505955]">
 
                         {benefit.text}
 
@@ -161,9 +161,9 @@ export default function LocalPartner() {
               </div>
 
               {/* Bottom Trust Message */}
-              <div className="mt-10 flex items-center gap-4 border-t border-[#e8dfe4] pt-7">
+              <div className="mt-10 flex items-center gap-4 border-t border-[#ebe6dc] pt-7">
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#4e1367] text-[#fb1895]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#1a3e34] text-[#b79b66]">
 
                   <ShieldCheck size={21} />
 
@@ -171,7 +171,7 @@ export default function LocalPartner() {
 
                 <div>
 
-                  <p className="text-[13px] font-semibold text-[#4e1367]">
+                  <p className="text-[13px] font-semibold text-[#1a3e34]">
                     Travel With Peace Of Mind
                   </p>
 

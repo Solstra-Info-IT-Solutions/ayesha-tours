@@ -90,9 +90,9 @@ export default async function LandingPageRoute({
 
       <Navbar />
 
-      <main className="bg-[#f9f6f8]">
+      <main className="bg-[#faf8f5]">
         {/* HERO */}
-        <section className="relative overflow-hidden bg-[#3e0e52] py-24 sm:py-28 lg:py-32">
+        <section className="relative overflow-hidden bg-[#143129] py-24 sm:py-28 lg:py-32">
           <Image
             src={page.heroImage}
             alt={`${page.h1} ${page.h1Accent} – ${SITE.name}`}
@@ -101,34 +101,34 @@ export default async function LandingPageRoute({
             sizes="100vw"
             className="object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#350b48] via-[#3e0e52]/85 to-[#3e0e52]/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#112b24] via-[#143129]/85 to-[#143129]/40" />
 
           <div className="relative mx-auto max-w-[1100px] px-5 sm:px-8">
-            <nav aria-label="Breadcrumb" className="text-[12px] text-[#c9b8d0]">
-              <Link href="/" className="hover:text-[#ff058f]">
+            <nav aria-label="Breadcrumb" className="text-[12px] text-[#bdcbc7]">
+              <Link href="/" className="hover:text-[#b79b66]">
                 Home
               </Link>
               <span className="mx-2">/</span>
               <span className="text-white">{page.h1}</span>
             </nav>
 
-            <span className="mt-8 block text-[10px] font-bold uppercase tracking-[0.28em] text-[#ff058f]">
+            <span className="mt-8 block text-[10px] font-bold uppercase tracking-[0.28em] text-[#b79b66]">
               {page.eyebrow}
             </span>
 
             <h1 className="mt-5 max-w-[820px] font-serif text-[38px] font-bold leading-[1.1] text-white sm:text-5xl lg:text-[58px]">
               {page.h1}{" "}
-              <span className="italic font-medium text-[#ff058f]">{page.h1Accent}</span>
+              <span className="italic font-medium text-[#b79b66]">{page.h1Accent}</span>
             </h1>
 
-            <p className="mt-6 max-w-[720px] text-[15px] leading-7 text-[#d8c9de] sm:text-[16px]">
+            <p className="mt-6 max-w-[720px] text-[15px] leading-7 text-[#e2d8c5] sm:text-[16px]">
               {page.intro}
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 href={quoteHref}
-                className="inline-flex min-h-[50px] items-center gap-3 bg-[#ff058f] px-6 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-[#3e0e52]"
+                className="inline-flex min-h-[50px] items-center gap-3 bg-[#b79b66] px-6 text-[11px] font-bold uppercase tracking-[0.18em] text-[#0e1f1b] transition hover:bg-white hover:text-[#143129]"
               >
                 Request Free Quote <ArrowUpRight size={16} />
               </Link>
@@ -136,13 +136,13 @@ export default async function LandingPageRoute({
                 href={whatsappLink(page.whatsappText)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[50px] items-center gap-3 border border-white/40 px-6 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition hover:border-[#ff058f] hover:text-[#ff058f]"
+                className="inline-flex min-h-[50px] items-center gap-3 border border-white/40 px-6 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition hover:border-[#b79b66] hover:text-[#b79b66]"
               >
                 <MessageCircle size={16} /> WhatsApp Us
               </a>
               <a
                 href={phoneLink()}
-                className="inline-flex min-h-[50px] items-center gap-3 border border-white/40 px-6 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition hover:border-[#ff058f] hover:text-[#ff058f]"
+                className="inline-flex min-h-[50px] items-center gap-3 border border-white/40 px-6 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition hover:border-[#b79b66] hover:text-[#b79b66]"
               >
                 <Phone size={16} /> {SITE.phone}
               </a>
@@ -154,9 +154,9 @@ export default async function LandingPageRoute({
         <section className="py-16 sm:py-20">
           <div className="mx-auto grid max-w-[1100px] gap-5 px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
             {page.highlights.map((item) => (
-              <div key={item.title} className="border border-[#e2d7dd] bg-white p-6">
-                <h2 className="font-serif text-[20px] font-bold text-[#3f1152]">{item.title}</h2>
-                <p className="mt-3 text-[14px] leading-6 text-[#6e6572]">{item.text}</p>
+              <div key={item.title} className="border border-[#e6e0d3] bg-white p-6">
+                <h2 className="font-serif text-[20px] font-bold text-[#16322a]">{item.title}</h2>
+                <p className="mt-3 text-[14px] leading-6 text-[#686f6c]">{item.text}</p>
               </div>
             ))}
           </div>
@@ -168,11 +168,11 @@ export default async function LandingPageRoute({
             <div className="space-y-10">
               {page.sections.map((section) => (
                 <article key={section.heading}>
-                  <h2 className="font-serif text-[28px] font-bold text-[#3f1152] sm:text-[34px]">
+                  <h2 className="font-serif text-[28px] font-bold text-[#16322a] sm:text-[34px]">
                     {section.heading}
                   </h2>
                   {section.paragraphs.map((p) => (
-                    <p key={p.slice(0, 32)} className="mt-4 text-[15px] leading-7 text-[#564b5b]">
+                    <p key={p.slice(0, 32)} className="mt-4 text-[15px] leading-7 text-[#4f5753]">
                       {p}
                     </p>
                   ))}
@@ -180,12 +180,12 @@ export default async function LandingPageRoute({
               ))}
             </div>
 
-            <aside className="h-fit border border-[#e2d7dd] bg-white p-7">
-              <h2 className="font-serif text-[22px] font-bold text-[#3f1152]">Good to know</h2>
+            <aside className="h-fit border border-[#e6e0d3] bg-white p-7">
+              <h2 className="font-serif text-[22px] font-bold text-[#16322a]">Good to know</h2>
               <ul className="mt-5 space-y-3">
                 {page.goodToKnow.map((tip) => (
-                  <li key={tip} className="flex gap-3 text-[14px] leading-6 text-[#564b5b]">
-                    <Check size={16} className="mt-1 shrink-0 text-[#e40e83]" />
+                  <li key={tip} className="flex gap-3 text-[14px] leading-6 text-[#4f5753]">
+                    <Check size={16} className="mt-1 shrink-0 text-[#7b6337]" />
                     {tip}
                   </li>
                 ))}
@@ -195,18 +195,18 @@ export default async function LandingPageRoute({
         </section>
 
         {/* FAQ */}
-        <section className="bg-[#f6f2f4] py-16 sm:py-20">
+        <section className="bg-[#f7f5f1] py-16 sm:py-20">
           <div className="mx-auto max-w-[860px] px-5 sm:px-8">
-            <h2 className="text-center font-serif text-[32px] font-bold text-[#3f1152] sm:text-[40px]">
+            <h2 className="text-center font-serif text-[32px] font-bold text-[#16322a] sm:text-[40px]">
               Frequently Asked Questions
             </h2>
             <div className="mt-10 space-y-4">
               {page.faqs.map((faq) => (
-                <details key={faq.question} className="border border-[#e2d7dd] bg-white p-5">
-                  <summary className="cursor-pointer font-serif text-[18px] font-bold text-[#3f1152]">
+                <details key={faq.question} className="border border-[#e6e0d3] bg-white p-5">
+                  <summary className="cursor-pointer font-serif text-[18px] font-bold text-[#16322a]">
                     {faq.question}
                   </summary>
-                  <p className="mt-3 text-[14px] leading-7 text-[#564b5b]">{faq.answer}</p>
+                  <p className="mt-3 text-[14px] leading-7 text-[#4f5753]">{faq.answer}</p>
                 </details>
               ))}
             </div>
@@ -216,34 +216,34 @@ export default async function LandingPageRoute({
         {/* RELATED + CTA */}
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-[1100px] px-5 sm:px-8">
-            <h2 className="font-serif text-[28px] font-bold text-[#3f1152]">You may also need</h2>
+            <h2 className="font-serif text-[28px] font-bold text-[#16322a]">You may also need</h2>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {related.map((r) => (
                 <Link
                   key={r.slug}
                   href={`/${r.slug}`}
-                  className="border border-[#e2d7dd] bg-white p-6 transition hover:border-[#e40e83]"
+                  className="border border-[#e6e0d3] bg-white p-6 transition hover:border-[#7b6337]"
                 >
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e40e83]">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#7b6337]">
                     {r.eyebrow}
                   </span>
-                  <p className="mt-3 font-serif text-[19px] font-bold leading-snug text-[#3f1152]">
+                  <p className="mt-3 font-serif text-[19px] font-bold leading-snug text-[#16322a]">
                     {r.seoTitle}
                   </p>
                 </Link>
               ))}
             </div>
 
-            <div className="mt-14 bg-[#3e0e52] p-8 text-center sm:p-12">
+            <div className="mt-14 bg-[#143129] p-8 text-center sm:p-12">
               <h2 className="font-serif text-[28px] font-bold text-white sm:text-[36px]">
                 Ready to plan your journey?
               </h2>
-              <p className="mx-auto mt-3 max-w-[560px] text-[14px] leading-6 text-[#c9b8d0]">
+              <p className="mx-auto mt-3 max-w-[560px] text-[14px] leading-6 text-[#bdcbc7]">
                 Share your dates and group size and our team will reply with a customised quote.
               </p>
               <Link
                 href={quoteHref}
-                className="mt-7 inline-flex min-h-[50px] items-center gap-3 bg-[#ff058f] px-7 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-[#3e0e52]"
+                className="mt-7 inline-flex min-h-[50px] items-center gap-3 bg-[#b79b66] px-7 text-[11px] font-bold uppercase tracking-[0.18em] text-[#0e1f1b] transition hover:bg-white hover:text-[#143129]"
               >
                 Request A Quote <ArrowUpRight size={16} />
               </Link>

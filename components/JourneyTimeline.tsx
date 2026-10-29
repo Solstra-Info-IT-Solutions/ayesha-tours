@@ -40,7 +40,7 @@ const steps = [
 
 export default function JourneyTimeline() {
   return (
-    <section className="relative overflow-hidden bg-[#3f1152] py-20 text-white sm:py-24 lg:py-28 xl:py-32">
+    <section className="relative overflow-hidden bg-[#16322a] py-20 text-white sm:py-24 lg:py-28 xl:py-32">
       {/* BACKGROUND */}
 
       <div className="pointer-events-none absolute inset-0">
@@ -48,7 +48,7 @@ export default function JourneyTimeline() {
 
         <div className="absolute right-[10%] top-0 h-full w-px bg-white/[0.05]" />
 
-        <div className="absolute -right-40 top-1/4 h-[450px] w-[450px] rounded-full border border-[#e40e83]/10" />
+        <div className="absolute -right-40 top-1/4 h-[450px] w-[450px] rounded-full border border-[#7b6337]/10" />
 
         <div className="absolute -left-52 bottom-[-250px] h-[550px] w-[550px] rounded-full border border-white/[0.05]" />
       </div>
@@ -58,18 +58,18 @@ export default function JourneyTimeline() {
 
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex items-center justify-center gap-4">
-            <span className="h-px w-10 bg-[#e40e83]" />
+            <span className="h-px w-10 bg-[#7b6337]" />
 
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#ff058f]">
+            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#b79b66]">
               Our Simple Process
             </span>
 
-            <span className="h-px w-10 bg-[#e40e83]" />
+            <span className="h-px w-10 bg-[#7b6337]" />
           </div>
 
           <h2 className="mt-6 font-serif text-[40px] font-bold leading-[1.1] sm:text-5xl lg:text-[58px]">
             How We Plan
-            <span className="italic font-medium text-[#ff058f]">
+            <span className="italic font-medium text-[#b79b66]">
               {" "}
               Your Pilgrimage.
             </span>
@@ -92,12 +92,12 @@ export default function JourneyTimeline() {
                 {/* CONNECTOR */}
 
                 {index !== steps.length - 1 && (
-                  <div className="absolute left-[65%] top-[34px] hidden h-px w-[70%] bg-gradient-to-r from-[#e40e83]/50 to-transparent xl:block" />
+                  <div className="absolute left-[65%] top-[34px] hidden h-px w-[70%] bg-gradient-to-r from-[#7b6337]/50 to-transparent xl:block" />
                 )}
 
-                <div className="relative border border-white/[0.10] bg-white/[0.035] p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#e40e83]/40 hover:bg-white/[0.06]">
+                <div className="relative border border-white/[0.10] bg-white/[0.035] p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#7b6337]/40 hover:bg-white/[0.06]">
                   <div className="flex items-start justify-between">
-                    <div className="flex h-[62px] w-[62px] items-center justify-center rounded-full border border-[#e40e83]/30 bg-[#e40e83]/10 text-[#ff058f]">
+                    <div className="flex h-[62px] w-[62px] items-center justify-center rounded-full border border-[#7b6337]/30 bg-[#7b6337]/10 text-[#b79b66]">
                       <Icon size={23} strokeWidth={1.6} />
                     </div>
 
@@ -115,9 +115,9 @@ export default function JourneyTimeline() {
                   </p>
 
                   <div className="mt-7 flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#e40e83]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#7b6337]" />
 
-                    <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-[#ff058f]">
+                    <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-[#b79b66]">
                       Step {step.number}
                     </span>
                   </div>

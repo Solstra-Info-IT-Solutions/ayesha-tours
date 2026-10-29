@@ -18,7 +18,7 @@ export default function TourCategories({
   onChange: (id: string) => void;
 }) {
   return (
-    <section className="relative border-b border-[#e3dbdf] bg-[#f6f2f4] py-8">
+    <section className="relative border-b border-[#e6e1d8] bg-[#f7f5f1] py-8">
       <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-10">
 
         <div className="flex flex-wrap justify-center gap-3">
@@ -35,8 +35,8 @@ export default function TourCategories({
                 aria-pressed={isActive}
                 className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-[10px] font-bold uppercase tracking-[0.16em] transition-all duration-300 ${
                   isActive
-                    ? "border-[#ff058f] bg-[#ff058f] text-white"
-                    : "border-[#d4ccd0] bg-white text-[#6a5c70] hover:border-[#ff058f]/60 hover:text-[#3e0e52]"
+                    ? "border-[#b79b66] bg-[#b79b66] text-[#0e1f1b]"
+                    : "border-[#ced2d0] bg-white text-[#616c66] hover:border-[#b79b66]/60 hover:text-[#143129]"
                 }`}
               >
                 <Icon size={14} />
