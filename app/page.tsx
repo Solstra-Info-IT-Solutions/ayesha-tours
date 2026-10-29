@@ -4,6 +4,7 @@ import HomeHero from "@/components/home/HomeHero";
 import JourneyComposer from "@/components/home/JourneyComposer";
 import TwoCities from "@/components/home/TwoCities";
 import CuratedJourneys from "@/components/home/CuratedJourneys";
+import PilgrimBand from "@/components/home/PilgrimBand";
 import JourneyArranged from "@/components/home/JourneyArranged";
 import Expectations from "@/components/home/Expectations";
 import Conversation from "@/components/home/Conversation";
@@ -20,6 +21,7 @@ export default function Home() {
         <HomeHero />
         <JourneyComposer />
         <TwoCities />
+        <PilgrimBand />
         <CuratedJourneys />
         <JourneyArranged />
         <Expectations />

@@ -3,8 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import {
+  motion,
+  useMotionValue,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { chapters } from "@/components/home/chapters";
+import Magnetic from "@/components/motion/Magnetic";
 
 const CHAPTER_MS = 8000;
 
@@ -34,13 +43,47 @@ export default function HomeHero() {
 
   const chapter = chapters[active];
 
+  // Physics: the photograph and headline drift against each other with the
+  // cursor (springs), and the copy lifts away as the page scrolls.
+  const reduce = useReducedMotion();
+  const pointerX = useMotionValue(0);
+  const pointerY = useMotionValue(0);
+  const drift = { stiffness: 55, damping: 18, mass: 0.8 };
+  const springX = useSpring(pointerX, drift);
+  const springY = useSpring(pointerY, drift);
+  const imageX = useTransform(springX, (v) => v * -22);
+  const imageY = useTransform(springY, (v) => v * -14);
+  const textX = useTransform(springX, (v) => v * 12);
+  const textY = useTransform(springY, (v) => v * 8);
+
+  const { scrollY } = useScroll();
+  const liftRaw = useTransform(scrollY, [0, 700], [0, -160]);
+  const lift = useSpring(liftRaw, { stiffness: 120, damping: 24, mass: 0.4 });
+  const fade = useTransform(scrollY, [0, 520], [1, 0.15]);
+  const imageScale = useTransform(scrollY, [0, 800], [1.04, 1.16]);
+
+  const onPointerMove = (event: React.PointerEvent) => {
+    if (reduce || event.pointerType !== "mouse") return;
+    pointerX.set(event.clientX / window.innerWidth - 0.5);
+    pointerY.set(event.clientY / window.innerHeight - 0.5);
+  };
+
   return (
     <section
       aria-label="Ayesha Tours – introduction"
+      onPointerMove={onPointerMove}
+      onPointerLeave={() => {
+        pointerX.set(0);
+        pointerY.set(0);
+      }}
       className="relative -mt-[72px] h-[100svh] min-h-[620px] overflow-hidden bg-night text-ivory sm:-mt-[84px] sm:min-h-[700px]"
     >
       {/* Photographic chapters */}
       <div className="veil-open absolute inset-0">
+        <motion.div
+          className="absolute -inset-8"
+          style={reduce ? undefined : { x: imageX, y: imageY, scale: imageScale }}
+        >
         {chapters.map((item, index) => (
           <div
             key={item.id}
@@ -62,6 +105,7 @@ export default function HomeHero() {
             />
           </div>
         ))}
+        </motion.div>
 
         {/* Readability veils: left for the headline, bottom for the rail */}
         <div className="absolute inset-0 bg-gradient-to-r from-night/75 via-night/25 to-transparent" />
@@ -70,8 +114,11 @@ export default function HomeHero() {
 
 
       <div className="relative mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-28 pt-28 sm:px-8 sm:pb-32 lg:px-12 lg:pb-36">
-        <div className="grid items-end gap-12 lg:grid-cols-[1fr_300px]">
-          <div className="max-w-[980px]">
+        <motion.div
+          className="grid items-end gap-12 lg:grid-cols-[1fr_300px]"
+          style={reduce ? undefined : { y: lift, opacity: fade }}
+        >
+          <motion.div className="max-w-[980px]" style={reduce ? undefined : { x: textX, y: textY }}>
             <p className="veil-fade flex items-center gap-4 text-[12px] font-medium uppercase tracking-[0.32em] text-gold" style={{ ["--line-delay" as string]: "300ms" }}>
               <span className="h-px w-10 bg-gold" aria-hidden />
               Haj &amp; Umrah<span className="hidden sm:inline"> · Ayesha Tours</span>
@@ -96,15 +143,17 @@ export default function HomeHero() {
               </p>
 
               <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
-                <Link
-                  href="/enquiry"
-                  className="group inline-flex h-14 items-center gap-3 rounded-full bg-ivory pl-7 pr-2 text-[15px] font-semibold text-night transition-colors hover:bg-gold"
-                >
-                  Plan My Pilgrimage
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-night text-ivory transition-transform duration-500 group-hover:rotate-45">
-                    <ArrowUpRight size={18} aria-hidden />
-                  </span>
-                </Link>
+                <Magnetic>
+                  <Link
+                    href="/enquiry"
+                    className="group inline-flex h-14 items-center gap-3 rounded-full bg-ivory pl-7 pr-2 text-[15px] font-semibold text-night transition-colors hover:bg-gold"
+                  >
+                    Plan My Pilgrimage
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-night text-ivory transition-transform duration-500 group-hover:rotate-45">
+                      <ArrowUpRight size={18} aria-hidden />
+                    </span>
+                  </Link>
+                </Magnetic>
                 <Link
                   href="#journeys"
                   className="group inline-flex items-center gap-2 border-b border-ivory/40 pb-1 text-[15px] font-medium text-ivory transition-colors hover:border-gold hover:text-gold"
@@ -113,7 +162,7 @@ export default function HomeHero() {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Chapter rail */}
           <div
@@ -160,7 +209,7 @@ export default function HomeHero() {
               })}
             </ol>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom strip: caption, mobile chapter dots, scroll cue */}

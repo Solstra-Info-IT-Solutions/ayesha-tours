@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import TiltCard from "@/components/motion/TiltCard";
 
 const D = "/images/demo/";
 
@@ -38,15 +39,17 @@ export default function ZiyaratStrip() {
             className="w-[78vw] shrink-0 snap-start sm:w-[44vw] lg:w-[min(30vw,440px)]"
           >
             <figure>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[18px]">
-                <Image
-                  src={site.image}
-                  alt={site.alt}
-                  fill
-                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 44vw, 78vw"
-                  className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.04]"
-                />
-                <span className="absolute left-4 top-4 rounded-full bg-night/70 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-ivory backdrop-blur">
+              <div className="relative">
+                <TiltCard className="relative aspect-[4/5] overflow-hidden rounded-[18px]">
+                  <Image
+                    src={site.image}
+                    alt={site.alt}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 44vw, 78vw"
+                    className="object-cover"
+                  />
+                </TiltCard>
+                <span className="pointer-events-none absolute left-4 top-4 rounded-full bg-night/70 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-ivory backdrop-blur">
                   {site.city}
                 </span>
               </div>

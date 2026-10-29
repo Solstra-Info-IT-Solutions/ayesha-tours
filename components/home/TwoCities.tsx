@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import ParallaxImage from "@/components/motion/ParallaxImage";
 import { ArrowUpRight } from "lucide-react";
 import ZiyaratStrip from "@/components/home/ZiyaratStrip";
 
@@ -74,12 +74,11 @@ export default function TwoCities() {
           >
             <div className={`relative lg:col-span-7 ${flip ? "lg:order-2" : ""}`}>
               <div data-reveal="mask" className="relative aspect-[4/5] overflow-hidden rounded-[22px] sm:aspect-[16/11] lg:aspect-auto lg:h-[min(86vh,820px)]">
-                <Image
+                <ParallaxImage
                   src={city.image}
                   alt={city.alt}
-                  fill
                   sizes="(min-width: 1024px) 58vw, 100vw"
-                  className="object-cover"
+                  strength={80}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night/60 via-transparent to-transparent" />
               </div>

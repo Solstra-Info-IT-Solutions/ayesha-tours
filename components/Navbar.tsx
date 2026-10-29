@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Mail, MessageCircle, Phone, X } from "lucide-react";
 import { SITE, mailLink, phoneLink, whatsappLink } from "@/lib/site";
+import Magnetic from "@/components/motion/Magnetic";
 
 const primaryLinks = [
   { name: "Journeys", href: "/tour-packages" },
@@ -124,6 +125,7 @@ export default function Navbar({ variant = "solid", hideCta = false }: NavbarPro
 
           <div className="flex items-center gap-2 sm:gap-3">
             {!hideCta && (
+              <Magnetic strength={0.22} className="hidden sm:inline-flex">
               <Link
                 href="/enquiry"
                 className="hidden h-11 items-center gap-2 rounded-full bg-ivory px-5 text-[13px] font-semibold text-night transition-all duration-300 hover:bg-gold hover:text-night sm:inline-flex"
@@ -131,6 +133,7 @@ export default function Navbar({ variant = "solid", hideCta = false }: NavbarPro
                 Plan My Pilgrimage
                 <ArrowUpRight size={16} aria-hidden />
               </Link>
+              </Magnetic>
             )}
 
             <button
@@ -170,16 +173,41 @@ export default function Navbar({ variant = "solid", hideCta = false }: NavbarPro
             animate={reduceMotion ? { opacity: 1 } : { clipPath: "inset(0 0 0% 0)" }}
             exit={reduceMotion ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-x-0 bottom-0 top-[72px] overflow-y-auto bg-night text-ivory sm:top-[84px]"
+            className="fixed inset-0 z-[200] overflow-y-auto overscroll-contain bg-night text-ivory"
           >
-            <div className="mx-auto grid min-h-full max-w-[1600px] gap-12 px-5 py-10 sm:px-8 lg:grid-cols-[1.4fr_1fr] lg:px-12 lg:py-16">
+            {/* The menu carries its own bar so Close is always visible,
+                whatever sits above the header (e.g. the demo notice). */}
+            <div className="sticky top-0 z-10 border-b border-emerald-line/70 bg-night/95 backdrop-blur-xl">
+              <div className="mx-auto flex h-[72px] max-w-[1600px] items-center justify-between gap-4 px-4 sm:h-[84px] sm:px-8 lg:px-12">
+                <Link
+                  href="/"
+                  aria-label="Ayesha Tours – Haj & Umrah Packages, home"
+                  className="flex shrink-0 items-center rounded-[14px] bg-ivory px-3 py-1.5"
+                >
+                  <img src="/logo.png" alt="Ayesha Tours – Haj & Umrah Packages" width={1099} height={684} className="h-[40px] w-auto sm:h-[48px]" />
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  className="flex h-11 items-center gap-3 rounded-full border border-ivory/30 px-4 text-[13px] font-medium text-ivory transition-colors hover:border-gold hover:text-gold"
+                >
+                  Close <X size={18} aria-hidden />
+                </button>
+              </div>
+            </div>
+
+            <div className="mx-auto grid max-w-[1600px] gap-12 px-5 py-10 sm:px-8 lg:grid-cols-[1.4fr_1fr] lg:px-12 lg:py-16">
               <ol className="space-y-1">
                 {menuLinks.map((link, index) => (
                   <motion.li
                     key={link.href}
-                    initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: reduceMotion ? 0 : 0.15 + index * 0.04, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    initial={reduceMotion ? false : { opacity: 0, y: 40, rotate: 1.5 }}
+                    animate={{ opacity: 1, y: 0, rotate: 0 }}
+                    transition={
+                      reduceMotion
+                        ? { duration: 0 }
+                        : { delay: 0.12 + index * 0.045, type: "spring", stiffness: 140, damping: 16, mass: 0.7 }
+                    }
                   >
                     <Link
                       ref={index === 0 ? firstLinkRef : undefined}
