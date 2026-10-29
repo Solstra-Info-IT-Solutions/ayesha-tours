@@ -69,7 +69,7 @@ export default function HomeHero() {
       </div>
 
 
-      <div className="relative mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-40 pt-28 sm:px-8 sm:pb-48 lg:px-12 lg:pb-52">
+      <div className="relative mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-28 pt-28 sm:px-8 sm:pb-32 lg:px-12 lg:pb-36">
         <div className="grid items-end gap-12 lg:grid-cols-[1fr_300px]">
           <div className="max-w-[980px]">
             <p className="veil-fade flex items-center gap-4 text-[12px] font-medium uppercase tracking-[0.32em] text-gold" style={{ ["--line-delay" as string]: "300ms" }}>
@@ -164,7 +164,7 @@ export default function HomeHero() {
       </div>
 
       {/* Bottom strip: caption, mobile chapter dots, scroll cue */}
-      <div className="absolute inset-x-0 bottom-16 sm:bottom-20">
+      <div className="absolute inset-x-0 bottom-0">
         <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6 border-t border-ivory/10 px-5 py-5 text-[12px] text-ivory/70 sm:px-8 lg:px-12">
           <p aria-live="polite" className="min-w-0 truncate">
             <span className="text-gold">{chapter.coords}</span>

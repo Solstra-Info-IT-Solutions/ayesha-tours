@@ -76,8 +76,8 @@ export default function JourneyComposer() {
   };
 
   return (
-    <section id="planner" aria-labelledby="planner-title" className="relative z-10 bg-ivory px-4 pb-20 sm:px-8 sm:pb-28 lg:px-12">
-      <div className="mx-auto -mt-16 max-w-[1400px] overflow-hidden rounded-[28px] bg-ivory shadow-[0_40px_120px_-40px_rgba(14,31,27,0.55)] ring-1 ring-stone sm:-mt-20">
+    <section id="planner" aria-labelledby="planner-title" className="relative z-10 bg-ivory px-4 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24 lg:px-12 lg:pt-28">
+      <div className="mx-auto max-w-[1400px] overflow-hidden rounded-[28px] bg-ivory shadow-[0_40px_120px_-40px_rgba(14,31,27,0.35)] ring-1 ring-stone">
         <div className="grid lg:grid-cols-[1.45fr_1fr]">
           {/* Composer */}
           <div className="p-6 sm:p-10 lg:p-14">
